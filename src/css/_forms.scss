@@ -1,0 +1,8 @@
+.form-item {
+    label {
+        @apply block text-xl mb-2.5
+    }
+    input {
+        @apply h-14 w-full bg-lightgrey p-2.5 border-none rounded-md
+    }
+}

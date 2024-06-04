@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>СверхКасса – Получить заём</title>
+</head>
+
+<body>
+
+    @@include('partials/header-flow.html')
+    <div class="wrapper pt-60 pt-sm-50">
+        <div class="container">
+            <h1 class="flow-title mb-40 mb-sm-20">
+                Заполните анкету
+            </h1>
+            <div class="d-flex justify-content-center">
+                <div class="flow-wrapper pb-150">
+
+                    <div class="flow-greeting mb-40 mb-sm-20">
+                        <div class="flow-greeting__text">
+                            Ваши данные под надежной защитой!
+                        </div>
+                        <div class="flow-greeting__image">
+                            <img src="img/icons/lock-3d.png" width="100%" alt="защита">
+                        </div>
+                    </div>
+
+                    <div class="flow-forms">
+
+                        <div class="probability">
+                            <div class="probability__top">
+                                <div class="">Вероятность одобрения</div>
+                                <div class="probability__percent"><span>40</span>%</div>
+                            </div>
+                            
+                            <div class="probability-scale">
+                                <div class="probability-scale__wrapper">
+                                    <div class="probability-scale__fill"></div>
+                                </div>
+                            </div>
+                            <div class="probability__hint">
+                                <img src="img/icons/warning.svg" width="32px" alt="предупреждение">
+                                <span>Пожалуйста, заполните данные точно как в паспорте</span>
+                            </div>
+                        </div>
+
+                        <div class="flow-forms__title">
+                            <h2>Паспортные данные</h2>
+                            <div class="flow-forms__steps">
+                                Шаг 2 из 5
+                            </div>
+                        </div>
+                        <form action="">
+                            <div class="form-item">
+                                <div class="form-item__label">Серия и номер паспорта</div>
+                                <div class="form-input">
+                                    <input type="text" id="passport-number" placeholder="Введите серию и номер паспорта" required>
+                                </div>
+                                <div class="input-error">Обязательное поле</div>
+                            </div>
+
+                            <div class="form-item">
+                                <div class="form-item__label">Кем выдан</div>
+                                <div class="form-input">
+                                    <input type="text" id="passport-issued" placeholder="Введите название" required>
+                                </div>
+                                <div class="input-error">Обязательное поле</div>
+                            </div>
+
+                            <div class="form-row">
+
+                                <div class="form-item">
+                                    <div class="form-item__label">Дата выдачи</div>
+                                    <div class="form-input">
+                                        <input type="text" id="passport-date" class="input-date" placeholder="ДД.ММ.ГГГГ" required>
+                                    </div>
+                                    <div class="input-error">Обязательное поле</div>
+                                </div>
+
+                                <div class="form-item">
+                                    <div class="form-item__label">Код подразделения</div>
+                                    <div class="form-input">
+                                        <input type="text" id="passport-code" placeholder="Введите код подразделения" required>
+                                    </div>
+                                    <div class="input-error">Обязательное поле</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-item">
+                                <div class="form-item__label">Место рождения</div>
+                                <div class="form-input">
+                                    <input type="text" id="passport-birthplace" placeholder="Введите место рождения" required>
+                                </div>
+                                <div class="input-error">Обязательное поле</div>
+                            </div>
+
+                            <div class="form-item">
+                                <div class="form-item__label">Адрес регистрации</div>
+                                <div class="form-input">
+                                    <input type="text" id="passport-address" placeholder="Введите адрес регистрации" required>
+                                </div>
+                                <div class="input-error">Обязательное поле</div>
+                            </div>
+
+                            <label for="same-address">
+                                <input type="checkbox" id="same-address">
+                                <span class="custom-checkbox"></span>
+                                <span>Адрес регистрации совпадает с моим фактическим местом жительства</span>
+                            </label>
+                            
+                            <div class="form-item fact-address mt-10 mt-md-10 mb-20">
+                                <div class="form-item__label">Адрес фактического места жительства</div>
+                                <div class="form-input">
+                                    <input type="text" id="fact-address" placeholder="Введите адрес фактического проживания" required>
+                                </div>
+                                <div class="input-error">Обязательное поле</div>
+                            </div>
+
+                            <a href="flow-photo.html" class="btn js-form-btn mt-40">Перейти к следующему шагу</a>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <div class="notification error">
+        <span>Не все поля заполнены</span>
+        <img src="img/buttons/account-menu-close.svg" alt="ошибка">
+    </div>
+
+    @@include('partials/main-footer.html')
+</body>
+
+</html>

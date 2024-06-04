@@ -1,0 +1,16 @@
+.btn {
+    @apply rounded-lg flex items-center justify-center gap-4 text-accent px-7 py-3.5 uppercase font-bold border-2 border-accent text-sm hover:brightness-110 cursor-pointer transition-all ease-in-out h-14;
+
+    &-rounded {
+        @apply rounded-full h-12;
+    }
+    &-accent {
+        @apply bg-accent border-accent text-white
+    }
+    &-black {
+        @apply bg-black border-black text-white
+    }
+    &.nav-toggler {
+        @apply px-3 py-3 bg-white lg:bg-transparent border-transparent lg:border-accent lg:px-7 lg:py-3.5
+    }
+}

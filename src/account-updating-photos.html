@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>СверхКасса – Личный кабинет</title>
+</head>
+
+<body>
+
+    @@include('partials/header-account.html')
+    <div class="wrapper account-wrapper">
+        <div class="container pt-60 pt-md-40">
+
+            <div class="account-content mb-60">
+                <h1 class="mb-40 mb-md-20">Изменение паспортных данных</h1>
+
+                
+                <form action="" class="update-photos-form">
+
+                    <p class="text-center text-20 mb-40">Для подтверждения введенных данных, <br> пожалуйста, прикрепите следующие фотографии:</p>
+
+                    <div class="update-photos mb-40">
+                        <div class="update-photos__item">
+                            <div class="update-photos__top mb-40">
+                                <div class="update-photos__image">
+                                    <img src="img/passport-selfie.png" alt=""> <!-- по умолчанию img/passport-selfie.png-->
+                                </div>
+                                <div class="update-photos__description">
+                                    Прикрепите ваше фото с паспортом. Убедитесь, что данные с паспорта и ваше лицо будут хорошо видны на фото.
+                                </div>
+                            </div>
+                            
+
+                            <label class="btn btn-rounded btn-transparent mb-20">
+                                <input type="file" name="file">
+                                <span class="file-name">Прикрепить файл</span>
+                            </label>
+
+                            <div class="btn btn-rounded btn-transparent">
+                                Сделать фото
+                            </div>
+                        </div>
+                        <div class="update-photos__item">
+
+                            <div class="update-photos__top mb-40">
+                                <div class="update-photos__image">
+                                    <img src="img/passport-photo.png" alt="">
+                                </div>
+                                <div class="update-photos__description">
+                                    Разворот паспорта с вашей фотографией и ФИО
+                                </div>
+                            </div>
+                            
+
+                            <label class="btn btn-rounded btn-transparent mb-20">
+                                <input type="file" name="file">
+                                <span class="file-name">Прикрепить файл</span>
+                            </label>
+
+                            <div class="btn btn-rounded btn-transparent">
+                                Сделать фото
+                            </div>
+                        </div>
+                        <div class="update-photos__item">
+                            <div class="update-photos__top mb-40">
+                                <div class="update-photos__image">
+                                    <img src="img/passport-address.png" alt="">
+                                </div>
+                                <div class="update-photos__description">
+                                    Разворот паспорта <br> с вашей регистраций
+                                </div>
+                            </div>
+                            
+
+                            <label class="btn btn-rounded btn-transparent mb-20">
+                                <input type="file" name="file">
+                                <span class="file-name">Прикрепить файл</span>
+                            </label>
+
+                            <div class="btn btn-rounded btn-transparent">
+                                Сделать фото
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    
+                    
+                    <div class="form-row gap-20 mt-20">
+                        <a href="account-updating.html" class="btn btn-dashed mb-40 mb-sm-20">
+                            <img src="img/buttons/left-arrow.svg" alt="стрелка">
+                            Назад
+                        </a>
+                        <a href="account-updating-photos-waiting.html" class="btn js-form-btn">Сохранить</a>
+                    </div>
+
+                </form>
+                
+
+            </div>
+
+
+            <div class="notification error">
+                <span>Не все поля заполнены</span>
+                <img src="img/buttons/account-menu-close.svg" alt="ошибка">
+            </div>
+
+        </div>
+    </div>
+
+
+    @@include('partials/footer.html')
+</body>
+
+</html>

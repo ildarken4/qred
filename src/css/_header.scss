@@ -1,0 +1,27 @@
+.header {
+    &.active {
+        .header-nav {
+            @apply translate-y-0 opacity-100;
+        }
+        .overlay {
+            @apply opacity-100
+        }
+        .nav-toggler {
+            @apply text-black border-black;
+
+            &__line {
+                @apply bg-black m-0;
+                
+                &:first-child {
+                    transform: rotate(-45deg) translateY(1.7px);
+                }
+                &:last-child {
+                    transform: rotate(45deg) translateY(-1.2px);
+                }
+                &:nth-child(2) {
+                    max-height: 0;
+                }
+            }
+        }
+    }
+}

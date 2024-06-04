@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>СверхКасса – Получить заём</title>
+</head>
+
+<body>
+
+    @@include('partials/header-flow.html')
+    <div class="wrapper pt-60 pt-sm-50">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="flow-wrapper pb-150">
+                    <h1 class="flow-title mb-40 mb-sm-20">
+                        Заполните анкету
+                    </h1>
+
+                    <div class="flow-greeting mb-40 mb-sm-20">
+                        <div class="flow-greeting__text">
+                            Ваши данные под надежной защитой!
+                        </div>
+                        <div class="flow-greeting__image">
+                            <img src="img/icons/lock-3d.png" width="100%" alt="защита">
+                        </div>
+                    </div>
+
+                    <div class="flow-forms">
+
+                        <div class="probability">
+                            <div class="probability__top">
+                                <div class="">Вероятность одобрения</div>
+                                <div class="probability__percent"><span>65</span>%</div>
+                            </div>
+                            <div class="probability-scale">
+                                <div class="probability-scale__wrapper">
+                                    <div class="probability-scale__fill"></div>
+                                </div>
+                            </div>
+                            <div class="probability__hint">
+                                <img src="img/icons/warning.svg" width="32px" alt="предупреждение">
+                                <span>Пожалуйста, загрузите фото по образцу</span>
+                            </div>
+                        </div>
+
+                        <div class="flow-forms__title">
+                            <h2>Подтверждение личности</h2>
+                            <div class="flow-forms__steps">
+                                Шаг 3 из 5
+                            </div>
+                        </div>
+                        
+                        <div class="flow-photo flow-photo-1 mb-40">
+                            <div class="flow-photo__picture">
+                                <img src="img/passport-selfie.png" alt="изображение селфи с паспортом">
+                            </div>
+
+                            <p class="flow-photo__description">Прикрепите ваше фото с паспортом. Убедитесь, что данные с паспорта и ваше лицо будет хорошо видно на фото.</p>
+
+                            <label class="btn btn-rounded btn-transparent mb-20">
+                                <input type="file" name="file">
+                                <span class="file-name">Прикрепить фото</span>
+                            </label>
+
+                            <div class="btn btn-rounded btn-transparent">
+                                Сделать фото
+                            </div>
+                        </div>
+
+                        <div class="flow-photo flow-photo-2 d-none mb-40">
+                            <div class="flow-photo__picture">
+                                <img src="img/passport-photo.png" alt="изображение селфи с паспортом">
+                            </div>
+                        
+                            <p class="flow-photo__description">Прикрепите разворот паспорта с вашей фотографией и ФИО</p>
+                        
+                            <label class="btn btn-rounded btn-transparent mb-20">
+                                <input type="file" name="file">
+                                <span class="file-name">Прикрепить фото</span>
+                            </label>
+
+                            <div class="btn btn-rounded btn-transparent">
+                                Сделать фото
+                            </div>
+                        </div>
+
+                        <div class="flow-photo flow-photo-3 d-none mb-40">
+                            <div class="flow-photo__picture">
+                                <img src="img/passport-address.png" alt="изображение селфи с паспортом">
+                            </div>
+                        
+                            <p class="flow-photo__description">Прикрепите разворот паспорта с вашей регистраций</p>
+                        
+                            <label class="input-file btn btn-rounded btn-transparent mb-20">
+                                <input type="file" name="file">
+                                <span class="file-name">Прикрепить фото</span>
+                            </label>
+                            
+                            <div class="btn btn-rounded btn-transparent">
+                                Сделать фото
+                            </div>
+                        </div>
+                        
+                        <div class="btn next-file btn-disabled" onclick="nextFile()">Далее</div>
+
+                        <a href="flow-job.html" class="btn next-step btn-disabled d-none"> Перейти к следующему шагу</a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    @@include('partials/main-footer.html')
+</body>
+
+</html>

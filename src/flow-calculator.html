@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>СверхКасса – Получить заём</title>
+</head>
+
+<body>
+
+    @@include('partials/header-flow.html')
+    <div class="wrapper pt-60 pt-sm-50">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="flow-wrapper pb-150">
+                    <h1 class="flow-title mb-40 mb-sm-20">
+                        Заполните анкету
+                    </h1>
+
+                    <div class="flow-forms">
+                        <div class="text-center text-20 for-desktop">Подтвердите или измените желаемый займ</div>
+                        <form class="calculator" action="">
+                            <div class="calculator__card mb-12">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="title">Выберите сумму</div>
+                                    <div class="data"><span class="data__number result-sum">15 000</span> <span>руб.</span></div>
+                                </div>
+                        
+                                <div class="range-slider sum-slider">
+                        
+                                    <input type="range" class="styled-slider slider-progress" id="sum-input" min="10000" max="300000"
+                                        value="80000" step="1000" />
+                                    <div class="range-slider__values">
+                                        <span class="minimum-scale">10 000</span>
+                                        <span class="maximum-scale">300 000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="calculator__card mb-40">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="title">Выберите срок</div>
+                                    <div class="data"><span class="data__number calc-days">20</span> <span>мес.</span></div>
+                                </div>
+                        
+                                <div class="range-slider term-slider">
+                        
+                                    <input type="range" class="styled-slider slider-progress" id="term-input" min="5" max="30" value="21" />
+                                    <div class="range-slider__values">
+                                        <span class="minimum-scale">6 месяцев</span>
+                                        <span class="maximum-scale">36 месяцев</span>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="calculator-result">
+                                <div class="result-item">
+                                    <div class="result-head mb-10">Ежемесячный платеж</div>
+                                    <div class="result-number"> <span class="result-monthly">15 000 </span> руб.</div>
+                                </div>
+                                <div class="result-item">
+                                    <div class="result-head mb-10">Сумма займа</div>
+                                    <div class="result-number mr-8"> <span class="result-sum">15 000 </span> руб.</div>
+                                </div>
+                            </div>
+
+                            <div class="btn next-step btn-disabled mb-40" onclick="openModal('sms-modal'); startEmailTimer()">Завершить оформление</div>
+
+                            <div class="double-checkbox">
+                                <div class="d-flex mb-16">
+                                    <label for="rules" class="">
+                                        <input type="checkbox" id="rules" checked disabled>
+                                        <span class="custom-checkbox"></span>
+                                        <span>Я ознакомлен со&nbsp;<a class="show-rules text-blue text-600 underlined">следующим</a></span>
+                                    </label>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="hidden-checkbox">
+                                <div class="double-checkbox">
+                                    <label for="agreement-personal" class="mb-10">
+                                        <input type="checkbox" id="agreement-personal" checked>
+                                        <span class="custom-checkbox"></span>
+                                        <span>Даю свое согласие на&nbsp;<a href="#" class="text-blue underlined">обработку и передачу персональных
+                                            данных</a> </span>
+                                    </label>
+                                </div>
+                                
+                                <div class="double-checkbox">
+                                    <label for="agreement-sign">
+                                        <input type="checkbox" id="agreement-sign" checked>
+                                        <span class="custom-checkbox"></span>
+                                        <span>Даю свое согласие на&nbsp;<a href="#" class="text-blue underlined">использование аналога собственноручной
+                                                подписи</a> </span>
+                                    </label>
+                                </div>
+                                <div class="hide-rules mt-20">Свернуть</div>
+                            </div>
+                            
+                            
+                        </form>
+                        
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="modal" id="sms-modal">
+        <div class="popup popup-small">
+            <div class="popup__top">
+                <div class="popup__title">
+                    Введите код из смс
+                </div>
+            </div>
+    
+            <div class="popup__content flow-popup">
+    
+                <p class="mb-20 text-grey">
+                    SMS с кодом подтверждения отправлен на указанный номер.
+                </p>
+                <p class="mb-40 text-darkblue text-600">
+                    +7 (915) 255 25 45
+                </p>
+                <div class="d-flex justify-content-center">
+                    <form action="">
+                        <div class="form-item mb-40">
+                            <div class="form-input">
+                                <input type="text" id="sms-code" placeholder="Введите код">
+                            </div>
+                            <div class="input-error">Обязательное поле</div>
+                        </div>
+                        
+                        <span class="popup-timer">59</span>
+                        <a class="resend underlined text-darkblue btn-disabled popup-email-button text-600 mt-20 mb-40" onclick="startEmailTimer()">Отправить ещё раз</a>
+
+                        <a href="flow-considering.html" class="btn">Готово</a>
+                    </form>
+                </div>
+                
+    
+    
+            </div>
+        </div>
+    </div>
+
+    @@include('partials/main-footer.html')
+</body>
+
+</html>
