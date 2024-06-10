@@ -1,16 +1,95 @@
-.btn {
-    @apply rounded-lg flex items-center justify-center gap-4 text-accent px-7 py-3.5 uppercase font-bold border-2 border-accent text-sm hover:brightness-110 cursor-pointer transition-all ease-in-out h-14;
+// Состояния кнопок:
 
-    &-rounded {
-        @apply rounded-full h-12;
+// .btn - без фона 
+// .btn.btn-accent - с фоном
+// .btn.btn-disabled - неактивная 
+// .btn.btn-dashed - с пунктирной границей
+// .btn.btn-gray - прямоугльная серая (в ЛК)
+// .btn.nav-toggler - кнопка открытия меню в header
+
+.btn {
+    @apply rounded-full flex items-center justify-center gap-4 text-accent px-7 py-3.5 border-2 border-accent text-base  hover:border-dark_accent  cursor-pointer transition-all h-[60px] hover:text-dark_accent active:border-black active:text-black min-w-[280px];
+
+    svg path {
+        @apply transition-all stroke-accent;
     }
+
+    &:active {
+        svg path {
+            @apply stroke-black
+        }
+    }
+
+    &.btn-disabled {
+        @apply border-gray pointer-events-none text-gray_text;
+
+        svg path {
+            @apply stroke-gray_text;
+        }
+    }
+
     &-accent {
-        @apply bg-accent border-accent text-white
+        @apply bg-accent border-accent text-black hover:bg-dark_accent hover:text-black active:bg-black active:border-black active:text-white;
+
+        &.btn-disabled {
+            @apply border-gray bg-gray pointer-events-none text-black;
+
+            svg path {
+                @apply stroke-black;
+            }
+        }
+
+        svg path {
+            @apply stroke-black;
+        }
+
+        &:active {
+            svg path {
+                @apply stroke-white 
+            }
+        }
     }
-    &-black {
-        @apply bg-black border-black text-white
+    &-dashed {
+         @apply bg-lightgray text-black border border-black border-dashed hover:border-accent hover:text-accent active:border-gray active:text-accent;
+
+        &:active {
+            svg path {
+                @apply stroke-accent
+            }
+        }
+
+        svg path {
+            @apply stroke-black;
+        }
+
+        &:hover {
+            svg path {
+                @apply stroke-accent;
+            }
+        }
+
     }
+    &-gray {
+        @apply rounded-[4px] bg-gray text-black border border-gray text-xl gap-1 font-semibold hover:text-black hover:border-black active:border-gray active:text-accent;
+
+        &:active {
+            svg path {
+                @apply stroke-accent 
+            }
+        }
+
+        svg path {
+            @apply stroke-black;
+        }
+    }
+
     &.nav-toggler {
         @apply px-3 py-3 bg-white lg:bg-transparent border-transparent lg:border-accent lg:px-7 lg:py-3.5
+    }
+    &-account-menu {
+        @apply bg-blue text-white uppercase border-white rounded-md shadow-md h-20 min-w-fit w-52 mx-auto mt-10 text-2xl font-semibold gap-2 hover:text-white hover:border-white hover:bg-darkblue hover:shadow-none active:bg-blue
+    }
+    &-squared {
+        @apply rounded-md
     }
 }

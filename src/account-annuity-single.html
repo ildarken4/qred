@@ -3,80 +3,80 @@
 <head>
     @@include('partials/head.html')
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>СверхКасса – Личный кабинет</title>
+    <title>Личный кабинет</title>
 </head>
 <body>
 
 @@include('partials/header-account.html')
-<div class="wrapper account-wrapper">
-    <div class="container pt-60 pt-md-40">
-        <div class="account-top">
-            <div class="mb-10 account-top__greeting">Добро пожаловать, <strong class="username text-black">Иванов Иван Иванович</strong></div>
-            <div class="account-top__title mb-20">У вас есть активный заем</div>
-            <div class="account-top__buttons">
-                <button class="btn btn-small" onclick="openModal('set-password-modal')">
+<div class="wrapper bg-lightgray py-14 relative">
+    <div class="container">
+
+        <div class="bg-darkblue text-center p-5 rounded-lg mb-10">
+            <div class="text-white font-bold text-[32px]">Добро пожаловать, <span class="">Иванов Иван Иванович</span></div>
+            <div class="text-accent font-bold text-5xl mb-5">У вас есть активный заем</div>
+            <div class="bg-red text-white text-6xl font-bold px-5 py-2.5 w-fit mx-auto rounded-md mb-5">Заем просрочен на <span>19</span> дней</div>
+            <div class="flex gap-5 justify-center">
+                <button class="btn btn-gray" onclick="openModal('set-password-modal')">
                     Задайте пароль
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
-                        <path d="M10.9587 18L9.35714 16.3175L14.154 11.2289H2.5V8.77113H14.154L9.35714 3.69072L10.9587 2L18.5 10L10.9587 18Z" fill="#151515"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M2.57227 11.9999L21.4284 11.9999M21.4284 11.9999L12.0004 21.428M21.4284 11.9999L12.0004 2.57178" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
-                <button class="btn btn-small" onclick="openModal('email-confirm-modal'); startEmailTimer()">
+                <button class="btn btn-gray" onclick="openModal('email-confirm-modal'); startEmailTimer()">
                     Подтвердите почту
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
-                        <path d="M10.9587 18L9.35714 16.3175L14.154 11.2289H2.5V8.77113H14.154L9.35714 3.69072L10.9587 2L18.5 10L10.9587 18Z" fill="#151515"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M2.57227 11.9999L21.4284 11.9999M21.4284 11.9999L12.0004 21.428M21.4284 11.9999L12.0004 2.57178" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
             </div>
         </div>
 
-        <div class="account-banner">
-            <div class="account-banner__content">
-                <div class="account-banner__bg"></div>
-                <div class="account-banner__text">
+
+
+        <div class="bg-account-banner bg-white rounded-lg mb-10 relative overflow-hidden">
+            
+            <div class="account-banner w-2/3 mx-auto text-center bg-white py-10 h-full">
+                <div class="text-3xl font-bold mb-8">
                     Активировать предложение по новому заему
                 </div>
-                <div class="account-banner__btn btn btn-transparent btn-rounded">
+                <div class="btn btn-accent w-80 mx-auto">
                     Активировать
                 </div>
             </div>
         </div>
 
-        <div class="account-body pt-20 mb-60">
-            <div class="row mob-reverse p-0">
-                <div class="col-lg-6 col-md-6 pl-0 pr-md-10 pr-sm-0">
-                    <div class="account-body__card loan-info">
-                        <div class="loan-info__item">
-                            <div class="info-title">Номер договора</div>
-                            <div class="info-data">№<span>12435445</span></div>
-                        </div>
-                        <div class="loan-info__item">
-                            <div class="info-title">Общая сумма долга</div>
-                            <div class="info-data">21 000 руб.</span></div>
-                        </div>
-                        <div class="loan-info__item">
-                            <div class="info-title">Очередной платеж</div>
-                            <div class="info-data">2 100 руб.</span></div>
-                        </div>
-                        <div class="loan-info__item">
-                            <div class="info-title">Рекомендованная дата платежа</div>
-                            <div class="info-data">03.03.23</span></div>
-                        </div>
-                    </div>
+        <div class="flex gap-5">
+            <div class="bg-white rounded-lg shadow-md w-1/2 py-10 px-14">
+                <div class="w-full py-5 flex items-center justify-between border-b border-gray">
+                    <div class="text-gray_text">Номер договора</div>
+                    <div class="text-2xl font-bold">№<span>12435445</span></div>
                 </div>
-                <div class="col-lg-6 col-md-6 pr-0 pl-md-10 pl-sm-0">
-                    <div class="account-body__card d-flex flex-column align-items-center justify-content-center">
-                        <form action="" class="payment-form">
-                            <input type="text" class="mb-10 account-pay" placeholder="Введите сумму" value="2100">
-                            <button class="btn mb-30">Оплатить</button>
-                            <div class="text-darkblue account-body__link schedule-btn">
-                                График платежей
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                                    <path d="M4.5 20.5L20.5 4.5M20.5 4.5V20.5M20.5 4.5H4.5" stroke="#003E76" stroke-width="2"/>
-                                </svg>
-                            </div>
-                        </form>
-                    </div>
+                <div class="w-full py-5 flex items-center justify-between border-b border-gray">
+                    <div class="text-gray_text">Общая сумма долга</div>
+                    <div class="text-2xl font-bold">21 000 руб.</span></div>
                 </div>
+                <div class="w-full py-5 flex items-center justify-between border-b border-gray">
+                    <div class="text-gray_text">Очередной платеж</div>
+                    <div class="text-2xl font-bold">2 100 руб.</span></div>
+                </div>
+                <div class="w-full py-5 flex items-center justify-between border-b border-gray">
+                    <div class="text-gray_text">Рекомендованная дата платежа</div>
+                    <div class="text-2xl font-bold">03.03.23</span></div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md w-1/2 py-10 px-10 flex items-center">
+                <form action="" class="w-full max-w-[400px] mx-auto h-fit my-auto">
+
+                    <input type="text" class="payment-input mb-2.5" placeholder="Введите сумму" value="2100 руб.">
+
+                    <button class="btn btn-accent btn-squared w-full mb-10">Оплатить</button>
+                    <div class="schedule-btn text-2xl font-semibold flex items-center gap-2 cursor-pointer hover:underlined">
+                        График платежей
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path d="M4.5 20.5L20.5 4.5M20.5 4.5V20.5M20.5 4.5H4.5" stroke="#000000" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </form>
             </div>
         </div>
 
@@ -87,9 +87,9 @@
 
     @@include('partials/schedule-modal.html')
 </div>
-
+<!-- 
 <div class="modal" id="set-password-modal">
-    <div class="popup popup-small bg-lightgrey">
+    <div class="popup popup-small bg-lightgray">
         <div class="popup__top">
             <div class="popup__title">
                 Задайте пароль
@@ -145,7 +145,7 @@
 </div>
 
 <div class="modal" id="password-success-modal">
-    <div class="popup popup-small bg-lightgrey">
+    <div class="popup popup-small bg-lightgray">
         <div class="popup__top">
             <div class="popup__title">
                 Задайте пароль
@@ -187,7 +187,7 @@
 
         <div class="popup__content">
             
-            <p class="mb-20 text-grey">
+            <p class="mb-20 text-gray">
                 Мы отправили вам письмо с подтверждением на вашу почту. Пожалуйста, перейдите по ссылке в письме для завершения
                 процесса
                 подтверждения. Если вы уже подтвердили свою почту, обновите страницу.
@@ -207,7 +207,7 @@
             
         </div>
     </div>
-</div>
+</div> -->
 
 
 @@include('partials/footer.html')

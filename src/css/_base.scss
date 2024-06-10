@@ -1,8 +1,18 @@
+@font-face {
+  font-family: 'Inter';
+  src: url("../fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+
 
 body {
+    font-family: 'Inter', serif;
     width: 100vw;
 }
 .container {
     @apply m-auto lg:max-w-7xl px-2.5;
 
+}
+footer .container {
+    @apply p-10
 }

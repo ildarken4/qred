@@ -1,8 +1,201 @@
 .form-item {
+    @apply mb-10;
     label {
         @apply block text-xl mb-2.5
     }
     input {
-        @apply h-14 w-full bg-lightgrey p-2.5 border-none rounded-md
+        @apply h-[60px] w-full bg-lightgray p-2.5 border-none rounded-md text-black focus:ring-black hover:ring-gray hover:text-black
     }
+    
+}
+.payment-input {
+  @apply w-full h-[70px] border-darkgray rounded-md font-medium text-center text-2xl 
+}
+label {
+    @apply flex items-start gap-1 text-sm
+}
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  position: relative;
+  top: -4px;
+  cursor: pointer;
+}
+
+.custom-checkbox::before {
+  content: '';
+  position: relative;
+  top: 0;
+  display: inline-block;
+  background-image: url('../img/icons/checkbox_big_empty.svg');
+  width: 28px;
+  height: 28px;
+  border-radius: 3px;
+  margin-right: 6px;
+  transition: all 0.4s ease;
+}
+
+.custom-checkbox::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('../img/icons/checkbox_big_checked.svg');
+  width: 28px;
+  height: 28px;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked + .custom-checkbox::after {
+  visibility: visible;
+}
+
+/* Кастомный input[type="radio"] */
+.custom-radio {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-radio::before {
+  content: '';
+  position: relative;
+  top: 4px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  margin-right: 4px;
+  // border: 2px solid #D9D9D9;
+  border-radius: 50%;
+}
+
+.custom-radio::after {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  // background-color: $green;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  visibility: hidden;
+}
+
+input[type="radio"]:checked {
+  & + .custom-radio::after {
+    visibility: visible;
+  }
+}
+
+// кастомный селект
+.custom-select {
+  position: relative;
+  width: 100%;
+
+  &__head {
+    padding: 20px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
+    background-color: #F4F5F7;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #F4F5F7;
+    cursor: pointer;
+
+    &.selected {
+      color: #191919 !important;
+    }
+
+    @media (max-width:991px) {
+      font-size: 18px;
+      padding: 10px 20px;
+    }
+
+    svg {
+      transition: all 0.4s ease;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    max-height: 0;
+    border-radius: 0 0 10px 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: max-height 0.4s ease;
+    overflow: hidden;
+    z-index: 200;
+
+    &.columned {
+      column-count: 2;
+      column-gap: 20px;
+      @media (max-width: 768px) {
+        column-count: 1;
+      }
+    }
+
+    .custom-option {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 10px 40px;
+      transition: all 0.4s ease;
+      break-inside: avoid;
+      cursor: pointer;
+
+      img {
+        margin-right: 15px;
+      }
+
+      &:hover {
+        background-color: #F4F5F7;
+      }
+
+      &[selected] {
+        background-color: #F4F5F7;
+      }
+
+      @media (max-width:991px) {
+        font-size: 18px;
+        padding: 10px 20px;
+
+        img {
+          width: 24px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+
+  &.active {
+    .custom-select__head {
+      border-radius: 10px 10px 0 0;
+      border: 1px solid #D9D9D9;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    .custom-select__options {
+      max-height: 500px;
+    }
+  }
 }

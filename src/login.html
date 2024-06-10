@@ -4,42 +4,43 @@
 <head>
     @@include('partials/head.html')
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>СверхКасса – Вход в личный кабинет</title>
+    <title>Вход в личный кабинет</title>
 </head>
 
 <body>
 
     @@include('partials/header-flow.html')
-    <div class="wrapper pt-60 pt-sm-50">
+    <div class="wrapper">
         <div class="container">
-            <div class="d-flex justify-content-center">
-                <div class="flow-wrapper pb-150">
-                    <h1 class="flow-title mb-40 mb-sm-20">
+            <div class="max-w-[990px] mx-auto pt-16 pb-36">
+                
+                    <h1 class="text-center text-5xl font-bold mb-10">
                         Вход в личный кабинет
                     </h1>
 
-                    <div class="flow-forms">
-
-                        <div class="flow-login">
-                            <p class="flow-info__text text-grey mb-40 mt-20 mt-sm-0">Укажите ваш номер телефона.</p>
+                    <div class="py-10 border border-darkgray rounded-lg shadow-md">
+                        <div class="max-w-[400px] mx-auto">
+                            <p class="text-2xl text-center mb-10">Укажите ваш номер телефона.</p>
 
                             <form action="">
                                 <div class="form-item">
-                                    <div class="form-item__label">Ваш номер телефона</div>
-                                    <div class="form-input">
-                                        <input type="tel" id="login-phone" placeholder="Введите номер" required>
-                                    </div>
-                                    <div class="input-error">Обязательное поле</div>
+                                    <label for="login-phone">Ваш номер телефона</label>
+                                    
+                                    <input type="tel" id="login-phone" placeholder="Введите номер" required>
+                                    
+                                    <div class="hidden text-red text-xs pt-1">Обязательное поле</div>
                                 </div>
 
-                                <a href="login-sms.html" class="btn mb-20 mb-sm-0">Войти</a>
+
+                                <a href="" class="btn btn-accent">
+                                    Далее
+                                </a>
+
                             </form>
-
-
                         </div>
+
                     </div>
 
-                </div>
             </div>
 
         </div>
