@@ -4,93 +4,48 @@
 <head>
     @@include('partials/head.html')
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Получить заём</title>
+    <title>Вход в личный кабинет</title>
 </head>
 
 <body>
 
     @@include('partials/header-flow.html')
-    <div class="wrapper pt-60 pt-sm-50">
+    <div class="wrapper">
         <div class="container">
-            <div class="d-flex justify-content-center">
-                <div class="flow-wrapper pb-150">
+            <div class="max-w-[990px] mx-auto pt-16 pb-36">
 
-                    <div class="flow-forms">
-                        <div class="flow-login">
-
-                            <p>Зарегистрируйтесь в личном кабинете, чтобы подать заявку на займ без посещения офиса</p>
-
-                            
+                    <div class="py-10 border border-darkgray rounded-lg shadow-md">
+                        
+                        <p class="text-2xl text-blue_text text-center mb-10">Зарегистрируйтесь в личном кабинете</p>
+                        
+                        <div class="max-w-[400px] mx-auto">
                             <form action="">
                                 <div class="form-item">
-                                    <div class="form-item__label">Ваш номер телефона</div>
-                                    <div class="form-input">
-                                        <input type="tel" id="login-phone" placeholder="Введите номер" required>
-                                    </div>
-                                    <div class="input-error">Обязательное поле</div>
-                                    <div class="text-darkblue text-12 mb-20">Отправим СМС с кодом подтверждения</div>
-                                </div>
-                                <div class="double-checkbox">
-                                    <label for="rules" class="">
-                                        <input type="checkbox" id="rules" checked>
-                                        <span class="custom-checkbox"></span>
-                                        <span>Согласен(на) на обработку персональных данных и электронный документооборот</span>
-                                    </label>
+                                    <label for="login-phone">Ваш номер телефона</label>
+                                    
+                                    <input type="tel" id="login-phone" placeholder="Введите номер" required>
+                                    
+                                    <div class="hidden text-red text-xs pt-1">Обязательное поле</div>
                                 </div>
 
-                                <a href="flow-contact.html" class="btn next-step js-form-btn mt-40" onclick="openModal('sms-modal'); startEmailTimer()">Продолжить</a>
+                                <label for="rules" class="mb-10">
+                                    <input type="checkbox" id="rules">
+                                    <span class="custom-checkbox"></span>
+                                    <span>Согласен(на) на &nbsp;<a class="js-show-rules text-dark_accent cursor-pointer">обработку персональных данных и электронный документооборот</a> </span>
+                                </label>
 
+                                <a href="" class="btn btn-accent mb-5 js-button">
+                                    Далее
+                                </a>
+
+                                <p class="text-center">У вас уже есть личный кабинет? &nbsp;<a class="js-show-rules text-dark_accent cursor-pointer">Войти</a> </p>
                             </form>
-
-                            <div class="text-gray text-center mt-20">У вас уже есть личный кабинет? <a href="" class="text-blue underlined">Войти</a></div>
                         </div>
 
                     </div>
 
-                </div>
             </div>
-            
-        </div>
-        
 
-    </div>
-
-
-    <div class="modal" id="sms-modal">
-        <div class="popup popup-small">
-            <div class="popup__top">
-                <div class="popup__title">
-                    Введите код из смс
-                </div>
-            </div>
-    
-            <div class="popup__content flow-popup">
-    
-                <p class="mb-20 text-gray">
-                    SMS с кодом подтверждения отправлен на указанный номер.
-                </p>
-                <p class="mb-40 text-darkblue text-600">
-                    +7 (915) 255 25 45
-                </p>
-                <div class="d-flex justify-content-center">
-                    <form action="">
-                        <div class="form-item mb-40">
-                            <div class="form-input">
-                                <input type="text" id="sms-code" placeholder="Введите код">
-                            </div>
-                            <div class="input-error">Обязательное поле</div>
-                        </div>
-                        
-                        <span class="popup-timer">59</span>
-                        <a class="resend underlined text-darkblue btn-disabled popup-email-button text-600 mt-20 mb-40" onclick="startEmailTimer()">Отправить ещё раз</a>
-
-                        <a href="flow-considering.html" class="btn">Готово</a>
-                    </form>
-                </div>
-                
-    
-    
-            </div>
         </div>
     </div>
 

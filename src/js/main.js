@@ -258,7 +258,7 @@ const accountSwiper = new Swiper('.loans-slider', {
         type: 'fraction',
         renderFraction: function (currentClass, totalClass) {
             return '<div class="current-slide ' + currentClass + '"></div>' +
-                ' <div class="line"></div> ' +
+                ' <div class="line border-b border-black w-8"></div> ' +
                 '<div class=" total-slide ' + totalClass + '"></div>';
         },
     },
