@@ -50,7 +50,7 @@
         }
     }
     &-dashed {
-         @apply bg-lightgray text-black border border-black border-dashed hover:border-accent hover:text-accent active:border-gray active:text-accent;
+         @apply bg-lightgray text-black border border-black border-dashed hover:bg-lightgray hover:border-accent hover:text-accent active:border-gray active:text-accent;
 
         &:active {
             svg path {

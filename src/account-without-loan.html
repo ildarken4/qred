@@ -32,9 +32,9 @@
 
 
 
-        <div class="bg-account-banner bg-white rounded-lg mb-10 relative overflow-hidden">
+        <div class="bg-account-banner bg-banner bg-center bg-white rounded-lg mb-10 relative overflow-hidden">
             
-            <div class="account-banner w-2/3 mx-auto text-center bg-white py-10 h-full">
+            <div class="account-banner w-2/4 mx-auto text-center bg-white py-10 h-full">
                 <div class="text-3xl font-bold mb-8">
                     Вернуться назад
                 </div>
@@ -179,170 +179,152 @@
     </div>
 </div>
 
-<!-- <div class="notification success">
-    <span>Данные подтверждены</span>
-    <img src="img/buttons/account-menu-close.svg" alt="закрыть">
-</div>
-
 
 <div class="modal" id="sms-modal">
-    <div class="popup popup-small">
-        <div class="popup__top">
-            <div class="popup__title">
-                Введите код из смс
-            </div>
-        </div>
-
-        <div class="popup__content flow-popup">
-
-            <p class="">
-                SMS с кодом подтверждения отправлен на указанный номер.
-            </p>
-            <p class="">
-                +7 (915) 255 25 45
-            </p>
-            <div class="">
-                <form action="">
-                    <div class="form-item">
-                        
-                        <input type="text" id="sms-code" placeholder="Введите код">
-                        
-                        <div class="input-error">Обязательное поле</div>
+        <div class="popup popup-small">
+            <div class="w-full max-w-[400px] mx-auto">
+                <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                    <div class="font-medium">
+                        Введите код из смс
                     </div>
-                    
-                    <span class="popup-timer">59</span>
-                    <a class="resend btn-disabled popup-email-button" onclick="startEmailTimer()">Отправить ещё раз</a>
+                    <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+        
+                
+        
+                <p class="text-blue_text text-2xl font-medium text-center mb-10">
+                    SMS с кодом подтверждения отправлен на указанный номер.
+                </p>
+    
+                <div class="text-center text-2xl mb-10">
+                    +7 (912) 345-67-89
+                </div>
 
-                    <a href="flow-considering.html" class="btn">Подтвердить</a>
-                </form>
+                <div class="form-item w-full retiree-hide mb-10">
+                    <label for="sms-code">Введите код</label>
+                    <input type="text" id="sms-code" placeholder="Введите код">
+                    
+                </div>
+    
+                <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
+
+                <p class="text-center text-gray_text js-email-button mb-10 cursor-pointer" onclick="startEmailTimer()">Отправить код ещё раз</p>
+    
+                
+                <button class="btn btn-accent btn-disabled w-full max-w-sm mx-auto">
+                    Подтвердить
+                </button>
+        
             </div>
             
-
-
         </div>
     </div>
-</div>
 
 <div class="modal" id="set-password-modal">
     <div class="popup popup-small">
-        <div class="popup__top">
-            <div class="popup__title">
-                Задайте пароль
+        <div class="w-full max-w-[400px] mx-auto">
+            <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                <div class="font-medium">
+                    Изменить пароль
+                </div>
+                <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
             </div>
-            <button class="modal-close" onclick="closeModal()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-        </div>
-
-        <div class="popup__content">
-            <div class="">
-                <form action="" class="popup-form password-form">
-                    <div class="new-password">
-                        <div class="mb-5">Придумайте пароль</div>
-                        <div class="form-input popup-input js-hinted-input">
-                            <input type="password" class="password-input" id="new-password" placeholder="Введите пароль" autocomplete="off">
-                            <div class="show-password">
-                                <img src="img/icons/password-eye.svg" alt="">
+    
+                <form action="">
+                <div class="form-item mb-10">
+                    <label for="new-password">Новый пароль</label>
+                    <div class="js-password-wrapper relative">
+                        <input type="password" id="new-password" class="peer" placeholder="Введите пароль" required>
+                        <div class="show-password absolute right-5 top-5 cursor-pointer opacity-60 peer-focus:opacity-100">
+                            <img src="img/icons/password-eye.svg" alt="">
+                        </div>
+                        <div class="absolute top-full left-0 w-full bg-white border-2 border-darkgray p-5 shadow-sm z-20 rounded-md mt-1 opacity-0 pointer-events-none peer-focus:opacity-100">
+                            <div class="text-center mb-5">Пароль должен содержать</div>
+                            <div class="font-semibold mb-5">
+                                - 8 символов латинского алфавита (A-z)
                             </div>
-                            <div class="input-hint">
-                                <div class="input-hint__title">Пароль должен содержать</div>
-                                <div class="input-hint__text">
-                                    - 8 символов латинского алфавита (A-z)
-                                </div>
-                                <div class="input-hint__text">
-                                    - цифры (0-9)
-                                </div>
+                            <div class="font-semibold">
+                                - цифры (0-9)
                             </div>
                         </div>
                     </div>
-                    <div class="confirm-password">
-                        <div class="mb-5">Повторите пароль</div>
-                        <div class="form-input popup-input">
-                            <input type="password" class="password-input" id="confirm-password" placeholder="Введите пароль" autocomplete="off">
-                            <div class="show-password">
-                                <img src="img/icons/password-eye.svg" alt="">
-                            </div>
+                    <div class="hidden text-red text-xs pt-1">Обязательное поле</div>
+                    <div class="hidden text-red text-xs pt-1">Проверьте поле на корректность текста</div>
+                </div>
+
+                <div class="form-item mb-10">
+                    <label for="confirm-password">Повторите пароль</label>
+                    <div class="password-wrapper relative">
+                        <input type="password" id="confirm-password" class="peer" placeholder="Повторите пароль" required>
+                        <div class="show-password absolute right-5 top-5 cursor-pointer opacity-60 peer-focus:opacity-100">
+                            <img src="img/icons/password-eye.svg" alt="">
                         </div>
-                        <div class="input-error">Пароли не совпадают</div>
                     </div>
+                    <div class="hidden text-red text-xs pt-1">Обязательное поле</div>
+                    <div class="hidden text-red text-xs pt-1">Проверьте поле на корректность текста</div>
+                </div>
 
-                    <button class="btn btn-disabled popup-password-button">
-                        Подтвердить
-                    </button>
-                </form>
-            </div>
+                <a href="" class="btn btn-accent">
+                    Сохранить
+                </a>
 
+            </form>
+    
         </div>
+        
     </div>
 </div>
 
-<div class="modal" id="password-success-modal">
-    <div class="popup popup-small">
-        <div class="popup__top">
-            <div class="popup__title">
-                Задайте пароль
-            </div>
-            <button class="modal-close" onclick="closeModal()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-        </div>
-
-        <div class="popup__content">
-
-            <div class="popup-result-text success">
-                Пароль успешно создан
-            </div>
-            <div class="popup-result-image">
-                <img src="img/icons/success-shield.png" alt="иконка результат">
-            </div>
-
-        </div>
-    </div>
-</div>
 
 <div class="modal" id="email-confirm-modal">
-    <div class="popup popup-small">
-        <div class="popup__top">
-            <div class="popup__title">
-                Подтвердите почту
+    <div class="popup">
+        <div class="w-full max-w-[480px] mx-auto">
+            <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                <div class="font-medium">
+                    Подтверждение почты
+                </div>
+                <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
             </div>
-            <button class="modal-close" onclick="closeModal()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </button>
-        </div>
-
-        <div class="popup__content">
+    
             
-            <p class="">
-                Мы отправили вам письмо с подтверждением на вашу почту. Пожалуйста, перейдите по ссылке в письме для завершения
+    
+            <p class="text-blue_text text-center mb-10">
+                Мы отправили вам письмо с подтверждением на вашу почту. Пожалуйста, перейдите по ссылке в письме для
+                завершения
                 процесса
                 подтверждения. Если вы уже подтвердили свою почту, обновите страницу.
             </p>
-            
-            <div class="user-email">
-                V<span>*****</span>a@mail.ru
+
+            <div class="text-center text-2xl mb-10">
+                P<span>*****</span>a@mail.ru
             </div>
+
+            <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
+
             
-            <div class="popup-timer">59 секунд</div>
-            
-            <div class="">
-                <button class="btn btn-disabled popup-email-button">
-                    Отправить ещё раз
-                </button>
-            </div>
-            
+            <button class="btn btn-accent btn-disabled js-email-button w-full max-w-sm mx-auto" onclick="startEmailTimer()">
+                Отправить ещё раз
+            </button>
+    
         </div>
+        
     </div>
-</div> -->
+</div>
 
 
 @@include('partials/footer.html')

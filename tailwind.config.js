@@ -36,9 +36,11 @@ module.exports = {
 
         red: '#DD2525',
         lightred: '#FF0000',
+        red_75: 'rgba(255, 0, 0, 0.75)',
 
         green: '#6BD390',
         lightgreen: '#6BD390',
+        green_80: 'rgba(107, 211, 144, 0.80)',
 
         blue_text: '#0E174A',
         blue: '#0E174A',
@@ -48,7 +50,13 @@ module.exports = {
         purple: '#312D4B',
       },
       backgroundImage: {
-        'account-banner': "url('/img/backgrounds/banner-background.svg')",
+        'account-banner': "url('/img/backgrounds/banner-background.png')",
+      },
+      backgroundSize: {
+        'auto': 'auto',
+        'cover': 'cover',
+        'contain': 'contain',
+        'banner': '25%'
       }
     },
   },

@@ -17,3 +17,10 @@
         @apply bg-white md:bg-lightgray
     }
 }
+.add-card:nth-child(odd):not(:first-child) {
+    @apply max-w-full min-h-fit col-span-2
+}
+.file-name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}

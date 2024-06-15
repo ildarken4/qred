@@ -23,7 +23,7 @@
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>CreditBooster – Личный кабинет</title>
+    <title>Личный кабинет</title>
 </head>
 <body>
 
@@ -47,16 +47,16 @@
     </div>
 </header>
 
-<div class="wrapper account-wrapper">
-    <div class="container pt-60 pt-md-40">
+<div class="wrapper bg-lightgray py-14 relative min-h-screen">
+    <div class="container">
         
-        <div class="account-content mb-60">
-            <h1 class="mb-40 mb-md-20">Создать обращение</h1>
+        <div class="bg-white rounded-lg shadow-md py-10 px-10">
+            <h1 class="text-5xl text-center font-bold mb-10">Создать обращение</h1>
 
-            <div class="account-updating">
+            <div class="max-w-4xl mx-auto">
                 <form action="">
-                    <div class="form-item mb-40 mb-md-30">
-                        <div class="form-item__label">Тема</div>
+                    <div class="form-item mb-5">
+                        <div class="">Выберите тему обращения</div>
                         <div class="custom-select">
                             <div class="custom-select__head">
                                 <div class="custom-select__result">
@@ -127,33 +127,37 @@
                         </div>
                     </div>
 
-                    <div class="form-item">
+                    <div class="form-item mb-5">
                         <div class="form-item__label">Ваше обращение</div>
-                        <div class="form-input">
-                            <textarea rows="10" placeholder="Введите текст обращения"></textarea>
-                        </div>
+                        <textarea rows="10" placeholder="Введите текст обращения"></textarea>
                     </div>
 
-                    <div class="updating-confirm flex-wrap mb-40">
-                        <div class="updating-confirm__text">
-                            <div class="updating-confirm__title">
-                                Прикрепите файлы
+                    <div class="py-5 mb-10 border-t border-b border-darkgray">
+                        <div class="flex flex-wrap items-center justify-between gap-7">
+                            <div class="w-full max-w-[50%]">
+                                <div class="text-xl uppercase font-semibold mb-2.5">
+                                    Прикрепите файлы
+                                </div>
+                                <div>Прикрепите файлы, которые могут помочь нам быстрее ответить на ваш запрос. До 10 файлов.</div>
                             </div>
-                            <div>Прикрепите файлы, которые могут помочь нам быстрее ответить на ваш запрос. До 10 файлов.</div>
+                            <div class="w-full max-w-[45%]">
+                                <label class="btn btn-transparent btn-rounded">
+                                    <input type="file" class="hidden" name="file" multiple>
+                                    <span>Прикрепить файлы</span>
+                                </label>
+                            </div>
                         </div>
-                        <label class="btn btn-transparent btn-rounded">
-                            <input type="file" name="file" multiple>
-                            <span>Прикрепить файлы</span>
-                        </label>
-                        <div class="loaded-files"></div>
+                        
+                        
+                        <div class="loaded-files basis-full w-full flex justify-between flex-wrap"></div>
                     </div>
                     
-                    <div class="form-row ">
-                        <a href="account-my-appeals.html" class="btn btn-dashed">
+                    <div class="flex gap-7 justify-center">
+                        <a href="account-my-appeals.html" class="btn btn-dashed w-full">
                             <img src="img/buttons/left-arrow.svg" alt="стрелка">
                             Назад
                         </a>
-                        <a href="" class="btn js-form-btn">Создать</a> 
+                        <a href="" class="btn btn-accent js-form-btn w-full">Создать</a> 
                     </div>
                 </form>
             </div>

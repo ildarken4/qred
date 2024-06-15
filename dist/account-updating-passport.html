@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
@@ -26,10 +25,9 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Личный кабинет</title>
 </head>
-
 <body>
 
-    <header class="header relative py-7">
+<header class="header relative py-7">
     <div class="container flex items-center justify-between">
       
       <a href="index.html" class="logo">
@@ -49,115 +47,88 @@
     </div>
 </header>
 
-    <div class="wrapper account-wrapper">
-        <div class="container pt-60 pt-md-40">
+<div class="wrapper bg-lightgray py-14 relative min-h-screen">
+    <div class="container">
+        
+        <div class="bg-white rounded-lg shadow-md py-10 px-10">
+            <h1 class="text-5xl text-center font-bold mb-10">Изменение паспортных данных</h1>
 
-            <div class="account-content mb-60">
-                <h1 class="mb-40 mb-md-20">Изменение паспортных данных</h1>
+            <form class="max-w-4xl mx-auto" action="">
+                            
+                <div class="flex flex-wrap gap-5">
+                    <div class="form-item w-full">
 
-                <div class="account-updating">
-                    <form action="">
+                        <label for="passport-number">Серия и номер паспорта</label>
+                        <input type="text" id="passport-number" placeholder="Введите серию и номер паспорта" required>
+                        <div class="hidden text-error">Обязательное поле</div>
+                    </div>
 
-                        <div class="form-item">
-                            <div class="form-item__label">Серия и номер паспорта<span class="text-blue">*</span></div>
-                            <div class="form-input">
-                                <input type="text" id="passport-number" placeholder="Введите серию и номер паспорта"
-                                    required>
-                            </div>
-                            <div class="input-error">Обязательное поле</div>
-                        </div>
+                    <div class="form-item w-full">
+                        <label for="passport-issued">Кем выдан</label>
+                        <input type="text" id="passport-issued" placeholder="Введите название" required>
+                        <div class="hidden text-error">Обязательное поле</div>
+                    </div>
 
-                        <div class="form-item">
-                            <div class="form-item__label">Кем выдан<span class="text-blue">*</span></div>
-                            <div class="form-input">
-                                <input type="text" id="passport-issued" placeholder="Введите название" required>
-                            </div>
-                            <div class="input-error">Обязательное поле</div>
-                        </div>
+                    
+                    <div class="form-item w-full md:w-[calc(50%-10px)]">
+                        <label for="passport-date">Дата выдачи</label>
+                        <input type="date" id="passport-date" class="js-input-date" placeholder="ДД.ММ.ГГ" required>
+                        <div class="hidden text-error">Обязательное поле</div>
+                    </div>
 
-                        <div class="form-row">
+                    <div class="form-item w-full md:w-[calc(50%-10px)]">
+                        <label for="passport-code">Код подразделения</label>
+                        <input type="text" id="passport-code" placeholder="Введите код подразделения" required>
+                        <div class="hidden text-error">Обязательное поле</div>
+                    </div>
 
-                            <div class="form-item">
-                                <div class="form-item__label">Дата выдачи<span class="text-blue">*</span></div>
-                                <div class="form-input">
-                                    <input type="text" id="passport-date" class="input-date" placeholder="ДД.ММ.ГГГГ" required>
-                                </div>
-                                <div class="input-error">Обязательное поле</div>
-                            </div>
+                    <div class="form-item w-full">
+                        <label for="passport-birthplace">Место рождения</label>
+                        <input type="text" id="passport-birthplace" placeholder="Введите место рождения" required>
+                        <div class="hidden text-error">Обязательное поле</div>
+                    </div>
 
-                            <div class="form-item">
-                                <div class="form-item__label">Код подразделения<span class="text-blue">*</span></div>
-                                <div class="form-input">
-                                    <input type="text" id="passport-code" placeholder="Введите код подразделения"
-                                        required>
-                                </div>
-                                <div class="input-error">Обязательное поле</div>
-                            </div>
-                        </div>
+                    <div class="form-item w-full">
+                        <label for="passport-address">Адрес регистрации</label>
+                        <input type="text" id="passport-address" placeholder="Введите адрес регистрации" required>
+                        <div class="hidden text-error">Обязательное поле</div>
+                    </div>
 
-                        <div class="form-item">
-                            <div class="form-item__label">Место рождения<span class="text-blue">*</span></div>
-                            <div class="form-input">
-                                <input type="text" id="passport-birthplace" placeholder="Введите место рождения"
-                                    required>
-                            </div>
-                            <div class="input-error">Обязательное поле</div>
-                        </div>
+                    <label class="">
+                        <input type="checkbox" id="same-address">
+                        <span class="custom-checkbox"></span>
+                        <span>Адрес регистрации совпадает с моим фактическим местом жительства</span>
+                    </label>
 
-                        <div class="form-item">
-                            <div class="form-item__label">Адрес регистрации<span class="text-blue">*</span></div>
-                            <div class="form-input">
-                                <input type="text" id="passport-address" placeholder="Введите адрес регистрации"
-                                    required>
-                            </div>
-                            <div class="input-error">Обязательное поле</div>
-                        </div>
-
-                        <label for="same-address">
-                            <input type="checkbox" id="same-address">
-                            <span class="custom-checkbox"></span>
-                            <span>Адрес регистрации совпадает с моим фактическим местом жительства</span>
-                        </label>
-
-                        <div class="form-item fact-address mt-10 mt-md-10 mb-40">
-                            <div class="form-item__label">Адрес фактического места жительства<span
-                                    class="text-blue">*</span></div>
-                            <div class="form-input">
-                                <input type="text" id="fact-address" placeholder="Введите адрес фактического проживания"
-                                    required>
-                            </div>
-                            <div class="input-error">Обязательное поле</div>
-                        </div>
+                    <div class="form-item w-full js-fact-address mb-10">
+                        <label for="passport-fact-address">Адрес фактического места жительства</label>
+                        <input type="text" id="passport-fact-address" class="" placeholder="Введите адрес фактического места жительства">
+                    </div>
 
 
-                        <div class="form-row gap-20 mt-20">
-                            <a href="account-updating.html" class="btn btn-dashed">
-                                <img src="img/buttons/left-arrow.svg" alt="стрелка">
-                                Назад
-                            </a>
-                            <a href="account-updating-photos.html" class="btn js-form-btn">Сохранить</a>
-                        </div>
-                    </form>
+                    <div class="w-full flex gap-5">
+                        <a href="account-updating.html" class="btn w-full btn-dashed ">
+                            Назад
+                        </a>
+                        <a href="account-updating-photos.html" class="btn w-full btn-accent">Далее</a> 
+                    </div>
+
                 </div>
-
-            </div>
-
-
-            <div class="notification error">
-                <span>Не все поля заполнены</span>
-                <img src="img/buttons/account-menu-close.svg" alt="ошибка">
-            </div>
+            </form>
 
         </div>
+
     </div>
+</div>
 
 
-    <footer>
+
+
+<footer>
     
 </footer>
 
 <script src="./js/scripts.js"></script>
 
 </body>
-
 </html>

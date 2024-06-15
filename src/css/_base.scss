@@ -16,3 +16,6 @@ body {
 footer .container {
     @apply p-10
 }
+.notification {
+    @apply fixed top-40 right-36 bg-red_75  text-white rounded-lg backdrop-blur-sm px-2.5 py-5 flex items-center gap-2 hidden cursor-pointer
+}

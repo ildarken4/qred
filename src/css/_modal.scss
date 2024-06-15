@@ -1,0 +1,18 @@
+.modal {
+    @apply fixed top-0 left-0 w-screen h-screen bg-black_02 flex items-center justify-center backdrop-blur-sm pointer-events-none opacity-0 transition-all;
+
+    &.active {
+        @apply opacity-100 pointer-events-auto
+    }
+    &-uploads {
+        @apply block overflow-auto fixed top-0 left-0 w-screen h-screen  bg-blue z-50 pt-0 pb-14 px-10;
+    }
+}
+.popup {
+    @apply bg-white rounded-lg p-10 w-full max-w-[736px];
+
+    &-small {
+        @apply max-w-3xl
+    }
+}
+

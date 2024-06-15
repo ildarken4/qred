@@ -65,7 +65,7 @@ if (probability) {
 
 const smsTimer = document.getElementById('js-timer');
 const updateTimerBtn = document.getElementById('js-update-timer');
-let timerCount = 10;
+let timerCount = 59;
 let timerInterval;
 
 function updateTimer() {
@@ -263,3 +263,282 @@ const accountSwiper = new Swiper('.loans-slider', {
         },
     },
 });
+
+// Модальное окно
+const modals = document.querySelectorAll('.modal');
+const popup = document.querySelector('.popup');
+let modalName;
+let scrollPosition;
+
+function disableBodyScroll() {
+    if (typeof scrollPosition === 'undefined') {
+        // Сохраняем текущую позицию прокрутки только при первом открытии модального окна
+        scrollPosition = window.scrollY || window.pageYOffset;
+
+        // Добавляем класс для блокировки прокрутки
+        document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollPosition}px`;
+    }
+}
+
+function enableBodyScroll() {
+    // Для закрытия модального окна, восстанавливаем прокрутку только если позиция была сохранена
+    if (typeof scrollPosition !== 'undefined') {
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.top = '';
+        window.scrollTo(0, scrollPosition);
+
+        // Сбрасываем сохраненную позицию прокрутки
+        scrollPosition = undefined;
+    }
+}
+// Клик вне .popup
+document.addEventListener('mouseup', function (e) {
+    const popups = document.querySelectorAll('.popup');
+    let headerNav = document.querySelector('.header-nav');
+
+    popups.forEach(popup => {
+        const modal = popup.closest('.modal'); // Получаем ближайший родитель .modal для текущего .popup
+
+        // Проверяем наличие .active у родителя .modal
+        if (modal && modal.classList.contains('active')) {
+            if (!popup.contains(e.target)) {
+                closeModal();
+            }
+        }
+    });
+
+    
+});
+
+
+// Открыть модальное окно
+function openModal(modalName) {
+    let modal = document.getElementById(modalName);
+    modal.classList.add("active");
+    disableBodyScroll();
+
+    
+}
+
+// Переключить модальное окно
+let modal1, modal2;
+function changeModal(modal1, modal2) {
+    let openingModal = document.getElementById(modal2);
+    let closingModal = document.getElementById(modal1);
+    openingModal.classList.add("active");
+    closingModal.classList.remove("active");
+
+}
+
+// Закрыть модальное окно
+function closeModal() {
+    
+    modals.forEach(function(item) {
+        item.classList.remove("active");
+    })
+    enableBodyScroll();
+}
+
+
+// Таймер отправки email/sms
+
+let timer;
+
+function startEmailTimer() {
+    clearInterval(timer); // Остановка предыдущего таймера, если он существует
+    
+    let seconds = 59;
+    const button = document.querySelector('.js-email-button');
+    button.classList.add('btn-disabled');
+    // Функция обновления таймера
+    function updateTimer() {
+        const timerElement = document.querySelector('.js-popup-timer');
+        timerElement.classList.remove('hidden');
+        
+
+        if (seconds >= 0) {
+            const secondsText = getSecondsText(seconds);
+            timerElement.textContent = seconds + ' ' + secondsText;
+            seconds--;
+        } else {
+            clearInterval(timer);
+            button.classList.remove('btn-disabled');
+            timerElement.classList.add('hidden');
+        }
+    }
+
+    updateTimer();
+
+    timer = setInterval(updateTimer, 1000);
+}
+
+// скрытие поля адреса если фактический совпадает с регистрацией
+
+const sameAddress = document.querySelector('#same-address');
+const factAddress = document.querySelector('.js-fact-address');
+
+if (sameAddress) {
+    sameAddress.addEventListener('click', function() {
+        factAddress.classList.toggle('hidden');
+    })
+}
+
+// скрытие лишних полей на странице Место работы если Пенсионер
+
+const customOptions = document.querySelectorAll('.custom-option');
+
+if (document.querySelector('.job-retiree')) {
+    customOptions.forEach(function (option) {
+        option.addEventListener('click', function () {
+            const selectValue = this.querySelector('.custom-select__value');
+
+            if (selectValue) {
+                if (selectValue.classList.contains('job-retiree')) {
+                    // Если есть класс .job-retiree, добавляем класс .hidden к элементам .retiree-hide
+                    const retireeHideElements = document.querySelectorAll('.retiree-hide');
+                    retireeHideElements.forEach(function (element) {
+                        element.classList.add('hidden');
+                    });
+                } else {
+                    // Если нет класса .job-retiree, удаляем класс .hidden у элементов .retiree-hide
+                    const retireeHideElements = document.querySelectorAll('.retiree-hide');
+                    retireeHideElements.forEach(function (element) {
+                        element.classList.remove('hidden');
+                    });
+                }
+            }
+        });
+    });
+}
+
+
+// скрипт для работы input[type="range"]
+const sliders = document.querySelectorAll('input[type="range"]');
+
+sliders.forEach(function(slider) {
+    const updateSlider = () => {
+        const min = slider.min;
+        const max = slider.max;
+        const value = slider.value;
+        const range = max - min;
+        const ratio = (value - min) / range;
+        const sx = `calc(0.5 * 2em + ${ratio} * (100% - 2em))`;
+
+        slider.style.setProperty('--sx', sx);
+    };
+
+    slider.addEventListener('input', updateSlider);
+    updateSlider(); // Initialize on page load
+})
+        
+const accountSlider = document.querySelector('.account-slider');
+
+if (accountSlider) {
+    const accountSwiper = new Swiper('.account-slider', {
+        spaceBetween: 30,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.slider-next',
+            prevEl: '.slider-prev',
+        },
+
+        pagination: {
+            el: '.slider-counter',
+            type: 'fraction',
+            renderFraction: function (currentClass, totalClass) {
+                return '<div class="current-slide ' + currentClass + '"></div>' +
+                    ' <div class="line border-b border-black w-8"></div> ' +
+                    '<div class=" total-slide ' + totalClass + '"></div>';
+            },
+        },
+    });
+}
+
+// Показать/скрыть обращения на account-my-apepals
+
+const appeals = document.querySelectorAll('.js-appeals-row');
+
+if(appeals) {
+    function hideAppeals() {
+        for(let i = 0; i<= appeals.length-1 ; i++) {
+            if (i > 4) {
+                appeals[i].classList.add('hidden')
+            }
+        }
+    }
+
+    hideAppeals();
+    
+    
+    const showAppeals = document.querySelector('.js-show-appeals');
+
+    if(showAppeals) {
+        showAppeals.addEventListener('click', function () {
+            if(!this.classList.contains('active')) {
+                appeals.forEach(function(appeal) {
+                    appeal.classList.remove('hidden');
+                });
+                this.classList.add('active');
+                this.textContent = 'Свернуть';
+            } else {
+                hideAppeals();
+                this.classList.remove('active');
+                this.textContent = 'Показать все обращения';
+            }
+        })
+    }
+}
+
+// Вывод названия загруженного файла для input[type="file"] и переключение между загржаемыми фото
+
+const fileInputs = document.querySelectorAll('input[type="file"]');
+
+
+if (fileInputs) {
+    
+    fileInputs.forEach(function (fileInput) {
+        fileInput.addEventListener('change', function () {
+            
+
+            var filesContainer = document.querySelector('.loaded-files');
+
+            if(filesContainer) {
+                filesContainer.classList.add('mt-7');
+                var files = fileInput.files;
+        
+                for (var i = 0; i < files.length; i++) {
+                    var file = files[i];
+                    let fileName = file.name;
+                    var fileItem = document.createElement('div');
+                    let deleteButton = document.createElement('img');
+                    deleteButton.src = '../img/icons/delete-file.svg';
+                    deleteButton.classList.add('delete-file');
+                    fileItem.classList.add('loaded-files__item');
+
+                    let fileNameBlock = document.createElement('div');
+                    fileNameBlock.classList.add('appeal-file');
+                    fileNameBlock.textContent = fileName;
+                    fileItem.appendChild(fileNameBlock);
+                    fileItem.appendChild(deleteButton);
+                    filesContainer.appendChild(fileItem);
+
+                    deleteButton.addEventListener('click', function() {
+                        let fileItems = filesContainer.querySelectorAll('.loaded-files__item');
+
+                        if(fileItems.length == 1) {
+                            filesContainer.classList.remove('mt-7');
+                        }
+
+                        this.parentNode.parentNode.removeChild(this.parentNode);
+                        
+                    })
+                }
+            }
+        });
+    });
+
+    
+}

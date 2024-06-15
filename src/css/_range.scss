@@ -32,15 +32,15 @@ input[type=range].styled-slider::-webkit-slider-thumb {
     border: 2px solid #FFFFFF;
    
     position: relative;
-    top: -7px;
+    top: -11px;
     cursor: pointer;
     transition: all 0.4s ease;
 }
 
 input[type=range].styled-slider::-webkit-slider-runnable-track {
-    height: 10px;
+    height: 3px;
     border-radius: 16px;
-    background: red;
+    background: #EDEDED ;
     box-shadow: none;
 } 
 
@@ -49,20 +49,20 @@ input[type=range].styled-slider::-webkit-slider-thumb:active {
 }
 
 input[type=range].styled-slider:active::-webkit-slider-runnable-track {
-    background: #F4F5F7;
-    border-color: #F4F5F7;
+    background: #F4F5F7 ;
+    border-color: #F4F5F7 ;
 }
 
 input[type=range].styled-slider.slider-progress::-webkit-slider-runnable-track {
-    background: linear-gradient(#D7AB50,#D7AB50) 0/var(--sx) 100% no-repeat, #F4F5F7;
+    background: linear-gradient(#D7AB50,#D7AB50) 0/var(--sx) 100% no-repeat, #F4F5F7 ;
 }
 
 input[type=range].styled-slider.slider-progress:hover::-webkit-slider-runnable-track {
-    background: linear-gradient(#D7AB50,#D7AB50) 0/var(--sx) 100% no-repeat, #F4F5F7;
+    background: linear-gradient(#D7AB50,#D7AB50) 0/var(--sx) 100% no-repeat, #F4F5F7 ;
 }
 
 input[type=range].styled-slider.slider-progress:active::-webkit-slider-runnable-track {
-    background: linear-gradient(#D7AB50,#D7AB50) 0/var(--sx) 100% no-repeat, #F4F5F7;
+    background: linear-gradient(#D7AB50,#D7AB50) 0/var(--sx) 100% no-repeat, #F4F5F7 ;
 }
 
 /*mozilla*/
@@ -78,7 +78,7 @@ input[type=range].styled-slider::-moz-range-thumb {
 }
 
 input[type=range].styled-slider::-moz-range-track {
-    height: 10px;
+    height: 3px;
     border-radius: 16px;
     background: #F4F5F7;
     box-shadow: none;
@@ -131,7 +131,7 @@ input[type=range].styled-slider::-ms-thumb {
 }
 
 input[type=range].styled-slider::-ms-track {
-    height: 1em;
+    height: 3px;
     border-radius: 0.5em;
     background: #F4F5F7;
     box-shadow: none;
@@ -141,3 +141,4 @@ input[type=range].styled-slider::-ms-track {
 input[type=range].styled-slider::-ms-thumb:hover {
     background: #D7AB50;
 }
+

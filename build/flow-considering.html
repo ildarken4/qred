@@ -30,49 +30,45 @@
 <body>
 
     <header class="header relative py-7">
-    <div class="container flex items-center justify-between">
+    <div class="container flex items-center justify-center">
       
       <a href="index.html" class="logo">
         <img src="img/Logo.svg" width="214px" alt="Логотип компании">
       </a>
-      <button class="btn btn-dashed">Назад</button>
+      <!-- <button class="btn btn-dashed">Назад</button> -->
     </div>
 </header>
 
-    <div class="wrapper pt-60 pt-sm-50">
+    <div class="wrapper">
         <div class="container">
-            <div class="d-flex justify-content-center">
-                <div class="flow-wrapper pb-150">
-                    <h1 class="flow-title mb-40 mb-sm-20">
+                <div class="max-w-[990px] mx-auto flex flex-col items-center pt-16 pb-36">
+                    <h1 class="text-5xl text-center font-bold mb-10">
                         Ваша заявка рассматривается
                     </h1>
 
-                    <div class="flow-info">
-                        <div class="flow-info__img">
-                            <img src="img/icons/clock-3d.png" width="100%" alt="часы">
+                    <img src="img/icons/clock-3d.png" class="mb-10" alt="">
+                    
+                    <p class="text-2xl text-blue_text font-semibold">Проверяем ваши документы.</p>
+                    <p class="text-2xl text-accent mb-10"> Пожалуйста, ожидайте.</p>
+
+                    <div class="w-[480px] px-10 py-5 bg-lightgray rounded-lg shadow-md border-2 border-gray flex-col justify-center items-start gap-5 inline-flex">
+                        <div class="w-full flex justify-between">
+                            <div class="">Номер заявки:</div>
+                            <div class="text-accent text-2xl font-semibold">134121231</div>
                         </div>
-                        <p class="flow-info__text text-gray">Проверяем ваши документы</p>
-                        <p class="flow-info__text text-blue mb-20">Пожалуйста, ожидайте.</p>
-                        <div class="flow-card loan-info">
-                            <div class="flow-card__item">
-                                <div class="flow-card__title">Номер заявки:</div>
-                                <div class="flow-card__data">12345678</div>
-                            </div>
-                            <div class="flow-card__item">
-                                <div class="flow-card__title">Дата займа:</div>
-                                <div class="flow-card__data">01.02.2024</div>
-                            </div>
-                            <div class="flow-card__item">
-                                <div class="flow-card__title">Номер заявки:</div>
-                                <div class="flow-card__data">21 000 ₽</div>
-                            </div>
+                        <div class="w-full flex justify-between">
+                            <div class="">Дата займа:</div>
+                            <div class="text-accent text-2xl font-semibold">01.02.2024</div>
+                        </div>
+                        <div class="w-full flex justify-between">
+                            <div class="">Сумма займа:</div>
+                            <div class="text-accent text-2xl font-semibold">21 000 ₽</div>
                         </div>
                     </div>
-
                 </div>
-            </div>
-
+            
         </div>
+        
 
     </div>
 
@@ -93,8 +89,6 @@
     
 </footer>
 
-<script src="./js/bootstrap.min.js"></script>
-<script src="./js/inputmask.js"></script>
 <script src="./js/scripts.js"></script>
 
 </body>

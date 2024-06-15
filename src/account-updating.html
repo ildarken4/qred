@@ -8,80 +8,80 @@
 <body>
 
 @@include('partials/header-account.html')
-<div class="wrapper account-wrapper">
-    <div class="container pt-60 pt-md-40">
+<div class="wrapper bg-lightgray py-14 relative min-h-screen">
+    <div class="container">
         
-        <div class="account-content mb-60">
-            <h1 class="mb-40 mb-md-20">Убедитесь, что все данные актуальны</h1>
+        <div class="bg-white rounded-lg shadow-md py-10 px-10">
+            <h1 class="text-5xl text-center font-bold mb-10">Убедитесь, что все данные актуальны</h1>
 
-            <div class="account-updating">
-                <div class="updating-block">
-                    <div class="updating-block__head">
-                        <div class="updating-block__name">Паспортные данные</div>
-                        <div class="change-btn">
-                            <div class="for-desktop">Изменить</div>
+            <div class="w-full max-w-4xl mx-auto">
+                <div class="mb-5">
+                    <div class="bg-lightgray flex items-center justify-between px-5 py-4">
+                        <div class="text-2xl font-semibold">Паспортные данные</div>
+                        <a href="account-updating-passport.html" class="flex items-center gap-1 cursor-pointer">
+                            <div>Изменить</div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M12.5 20.6951H18.5M6.50736 19.6951H5C4.44772 19.6951 4 19.2474 4 18.6951V17.1877C4 16.3921 4.31607 15.629 4.87868 15.0664L14.75 5.19511C15.7855 4.15957 17.4645 4.15957 18.5 5.19511C19.5355 6.23064 19.5355 7.90957 18.5 8.94511L8.62868 18.8164C8.06607 19.379 7.30301 19.6951 6.50736 19.6951Z" stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </div>
+                        </a>
                     </div>
-                    <div class="updating-block__body">
-                        <div class="updating-block__item">
-                            <span class="text-gray">Серия и номер:</span>
-                            <span>1234 456789</span>
+                    <div class="border-l border-gray border-dashed px-5 py-2.5">
+                        <div class="mb-2.5">
+                            <span class="text-gray_text">Серия и номер:</span>
+                            <span class="text-blue_text">1234 456789</span>
                         </div>
-                        <div class="updating-block__item">
-                            <span class="text-gray">Адрес регистрации:</span>
-                            <span>Москва, ул. Пушкина, д. 10к1, кв. 6</span>
+                        <div class="mb-2.5">
+                            <span class="text-gray_text">Адрес регистрации:</span>
+                            <span class="text-blue_text">Москва, ул. Пушкина, д. 10к1, кв. 6</span>
                         </div>
-                        <div class="updating-block__item">
-                            <span class="text-gray">Адрес фактического места жительства:</span>
-                            <span>Санкт-Петербург, ул. Уточкина, д58, кв. 194</span>
+                        <div class="mb-2.5">
+                            <span class="text-gray_text">Адрес фактического места жительства:</span>
+                            <span class="text-blue_text">Санкт-Петербург, ул. Уточкина, д58, кв. 194</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="updating-block">
-                    <div class="updating-block__head">
-                        <div class="updating-block__name">Занятость</div>
-                        <div class="change-btn">
-                            <div class="for-desktop">Изменить</div>
+                <div class="mb-5">
+                    <div class="bg-lightgray flex items-center justify-between px-5 py-4">
+                        <div class="text-2xl font-semibold">Занятость</div>
+                        <a href="account-updating-job.html" class="flex items-center gap-1 cursor-pointer">
+                            <div>Изменить</div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M12.5 20.6951H18.5M6.50736 19.6951H5C4.44772 19.6951 4 19.2474 4 18.6951V17.1877C4 16.3921 4.31607 15.629 4.87868 15.0664L14.75 5.19511C15.7855 4.15957 17.4645 4.15957 18.5 5.19511C19.5355 6.23064 19.5355 7.90957 18.5 8.94511L8.62868 18.8164C8.06607 19.379 7.30301 19.6951 6.50736 19.6951Z" stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </div>
+                        </a>
                     </div>
-                    <div class="updating-block__body">
-                        <div class="updating-block__item">
-                            <span class="text-gray">Деятельность:</span>
-                            <span>Работаю</span>
+                    <div class="border-l border-gray border-dashed px-5 py-2.5">
+                        <div class="mb-2.5">
+                            <span class="text-gray_text">Деятельность:</span>
+                            <span class="text-blue_text">Работаю</span>
                         </div>
-                        <div class="updating-block__item">
-                            <span class="text-gray">Место работы:</span>
-                            <span>Банковское отделение “Сбербанк”</span>
+                        <div class="mb-2.5">
+                            <span class="text-gray_text">Место работы:</span>
+                            <span class="text-blue_text">Банковское отделение “Сбербанк”</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="updating-block">
-                    <div class="updating-block__head">
-                        <div class="updating-block__name">Почта</div>
-                        <div class="change-btn">
-                            <div class="for-desktop">Изменить</div>
+                <div class="mb-10">
+                    <div class="bg-lightgray flex items-center justify-between px-5 py-4">
+                        <div class="text-2xl font-semibold">Почта</div>
+                        <a href="account-updating-email.html" class="flex items-center gap-1 cursor-pointer">
+                            <div>Изменить</div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M12.5 20.6951H18.5M6.50736 19.6951H5C4.44772 19.6951 4 19.2474 4 18.6951V17.1877C4 16.3921 4.31607 15.629 4.87868 15.0664L14.75 5.19511C15.7855 4.15957 17.4645 4.15957 18.5 5.19511C19.5355 6.23064 19.5355 7.90957 18.5 8.94511L8.62868 18.8164C8.06607 19.379 7.30301 19.6951 6.50736 19.6951Z" stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </div>
+                        </a>
                     </div>
-                    <div class="updating-block__body">
-                        <div class="updating-block__item">
-                            <span class="text-gray">Почта:</span>
-                            <span>pochta@mail.ru</span>
+                    <div class="border-l border-gray border-dashed px-5 py-2.5">
+                        <div class="mb-2.5">
+                            <span class="text-gray_text">Почта:</span>
+                            <span class="text-blue_text">pochta@mail.ru</span>
                         </div>
                     </div>
                 </div>
 
-                <a href="account-without-loan.html" class="btn">Подтвердить</a>
+                <a href="account-without-loan.html" class="btn btn-accent max-w-md mx-auto">Подтвердить</a>
             </div>
 
         </div>
@@ -89,6 +89,10 @@
     </div>
 </div>
 
+<div class="notification bg-green_80">
+    <span>Изменения успешно внесены</span>
+    <img src="img/buttons/account-menu-close.svg" alt="Закрыть">
+</div>
 
 @@include('partials/footer.html')
 </body>

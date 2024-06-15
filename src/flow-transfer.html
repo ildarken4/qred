@@ -10,27 +10,21 @@
 <body>
 
     @@include('partials/header-flow.html')
-    <div class="wrapper pt-60 pt-sm-50">
+    <div class="wrapper pb-36">
         <div class="container">
-            <div class="d-flex justify-content-center">
-                <div class="flow-wrapper pb-150 pb-sm-0">
-                    <h1 class="flow-title mb-40 mb-sm-20">
-                        Переводим деньги
-                    </h1>
+            <div class="max-w-[990px] mx-auto flex flex-col items-center pt-16 ">
+                <h1 class="text-5xl text-center font-bold mb-10">
+                    Переводим деньги
+                </h1>
 
-                    <div class="flow-info">
-                        <div class="flow-info__img">
-                            <img src="img/icons/wallet-3d.png" width="100%" alt="одобрение">
-                        </div>
-                        <p class="flow-info__text text-gray">Осуществляется перевод</p>
-                        <p class="flow-info__text text-blue mb-20">Пожалуйста, ожидайте.</p>
-                    </div>
+                <img src="img/icons/wallet-3d.png" class="mb-10" alt="">
+                
+                <p class="text-2xl text-blue_text font-semibold text-center w-full max-w-4xl mb-2">Осуществляется перевод.</p>
+                <p class="text-2xl text-accent">Пожалуйста, ожидайте.</p>
 
-                </div>
             </div>
-
+        
         </div>
-
     </div>
 
     @@include('partials/main-footer.html')
