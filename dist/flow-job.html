@@ -28,38 +28,39 @@
 </head>
 
 <body>
-
-    <header class="header relative py-7">
-    <div class="container flex items-center justify-center">
-      
-      <a href="index.html" class="logo">
-        <img src="img/Logo.svg" width="214px" alt="Логотип компании">
-      </a>
-      <!-- <button class="btn btn-dashed">Назад</button> -->
+    <div id="app">
+        <header class="header relative py-7">
+    <div class="container">
+      <div class="flex items-center justify-center">
+        <a href="index.html" class="logo w-36 lg:w-52">
+          <img src="img/Logo.svg" width="100%" alt="Логотип компании">
+        </a>
+      </div>
     </div>
 </header>
 
-    <div class="wrapper">
-        <div class="container">
-                <div class="max-w-[990px] mx-auto pt-16 pb-36">
-                    <h1 class="text-5xl text-center font-bold mb-10">
+
+        <div class="wrapper">
+            <div class="container">
+                <div class="max-w-[990px] mx-auto pt-10 md:pt-16 pb-36">
+                    <h1 class="text-[28px] md:text-5xl text-blue_text text-center font-bold mb-5 md:mb-10">
                         Заполните анкету
                     </h1>
 
-                    <div class="bg-lightgray rounded-xl border-2 border-lightgray flex justify-between items-center px-14 text-3xl font-bold mb-10">
+                    <div class="bg-lightgray rounded-lg mb:rounded-xl border-2 border-lightgray flex justify-between items-center px-2.5 md:px-14 text-xl md:text-3xl font-bold mb-5 md:mb-10">
                         <div class="flow-greeting__text">
                             Ваши данные под надежной защитой!
                         </div>
-                        <div class="">
-                            <img src="img/icons/lock-3d.png" width="100px" alt="приветствие">
+                        <div class="max-w-[60px] md:max-w-[100px]">
+                            <img src="img/icons/lock-3d.png" width="100%" alt="защита">
                         </div>
                     </div>
 
-                    <div class="rounded-xl border-2 border-lightgray px-20 py-14 shadow-sm">
+                    <div class="rounded-lg mb:rounded-xl border-2 border-lightgray px-7 lg:px-20 py-7 lg:py-14 shadow-sm">
 
 
                         <div class="js-probability text-darkblue mb-10">
-                            <div class="flex justify-between items-center text-2xl font-semibold mb-4">
+                            <div class="flex justify-between items-center md:text-2xl font-semibold mb-4">
                                 <div class="">Вероятность одобрения</div>
                                 <div class="js-probability__percent"><span>85</span>%</div>
                             </div>
@@ -70,26 +71,29 @@
                             </div>
                         </div>
 
-                        <div class="flex items-center justify-between text-3xl mb-10">
+                        <div class="flex flex-col md:flex-row gap-1  items-center justify-between text-xl md:text-3xl mb-10">
                             <h2 class="font-bold">Место работы</h2>
-                            <div class="text-gray_text">
-                                Шаг 4 из 5
+                            <div class="font-bold md:font-semibold  text-gray_text">
+                                 Шаг 4 из 5
                             </div>
                         </div>
+
                         <form action="">
-                            
+
                             <div class="flex flex-wrap gap-5">
                                 <div class="form-item w-full">
                                     <div class="form-item__label">Вид занятости</div>
-                                
-                                
+
+
                                     <div class="custom-select">
                                         <div class="custom-select__head">
                                             <div class="custom-select__result">
                                                 Выберите занятость
                                             </div>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9" fill="none">
-                                                <path d="M6 9L0.803847 -2.51247e-08L11.1962 8.834e-07L6 9Z" fill="#A3A3A3" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"
+                                                viewBox="0 0 12 9" fill="none">
+                                                <path d="M6 9L0.803847 -2.51247e-08L11.1962 8.834e-07L6 9Z"
+                                                    fill="#A3A3A3" />
                                             </svg>
                                         </div>
                                         <div class="custom-select__options columned">
@@ -115,7 +119,8 @@
                                                 </label>
                                             </div>
                                             <div class="custom-option custom-option-radio">
-                                                <label for="job-self-employed" class="radio-wrapper justify-content-between">
+                                                <label for="job-self-employed"
+                                                    class="radio-wrapper justify-content-between">
                                                     <span class="custom-select__value">Самозанятый</span>
                                                     <input type="radio" name="job-status" id="job-self-employed">
                                                     <span class="custom-radio"></span>
@@ -129,8 +134,10 @@
                                                 </label>
                                             </div>
                                             <div class="custom-option custom-option-radio">
-                                                <label for="job-individual" class="radio-wrapper justify-content-between">
-                                                    <span class="custom-select__value">Индивидуальный предприниматель</span>
+                                                <label for="job-individual"
+                                                    class="radio-wrapper justify-content-between">
+                                                    <span class="custom-select__value">Индивидуальный
+                                                        предприниматель</span>
                                                     <input type="radio" name="job-status" id="job-individual">
                                                     <span class="custom-radio"></span>
                                                 </label>
@@ -143,7 +150,8 @@
                                                 </label>
                                             </div>
                                             <div class="custom-option custom-option-radio">
-                                                <label for="job-unemployed" class="radio-wrapper justify-content-between">
+                                                <label for="job-unemployed"
+                                                    class="radio-wrapper justify-content-between">
                                                     <span class="custom-select__value">Безработный</span>
                                                     <input type="radio" name="job-status" id="job-unemployed">
                                                     <span class="custom-radio"></span>
@@ -156,73 +164,75 @@
                                 <div class="form-item w-full retiree-hide">
                                     <label for="job-position">Ваша должность</label>
                                     <input type="text" id="job-position" placeholder="Введите должность">
-                                    
+
                                 </div>
 
-                                
+
                                 <div class="form-item w-full retiree-hide">
                                     <label for="job-name">Наименование работодателя</label>
                                     <input type="text" id="job-name" placeholder="Введите наименование">
-                                    
+
                                 </div>
 
                                 <div class="form-item w-full retiree-hide">
                                     <label for="job-address">Адрес работодателя</label>
                                     <input type="text" id="job-address" placeholder="Введите адрес работодателя">
-                                    
+
                                 </div>
 
                                 <div class="form-item w-full retiree-hide">
                                     <label for="job-phone">Рабочий телефон</label>
                                     <input type="tel" id="job-phone" placeholder="Введите рабочий телефон">
-                                    
+
                                 </div>
 
                                 <div class="form-item w-full md:w-[calc(50%-10px)]">
                                     <label for="job-income">Ежемесячный доход</label>
                                     <input type="text" id="job-income" placeholder="Введите ваш ежемесячный доход">
-                                    
+
                                 </div>
 
                                 <div class="form-item w-full md:w-[calc(50%-10px)]">
                                     <label for="job-expenses">Ежемесячный расход</label>
                                     <input type="text" id="job-expenses" placeholder="Введите ваш ежемесячный расход">
-                                    
+
                                 </div>
 
-                                <a href="flow-passport.html" class="btn btn-accent w-full js-form-btn mt-5"> Перейти к следующему шагу</a>
+                                <a href="flow-passport.html" class="btn btn-accent w-full js-form-btn mt-5"> Перейти к
+                                    следующему шагу</a>
 
                             </div>
-                            
+
                         </form>
                     </div>
 
                 </div>
-            
+
+            </div>
+
+
         </div>
-        
 
-    </div>
-
-    <footer class="pb-16">
-    <div class="container flex justify-between gap-5 bg-lightgray rounded-3xl">
-        <a href="index.html" class="logo">
-            <img src="img/Logo.svg" width="214px" alt="Логотип компании">
-        </a>
-        <p class="text-[10px] text-gray_text max-w-md text-center">
-             2024 ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ МИКРОКРЕДИТНАЯ КОМПАНИЯ «БАНКА ДЕНЕГ», ИНН 9727039021, ОГРН 1237700445696, 117638, г Москва, ул Одесская, д 2, помещ. 5/7, регистрационный номер записи в государственном реестре микрофинансовых организаций Банка России 2303045009979 от 22.08.2023.
-        </p>
-
-        <div class="text-3xl uppercase font-semibold flex flex-col items-end">
-            <a href="tel:88000000000">8 800 000-00-00</a>
-            <a href="mailto:mail@mail.ru" class="underline underline-offset-4">mail@mail.ru</a>
+        <footer class="pb-16">
+    <div class="container">
+        <div class="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-5 bg-lightgray rounded-3xl p-10">
+            <a href="index.html" class="order-2 md:order-1 w-36 md:w-52">
+                <img src="img/Logo.svg" width="100%" alt="Логотип компании">
+            </a>
+            <p class="order-3 md:order-2 text-[10px] text-gray_text max-w-md text-center">
+                2024 ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ МИКРОКРЕДИТНАЯ КОМПАНИЯ «БАНКА ДЕНЕГ», ИНН 9727039021, ОГРН 1237700445696, 117638, г Москва, ул Одесская, д 2, помещ. 5/7, регистрационный номер записи в государственном реестре микрофинансовых организаций Банка России 2303045009979 от 22.08.2023.
+            </p>
+            <div class="text-[28px] md:text-xl xl:text-3xl leading-8 uppercase font-medium md:font-semibold flex flex-col order-1 md:order-3 items-center md:items-end">
+                <a href="tel:88000000000">8 800 000-00-00</a>
+                <a href="mailto:mail@mail.ru" class="lg:underline underline-offset-4">mail@mail.ru</a>
+            </div>
         </div>
     </div>
-    
 </footer>
 
 <script src="./js/scripts.js"></script>
 
+    </div>
 </body>
 
 </html>

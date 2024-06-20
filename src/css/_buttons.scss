@@ -8,7 +8,7 @@
 // .btn.nav-toggler - кнопка открытия меню в header
 
 .btn {
-    @apply rounded-full flex items-center justify-center gap-4 text-accent px-7 py-3.5 border-2 border-accent text-base  hover:border-dark_accent  cursor-pointer transition-all h-[60px] hover:text-dark_accent active:border-black active:text-black min-w-[280px];
+    @apply rounded-full flex items-center justify-center gap-4 text-accent px-2.5 md:px-7 py-3.5 border-2 border-accent text-base  hover:border-dark_accent  cursor-pointer transition-all h-[60px] hover:text-dark_accent active:border-black active:text-black min-w-[280px];
 
     svg path {
         @apply transition-all stroke-accent;
@@ -70,7 +70,7 @@
 
     }
     &-gray {
-        @apply rounded-[4px] bg-gray text-black border border-gray text-xl gap-1 font-semibold hover:text-black hover:border-black active:border-gray active:text-accent;
+        @apply rounded-[4px] bg-gray text-black border border-gray h-[50px] md:h-[60px] text-sm md:text-xl gap-1 font-semibold hover:text-black hover:border-black active:border-gray active:text-accent;
 
         &:active {
             svg path {

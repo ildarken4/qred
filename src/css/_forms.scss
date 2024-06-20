@@ -1,6 +1,6 @@
 .form-item {
     label {
-        @apply block text-xl mb-2.5;
+        @apply block text-sm lg:text-xl mb-2.5;
     }
     input {
         @apply h-[60px] w-full bg-lightgray p-2.5 border-none rounded-md text-black focus:ring-black hover:ring-gray hover:text-black;
@@ -100,12 +100,13 @@ input[type="radio"]:checked {
   width: 100%;
 
   &__head {
+    height: 60px;
     padding: 20px;
     font-size: 17px;
     font-weight: 500;
     line-height: 20px;
     background-color: #F4F5F7;
-    border-radius: 10px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -118,7 +119,7 @@ input[type="radio"]:checked {
 
     @media (max-width:991px) {
       font-size: 18px;
-      padding: 10px 20px;
+      // padding: 10px 20px;
     }
 
     svg {

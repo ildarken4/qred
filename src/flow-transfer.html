@@ -8,26 +8,30 @@
 </head>
 
 <body>
+    <div id="app">
+        @@include('partials/header-flow.html')
+        <div class="wrapper">
+            <div class="container">
+                <div class="max-w-[990px] mx-auto pt-10 md:pt-16 pb-36 text-center">
+                    <h1 class="text-[28px] md:text-5xl text-blue_text text-center font-bold mb-5 md:mb-10">
+                        Переводим деньги
+                    </h1>
 
-    @@include('partials/header-flow.html')
-    <div class="wrapper pb-36">
-        <div class="container">
-            <div class="max-w-[990px] mx-auto flex flex-col items-center pt-16 ">
-                <h1 class="text-5xl text-center font-bold mb-10">
-                    Переводим деньги
-                </h1>
+                    <div class="w-[100px] md:w-40 mx-auto mb-5 md:mb-10">
+                        <img src="img/icons/wallet-3d.png" width="100%" alt="кошелек">
+                    </div>
 
-                <img src="img/icons/wallet-3d.png" class="mb-10" alt="">
-                
-                <p class="text-2xl text-blue_text font-semibold text-center w-full max-w-4xl mb-2">Осуществляется перевод.</p>
-                <p class="text-2xl text-accent">Пожалуйста, ожидайте.</p>
+                    <p class="text-center md:text-2xl text-blue_text font-semibold max-w-3xl mx-auto">Осуществляется
+                        перевод.</p>
+                    <p class=" md:text-2xl text-accent">Пожалуйста, ожидайте.</p>
+
+                </div>
 
             </div>
-        
         </div>
-    </div>
 
-    @@include('partials/main-footer.html')
+        @@include('partials/main-footer.html')
+    </div>
 </body>
 
 </html>

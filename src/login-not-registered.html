@@ -8,57 +8,37 @@
 </head>
 
 <body>
+    <div id="app">
+        @@include('partials/header-login.html')
+        <div class="wrapper">
+            <div class="container">
+                <div class="max-w-[990px] mx-auto pt-10 md:pt-16 pb-36">
+                    
+                        <h1 class="text-[28px] md:text-5xl text-blue_text text-center font-bold mb-10">
+                            Вход в личный кабинет
+                        </h1>
 
-    @@include('partials/header-flow.html')
-    <div class="wrapper">
-        <div class="container">
-            <div class="max-w-[990px] mx-auto pt-16 pb-36">
-                
-                    <h1 class="text-center text-5xl font-bold mb-10">
-                        Вход в личный кабинет
-                    </h1>
+                        <div class="py-7 lg:py-10 px-7 border border-darkgray rounded-lg shadow-md">
+                            <div class="max-w-[400px] mx-auto">
+                                <p class="text-base md:text-2xl text-center font-medium text-blue_text mb-10">По указанному номеру телефона не зарегистрирован личный кабинет</p>
 
-                    <div class="py-10 border border-darkgray rounded-lg shadow-md">
-                        <div class="max-w-[400px] mx-auto">
-                            <p class="text-2xl text-center mb-10">По указанному номеру телефона не зарегистрирован личный кабинет</p>
-
-                            <a href="" class="btn btn-accent btn-disabled mb-10 js-button">
-                                Получить заем
-                            </a>
-
-                            <label for="rules" class="">
-                                <input type="checkbox" id="rules">
-                                <span class="custom-checkbox"></span>
-                                <span>Я ознакомлен и согласен со&nbsp;<a class="js-show-rules text-dark_accent cursor-pointer">следующим</a> </span>
-                            </label>
-                        
-                            <div class="js-hidden-checkbox hidden">
-                                <label class="mb-2.5 mt-5" for="agreement-personal" class="mb-10">
-                                    <input type="checkbox" id="agreement-personal" checked>
-                                    <span class="custom-checkbox"></span>
-                                    <span>Даю свое согласие на&nbsp;<a href="#" class="text-dark_accent">обработку и передачу персональных
-                                            данных</a> </span>
-                                </label>
-                        
-                                <label class=""  for="agreement-sign">
-                                    <input type="checkbox" id="agreement-sign" checked>
-                                    <span class="custom-checkbox"></span>
-                                    <span>Даю свое согласие на&nbsp;<a href="#" class="text-dark_accent">использование аналога
-                                            собственноручной
-                                            подписи</a> </span>
-                                </label>
-                                <div class="js-hide-rules mt-5 text-center cursor-pointer">Свернуть</div>
+                                <a href="" class="btn btn-accent btn-disabled mb-10 js-button">
+                                    Получить заем
+                                </a>
+                                @@include('partials/checkbox-confirm.html')
+                                
                             </div>
+
                         </div>
 
-                    </div>
+                </div>
 
             </div>
-
         </div>
-    </div>
 
-    @@include('partials/main-footer.html')
+        @@include('partials/main-footer.html')
+    </div>
+    
 </body>
 
 </html>

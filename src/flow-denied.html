@@ -8,29 +8,35 @@
 </head>
 
 <body>
-
-    @@include('partials/header-flow.html')
-    <div class="wrapper">
-        <div class="container">
-                <div class="max-w-[990px] mx-auto flex flex-col items-center pt-16 pb-36">
-                    <h1 class="text-5xl text-center font-bold mb-10">
+    <div id="app">
+        @@include('partials/header-flow.html')
+        <div class="wrapper">
+            <div class="container">
+                <div class="max-w-[990px] mx-auto pt-10 md:pt-16 pb-36 text-center">
+                    <h1 class="text-[28px] md:text-5xl text-blue_text text-center font-bold mb-5 md:mb-10">
                         Вам отказано в займе!
                     </h1>
 
-                    <img src="img/icons/mail-3d.png" class="mb-10" alt="">
-                    
-                    <p class="text-2xl text-blue_text font-semibold text-center w-full max-w-4xl mb-10">К сожалению, мы вынуждены отказать вам в займе. <span class="text-accent">Мы не называем точной причины отказа.</span>  Возможно, у вас плохая кредитная история. Вы можете попробовать снова через 7 дней</p>
-                    
+                    <div class="w-[100px] md:w-40 mx-auto mb-5 md:mb-10">
+                        <img src="img/icons/mail-3d.png" width="100%" alt="отказ">
+                    </div>
 
-                    <a href="index.html" class="btn btn-accent">Вернуться на главную</a>
+                    <p class="text-center md:text-2xl text-blue_text font-semibold mb-5 md:mb-10">К сожалению, мы
+                        вынуждены отказать вам в займе. <span class="text-accent">Мы не называем точной причины
+                            отказа.</span> Возможно, у вас плохая кредитная история. Вы можете попробовать снова через 7
+                        дней</p>
+
+
+                    <a href="index.html" class="btn btn-accent max-w-[280px] mx-auto">Вернуться на главную</a>
                 </div>
-            
+
+            </div>
+
+
         </div>
-        
 
+        @@include('partials/main-footer.html')
     </div>
-
-    @@include('partials/main-footer.html')
 </body>
 
 </html>

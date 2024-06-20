@@ -57,7 +57,16 @@ module.exports = {
         'cover': 'cover',
         'contain': 'contain',
         'banner': '25%'
-      }
+      },
+      container: {
+        center: true,
+        padding: '2rem',
+        screens: {
+          lg: '991px',
+          xl: '1200px',
+          '2xl': '1500px',
+        },
+      },
     },
   },
   plugins: plugins,
