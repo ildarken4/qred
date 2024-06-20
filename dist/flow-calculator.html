@@ -43,7 +43,7 @@
         <div class="wrapper">
             <div class="container">
                 <div class="max-w-[990px] mx-auto pt-10 md:pt-16 pb-36">
-                    <h1 class="text-[28px] md:text-5xl text-blue_text text-center font-bold mb-5 md:mb-10">
+                    <h1 class="text-[28px] text-blue_text  md:text-5xl text-blue_text text-center font-bold mb-5 md:mb-10">
                         Заполните анкету
                     </h1>
 
@@ -116,31 +116,28 @@
                                 оформление</a>
 
                             <label for="rules" class="">
-                                <input type="checkbox" id="rules">
-                                <span class="custom-checkbox"></span>
-                                <span>Я ознакомлен со&nbsp;<a
-                                        class="js-show-rules text-dark_accent cursor-pointer">следующим</a> </span>
-                            </label>
+    <input type="checkbox" id="rules">
+    <span class="custom-checkbox"></span>
+    <span class="text-xs md:text-sm leading-5">Я ознакомлен и согласен со&nbsp;<a class="js-show-rules text-dark_accent cursor-pointer">следующим</a> </span>
+</label>
 
-                            <div class="js-hidden-checkbox hidden">
-                                <label class="mb-2.5 mt-5" for="agreement-personal" class="mb-10">
-                                    <input type="checkbox" id="agreement-personal" checked>
-                                    <span class="custom-checkbox"></span>
-                                    <span>Даю свое согласие на&nbsp;<a href="#" class="text-dark_accent">обработку и
-                                            передачу персональных
-                                            данных</a> </span>
-                                </label>
+<div class="js-hidden-checkbox hidden">
+    <label class="mb-2.5 mt-5" for="agreement-personal" class="mb-10">
+        <input type="checkbox" id="agreement-personal" checked>
+        <span class="custom-checkbox"></span>
+        <span class="text-xs md:text-sm leading-5">Даю свое согласие на&nbsp;<a href="#" class="text-dark_accent">обработку и передачу персональных
+                данных</a> </span>
+    </label>
 
-                                <label class="" for="agreement-sign">
-                                    <input type="checkbox" id="agreement-sign" checked>
-                                    <span class="custom-checkbox"></span>
-                                    <span>Даю свое согласие на&nbsp;<a href="#" class="text-dark_accent">использование
-                                            аналога
-                                            собственноручной
-                                            подписи</a> </span>
-                                </label>
-                                <div class="js-hide-rules mt-5 text-center cursor-pointer">Свернуть</div>
-                            </div>
+    <label class=""  for="agreement-sign">
+        <input type="checkbox" id="agreement-sign" checked>
+        <span class="custom-checkbox"></span>
+        <span class="text-xs md:text-sm leading-5">Даю свое согласие на&nbsp;<a href="#" class="text-dark_accent">использование аналога
+                собственноручной
+                подписи</a> </span>
+    </label>
+    <div class="js-hide-rules mt-5 text-center font-medium underline cursor-pointer">Свернуть</div>
+</div>
                         </form>
 
 

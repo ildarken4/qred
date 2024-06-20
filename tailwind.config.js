@@ -63,7 +63,7 @@ module.exports = {
         padding: '2rem',
         screens: {
           lg: '991px',
-          xl: '1200px',
+          xl: '1280px',
           '2xl': '1500px',
         },
       },

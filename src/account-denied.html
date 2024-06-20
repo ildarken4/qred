@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     @@include('partials/head.html')
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Личный кабинет</title>
 </head>
+
 <body>
+    <div id="app">
+        @@include('partials/header-account.html')
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
+            <div class="container">
 
-@@include('partials/header-account.html')
-<div class="wrapper bg-lightgray py-14 relative min-h-screen">
-    <div class="container">
-        
-        <div class="bg-white rounded-lg shadow-md py-10 px-10">
-            <div class="max-w-[990px] mx-auto flex flex-col items-center">
-                <h1 class="text-5xl text-center font-bold mb-10">
-                    Вам отказано в займе!
-                </h1>
+                <div class="bg-white rounded-lg shadow-md py-10 px-2.5 md:px-10">
+                    <h1 class="text-[28px] text-blue_text  md:text-5xl text-center font-bold mb-5 md:mb-10">Вам отказано в займе!</h1>
 
-                <img src="img/icons/mail-3d.png" class="mb-10" alt="">
-                
-                <p class="text-2xl text-blue_text font-semibold text-center w-full max-w-4xl mb-10">К сожалению, мы вынуждены отказать вам в займе. <span class="text-accent">Мы не называем точной причины отказа.</span>  Возможно, у вас плохая кредитная история. Вы можете попробовать снова через 7 дней</p>
-                
+                    <div class="max-w-[990px] mx-auto flex flex-col items-center">
+                        <div class="w-[100px] md:w-40 mx-auto mb-5 md:mb-10">
+                        <img src="img/icons/mail-3d.png" width="100%" alt="отказ">
+                    </div>
 
-                <a href="index.html" class="btn btn-accent w-full max-w-sm">Вернуться на главную</a>
+                    <p class="text-center md:text-2xl text-blue_text font-semibold mb-5 md:mb-10">К сожалению, мы
+                        вынуждены отказать вам в займе. <span class="text-accent">Мы не называем точной причины
+                            отказа.</span> Возможно, у вас плохая кредитная история. Вы можете попробовать снова через 7
+                        дней</p>
+
+
+                    <a href="index.html" class="btn btn-accent max-w-[280px] mx-auto">Вернуться на главную</a>
+                    </div>
+
+                </div>
+
             </div>
-        
         </div>
-    </div>
-</div>
 
-    @@include('partials/footer.html')
+        @@include('partials/footer.html')
+    </div>
 </body>
 
 </html>

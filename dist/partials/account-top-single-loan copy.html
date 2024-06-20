@@ -1,0 +1,19 @@
+<div class="bg-darkblue text-center p-5 rounded-lg mb-5">
+    <div class="text-white font-bold md:text-[32px] mb-2.5">Добро пожаловать, <span class="block md:inline">Иванов Иван Иванович</span></div>
+    <div class="text-accent font-bold max-w-[280px] mx-auto leading-8 md:max-w-full text-[28px] md:text-5xl mb-5">У вас есть активный заем</div>
+    <div class="bg-red text-white text-sm md:text-2xl lg:text-6xl font-bold px-7 lg:px-5 py-3 lg:py-2.5 w-fit mx-auto rounded-md mb-5">Платеж просрочен на <span>19</span> дней</div>
+    <div class="flex flex-col md:flex-row gap-2.5 md:gap-5 items-center justify-center">
+        <button class="btn btn-gray min-w-[228px] md:min-w-[280px]" onclick="openModal('set-password-modal')">
+            Задайте пароль
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M2.57227 11.9999L21.4284 11.9999M21.4284 11.9999L12.0004 21.428M21.4284 11.9999L12.0004 2.57178" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <button class="btn btn-gray min-w-[228px] md:min-w-[280px]" onclick="openModal('email-confirm-modal'); startEmailTimer()">
+            Подтвердите почту
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M2.57227 11.9999L21.4284 11.9999M21.4284 11.9999L12.0004 21.428M21.4284 11.9999L12.0004 2.57178" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+</div>

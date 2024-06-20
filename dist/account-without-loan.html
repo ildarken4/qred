@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
@@ -25,9 +26,11 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Личный кабинет</title>
 </head>
-<body>
 
-<header class="header relative py-7">
+<body>
+<div id="app">
+    <a id="top"></a>
+<header class="header relative py-2.5 md:py-7">
     <div class="container flex items-center justify-between">
       
       <a href="index.html" class="w-36 md:w-52">
@@ -59,194 +62,204 @@
     </div>
 </header>
 
-<div class="wrapper bg-lightgray py-10 md:py-14">
-    <div class="container">
+    <div class="wrapper bg-lightgray py-10 md:py-14">
+        <div class="container">
 
-        <div class="bg-darkblue text-center p-5 rounded-lg mb-5">
-            <div class="text-white font-bold md:text-[32px] mb-5">Добро пожаловать, <span class="block md:inline">Иванов Иван Иванович</span></div>
-            <div class="text-accent font-bold max-w-[280px] mx-auto leading-8 md:max-w-full text-[28px] md:text-5xl mb-5">У вас нет активного займа</div>
-            <div class="flex flex-col md:flex-row gap-5 items-center justify-center">
-                <button class="btn btn-gray min-w-[228px] md:min-w-[280px]" onclick="openModal('set-password-modal')">
-                    Задайте пароль
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M2.57227 11.9999L21.4284 11.9999M21.4284 11.9999L12.0004 21.428M21.4284 11.9999L12.0004 2.57178" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <button class="btn btn-gray min-w-[228px] md:min-w-[280px]" onclick="openModal('email-confirm-modal'); startEmailTimer()">
-                    Подтвердите почту
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M2.57227 11.9999L21.4284 11.9999M21.4284 11.9999L12.0004 21.428M21.4284 11.9999L12.0004 2.57178" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
+            <div class="bg-darkblue text-center p-5 rounded-lg mb-5">
+    <div class="text-white font-bold md:text-[32px] mb-2.5">Добро пожаловать, <span class="block md:inline">Иванов Иван Иванович</span></div>
+    <div class="text-accent font-bold max-w-[280px] mx-auto leading-8 md:max-w-full text-[28px] md:text-5xl">У вас нет активного займа</div>
+</div>
 
-
-
-        <div class="bg-account-banner bg-banner bg-center bg-white rounded-lg mb-10 relative overflow-hidden">
-            
-            <div class="account-banner w-2/4 mx-auto text-center bg-white py-10 h-full">
-                <div class="text-3xl font-bold mb-8">
-                    Вернуться назад
-                </div>
-                <div class="btn btn-accent w-80 mx-auto">
-                    Назад
+            <div
+                class="bg-account-banner bg-banner bg-repeat-x md:bg-repeat bg-top md:bg-center bg-white rounded-lg mb-5 md:mb-10 relative overflow-hidden">
+                <div
+                    class="account-banner w-full relative md:w-2/4 mx-auto text-center md:bg-white py-5 md:py-10 px-7 h-full">
+                    <div class="account-banner__bg md:hidden absolute bottom-0 left-0 w-full h-1/2 bg-white z-0"></div>
+                    <div class="text-blue_text relative z-10 text-xl md:text-3xl font-bold mb-5 md:mb-8">
+                        Вернуться назад
+                    </div>
+                    <div class="btn btn-accent relative z-10 min-w-fit sm:w-80 mx-auto">
+                        Назад
+                    </div>
                 </div>
             </div>
-        </div>
 
 
 
-        <div class="flex gap-5">
-            <div class="bg-white rounded-lg shadow-md w-1/2 py-[70px]">
-                
-                <form class="calculator w-full max-w-md mx-auto" action="">
-                    <div class="calculator__card mb-10">
-                        <div class="flex justify-between items-center">
-                            <div class="title">Выберите сумму</div>
-                            <div class="data w-36 h-10 flex items-center justify-between text-lg px-2.5 rounded-[4px] bg-lightgray text-gray_text"><span class="data__number result-sum">15 000</span> <span>₽</span></div>
-                        </div>
-                
-                        <div class="range-slider sum-slider">
-                
-                            <input type="range" class="styled-slider slider-progress" id="sum-input" min="10000" max="300000"
-                                value="80000" step="1000" />
-                            <div class="range-slider__values w-full flex items-center justify-between">
-                                <span class="minimum-scale text-xs">10 000</span>
-                                <span class="maximum-scale text-xs">300 000</span>
+            <div class="flex flex-col lg:flex-row gap-5">
+                <div class="bg-white rounded-lg shadow-md lg:w-1/2 py-7 px-5 lg:py-[70px]">
+
+                    <form class="calculator w-full max-w-md mx-auto" action="">
+                        <div class="calculator__card mb-5 md:mb-10">
+                            <div class="flex justify-between items-center">
+                                <div class="text-xs md:text-base">Выберите сумму</div>
+                                <div
+                                    class="data w-28 md:w-36 h-8 md:h-10 flex items-center justify-between text-xs md:text-lg px-2.5 rounded-[4px] bg-lightgray text-gray_text">
+                                    <span class="data__number result-sum">15 000</span> <span>₽</span></div>
                             </div>
-                        </div>
-                    </div>
-                
-                    <div class="calculator__card mb-10">
-                        <div class="flex justify-between items-center">
-                            <div class="title">Выберите срок</div>
-                            <div class="data w-36 h-10 flex items-center justify-between text-lg px-2.5 rounded-[4px] bg-lightgray text-gray_text"><span class="data__number calc-days">21</span> <span>день</span></div>
-                        </div>
-                
-                        <div class="range-slider term-slider">
-                
-                            <input type="range" class="styled-slider slider-progress" id="term-input" min="5" max="30" value="21" />
-                            <div class="range-slider__values w-full flex items-center justify-between">
-                                <span class="minimum-scale text-xs">5 дней</span>
-                                <span class="maximum-scale text-xs">31 день</span>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="calculator-result flex justify-between gap-5 w-full">
-                        <div class="result-item text-center">
-                            <div class="result-head text-[11px] text-gray_text mb-1">Вы берете</div>
-                            <div class="result-number font-bold text-xs"> <span class="result-monthly">15 000 </span> руб.</div>
-                        </div>
-                        <div class="result-item text-center">
-                            <div class="result-head text-[11px] text-gray_text mb-1">До (включительно)</div>
-                            <div class="result-number font-bold text-xs"> <span class="result-sum">15 000 </span> руб.</div>
-                        </div>
-                        <div class="result-item text-center">
-                            <div class="result-head text-[11px] text-gray_text mb-1">Вы возвращаете</div>
-                            <div class="result-number font-bold text-xs text-accent"> <span class="crossed relative text-gray_text font-normal mr-2">14 016 <span class="w-full top-1/2 left-0 absolute border-b border-gray_text"></span></span> <span class="result-sum">15 000 </span> руб.</div>
-                        </div>
-                    </div>
-                    
-                </form>
-            </div>
-            <div class="bg-white rounded-lg shadow-md w-1/2 py-10 px-10">
 
-                <form action="" class="">
-                    <div class="flex justify-between items-center pb-7 border-b border-gray">
-                        <div class="form-text">
-                            Выберите карту, <br> на&nbsp;которую <span class="text-accent">придут</span> деньги
-                        </div>
-                        <div class="custom-select max-w-xs">
-                            <div class="custom-select__head selected">
-                                <div class="custom-select__result">
-                                    4276********3958
+                            <div class="range-slider sum-slider">
+
+                                <input type="range" class="styled-slider slider-progress" id="sum-input" min="10000"
+                                    max="300000" value="80000" step="1000" />
+                                <div class="range-slider__values w-full flex items-center justify-between">
+                                    <span class="minimum-scale text-xs">10 000</span>
+                                    <span class="maximum-scale text-xs">300 000</span>
                                 </div>
-                                <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M19 9L12 16L5 9" stroke="#A3A3A3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
                             </div>
-                            <div class="custom-select__options">
-                                <div class="custom-option" selected>
-                                    <div class="custom-select__value">
+                        </div>
+
+                        <div class="calculator__card mb-5">
+                            <div class="flex justify-between items-center">
+                                <div class="text-xs md:text-base">Выберите срок</div>
+                                <div
+                                    class="data w-28 md:w-36 h-8 md:h-10 flex items-center justify-between text-xs md:text-lg px-2.5 rounded-[4px] bg-lightgray text-gray_text">
+                                    <span class="data__number calc-days">21</span> <span>день</span></div>
+                            </div>
+
+                            <div class="range-slider term-slider">
+
+                                <input type="range" class="styled-slider slider-progress" id="term-input" min="5"
+                                    max="30" value="21" />
+                                <div class="range-slider__values w-full flex items-center justify-between">
+                                    <span class="minimum-scale text-xs">5 дней</span>
+                                    <span class="maximum-scale text-xs">31 день</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="calculator-result flex justify-between gap-2 md:gap-5 w-full pt-5 border-t border-gray">
+                            <div class="result-item text-center">
+                                <div class="result-head text-xs md:text-[11px] text-gray_text mb-1">Вы берете</div>
+                                <div class="result-number text-blue_text font-bold text-xs"> <span
+                                        class="result-monthly">15 000
+                                    </span> ₽</div>
+                            </div>
+                            <div class="result-item text-center">
+                                <div class="result-head text-xs md:text-[11px] text-gray_text mb-1">До (включительно)
+                                </div>
+                                <div class="result-number text-blue_text font-bold text-xs"> <span
+                                        class="result-date">24 апреля,
+                                        2024</div>
+                            </div>
+                            <div class="result-item text-center">
+                                <div class="result-head text-xs md:text-[11px] text-gray_text mb-1">Вы возвращаете</div>
+                                <div class="result-number font-bold text-xs text-accent"> <span
+                                        class="crossed relative text-gray_text font-normal mr-2">14 016 <span
+                                            class="w-full top-1/2 left-0 absolute border-b border-gray_text"></span></span>
+                                    <span class="result-sum">15 000 </span> ₽</div>
+                            </div>
+                        </div>
+
+                        
+                    </form>
+                </div>
+                <div class="bg-white rounded-lg shadow-md lg:w-1/2  py-7 px-5 md:py-10 md:px-10">
+
+                    <form action="" class="">
+                        <div class="text-sm md:text-base flex flex-col md:flex-row justify-between items-center pb-7 border-b border-gray">
+                            <div class="form-text mb-5 md:mb-0 text-center md:text-left">
+                                Выберите карту, <br> на&nbsp;которую <span class="text-accent">придут</span> деньги
+                            </div>
+                            <div class="custom-select max-w-xs">
+                                <div class="custom-select__head selected">
+                                    <div class="custom-select__result">
                                         4276********3958
                                     </div>
+                                    <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <path d="M19 9L12 16L5 9" stroke="#A3A3A3" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
                                 </div>
-                                <div class="custom-option">
-                                    <div class="custom-select__value">
-                                        4276********3958
+                                <div class="custom-select__options">
+                                    <div class="custom-option" selected>
+                                        <div class="custom-select__value">
+                                            4276********3958
+                                        </div>
+                                    </div>
+                                    <div class="custom-option">
+                                        <div class="custom-select__value">
+                                            4276********3958
+                                        </div>
+                                    </div>
+                                    <div class="custom-option">
+                                        <a href="account-add-card.html" class="custom-select__value">
+                                            Добавить новую карту
+                                        </a>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- При выборе в селекте "Добавить новую карту" селект сменяется на кнопку ниже (скрыта классом hidden) -->
+                            <a href="account-updating.html" class="btn hidden">Добавить карту</a>
                         </div>
-                    </div>
 
-                    <div class="flex items-center justify-between py-7 border-b border-gray">
-                        <div class="form-text">
-                            Перед оформлением нового займа <span class="text-accent">актуализируйте </span>или <span class="text-accent">подтвердите&nbsp;</span> личные данные
+                        <div class="text-sm md:text-base flex flex-col xl:flex-row items-center justify-between py-7 border-b border-gray">
+                            <div class="form-text mb-5 xl:mb-0 text-sm xl:text-base text-center xl:text-left">
+                                Перед оформлением нового займа <span class="text-accent">актуализируйте </span>или <span
+                                    class="text-accent">подтвердите&nbsp;</span> личные данные
+                            </div>
+                            <a href="account-updating.html" class="btn">Проверить</a>
+
+                            <!-- Кода данные актуализированы - кнопка выше получает класс .btn-disabled -->
                         </div>
-                        <a href="account-updating.html" class="btn">Проверить</a>
 
-                        <!-- Кода данные актуализированы - кнопка выше меняется на кнопку "Готово" -->
-                        <!-- <div href="#" class="btn btn-transparent btn-rounded btn-green">Готово</div> -->
-                    </div>
+                        <div class="max-w-sm mx-auto">
+                            <a href="" class="btn btn-accent btn-disabled mb-10 md:mb-5 js-button w-full mx-auto mt-7"
+                                onclick="event.preventDefault(); openModal('sms-confirm-modal'); startEmailTimer()">
+                                Получить заем
+                            </a>
 
-                    <div class="max-w-sm mx-auto">
-                        <a href="" class="btn btn-accent btn-disabled mb-5 js-button w-full mx-auto mt-7" onclick="event.preventDefault(); openModal('sms-modal'); startEmailTimer()">
-                            Получить заем
-                        </a>
+                            <label for="rules" class="">
+    <input type="checkbox" id="rules">
+    <span class="custom-checkbox"></span>
+    <span class="text-xs md:text-sm leading-5">Я ознакомлен и согласен со&nbsp;<a class="js-show-rules text-dark_accent cursor-pointer">следующим</a> </span>
+</label>
 
-                        <label for="rules" class="">
-                            <input type="checkbox" id="rules">
-                            <span class="custom-checkbox"></span>
-                            <span>Я ознакомлен и согласен со&nbsp;<a class="js-show-rules text-dark_accent cursor-pointer">следующим</a> </span>
-                        </label>
-                    
-                        <div class="js-hidden-checkbox hidden">
-                            <label class="mb-2.5 mt-5" for="agreement-personal" class="mb-10">
-                                <input type="checkbox" id="agreement-personal" checked>
-                                <span class="custom-checkbox"></span>
-                                <span>Даю свое согласие на&nbsp;<a href="#" class="text-dark_accent">обработку и передачу персональных
-                                        данных</a> </span>
-                            </label>
-                    
-                            <label class=""  for="agreement-sign">
-                                <input type="checkbox" id="agreement-sign" checked>
-                                <span class="custom-checkbox"></span>
-                                <span>Даю свое согласие на&nbsp;<a href="#" class="text-dark_accent">использование аналога
-                                        собственноручной
-                                        подписи</a> </span>
-                            </label>
-                            <div class="js-hide-rules mt-5 text-center cursor-pointer">Свернуть</div>
+<div class="js-hidden-checkbox hidden">
+    <label class="mb-2.5 mt-5" for="agreement-personal" class="mb-10">
+        <input type="checkbox" id="agreement-personal" checked>
+        <span class="custom-checkbox"></span>
+        <span class="text-xs md:text-sm leading-5">Даю свое согласие на&nbsp;<a href="#" class="text-dark_accent">обработку и передачу персональных
+                данных</a> </span>
+    </label>
+
+    <label class=""  for="agreement-sign">
+        <input type="checkbox" id="agreement-sign" checked>
+        <span class="custom-checkbox"></span>
+        <span class="text-xs md:text-sm leading-5">Даю свое согласие на&nbsp;<a href="#" class="text-dark_accent">использование аналога
+                собственноручной
+                подписи</a> </span>
+    </label>
+    <div class="js-hide-rules mt-5 text-center font-medium underline cursor-pointer">Свернуть</div>
+</div>
                         </div>
-                    </div>
-                    
-                </form>
+
+                    </form>
+                </div>
             </div>
-        </div>
 
-        <div class="btn btn-account-menu">
+            <div class="btn btn-account-menu">
     Меню
     <img src="img/buttons/menu.svg" alt="меню">
 </div>
 
-<div class="js-account-menu fixed top-0 left-0 h-screen w-screen bg-blue_08 backdrop-blur-sm translate-y-full transition-all">
-    <div class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-5 px-[50px] pt-36">
+<div class="js-account-menu fixed top-0 left-0 h-screen w-screen bg-blue_08 backdrop-blur-sm translate-y-full transition-all z-50">
+    <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-2.5 md:gap-5 px-2.5 md:px-[50px] pt-10 md:pt-36 overflow-auto max-h-screen pb-52">
         
-        <a href="account-loan.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 text-2xl font-semibold w-full">
-
-            <div class="bg-lightgray rounded-md min-w-[80px] xl:min-w-[100px]">
+        <a href="account-loan.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
                 <img src="img/icons/account-main.png" width="100%" alt="изображение пункта меню">
             </div>
             <div class="account-menu__title">
                 Главная
             </div>
-            
         </a>
     
-        <a href="account-my-cards.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 text-2xl font-semibold w-full">
-            <div class="bg-lightgray rounded-md min-w-[80px] xl:min-w-[100px]">
+        <a href="account-my-cards.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
                 <img src="img/icons/account-menu_card.png" width="100%" alt="изображение пункта меню">
             </div>
             <div class="account-menu__title">
@@ -254,8 +267,8 @@
             </div>
         </a>
     
-        <a href="account-history.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 text-2xl font-semibold w-full">
-            <div class="bg-lightgray rounded-md min-w-[80px] xl:min-w-[100px]">
+        <a href="account-history.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
                 <img src="img/icons/account-menu_history.png" width="100%" alt="изображение пункта меню">
             </div>
             <div class="account-menu__title">
@@ -263,8 +276,8 @@
             </div>
         </a>
     
-        <a href="account-docs.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 text-2xl font-semibold w-full">
-            <div class="bg-lightgray rounded-md min-w-[80px] xl:min-w-[100px]">
+        <a href="account-docs.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
                 <img src="img/icons/account-menu_docs.png" width="100%" alt="изображение пункта меню">
             </div>
             <div class="account-menu__title">
@@ -272,8 +285,8 @@
             </div>
         </a>
     
-        <a href="account-files.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 text-2xl font-semibold w-full">
-            <div class="bg-lightgray rounded-md min-w-[80px] xl:min-w-[100px]">
+        <a href="account-files.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
                 <img src="img/icons/account-menu_files.png" width="100%" alt="изображение пункта меню">
             </div>
             <div class="account-menu__title">
@@ -281,8 +294,8 @@
             </div>
         </a>
     
-        <a href="account-my-appeals.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 text-2xl font-semibold w-full">
-            <div class="bg-lightgray rounded-md min-w-[80px] xl:min-w-[100px]">
+        <a href="account-my-appeals.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
                 <img src="img/icons/my-appeals.png" width="100%" alt="изображение пункта меню">
             </div>
             <div class="account-menu__title">
@@ -290,8 +303,8 @@
             </div>
         </a>
     
-        <a href="account-files.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 text-2xl font-semibold w-full">
-            <div class="bg-lightgray rounded-md min-w-[80px] xl:min-w-[100px]">
+        <a href="account-files.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
                 <img src="img/icons/my-account.png" width="100%" alt="изображение пункта меню">
             </div>
             <div class="account-menu__title">
@@ -299,17 +312,17 @@
             </div>
         </a>
     </div>
-    <div class="btn btn-account-menu fixed bottom-16 left-[calc(50%-104px)]">
+    <div class="btn btn-account-menu fixed bottom-14 left-2.5 w-[calc(100%-20px)] md:w-52 md:left-[calc(50%-104px)]">
         Закрыть
         <img src="img/buttons/account-menu-close.svg" alt="закрыть">
     </div>
 </div>
 
+        </div>
     </div>
-</div>
 
 
-<div class="modal" id="sms-modal">
+    <div class="modal" id="sms-confirm-modal">
         <div class="popup popup-small">
             <div class="w-full max-w-[400px] mx-auto">
                 <div class="flex items-center justify-center relative border-b pb-5 mb-5">
@@ -317,150 +330,55 @@
                         Введите код из смс
                     </div>
                     <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none">
                             <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
                 </div>
-        
-                
-        
-                <p class="text-blue_text text-2xl font-medium text-center mb-10">
+
+
+
+                <p class="text-blue_text md:text-2xl font-medium text-center mb-5 md:mb-10">
                     SMS с кодом подтверждения отправлен на указанный номер.
                 </p>
-    
-                <div class="text-center text-2xl mb-10">
+
+                <div class="text-center md:text-2xl mb-10">
                     +7 (912) 345-67-89
                 </div>
 
                 <div class="form-item w-full retiree-hide mb-10">
                     <label for="sms-code">Введите код</label>
                     <input type="text" id="sms-code" placeholder="Введите код">
-                    
+
                 </div>
-    
+
                 <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
 
-                <p class="text-center text-gray_text js-email-button mb-10 cursor-pointer" onclick="startEmailTimer()">Отправить код ещё раз</p>
-    
-                
+                <p class="text-center text-gray_text js-email-button mb-10 cursor-pointer"
+                    onclick="startEmailTimer()">Отправить код ещё раз</p>
+
+
                 <button class="btn btn-accent btn-disabled w-full max-w-sm mx-auto">
                     Подтвердить
                 </button>
-        
+
             </div>
-            
+
         </div>
     </div>
 
-<div class="modal" id="set-password-modal">
-    <div class="popup popup-small">
-        <div class="w-full max-w-[400px] mx-auto">
-            <div class="flex items-center justify-center relative border-b pb-5 mb-5">
-                <div class="font-medium">
-                    Изменить пароль
-                </div>
-                <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>
     
-                <form action="">
-                <div class="form-item mb-10">
-                    <label for="new-password">Новый пароль</label>
-                    <div class="js-password-wrapper relative">
-                        <input type="password" id="new-password" class="peer" placeholder="Введите пароль" required>
-                        <div class="show-password absolute right-5 top-5 cursor-pointer opacity-60 peer-focus:opacity-100">
-                            <img src="img/icons/password-eye.svg" alt="">
-                        </div>
-                        <div class="absolute top-full left-0 w-full bg-white border-2 border-darkgray p-5 shadow-sm z-20 rounded-md mt-1 opacity-0 pointer-events-none peer-focus:opacity-100">
-                            <div class="text-center mb-5">Пароль должен содержать</div>
-                            <div class="font-semibold mb-5">
-                                - 8 символов латинского алфавита (A-z)
-                            </div>
-                            <div class="font-semibold">
-                                - цифры (0-9)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hidden text-red text-xs pt-1">Обязательное поле</div>
-                    <div class="hidden text-red text-xs pt-1">Проверьте поле на корректность текста</div>
-                </div>
-
-                <div class="form-item mb-10">
-                    <label for="confirm-password">Повторите пароль</label>
-                    <div class="password-wrapper relative">
-                        <input type="password" id="confirm-password" class="peer" placeholder="Повторите пароль" required>
-                        <div class="show-password absolute right-5 top-5 cursor-pointer opacity-60 peer-focus:opacity-100">
-                            <img src="img/icons/password-eye.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="hidden text-red text-xs pt-1">Обязательное поле</div>
-                    <div class="hidden text-red text-xs pt-1">Проверьте поле на корректность текста</div>
-                </div>
-
-                <a href="" class="btn btn-accent">
-                    Сохранить
-                </a>
-
-            </form>
-    
-        </div>
-        
-    </div>
-</div>
 
 
-<div class="modal" id="email-confirm-modal">
-    <div class="popup">
-        <div class="w-full max-w-[480px] mx-auto">
-            <div class="flex items-center justify-center relative border-b pb-5 mb-5">
-                <div class="font-medium">
-                    Подтверждение почты
-                </div>
-                <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>
-    
-            
-    
-            <p class="text-blue_text text-center mb-10">
-                Мы отправили вам письмо с подтверждением на вашу почту. Пожалуйста, перейдите по ссылке в письме для
-                завершения
-                процесса
-                подтверждения. Если вы уже подтвердили свою почту, обновите страницу.
-            </p>
-
-            <div class="text-center text-2xl mb-10">
-                P<span>*****</span>a@mail.ru
-            </div>
-
-            <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
-
-            
-            <button class="btn btn-accent btn-disabled js-email-button w-full max-w-sm mx-auto" onclick="startEmailTimer()">
-                Отправить ещё раз
-            </button>
-    
-        </div>
-        
-    </div>
-</div>
-
-
-<footer>
+    <footer>
     
 </footer>
 
 <script src="./js/scripts.js"></script>
 
+</div>
 </body>
+
 </html>

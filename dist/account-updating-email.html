@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
@@ -25,9 +26,11 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Личный кабинет</title>
 </head>
-<body>
 
-<header class="header relative py-7">
+<body>
+    <div id="app">
+        <a id="top"></a>
+<header class="header relative py-2.5 md:py-7">
     <div class="container flex items-center justify-between">
       
       <a href="index.html" class="w-36 md:w-52">
@@ -59,39 +62,109 @@
     </div>
 </header>
 
-<div class="wrapper bg-lightgray py-14 relative min-h-screen">
-    <div class="container">
-        
-        <div class="bg-white rounded-lg shadow-md py-10 px-10">
-            <h1 class="text-5xl text-center font-bold mb-10">Изменение почты</h1>
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
+            <div class="container">
 
-            
-            <form class="max-w-4xl mx-auto" action="">
-                <div class="form-item w-full mb-10">
-                    <label for="passport-birthplace">Почта</label>
-                    <input type="text" id="passport-birthplace" placeholder="Введите почту">
-                </div>
+                <div class="bg-white rounded-lg shadow-md py-7 px-7 md:py-10 md:px-2.5">
+                    <h1 class="text-[28px] text-blue_text  md:text-5xl text-center font-bold mb-10">Изменение почты</h1>
 
-                
-                <div class="flex flex-wrap items-end justify-between gap-7 py-5 mb-10 border-t border-b border-darkgray">
-                    <div class="w-full max-w-[50%]">
-                        <div class="text-xl uppercase font-semibold mb-2.5">
-                            Вы можете сразу <br> подтвердить свою почту
+
+                    <form class="max-w-4xl mx-auto" action="">
+                        <div class="form-item w-full mb-10">
+                            <label for="passport-birthplace">Почта</label>
+                            <input type="text" id="passport-birthplace" placeholder="Введите почту">
                         </div>
-                        <div>Мы будем использовать вашу почту для обеспечения безопасности вашего аккаунта.</div>
-                    </div>
-                    <div class="w-full max-w-[45%]">
-                        <div class="btn w-full" onclick="openModal('email-confirm-modal'); startEmailTimer()">Подтвердить почту</div>
-                    </div>
-                </div>
-                
 
-                <div class="flex gap-5">
-                    <a href="account-updating.html" class="btn w-full btn-dashed ">
-                        Назад
-                    </a>
-                    <a href="" class="btn w-full btn-accent">Сохранить</a> <!-- По нажатию появляется соответствующий .notification и при успехе кнопка подтвердить становится .btn-disabled -->
+
+                        <div
+                            class="flex flex-col md:flex-row flex-wrap items-end justify-between gap-7 py-5 mb-10 border-t border-b border-darkgray">
+                            <div class="w-full md:max-w-[50%] text-center">
+                                <div class="text-sm md:text-xl uppercase font-semibold mb-2.5">
+                                    Вы можете сразу <br> подтвердить свою почту
+                                </div>
+                                <div class="text-sm md:text-base">Мы будем использовать вашу почту для обеспечения безопасности вашего аккаунта.
+                                </div>
+                            </div>
+                            <div class="w-full md:max-w-[45%]">
+                                <div class="btn w-full" onclick="openModal('email-confirm-modal'); startEmailTimer()">
+                                    Подтвердить почту</div>
+                            </div>
+                        </div>
+
+
+                        <div class="flex flex-col-reverse md:flex-row gap-5">
+                            <a href="account-updating.html" class="btn w-full btn-dashed ">
+                                Назад
+                            </a>
+                            <a href="" class="btn w-full btn-accent">Сохранить</a>
+                            <!-- По нажатию появляется соответствующий .notification и при успехе кнопка подтвердить становится .btn-disabled -->
+                        </div>
+                    </form>
+
                 </div>
+
+            </div>
+        </div>
+
+        <div class="modal" id="set-password-modal">
+    <div class="popup popup-small">
+        <div class="w-full max-w-[400px] mx-auto">
+            <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                <div class="font-medium">
+                    Создание пароля
+                </div>
+                <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <form action="">
+                <div class="form-item mb-5 lg:mb-10">
+                    <label for="new-password">Новый пароль</label>
+                    <div class="js-password-wrapper relative">
+                        <input type="password" id="new-password" class="peer" placeholder="Введите пароль" required>
+                        <div
+                            class="show-password absolute right-5 top-5 cursor-pointer opacity-60 peer-focus:opacity-100">
+                            <img src="img/icons/password-eye.svg" alt="">
+                        </div>
+                        <div
+                            class="absolute top-full left-0 w-full bg-white border-2 border-darkgray px-2.5 py-5 lg:p-5 shadow-sm z-20 rounded-md mt-1 opacity-0 pointer-events-none peer-focus:opacity-100">
+                            <div class="text-center text-sm md:text-base mb-5">Пароль должен содержать</div>
+                            <div class="font-semibold text-xs md:text-base mb-5">
+                                - 8 символов латинского алфавита (A-z)
+                            </div>
+                            <div class="font-semibold text-xs md:text-base">
+                                - цифры (0-9)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden text-red text-xs pt-1">Обязательное поле</div>
+                    <div class="hidden text-red text-xs pt-1">Проверьте поле на корректность текста
+                    </div>
+                </div>
+
+                <div class="form-item mb-10">
+                    <label for="confirm-password">Повторите пароль</label>
+                    <div class="js-password-wrapper relative">
+                        <input type="password" id="confirm-password" class="peer" placeholder="Повторите пароль"
+                            required>
+                        <div
+                            class="show-password absolute right-5 top-5 cursor-pointer opacity-60 peer-focus:opacity-100">
+                            <img src="img/icons/password-eye.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="hidden text-red text-xs pt-1">Обязательное поле</div>
+                    <div class="hidden text-red text-xs pt-1">Проверьте поле на корректность текста
+                    </div>
+                </div>
+
+                <div class="btn btn-accent">
+                    Далее
+                </div>
+
             </form>
 
         </div>
@@ -113,44 +186,62 @@
                     </svg>
                 </button>
             </div>
-    
-            
-    
+
+
+
             <p class="text-blue_text text-center mb-10">
-                Мы отправили вам письмо с подтверждением на вашу почту. Пожалуйста, перейдите по ссылке в письме для
+                Мы отправили вам письмо с подтверждением на вашу почту. Пожалуйста, перейдите по ссылке в письме
+                для
                 завершения
                 процесса
                 подтверждения. Если вы уже подтвердили свою почту, обновите страницу.
             </p>
 
-            <div class="text-center text-2xl mb-10">
+            <div class="text-center md:text-2xl mb-10">
                 P<span>*****</span>a@mail.ru
             </div>
 
             <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
 
-            
-            <button class="btn btn-accent btn-disabled js-email-button w-full max-w-sm mx-auto" onclick="startEmailTimer()">
+
+            <button class="btn btn-accent btn-disabled js-email-button w-full max-w-sm mx-auto"
+                onclick="startEmailTimer()">
                 Отправить ещё раз
             </button>
-    
+
         </div>
-        
+
     </div>
 </div>
 
 
+<div class="notification bg-red_75">
+    <span>Не все поля заполнены</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="white" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+    </svg>
+</div>
+
 <div class="notification bg-green_80">
     <span>Почта подтверждена</span>
-    <img src="img/buttons/account-menu-close.svg" alt="Закрыть">
+    <img src="img/buttons/account-menu-close.svg" alt="Почта подтверждена">
 </div>
 
 
-<footer>
+        <div class="notification bg-green_80">
+            <span>Почта подтверждена</span>
+            <img src="img/buttons/account-menu-close.svg" alt="Закрыть">
+        </div>
+
+
+        <footer>
     
 </footer>
 
 <script src="./js/scripts.js"></script>
 
+    </div>
 </body>
+
 </html>

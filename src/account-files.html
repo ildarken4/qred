@@ -1,79 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     @@include('partials/head.html')
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Личный кабинет</title>
 </head>
+
 <body>
+    <div id="app">
+        @@include('partials/header-account.html')
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
+            <div class="container">
 
-@@include('partials/header-account.html')
-<div class="wrapper bg-lightgray py-14 relative min-h-screen">
-    <div class="container">
-        
-        <div class="bg-white rounded-lg shadow-md py-10 px-10">
-            <h1 class="text-5xl text-center font-bold mb-10">Мои файлы</h1>
+                <div class="bg-white rounded-lg shadow-md py-7 md:py-10 px-2.5">
+                    <h1 class="text-[28px] text-blue_text  md:text-5xl text-center font-bold mb-10">Мои файлы</h1>
 
-            <div class="grid grid-cols-4 gap-7">
-                <div class="border-2 border-darkblue border-dashed rounded-md shadow-md w-full max-w-[332px] min-h-[263px] flex flex-col items-center justify-between px-[30px] py-10">
-                    <div class="mb-5">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" fill="none">
-                         <path d="M24 48H48M48 48H72M48 48V72M48 48V24" stroke="#394D69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center xl:grid-cols-4 gap-7">
+                        <div
+                            class="border-2 border-darkblue border-dashed rounded-md shadow-md w-full max-w-[332px] min-h-[145px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
+                            <div class="md:mb-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96"
+                                    fill="none">
+                                    <path d="M24 48H48M48 48H72M48 48V72M48 48V24" stroke="#394D69" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">
+                                Название файла которого не хватает</div>
+                        </div>
+                        <div
+                            class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[116px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
+                            <div class="mb-2.5 md:mb-5 w-12 md:w-24">
+                                <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
+                            </div>
+                            <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                                с паспортом</div>
+                        </div>
+                        <div
+                            class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[116px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
+                            <div class="mb-2.5 md:mb-5 w-12 md:w-24">
+                                <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
+                            </div>
+                            <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                                с паспортом</div>
+                        </div>
+                        <div
+                            class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[116px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
+                            <div class="mb-2.5 md:mb-5 w-12 md:w-24">
+                                <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
+                            </div>
+                            <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">
+                                Пример очень и очень длинного текста, который может не влезть или все же?</div>
+                        </div>
+                        <div
+                            class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[116px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
+                            <div class="mb-2.5 md:mb-5 w-12 md:w-24">
+                                <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
+                            </div>
+                            <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                                с паспортом</div>
+                        </div>
+                        <div
+                            class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[116px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
+                            <div class="mb-2.5 md:mb-5 w-12 md:w-24">
+                                <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
+                            </div>
+                            <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                                с паспортом</div>
+                        </div>
+                        <div
+                            class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[116px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
+                            <div class="mb-2.5 md:mb-5 w-12 md:w-24">
+                                <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
+                            </div>
+                            <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                                с паспортом</div>
+                        </div>
+                        <div
+                            class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[116px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
+                            <div class="mb-2.5 md:mb-5 w-12 md:w-24">
+                                <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
+                            </div>
+                            <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                                с паспортом</div>
+                        </div>
+
                     </div>
-                    <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Название файла которого не хватает</div>
-                </div>
-                <div class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[263px] flex flex-col items-center justify-between px-[30px] py-10">
-                    <div class="mb-5">
-                        <img src="img/icons/file-big-blue.svg" alt="файл">
-                    </div>
-                    <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи с паспортом</div>
-                </div>
-                <div class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[263px] flex flex-col items-center justify-between px-[30px] py-10">
-                    <div class="mb-5">
-                        <img src="img/icons/file-big-blue.svg" alt="файл">
-                    </div>
-                    <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи с паспортом</div>
-                </div>
-                <div class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[263px] flex flex-col items-center justify-between px-[30px] py-10">
-                    <div class="mb-5">
-                        <img src="img/icons/file-big-blue.svg" alt="файл">
-                    </div>
-                    <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Пример очень и очень длинного текста, который может не влезть или все же?</div>
-                </div>
-                <div class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[263px] flex flex-col items-center justify-between px-[30px] py-10">
-                    <div class="mb-5">
-                        <img src="img/icons/file-big-blue.svg" alt="файл">
-                    </div>
-                    <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи с паспортом</div>
-                </div>
-                <div class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[263px] flex flex-col items-center justify-between px-[30px] py-10">
-                    <div class="mb-5">
-                        <img src="img/icons/file-big-blue.svg" alt="файл">
-                    </div>
-                    <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи с паспортом</div>
-                </div>
-                <div class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[263px] flex flex-col items-center justify-between px-[30px] py-10">
-                    <div class="mb-5">
-                        <img src="img/icons/file-big-blue.svg" alt="файл">
-                    </div>
-                    <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи с паспортом</div>
-                </div>
-                <div class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[263px] flex flex-col items-center justify-between px-[30px] py-10">
-                    <div class="mb-5">
-                        <img src="img/icons/file-big-blue.svg" alt="файл">
-                    </div>
-                    <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи с паспортом</div>
+
                 </div>
 
+                @@include('partials/account-menu.html')
             </div>
-
         </div>
 
-        @@include('partials/account-menu.html')
+        @@include('partials/footer.html')
     </div>
-</div>
-
-@@include('partials/footer.html')
 </body>
+
 </html>

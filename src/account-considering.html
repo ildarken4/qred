@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     @@include('partials/head.html')
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Личный кабинет</title>
 </head>
+
 <body>
+    <div id="app">
+        @@include('partials/header-account.html')
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
+            <div class="container">
 
-@@include('partials/header-account.html')
-<div class="wrapper bg-lightgray py-14 relative min-h-screen">
-    <div class="container">
-        
-        <div class="bg-white rounded-lg shadow-md py-10 px-10">
-            <h1 class="text-5xl text-center font-bold mb-10">Ваша заявка рассматривается</h1>
+                <div class="bg-white rounded-lg shadow-md py-10 px-2.5 md:px-10">
+                    <h1 class="text-[28px] text-blue_text  md:text-5xl text-center font-bold mb-5 md:mb-10">Ваша заявка
+                        рассматривается</h1>
 
-            <div class="max-w-[990px] mx-auto flex flex-col items-center">
-                <img src="img/icons/clock-3d.png" class="mb-10" alt="">
-                
-                <p class="text-2xl text-blue_text font-semibold">Проверяем ваши документы.</p>
-                <p class="text-2xl text-accent mb-10"> Пожалуйста, ожидайте.</p>
+                    <div class="max-w-[990px] mx-auto flex flex-col items-center">
+                        <div class="w-[100px] md:w-40 mx-auto mb5 md:mb-10">
+                            <img src="img/icons/clock-3d.png" width="100%" alt="">
+                        </div>
 
-                <div class="w-[480px] px-10 py-5 bg-lightgray rounded-lg shadow-md border-2 border-gray flex-col justify-center items-start gap-5 inline-flex">
-                    <div class="w-full flex justify-between">
-                        <div class="">Номер заявки:</div>
-                        <div class="text-accent text-2xl font-semibold">134121231</div>
+
+                        <p class="text-center md:text-2xl text-blue_text font-semibold">Проверяем ваши документы.</p>
+                        <p class="text-center md:text-2xl text-accent mb-5 md:mb-10"> Пожалуйста, ожидайте.</p>
+
+                        <div
+                            class="w-full md:w-[480px] px-5 md:px-10 py-7 md:py-5 bg-lightgray rounded-lg shadow-md border-2 border-gray flex-col justify-center items-start gap-5 inline-flex">
+                            <div class="w-full flex justify-between">
+                                <div class="text-sm md:text-base">Номер заявки: </div>
+                                <div class="text-accent md:text-2xl font-semibold">134121231</div>
+                            </div>
+                            <div class="w-full flex justify-between">
+                                <div class="text-sm md:text-base">Дата займа:</div>
+                                <div class="text-accent md:text-2xl font-semibold">01.02.2024</div>
+                            </div>
+                            <div class="w-full flex justify-between">
+                                <div class="text-sm md:text-base">Сумма займа:</div>
+                                <div class="text-accent md:text-2xl font-semibold">21 000 ₽</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="w-full flex justify-between">
-                        <div class="">Дата займа:</div>
-                        <div class="text-accent text-2xl font-semibold">01.02.2024</div>
-                    </div>
-                    <div class="w-full flex justify-between">
-                        <div class="">Сумма займа:</div>
-                        <div class="text-accent text-2xl font-semibold">21 000 ₽</div>
-                    </div>
+
                 </div>
-            </div>
 
+            </div>
         </div>
 
+        @@include('partials/footer.html')
     </div>
-</div>
-
-@@include('partials/footer.html')
 </body>
+
 </html>

@@ -6,112 +6,113 @@
     <title>Личный кабинет</title>
 </head>
 <body>
+    <div id="app">
+        @@include('partials/header-account.html')
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
+            <div class="container">
+                
+                <div class="bg-white rounded-lg shadow-md py-7 md:py-10">
+                    <h1 class="text-[28px] text-blue_text  md:text-5xl text-center font-bold mb-10">Мои карты</h1>
 
-@@include('partials/header-account.html')
-<div class="wrapper bg-lightgray py-14 relative min-h-screen">
-    <div class="container">
-        
-        <div class="bg-white rounded-lg shadow-md py-10">
-            <h1 class="text-5xl text-center font-bold mb-10">Мои карты</h1>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-8 max-w-3xl mx-auto px-7">
+                        <div class="border-2 border-darkgray rounded-md px-5 md:px-10 py-5 shadow-md w-full max-w-[353px] min-h-[144px] md:min-h-[188px] text-blue_text flex flex-col justify-between">
+                            <div class="w-full flex items-center justify-between">
+                                <div class="bg-accent rounded-md px-1 font-semibold">Основная</div>
+                                <div class="cursor-pointer" onclick="openModal('delete-card-modal')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                        <path d="M18.5 18L12.5 12M12.5 12L6.5 6M12.5 12L18.5 6M12.5 12L6.5 18" stroke="#0E174A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class=" md:text-2xl font-bold flex items-center justify-between">
+                                <span>2200 </span>
+                                <span>**** </span>
+                                <span>**** </span>
+                                <span>2525</span>
+                            </div>
 
-            <div class="grid grid-cols-2 justify-items-center gap-8 max-w-3xl mx-auto">
-                <div class="border-2 border-darkgray  rounded-md px-10 py-5 shadow-md w-full max-w-[353px] min-h-[188px] text-blue_text flex flex-col justify-between">
-                    <div class="w-full flex items-center justify-between">
-                        <div class=" bg-accent rounded-md px-1 font-semibold">Основная</div>
-                        <div class="cursor-pointer" onclick="openModal('delete-card-modal')">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                                <path d="M18.5 18L12.5 12M12.5 12L6.5 6M12.5 12L18.5 6M12.5 12L6.5 18" stroke="#0E174A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            <div class="bank-card__autopay">
+                                <label class="checkbox-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-switch-mask"></span>
+                                    <span class="ml-2 text-sm md:text-base">Автоплатёж</span>
+                                </label>
+                            </div>
+
                         </div>
-                    </div>
-                    <div class="text-2xl font-bold flex items-center justify-between">
-                        <span>2200 </span>
-                        <span>**** </span>
-                        <span>**** </span>
-                        <span>2525</span>
-                    </div>
 
-                    <div class="bank-card__autopay">
-                        <label class="checkbox-switch">
-                            <input type="checkbox" checked>
-                            <span class="checkbox-switch-mask"></span>
-                            <span class="ml-2">Автоплатёж</span>
-                        </label>
-                    </div>
+                        <div class="border-2 border-darkgray rounded-md px-5 md:px-10 py-5 shadow-md w-full max-w-[353px] min-h-[144px] md:min-h-[188px] text-blue_text flex flex-col justify-between">
+                            <div class="w-full flex items-center justify-between">
+                                <div class="underline rounded-md px-1 font-semibold">Сделать основной</div>
+                                <div class="cursor-pointer" onclick="openModal('delete-card-modal')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                        <path d="M18.5 18L12.5 12M12.5 12L6.5 6M12.5 12L18.5 6M12.5 12L6.5 18" stroke="#0E174A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class=" md:text-2xl font-bold flex items-center justify-between">
+                                <span>2200 </span>
+                                <span>**** </span>
+                                <span>**** </span>
+                                <span>2525</span>
+                            </div>
 
-                </div>
+                            <div class="bank-card__autopay">
+                                <label class="checkbox-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-switch-mask"></span>
+                                    <span class="ml-2 text-sm md:text-base">Автоплатёж</span>
+                                </label>
+                            </div>
 
-                <div class="border-2 border-darkgray  rounded-md px-10 py-5 shadow-md w-full max-w-[353px] min-h-[188px] text-blue_text flex flex-col justify-between">
-                    <div class="w-full flex items-center justify-between">
-                        <div class="underline rounded-md px-1 font-semibold">Сделать основной</div>
-                        <div class="bank-card__delete">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                                <path d="M18.5 18L12.5 12M12.5 12L6.5 6M12.5 12L18.5 6M12.5 12L6.5 18" stroke="#0E174A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
                         </div>
-                    </div>
-                    <div class="text-2xl font-bold flex items-center justify-between">
-                        <span>2200 </span>
-                        <span>**** </span>
-                        <span>**** </span>
-                        <span>2525</span>
-                    </div>
 
-                    <div class="bank-card__autopay">
-                        <label class="checkbox-switch">
-                            <input type="checkbox">
-                            <span class="checkbox-switch-mask"></span>
-                            <span class="ml-2">Автоплатёж</span>
-                        </label>
+                        <a href="account-add-card.html" class="add-card border-2 border-darkblue border-dotted rounded-md px-10 py-5 w-full max-w-[353px] min-h-[144px] md:min-h-[188px] flex items-center justify-center md:text-2xl text-blue_text font-semibold cursor-pointer">
+                            Добавить карту
+                        </a>
                     </div>
 
                 </div>
 
-                <div class="add-card border-2 border-darkblue border-dotted rounded-md px-10 py-5 w-full max-w-[353px] min-h-[188px] flex items-center justify-center text-2xl text-blue_text font-semibold cursor-pointer">
-                    Добавить карту
-                </div>
+                @@include('partials/account-menu.html')
             </div>
-
         </div>
 
-        @@include('partials/account-menu.html')
-    </div>
-</div>
-
-    <div class="modal" id="delete-card-modal">
-        <div class="popup popup-small">
-            <div class="w-full max-w-md mx-auto">
-                <div class="flex items-center justify-center relative border-b pb-5 mb-5">
-                    <div class="font-medium">
-                        Удалить карту?
+        <div class="modal" id="delete-card-modal">
+            <div class="popup popup-small">
+                <div class="w-full max-w-md mx-auto">
+                    <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                        <div class="font-medium">
+                            Удалить карту?
+                        </div>
+                        <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                    <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                </div>
+            
+                    <p class="text-blue_text font-medium text-center mb-10">
+                        Вы действительно хотите удалить свою карту? Если вы захотите добавить ее заново, то нужно будет пройти фото подтверждение еще раз.
+                    </p>
         
-                <p class="text-blue_text font-medium text-center mb-10">
-                    Вы действительно хотите удалить свою карту? Если вы захотите добавить ее заново, то нужно будет пройти фото подтверждение еще раз.
-                </p>
-    
-                <div class="flex items-center justify-center gap-5">
-                    <button class="btn btn-accent btn-dashed w-full max-w-xs min-w-0">
-                        Не удалять
-                    </button>
-                    <button class="btn btn-accent w-full max-w-xs min-w-0">
-                        Удалить
-                    </button>
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-5">
+                        <button class="btn btn-accent btn-dashed w-full max-w-xs min-w-0">
+                            Не удалять
+                        </button>
+                        <button class="btn btn-accent w-full max-w-xs min-w-0">
+                            Удалить
+                        </button>
+                    </div>
+                    
+            
                 </div>
                 
-        
             </div>
-            
         </div>
-    </div>
 
-@@include('partials/footer.html')
+        @@include('partials/footer.html')
+    </div>
 </body>
 </html>

@@ -1,100 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     @@include('partials/head.html')
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Личный кабинет</title>
 </head>
+
 <body>
+    <div id="app">
+        @@include('partials/header-account.html')
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
+            <div class="container">
 
-@@include('partials/header-account.html')
-<div class="wrapper bg-lightgray py-14 relative min-h-screen">
-    <div class="container">
-        
-        <div class="bg-white rounded-lg shadow-md py-10 px-10">
-            <h1 class="text-5xl text-center font-bold mb-10">Изменение почты</h1>
+                <div class="bg-white rounded-lg shadow-md py-7 px-7 md:py-10 md:px-2.5">
+                    <h1 class="text-[28px] text-blue_text  md:text-5xl text-center font-bold mb-10">Изменение почты</h1>
 
-            
-            <form class="max-w-4xl mx-auto" action="">
-                <div class="form-item w-full mb-10">
-                    <label for="passport-birthplace">Почта</label>
-                    <input type="text" id="passport-birthplace" placeholder="Введите почту">
-                </div>
 
-                
-                <div class="flex flex-wrap items-end justify-between gap-7 py-5 mb-10 border-t border-b border-darkgray">
-                    <div class="w-full max-w-[50%]">
-                        <div class="text-xl uppercase font-semibold mb-2.5">
-                            Вы можете сразу <br> подтвердить свою почту
+                    <form class="max-w-4xl mx-auto" action="">
+                        <div class="form-item w-full mb-10">
+                            <label for="passport-birthplace">Почта</label>
+                            <input type="text" id="passport-birthplace" placeholder="Введите почту">
                         </div>
-                        <div>Мы будем использовать вашу почту для обеспечения безопасности вашего аккаунта.</div>
-                    </div>
-                    <div class="w-full max-w-[45%]">
-                        <div class="btn w-full" onclick="openModal('email-confirm-modal'); startEmailTimer()">Подтвердить почту</div>
-                    </div>
-                </div>
-                
 
-                <div class="flex gap-5">
-                    <a href="account-updating.html" class="btn w-full btn-dashed ">
-                        Назад
-                    </a>
-                    <a href="" class="btn w-full btn-accent">Сохранить</a> <!-- По нажатию появляется соответствующий .notification и при успехе кнопка подтвердить становится .btn-disabled -->
-                </div>
-            </form>
 
+                        <div
+                            class="flex flex-col md:flex-row flex-wrap items-end justify-between gap-7 py-5 mb-10 border-t border-b border-darkgray">
+                            <div class="w-full md:max-w-[50%] text-center">
+                                <div class="text-sm md:text-xl uppercase font-semibold mb-2.5">
+                                    Вы можете сразу <br> подтвердить свою почту
+                                </div>
+                                <div class="text-sm md:text-base">Мы будем использовать вашу почту для обеспечения безопасности вашего аккаунта.
+                                </div>
+                            </div>
+                            <div class="w-full md:max-w-[45%]">
+                                <div class="btn w-full" onclick="openModal('email-confirm-modal'); startEmailTimer()">
+                                    Подтвердить почту</div>
+                            </div>
+                        </div>
+
+
+                        <div class="flex flex-col-reverse md:flex-row gap-5">
+                            <a href="account-updating.html" class="btn w-full btn-dashed ">
+                                Назад
+                            </a>
+                            <a href="" class="btn w-full btn-accent">Сохранить</a>
+                            <!-- По нажатию появляется соответствующий .notification и при успехе кнопка подтвердить становится .btn-disabled -->
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
         </div>
 
-    </div>
-</div>
+        @@include('partials/account-modals.html')
 
-<div class="modal" id="email-confirm-modal">
-    <div class="popup">
-        <div class="w-full max-w-[480px] mx-auto">
-            <div class="flex items-center justify-center relative border-b pb-5 mb-5">
-                <div class="font-medium">
-                    Подтверждение почты
-                </div>
-                <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>
-    
-            
-    
-            <p class="text-blue_text text-center mb-10">
-                Мы отправили вам письмо с подтверждением на вашу почту. Пожалуйста, перейдите по ссылке в письме для
-                завершения
-                процесса
-                подтверждения. Если вы уже подтвердили свою почту, обновите страницу.
-            </p>
 
-            <div class="text-center text-2xl mb-10">
-                P<span>*****</span>a@mail.ru
-            </div>
-
-            <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
-
-            
-            <button class="btn btn-accent btn-disabled js-email-button w-full max-w-sm mx-auto" onclick="startEmailTimer()">
-                Отправить ещё раз
-            </button>
-    
+        <div class="notification bg-green_80">
+            <span>Почта подтверждена</span>
+            <img src="img/buttons/account-menu-close.svg" alt="Закрыть">
         </div>
-        
+
+
+        @@include('partials/footer.html')
     </div>
-</div>
-
-
-<div class="notification bg-green_80">
-    <span>Почта подтверждена</span>
-    <img src="img/buttons/account-menu-close.svg" alt="Закрыть">
-</div>
-
-
-@@include('partials/footer.html')
 </body>
+
 </html>

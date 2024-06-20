@@ -188,9 +188,9 @@ if(accountMenuBtns) {
         btn.onclick = () => {
             accountMenu.classList.toggle('translate-y-full');
             if(!accountMenu.classList.contains('translate-y-full')) {
-                enableBodyScroll();
-            } else {
                 disableBodyScroll();
+            } else {
+                enableBodyScroll();
             }
         }
     })
@@ -228,25 +228,28 @@ if (customSelects) {
 
 // Открытие графика платежей
 
-const scheduleButton = document.querySelector('.schedule-btn');
+const scheduleButtons = document.querySelectorAll('.schedule-btn');
 const scheduleModal = document.querySelector('.schedule-modal');
 const scheduleClose = document.querySelector('.schedule-close');
 
-if(scheduleButton) {
-    scheduleButton.addEventListener('click', function () {
-        scheduleModal.classList.remove('translate-y-full');
-    });
-    scheduleClose.addEventListener('click', function () {
-        scheduleModal.classList.add('translate-y-full');
+if(scheduleButtons) {
+    scheduleButtons.forEach(function (scheduleBtn) {
+        scheduleBtn.addEventListener('click', function () {
+          scheduleModal.classList.remove('translate-y-full');
+
+        });
+        scheduleClose.addEventListener('click', function () {
+            scheduleModal.classList.add('translate-y-full');
+
+        })
     })
+    
 }
 
 
 // Открытие информации о заеме в multiple
 
 const loanCards = document.querySelectorAll('.js-loan-card');
-const infoButton = document.querySelector('.js-show-info');
-const loanInfo = document.querySelector('.js-loan-info');
 
 if(loanCards) {
 
@@ -255,6 +258,12 @@ if(loanCards) {
         let loanInfo = card.querySelector('.js-loan-info');
         infoButton.addEventListener('click', function () {
             loanInfo.classList.toggle('max-h-96');
+            if(loanInfo.classList.contains('max-h-96')) {
+                this.textContent="Свернуть";
+            } else {
+                this.textContent="Подробнее о займе";
+            }
+            
         });
     })
     

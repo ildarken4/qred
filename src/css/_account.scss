@@ -1,16 +1,26 @@
 .account-banner {
-    -webkit-box-shadow: 0px 0px 74px 58px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 0px 0px 74px 58px rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 74px 58px rgba(255, 255, 255, 1);
+    @media (min-width:768px) {
+        -webkit-box-shadow: 0px 0px 74px 58px rgba(255, 255, 255, 1);
+        -moz-box-shadow: 0px 0px 74px 58px rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 74px 58px rgba(255, 255, 255, 1);
+    }
+
+    &__bg {
+        -webkit-box-shadow: 0px 0px 74px 58px rgba(255, 255, 255, 1);
+        -moz-box-shadow: 0px 0px 74px 58px rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 74px 58px rgba(255, 255, 255, 1);
+
+    }
 }
 .schedule-row {
-    @apply flex items-center justify-between py-5 px-10;
+    @apply bg-white flex items-center justify-between p-5 md:px-10 flex-col md:flex-row rounded-md md:rounded-none shadow-md md:shadow-none mb-2.5 md:mb-0;
+
 
     &__item {
-        @apply flex items-center justify-between w-full font-semibold basis-1/3 md:block md:font-normal;
+        @apply flex items-center justify-between w-full font-semibold basis-1/3 md:block md:font-normal mb-2.5 md:mb-0;
 
         &:last-child {
-            @apply basis-2/12 lg:basis-[10%] text-right whitespace-nowrap;
+            @apply basis-2/12 lg:basis-[10%] md:text-right whitespace-nowrap mb-0;
         }
     }
     &:nth-child(even) {
@@ -18,7 +28,9 @@
     }
 }
 .add-card:nth-child(odd):not(:first-child) {
-    @apply max-w-full min-h-fit col-span-2
+
+        @apply sm:max-w-full sm:min-h-fit sm:col-span-2
+
 }
 .file-name {
     display: -webkit-box;

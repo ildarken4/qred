@@ -13,7 +13,7 @@
         <div class="wrapper">
             <div class="container">
                 <div class="max-w-[990px] mx-auto pt-10 md:pt-16 pb-36 text-center">
-                    <h1 class="text-[28px] md:text-5xl text-blue_text text-center font-bold mb-5 md:mb-10">
+                    <h1 class="text-[28px] text-blue_text md:text-5xl text-center font-bold mb-5 md:mb-10">
                         Ваша заявка рассматривается
                     </h1>
 
@@ -50,7 +50,7 @@
 
                         <div class="flex md:block w-full md:max-w-[256px] text-center relative">
                             <div class="bg-lightgray rounded-md overflow-hidden w-full max-w-[150px] md:max-w-none h-[130px] md:h-[180px] mb-0 md:mb-2 border border-darkblue md:border-none">
-                                <img src="img/selfie-example.jpg"" class="w-full h-full object-contain" alt="первый разворот паспорта">
+                                <img src="img/selfie-example.jpg" class="w-full h-full object-contain" alt="первый разворот паспорта">
                             </div>
                             <div class="pl-5 md:pl-0 flex justify-between flex-col md:block">
                                 <div class="text-sm md:text-base text-left md:text-center">
@@ -92,7 +92,7 @@
 
                         <div class="flex md:block w-full md:max-w-[256px] text-center relative">
                             <div class="bg-lightgray rounded-md overflow-hidden w-full max-w-[150px] md:max-w-none h-[130px] md:h-[180px] mb-0 md:mb-2 border border-darkblue md:border-none">
-                                <img src="img/selfie-example.jpg"" class="w-full h-full object-contain" alt="фото прописки">
+                                <img src="img/selfie-example.jpg" class="w-full h-full object-contain" alt="фото прописки">
                             </div>
                             <div class="pl-5 md:pl-0 flex justify-between flex-col md:block">
                                 <div class="text-sm md:text-base text-left md:text-center">
@@ -122,255 +122,7 @@
 
         </div>
 
-        <div class="modal modal-uploads" id="upload-selfie">
-            <div class="flex justify-between md:justify-center relative mt-14 mb-12">
-                <div class="flex items-center bg-lightgray rounded-lg p-2 gap-2">
-                    <div class="rounded-md py-2 px-4 transition-all bg-accent">
-                        Шаг 1
-                    </div>
-                    <div class="rounded-md py-2 px-4 transition-all">
-                        Шаг 2
-                    </div>
-                    <div class="rounded-md py-2 px-4 transition-all">
-                        Шаг 3
-                    </div>
-                </div>
-                <div class="w-14 h-14 md:absolute bg-lightgray rounded-lg flex items-center justify-center cursor-pointer right-12 top-0 transition-all hover:bg-white" onclick="closeModal()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                        <path d="M18 18.5L12 12.5M12 12.5L6 6.5M12 12.5L18 6.5M12 12.5L6 18.5" stroke="#191919"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-            </div>
-            <div class="text-center md:uppercase font-semibold mb-5 text-white text-2xl md:text-base">
-                Селфи с паспортом
-            </div>
-            <div class="w-full max-w-[990px] bg-white rounded-[20px] mx-auto flex flex-col items-center pt-10 pb-14">
-                <div class="bg-lightgray rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-5">
-                    <img src="img/passport-selfie.png" class="w-full h-full object-contain" alt="селфи с паспортом">
-                </div>
-                <p class="text-center text-sm md:text-base max-w-[280px] md:max-w-xs md:mb-10">Убедитесь, что данные паспорта и Ваше лицо будет хорошо видно </p>
-
-                <label class="w-full max-w-2xl h-60 border border-darkblue border-dashed rounded-lg hidden md:flex flex-col items-center justify-center">
-                    <input type="file" class="hidden" name="flow-photo">
-
-                    <div class="hidden lg:block mb-5">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path
-                                d="M26 6.00174C25.809 6 25.5946 6 25.3494 6H16.4004C14.1602 6 13.0392 6 12.1836 6.43597C11.4309 6.81947 10.8195 7.43095 10.436 8.18359C10 9.03924 10 10.1602 10 12.4004V35.6004C10 37.8406 10 38.9601 10.436 39.8158C10.8195 40.5684 11.4309 41.181 12.1836 41.5645C13.0384 42 14.158 42 16.3939 42L31.6062 42C33.842 42 34.96 42 35.8148 41.5645C36.5674 41.181 37.181 40.5684 37.5645 39.8158C38 38.961 38 37.843 38 35.6072V18.6514C38 18.4059 37.9999 18.1912 37.9981 18M26 6.00174C26.5713 6.00694 26.9327 6.02769 27.2777 6.11052C27.6858 6.20851 28.0757 6.37053 28.4336 6.58984C28.8371 6.83713 29.1836 7.18364 29.875 7.875L36.126 14.126C36.8178 14.8178 37.1617 15.1627 37.4091 15.5664C37.6284 15.9243 37.7907 16.3145 37.8887 16.7227C37.9715 17.0675 37.9927 17.429 37.9981 18M26 6.00174V11.6C26 13.8402 26 14.9595 26.436 15.8152C26.8195 16.5678 27.4309 17.181 28.1836 17.5645C29.0384 18 30.158 18 32.3938 18H37.9981M37.9981 18H38.0004"
-                                stroke="#F1C025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    
-                    <p class="upload-description text-blue_text mb-1">
-                        Нажмите или перетащите фото, чтобы загрузить.
-                    </p>
-                    <p class="text-gray_text">
-                        PNG, JPG (Размером до 25MB)
-                    </p>
-                </label>
-
-                <div class="hidden">
-                    <div class="btn mb-5">Заменить</div>
-                    <div class="btn">Использовать</div>
-                </div>
-            </div>
-            <div class="mobile-upload-icon lg:hidden bg-accent rounded-full h-[60px] w-[60px] flex items-center justify-center mx-auto cursor-pointer fixed bottom-10 left-[calc(50%-24px)]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                        d="M8 5.7777H5C3.34315 5.7777 2 7.12084 2 8.7777V16.9999C2 18.6568 3.34315 19.9999 5 19.9999H19C20.6569 19.9999 22 18.6568 22 16.9999V8.7777C22 7.12084 20.6569 5.7777 19 5.7777H16M8 5.7777L8.08797 4.65915C8.12212 4.22487 8.23322 3.78752 8.52463 3.46373C9.08674 2.83916 9.89408 2.4707 10.7545 2.4707H13.2455C14.1059 2.4707 14.9133 2.83916 15.4754 3.46373C15.7668 3.78752 15.8779 4.22487 15.912 4.65915L16 5.7777M8 5.7777H16M18.01 8.99992H18M15 12.9999C15 14.6568 13.6569 15.9999 12 15.9999C10.3431 15.9999 9 14.6568 9 12.9999C9 11.3431 10.3431 9.99992 12 9.99992C13.6569 9.99992 15 11.3431 15 12.9999Z"
-                        stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </div>
-        </div>
-
-        <div class="modal modal-uploads" id="upload-passport-1">
-            <div class="flex justify-between md:justify-center relative mt-14 mb-12">
-                <div class="flex items-center bg-lightgray rounded-lg p-2 gap-2">
-                    <div class="rounded-md py-2 px-4 transition-all bg-accent">
-                        Шаг 1
-                    </div>
-                    <div class="rounded-md py-2 px-4 transition-all bg-accent">
-                        Шаг 2
-                    </div>
-                    <div class="rounded-md py-2 px-4 transition-all">
-                        Шаг 3
-                    </div>
-                </div>
-                <div class="w-14 h-14 md:absolute bg-lightgray rounded-lg flex items-center justify-center cursor-pointer right-12 top-0 transition-all hover:bg-white" onclick="closeModal()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                        <path d="M18 18.5L12 12.5M12 12.5L6 6.5M12 12.5L18 6.5M12 12.5L6 18.5" stroke="#191919"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-            </div>
-            <div class="text-center md:uppercase font-semibold mb-5 text-white text-2xl md:text-base">
-                Первый разворот паспорта
-            </div>
-            <div class="w-full max-w-[990px] bg-white rounded-[20px] mx-auto flex flex-col items-center pt-10 pb-14">
-                <div class="bg-lightgray rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-5">
-                    <img src="img/passport-photo.png" class="w-full h-full object-contain" alt="Первый разворот паспорта">
-                </div>
-                <p class="text-center text-sm md:text-base max-w-[280px] md:max-w-xs md:mb-10">Убедитесь, что все данные паспорта будут хорошо видны</p>
-
-                <label class="w-full max-w-2xl h-60 border border-darkblue border-dashed rounded-lg hidden md:flex flex-col items-center justify-center">
-                    <input type="file" class="hidden" name="flow-photo">
-
-                    <div class="hidden lg:block mb-5">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path
-                                d="M26 6.00174C25.809 6 25.5946 6 25.3494 6H16.4004C14.1602 6 13.0392 6 12.1836 6.43597C11.4309 6.81947 10.8195 7.43095 10.436 8.18359C10 9.03924 10 10.1602 10 12.4004V35.6004C10 37.8406 10 38.9601 10.436 39.8158C10.8195 40.5684 11.4309 41.181 12.1836 41.5645C13.0384 42 14.158 42 16.3939 42L31.6062 42C33.842 42 34.96 42 35.8148 41.5645C36.5674 41.181 37.181 40.5684 37.5645 39.8158C38 38.961 38 37.843 38 35.6072V18.6514C38 18.4059 37.9999 18.1912 37.9981 18M26 6.00174C26.5713 6.00694 26.9327 6.02769 27.2777 6.11052C27.6858 6.20851 28.0757 6.37053 28.4336 6.58984C28.8371 6.83713 29.1836 7.18364 29.875 7.875L36.126 14.126C36.8178 14.8178 37.1617 15.1627 37.4091 15.5664C37.6284 15.9243 37.7907 16.3145 37.8887 16.7227C37.9715 17.0675 37.9927 17.429 37.9981 18M26 6.00174V11.6C26 13.8402 26 14.9595 26.436 15.8152C26.8195 16.5678 27.4309 17.181 28.1836 17.5645C29.0384 18 30.158 18 32.3938 18H37.9981M37.9981 18H38.0004"
-                                stroke="#F1C025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    
-                    <p class="upload-description text-blue_text mb-1">
-                        Нажмите или перетащите фото, чтобы загрузить.
-                    </p>
-                    <p class="text-gray_text">
-                        PNG, JPG (Размером до 25MB)
-                    </p>
-                </label>
-
-                <div class="hidden">
-                    <div class="btn mb-5">Заменить</div>
-                    <div class="btn">Использовать</div>
-                </div>
-            </div>
-            <div class="mobile-upload-icon lg:hidden bg-accent rounded-full h-[60px] w-[60px] flex items-center justify-center mx-auto cursor-pointer fixed bottom-10 left-[calc(50%-24px)]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                        d="M8 5.7777H5C3.34315 5.7777 2 7.12084 2 8.7777V16.9999C2 18.6568 3.34315 19.9999 5 19.9999H19C20.6569 19.9999 22 18.6568 22 16.9999V8.7777C22 7.12084 20.6569 5.7777 19 5.7777H16M8 5.7777L8.08797 4.65915C8.12212 4.22487 8.23322 3.78752 8.52463 3.46373C9.08674 2.83916 9.89408 2.4707 10.7545 2.4707H13.2455C14.1059 2.4707 14.9133 2.83916 15.4754 3.46373C15.7668 3.78752 15.8779 4.22487 15.912 4.65915L16 5.7777M8 5.7777H16M18.01 8.99992H18M15 12.9999C15 14.6568 13.6569 15.9999 12 15.9999C10.3431 15.9999 9 14.6568 9 12.9999C9 11.3431 10.3431 9.99992 12 9.99992C13.6569 9.99992 15 11.3431 15 12.9999Z"
-                        stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </div>
-
-        </div>
-
-        <div class="modal modal-uploads" id="upload-passport-2">
-
-             <div class="flex justify-between md:justify-center relative mt-14 mb-12">
-                <div class="flex items-center bg-lightgray rounded-lg p-2 gap-2">
-                    <div class="rounded-md py-2 px-4 transition-all bg-accent">
-                        Шаг 1
-                    </div>
-                    <div class="rounded-md py-2 px-4 transition-all bg-accent">
-                        Шаг 2
-                    </div>
-                    <div class="rounded-md py-2 px-4 transition-all bg-accent">
-                        Шаг 3
-                    </div>
-                </div>
-                <div class="w-14 h-14 md:absolute bg-lightgray rounded-lg flex items-center justify-center cursor-pointer right-12 top-0 transition-all hover:bg-white" onclick="closeModal()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                        <path d="M18 18.5L12 12.5M12 12.5L6 6.5M12 12.5L18 6.5M12 12.5L6 18.5" stroke="#191919"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-            </div>
-            <div class="text-center md:uppercase font-semibold mb-5 text-white text-2xl md:text-base">
-                Разворот с регистрацией
-            </div>
-            <div class="w-full max-w-[990px] bg-white rounded-[20px] mx-auto flex flex-col items-center pt-10 pb-14">
-                <div class="bg-lightgray rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-5">
-                    <img src="img/passport-address.png" class="w-full h-full object-contain" alt="Разворот с регистрацией">
-                </div>
-                <p class="text-center text-sm md:text-base max-w-[280px] md:max-w-xs md:mb-10">Убедитесь, что все данные паспорта будут хорошо видны</p>
-
-                <label class="w-full max-w-2xl h-60 border border-darkblue border-dashed rounded-lg hidden md:flex flex-col items-center justify-center">
-                    <input type="file" class="hidden" name="flow-photo">
-
-                    <div class="hidden lg:block mb-5">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path
-                                d="M26 6.00174C25.809 6 25.5946 6 25.3494 6H16.4004C14.1602 6 13.0392 6 12.1836 6.43597C11.4309 6.81947 10.8195 7.43095 10.436 8.18359C10 9.03924 10 10.1602 10 12.4004V35.6004C10 37.8406 10 38.9601 10.436 39.8158C10.8195 40.5684 11.4309 41.181 12.1836 41.5645C13.0384 42 14.158 42 16.3939 42L31.6062 42C33.842 42 34.96 42 35.8148 41.5645C36.5674 41.181 37.181 40.5684 37.5645 39.8158C38 38.961 38 37.843 38 35.6072V18.6514C38 18.4059 37.9999 18.1912 37.9981 18M26 6.00174C26.5713 6.00694 26.9327 6.02769 27.2777 6.11052C27.6858 6.20851 28.0757 6.37053 28.4336 6.58984C28.8371 6.83713 29.1836 7.18364 29.875 7.875L36.126 14.126C36.8178 14.8178 37.1617 15.1627 37.4091 15.5664C37.6284 15.9243 37.7907 16.3145 37.8887 16.7227C37.9715 17.0675 37.9927 17.429 37.9981 18M26 6.00174V11.6C26 13.8402 26 14.9595 26.436 15.8152C26.8195 16.5678 27.4309 17.181 28.1836 17.5645C29.0384 18 30.158 18 32.3938 18H37.9981M37.9981 18H38.0004"
-                                stroke="#F1C025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    
-                    <p class="upload-description text-blue_text mb-1">
-                        Нажмите или перетащите фото, чтобы загрузить.
-                    </p>
-                    <p class="text-gray_text">
-                        PNG, JPG (Размером до 25MB)
-                    </p>
-                </label>
-
-                <div class="hidden">
-                    <div class="btn mb-5">Заменить</div>
-                    <div class="btn">Использовать</div>
-                </div>
-            </div>
-            <div class="mobile-upload-icon lg:hidden bg-accent rounded-full h-[60px] w-[60px] flex items-center justify-center mx-auto cursor-pointer fixed bottom-10 left-[calc(50%-24px)]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                        d="M8 5.7777H5C3.34315 5.7777 2 7.12084 2 8.7777V16.9999C2 18.6568 3.34315 19.9999 5 19.9999H19C20.6569 19.9999 22 18.6568 22 16.9999V8.7777C22 7.12084 20.6569 5.7777 19 5.7777H16M8 5.7777L8.08797 4.65915C8.12212 4.22487 8.23322 3.78752 8.52463 3.46373C9.08674 2.83916 9.89408 2.4707 10.7545 2.4707H13.2455C14.1059 2.4707 14.9133 2.83916 15.4754 3.46373C15.7668 3.78752 15.8779 4.22487 15.912 4.65915L16 5.7777M8 5.7777H16M18.01 8.99992H18M15 12.9999C15 14.6568 13.6569 15.9999 12 15.9999C10.3431 15.9999 9 14.6568 9 12.9999C9 11.3431 10.3431 9.99992 12 9.99992C13.6569 9.99992 15 11.3431 15 12.9999Z"
-                        stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </div>
-
-
-        </div>
-
-        <div class="modal modal-uploads" id="upload-card">
-            <div class="flex justify-between md:justify-center relative mt-14 mb-12">
-                <div class="flex items-center bg-lightgray rounded-lg p-2 gap-2">
-                    <div class="rounded-md py-2 px-4 transition-all bg-accent">
-                        Шаг 4
-                    </div>
-                </div>
-                <div class="w-14 h-14 md:absolute bg-lightgray rounded-lg flex items-center justify-center cursor-pointer right-12 top-0 transition-all hover:bg-white"
-                    onclick="closeModal()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                        <path d="M18 18.5L12 12.5M12 12.5L6 6.5M12 12.5L18 6.5M12 12.5L6 18.5" stroke="#191919"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-            </div>
-            <div class="text-center md:uppercase font-semibold mb-5 text-white text-2xl md:text-base">
-                Фото привязанной карты
-            </div>
-            <div class="w-full max-w-[990px] bg-white rounded-[20px] mx-auto flex flex-col items-center pt-10 pb-14">
-                <div class="bg-lightgray rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-5">
-                    <img src="img/card-photo.png" class="w-full h-full object-contain" alt="сФото привязанной карты">
-                </div>
-                <p class="text-center text-sm md:text-base max-w-[280px] md:max-w-xs md:mb-10">Убедитесь, что данные с
-                    карты будет хорошо видно </p>
-
-                <label
-                    class="w-full max-w-2xl h-60 border border-darkblue border-dashed rounded-lg hidden md:flex flex-col items-center justify-center">
-                    <input type="file" class="hidden" name="flow-photo">
-
-                    <div class="hidden lg:block mb-5">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path
-                                d="M26 6.00174C25.809 6 25.5946 6 25.3494 6H16.4004C14.1602 6 13.0392 6 12.1836 6.43597C11.4309 6.81947 10.8195 7.43095 10.436 8.18359C10 9.03924 10 10.1602 10 12.4004V35.6004C10 37.8406 10 38.9601 10.436 39.8158C10.8195 40.5684 11.4309 41.181 12.1836 41.5645C13.0384 42 14.158 42 16.3939 42L31.6062 42C33.842 42 34.96 42 35.8148 41.5645C36.5674 41.181 37.181 40.5684 37.5645 39.8158C38 38.961 38 37.843 38 35.6072V18.6514C38 18.4059 37.9999 18.1912 37.9981 18M26 6.00174C26.5713 6.00694 26.9327 6.02769 27.2777 6.11052C27.6858 6.20851 28.0757 6.37053 28.4336 6.58984C28.8371 6.83713 29.1836 7.18364 29.875 7.875L36.126 14.126C36.8178 14.8178 37.1617 15.1627 37.4091 15.5664C37.6284 15.9243 37.7907 16.3145 37.8887 16.7227C37.9715 17.0675 37.9927 17.429 37.9981 18M26 6.00174V11.6C26 13.8402 26 14.9595 26.436 15.8152C26.8195 16.5678 27.4309 17.181 28.1836 17.5645C29.0384 18 30.158 18 32.3938 18H37.9981M37.9981 18H38.0004"
-                                stroke="#F1C025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-
-                    <p class="upload-description text-blue_text mb-1">
-                        Нажмите или перетащите фото, чтобы загрузить.
-                    </p>
-                    <p class="text-gray_text">
-                        PNG, JPG (Размером до 25MB)
-                    </p>
-                </label>
-
-                <div class="hidden">
-                    <div class="btn mb-5 w-">Заменить</div>
-                    <div class="btn">Использовать</div>
-                </div>
-            </div>
-            <div
-                class="mobile-upload-icon lg:hidden bg-accent rounded-full h-[60px] w-[60px] flex items-center justify-center mx-auto cursor-pointer fixed bottom-10 left-[calc(50%-24px)]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                        d="M8 5.7777H5C3.34315 5.7777 2 7.12084 2 8.7777V16.9999C2 18.6568 3.34315 19.9999 5 19.9999H19C20.6569 19.9999 22 18.6568 22 16.9999V8.7777C22 7.12084 20.6569 5.7777 19 5.7777H16M8 5.7777L8.08797 4.65915C8.12212 4.22487 8.23322 3.78752 8.52463 3.46373C9.08674 2.83916 9.89408 2.4707 10.7545 2.4707H13.2455C14.1059 2.4707 14.9133 2.83916 15.4754 3.46373C15.7668 3.78752 15.8779 4.22487 15.912 4.65915L16 5.7777M8 5.7777H16M18.01 8.99992H18M15 12.9999C15 14.6568 13.6569 15.9999 12 15.9999C10.3431 15.9999 9 14.6568 9 12.9999C9 11.3431 10.3431 9.99992 12 9.99992C13.6569 9.99992 15 11.3431 15 12.9999Z"
-                        stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </div>
-        </div>
+        @@include('partials/upload-modals.html')
 
         @@include('partials/main-footer.html')
     </div>

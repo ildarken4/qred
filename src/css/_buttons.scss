@@ -87,7 +87,7 @@
         @apply px-3 py-3 bg-white lg:bg-transparent border-transparent lg:border-accent lg:px-7 lg:py-3.5
     }
     &-account-menu {
-        @apply bg-blue text-white uppercase border-white rounded-md shadow-md h-20 min-w-fit w-52 mx-auto mt-10 text-2xl font-semibold gap-2 hover:text-white hover:border-white hover:bg-darkblue hover:shadow-none active:bg-blue
+        @apply bg-blue text-white uppercase border-2 border-white rounded-md shadow-md md:h-20 min-w-fit w-full md:w-52 mx-auto mt-10 md:text-2xl font-semibold gap-2 hover:text-white hover:border-white hover:bg-darkblue hover:shadow-none active:bg-blue
     }
     &-squared {
         @apply rounded-md

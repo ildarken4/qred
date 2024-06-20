@@ -1,5 +1,5 @@
 .modal {
-    @apply fixed top-0 left-0 w-screen h-screen bg-black_02 flex items-end md:items-center justify-center backdrop-blur-sm pointer-events-none opacity-0 transition-all;
+    @apply fixed top-0 left-0 w-screen h-screen bg-black_02 flex items-end md:items-center justify-center backdrop-blur-sm pointer-events-none opacity-0 transition-all z-50;
 
     &.active {
         @apply opacity-100 pointer-events-auto;
@@ -9,7 +9,7 @@
     }
 }
 .popup {
-    @apply bg-white rounded-t-lg md:rounded-lg p-5 md:p-10 w-full max-w-[736px];
+    @apply bg-white rounded-t-lg md:rounded-lg pb-10 p-5 md:p-10 w-full max-w-[736px];
 
     &-small {
         @apply max-w-3xl
