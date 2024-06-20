@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+<link rel="manifest" href="img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Личный кабинет</title>
+</head>
+<body>
+    <div id="app">
+        <a id="top"></a>
+<header class="header relative py-2.5 md:py-7">
+    <div class="container flex items-center justify-between">
+      
+      <a href="index.html" class="w-36 md:w-52">
+          <img src="img/Logo.svg" width="100%" alt="Логотип компании">
+      </a>
+      <div class="flex gap-2.5 lg:gap-7">
+
+        <button class="btn btn-squared btn-gray min-w-fit h-14 flex px-4 lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M20.7772 10.5C20.9231 11.1432 21.0002 11.8126 21.0002 12.5C21.0002 17.4706 16.9708 21.5 12.0002 21.5C11.3072 21.5 10.6324 21.4217 9.98437 21.2734C9.35838 21.1301 8.70618 21.1103 8.08126 21.2581C6.68573 21.5884 4.75953 21.8545 3.4417 21.4801C2.88639 21.3224 2.83203 20.6354 3.09965 20.1239C3.41097 19.5289 3.68178 18.7964 3.88646 18.1456C4.11568 17.4167 3.97026 16.6402 3.67854 15.934C3.24139 14.8758 3.0002 13.7161 3.0002 12.5C3.0002 7.52944 7.02964 3.5 12.0002 3.5C12.8677 3.5 13.7065 3.62273 14.5002 3.85177M8.0002 11H16.0002M8.0002 15H12.0002M20.0002 2.5V4.5M20.0002 4.5V6.5M20.0002 4.5H18.0002M20.0002 4.5H22.0002" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="btn btn-squared btn-gray min-w-fit h-14 flex px-4 lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M12 15.5L15 12.5M15 12.5L12 9.5M15 12.5H4M4 7.74802V7.7002C4 6.58009 4 6.01962 4.21799 5.5918C4.40973 5.21547 4.71547 4.90973 5.0918 4.71799C5.51962 4.5 6.08009 4.5 7.2002 4.5H16.8002C17.9203 4.5 18.4796 4.5 18.9074 4.71799C19.2837 4.90973 19.5905 5.21547 19.7822 5.5918C20 6.0192 20 6.57899 20 7.69691V17.3036C20 18.4215 20 18.9805 19.7822 19.4079C19.5905 19.7842 19.2837 20.0905 18.9074 20.2822C18.48 20.5 17.921 20.5 16.8031 20.5H7.19691C6.07899 20.5 5.5192 20.5 5.0918 20.2822C4.71547 20.0905 4.40973 19.7839 4.21799 19.4076C4 18.9798 4 18.4201 4 17.3V17.25" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <a class="btn btn-accent hidden lg:flex">Подать обращение</a>
+        <a class="btn hidden lg:flex">
+          Выйти
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+            <path d="M12.5 15L15.5 12M15.5 12L12.5 9M15.5 12H4.5M4.5 7.24802V7.2002C4.5 6.08009 4.5 5.51962 4.71799 5.0918C4.90973 4.71547 5.21547 4.40973 5.5918 4.21799C6.01962 4 6.58009 4 7.7002 4H17.3002C18.4203 4 18.9796 4 19.4074 4.21799C19.7837 4.40973 20.0905 4.71547 20.2822 5.0918C20.5 5.5192 20.5 6.07899 20.5 7.19691V16.8036C20.5 17.9215 20.5 18.4805 20.2822 18.9079C20.0905 19.2842 19.7837 19.5905 19.4074 19.7822C18.98 20 18.421 20 17.3031 20H7.69691C6.57899 20 6.0192 20 5.5918 19.7822C5.21547 19.5905 4.90973 19.2839 4.71799 18.9076C4.5 18.4798 4.5 17.9201 4.5 16.8V16.75" stroke="#F1C025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      
+    </div>
+</header>
+
+        <div class="wrapper bg-lightgray py-14 relative overflow-hidden">
+            <div class="container">
+
+                <div class="bg-darkblue text-center p-5 rounded-lg mb-5">
+    <div class="text-white font-bold md:text-[32px] mb-2.5">Добро пожаловать, <span class="block md:inline">Иванов Иван Иванович</span></div>
+    <div class="text-accent font-bold max-w-xs mx-auto leading-8 md:max-w-full text-[28px] md:text-5xl mb-5">У вас есть несколько активных займов</div>
+    <div class="bg-red text-white text-sm md:text-2xl lg:text-6xl font-bold px-5 lg:px-5 py-3 lg:py-2.5 w-fit mx-auto rounded-md mb-5">У вас есть просроченные платежи</div>
+    <div class="flex flex-col md:flex-row gap-2.5 md:gap-5 items-center justify-center">
+        <button class="btn btn-gray min-w-[228px] md:min-w-[280px]" onclick="openModal('set-password-modal')">
+            Задайте пароль
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M2.57227 11.9999L21.4284 11.9999M21.4284 11.9999L12.0004 21.428M21.4284 11.9999L12.0004 2.57178" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <button class="btn btn-gray min-w-[228px] md:min-w-[280px]" onclick="openModal('email-confirm-modal'); startEmailTimer()">
+            Подтвердите почту
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M2.57227 11.9999L21.4284 11.9999M21.4284 11.9999L12.0004 21.428M21.4284 11.9999L12.0004 2.57178" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+</div>
+
+                <div
+                    class="bg-account-banner bg-banner bg-repeat-x md:bg-repeat bg-top md:bg-center bg-white rounded-lg mb-5 md:mb-10 relative overflow-hidden">
+                    <div
+                        class="account-banner w-full relative md:w-2/3 mx-auto text-center md:bg-white py-5 md:py-10 px-6 h-full">
+                        <div class="account-banner__bg md:hidden absolute bottom-0 left-0 w-full h-1/2 bg-white z-0">
+                        </div>
+                        <div class="text-blue_text relative z-10 text-xl md:text-3xl font-bold mb-5 md:mb-8">
+                            Активировать предложение по новому заему
+                        </div>
+                        <div class="btn btn-accent relative z-10 min-w-fit sm:w-80 mx-auto">
+                            Активировать
+                        </div>
+                    </div>
+                </div>
+
+        
+            <div class="loans-slider overflow-hidden">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                            <div class="js-loan-card bg-white rounded-lg shadow-md py-10 px-10 flex flex-col items-center h-fit border border-red relative">
+
+                                <div class="absolute top-0 bg-red rounded-b text-white text-sm md:text-xl font-bold h-10 flex items-center w-fit whitespace-nowrap px-4 left-1/2 -translate-x-1/2 mx-auto mb-2">Платеж просрочен на&nbsp;<span>19</span>&nbsp;дней!</div>
+
+                                <div class="text-center">Номер договора</div>
+                                <div class="text-center text-xl font-bold mb-8">№<span>12435445</span></div>
+
+                                <form action="" class="w-full max-w-[400px] mx-auto h-fit my-auto mb-5">
+
+                                    
+                            <input type="text" class="payment-input mb-2.5" placeholder="Введите сумму" value="40 руб.">
+
+                            <button class="btn btn-accent btn-squared w-full mb-5 md:mb-10">Продлить</button>
+
+                            <input type="text" class="payment-input mb-2.5" placeholder="Введите сумму"
+                                value="2100 руб.">
+
+                            <button class="btn btn-accent btn-squared w-full">Оплатить</button>
+                                    
+                                </form>
+
+                                <div class="js-loan-info border-b border-dashed border-gray mb-5 w-full max-w-[280px] md:max-w-lg h-fit max-h-0 overflow-hidden text-blue_text transition-all">
+                                    <div class="w-full py-2.5 flex items-center justify-between">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Общая сумма долга</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">21 000 руб.</span></div>
+                                    </div>
+                                    <div class="w-full py-2.5 flex items-center justify-between">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Проценты</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">40 руб.</span></div>
+                                    </div>
+                                    <div class="w-full py-2.5 flex items-center justify-between mb-5">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Рекомендованная дата платежа</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">03.03.23</span></div>
+                                    </div>
+
+                                    
+                                </div>
+                                
+                                <div class="js-show-info text-center font-medium cursor-pointer">Подробнее о заеме</div>
+
+
+
+                            </div>
+                            <div class="js-loan-card bg-white rounded-lg shadow-md py-10 px-10 flex flex-col items-center h-fit relative">
+
+                                <div class="text-center">Номер договора</div>
+                                <div class="text-center text-xl font-bold mb-8">№<span>12435445</span></div>
+
+                                <form action="" class="w-full max-w-[400px] mx-auto h-fit my-auto mb-5">
+
+                                    
+                            <input type="text" class="payment-input mb-2.5" placeholder="Введите сумму" value="40 руб.">
+
+                            <button class="btn btn-accent btn-squared w-full mb-5 md:mb-10">Продлить</button>
+
+                            <input type="text" class="payment-input mb-2.5" placeholder="Введите сумму"
+                                value="2100 руб.">
+
+                            <button class="btn btn-accent btn-squared w-full">Оплатить</button>
+                                    
+                                </form>
+
+                                <div class="js-loan-info border-b border-dashed border-gray mb-5 w-full max-w-[280px] md:max-w-lg h-fit max-h-0 overflow-hidden text-blue_text transition-all">
+                                    <div class="w-full py-2.5 flex items-center justify-between">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Общая сумма долга</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">21 000 руб.</span></div>
+                                    </div>
+                                    <div class="w-full py-2.5 flex items-center justify-between">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Проценты</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">40 руб.</span></div>
+                                    </div>
+                                    <div class="w-full py-2.5 flex items-center justify-between mb-5">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Рекомендованная дата платежа</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">03.03.23</span></div>
+                                    </div>
+
+
+                                    
+                                </div>
+                                <div class="js-show-info text-center font-medium cursor-pointer">Подробнее о заеме</div>
+                            </div>
+                            <div class="js-loan-card bg-white rounded-lg shadow-md py-10 px-10 flex flex-col items-center h-fit relative">
+
+                                <div class="text-center">Номер договора</div>
+                                <div class="text-center text-xl font-bold mb-8">№<span>12435445</span></div>
+
+                                <form action="" class="w-full max-w-[400px] mx-auto h-fit my-auto mb-5">
+
+                                    
+                            <input type="text" class="payment-input mb-2.5" placeholder="Введите сумму" value="40 руб.">
+
+                            <button class="btn btn-accent btn-squared w-full mb-5 md:mb-10">Продлить</button>
+
+                            <input type="text" class="payment-input mb-2.5" placeholder="Введите сумму"
+                                value="2100 руб.">
+
+                            <button class="btn btn-accent btn-squared w-full">Оплатить</button>
+                                    
+                                </form>
+
+                                <div class="js-loan-info border-b border-dashed border-gray mb-5 w-full max-w-[280px] md:max-w-lg h-fit max-h-0 overflow-hidden text-blue_text transition-all">
+                                    <div class="w-full py-2.5 flex items-center justify-between">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Общая сумма долга</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">21 000 руб.</span></div>
+                                    </div>
+                                    <div class="w-full py-2.5 flex items-center justify-between">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Проценты</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">40 руб.</span></div>
+                                    </div>
+                                    <div class="w-full py-2.5 flex items-center justify-between mb-5">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Рекомендованная дата платежа</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">03.03.23</span></div>
+                                    </div>
+
+
+                                    
+                                </div>
+                                <div class="js-show-info text-center font-medium cursor-pointer">Подробнее о заеме</div>
+                            </div>
+                            <div class="js-loan-card bg-white rounded-lg shadow-md py-10 px-10 flex flex-col items-center h-fit relative">
+
+                                <div class="text-center">Номер договора</div>
+                                <div class="text-center text-xl font-bold mb-8">№<span>12435445</span></div>
+
+                                <form action="" class="w-full max-w-[400px] mx-auto h-fit my-auto mb-5">
+
+                                    
+                            <input type="text" class="payment-input mb-2.5" placeholder="Введите сумму" value="40 руб.">
+
+                            <button class="btn btn-accent btn-squared w-full mb-5 md:mb-10">Продлить</button>
+
+                            <input type="text" class="payment-input mb-2.5" placeholder="Введите сумму"
+                                value="2100 руб.">
+
+                            <button class="btn btn-accent btn-squared w-full">Оплатить</button>
+                                    
+                                </form>
+
+                                <div class="js-loan-info border-b border-dashed border-gray mb-5 w-full max-w-[280px] md:max-w-lg h-fit max-h-0 overflow-hidden text-blue_text transition-all">
+                                    <div class="w-full py-2.5 flex items-center justify-between">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Общая сумма долга</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">21 000 руб.</span></div>
+                                    </div>
+                                    <div class="w-full py-2.5 flex items-center justify-between">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Проценты</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">40 руб.</span></div>
+                                    </div>
+                                    <div class="w-full py-2.5 flex items-center justify-between mb-5">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Рекомендованная дата платежа</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">03.03.23</span></div>
+                                    </div>
+
+
+                                    
+                                </div>
+                                <div class="js-show-info text-center font-medium cursor-pointer">Подробнее о заеме</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                            
+                            <div class="js-loan-card bg-white rounded-lg shadow-md py-10 px-10 flex flex-col items-center h-fit relative">
+
+                                <div class="text-center">Номер договора</div>
+                                <div class="text-center text-xl font-bold mb-8">№<span>12435445</span></div>
+
+                                <form action="" class="w-full max-w-[400px] mx-auto h-fit my-auto mb-5">
+
+                                    
+                            <input type="text" class="payment-input mb-2.5" placeholder="Введите сумму" value="40 руб.">
+
+                            <button class="btn btn-accent btn-squared w-full mb-5 md:mb-10">Продлить</button>
+
+                            <input type="text" class="payment-input mb-2.5" placeholder="Введите сумму"
+                                value="2100 руб.">
+
+                            <button class="btn btn-accent btn-squared w-full">Оплатить</button>
+                                    
+                                </form>
+
+                                <div class="js-loan-info border-b border-dashed border-gray mb-5 w-full max-w-[280px] md:max-w-lg h-fit max-h-0 overflow-hidden text-blue_text transition-all">
+                                    <div class="w-full py-2.5 flex items-center justify-between">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Общая сумма долга</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">21 000 руб.</span></div>
+                                    </div>
+                                    <div class="w-full py-2.5 flex items-center justify-between">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Проценты</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">40 руб.</span></div>
+                                    </div>
+                                    <div class="w-full py-2.5 flex items-center justify-between mb-5">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Рекомендованная дата платежа</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">03.03.23</span></div>
+                                    </div>
+
+
+                                    
+                                </div>
+                                <div class="js-show-info text-center font-medium cursor-pointer">Подробнее о заеме</div>
+                            </div>
+                            
+                            <div class="js-loan-card bg-white rounded-lg shadow-md py-10 px-10 flex flex-col items-center h-fit relative">
+
+                                <div class="text-center">Номер договора</div>
+                                <div class="text-center text-xl font-bold mb-8">№<span>12435445</span></div>
+
+                                <form action="" class="w-full max-w-[400px] mx-auto h-fit my-auto mb-5">
+
+                                    
+                            <input type="text" class="payment-input mb-2.5" placeholder="Введите сумму" value="40 руб.">
+
+                            <button class="btn btn-accent btn-squared w-full mb-5 md:mb-10">Продлить</button>
+
+                            <input type="text" class="payment-input mb-2.5" placeholder="Введите сумму"
+                                value="2100 руб.">
+
+                            <button class="btn btn-accent btn-squared w-full">Оплатить</button>
+                                    
+                                </form>
+
+                                <div class="js-loan-info border-b border-dashed border-gray mb-5 w-full max-w-[280px] md:max-w-lg h-fit max-h-0 overflow-hidden text-blue_text transition-all">
+                                    <div class="w-full py-2.5 flex items-center justify-between">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Общая сумма долга</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">21 000 руб.</span></div>
+                                    </div>
+                                    <div class="w-full py-2.5 flex items-center justify-between">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Проценты</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">40 руб.</span></div>
+                                    </div>
+                                    <div class="w-full py-2.5 flex items-center justify-between mb-5">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Рекомендованная дата платежа</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">03.03.23</span></div>
+                                    </div>
+
+
+                                    
+                                </div>
+                                <div class="js-show-info text-center font-medium cursor-pointer">Подробнее о заеме</div>
+                            </div>
+                            
+                            <div class="js-loan-card bg-white rounded-lg shadow-md py-10 px-10 flex flex-col items-center h-fit relative">
+
+                                <div class="text-center">Номер договора</div>
+                                <div class="text-center text-xl font-bold mb-8">№<span>12435445</span></div>
+
+                                <form action="" class="w-full max-w-[400px] mx-auto h-fit my-auto mb-5">
+
+                                    
+                            <input type="text" class="payment-input mb-2.5" placeholder="Введите сумму" value="40 руб.">
+
+                            <button class="btn btn-accent btn-squared w-full mb-5 md:mb-10">Продлить</button>
+
+                            <input type="text" class="payment-input mb-2.5" placeholder="Введите сумму"
+                                value="2100 руб.">
+
+                            <button class="btn btn-accent btn-squared w-full">Оплатить</button>
+                                    
+                                </form>
+
+                                <div class="js-loan-info border-b border-dashed border-gray mb-5 w-full max-w-[280px] md:max-w-lg h-fit max-h-0 overflow-hidden text-blue_text transition-all">
+                                    <div class="w-full py-2.5 flex items-center justify-between">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Общая сумма долга</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">21 000 руб.</span></div>
+                                    </div>
+                                    <div class="w-full py-2.5 flex items-center justify-between">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Проценты</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">40 руб.</span></div>
+                                    </div>
+                                    <div class="w-full py-2.5 flex items-center justify-between mb-5">
+                                        <div class="md:text-gray_text text-sm md:text-basis max-w-[60%]">Рекомендованная дата платежа</div>
+                                        <div class="md:text-2xl font-bold basis-2/5 md:basis-1/3">03.03.23</span></div>
+                                    </div>
+
+
+                                    
+                                </div>
+                                <div class="js-show-info text-center font-medium cursor-pointer">Подробнее о заеме</div>
+                            </div>
+                            
+                        </div>
+                </div>
+            </div>
+            
+        </div>
+
+        
+        <div class="slider-controls flex items-center justify-center mt-10 gap-8">
+    <div class="slider-prev slider-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <path
+                d="M26 30L20 24L26 18M42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42C33.9411 42 42 33.9411 42 24Z"
+                stroke="#394D69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </div>
+
+    <div class="slider-counter flex items-center gap-2">
+
+    </div>
+
+    <div class="slider-next slider-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <path
+                d="M22 18L28 24L22 30M42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42C33.9411 42 42 33.9411 42 24Z"
+                stroke="#394D69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </div>
+</div>
+
+         <div class="btn btn-account-menu">
+    Меню
+    <img src="img/buttons/menu.svg" alt="меню">
+</div>
+
+<div class="js-account-menu fixed top-0 left-0 h-screen w-screen bg-blue_08 backdrop-blur-sm translate-y-full transition-all z-50">
+    <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-2.5 md:gap-5 px-2.5 md:px-[50px] pt-10 md:pt-36 overflow-auto max-h-screen pb-52">
+        
+        <a href="account-loan.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
+                <img src="img/icons/account-main.png" width="100%" alt="изображение пункта меню">
+            </div>
+            <div class="account-menu__title">
+                Главная
+            </div>
+        </a>
+    
+        <a href="account-my-cards.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
+                <img src="img/icons/account-menu_card.png" width="100%" alt="изображение пункта меню">
+            </div>
+            <div class="account-menu__title">
+                Мои Карты
+            </div>
+        </a>
+    
+        <a href="account-history.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
+                <img src="img/icons/account-menu_history.png" width="100%" alt="изображение пункта меню">
+            </div>
+            <div class="account-menu__title">
+                История займов
+            </div>
+        </a>
+    
+        <a href="account-docs.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
+                <img src="img/icons/account-menu_docs.png" width="100%" alt="изображение пункта меню">
+            </div>
+            <div class="account-menu__title">
+                Документы
+            </div>
+        </a>
+    
+        <a href="account-files.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
+                <img src="img/icons/account-menu_files.png" width="100%" alt="изображение пункта меню">
+            </div>
+            <div class="account-menu__title">
+                Мои файлы
+            </div>
+        </a>
+    
+        <a href="account-my-appeals.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
+                <img src="img/icons/my-appeals.png" width="100%" alt="изображение пункта меню">
+            </div>
+            <div class="account-menu__title">
+                Мои обращения
+            </div>
+        </a>
+    
+        <a href="account-files.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
+                <img src="img/icons/my-account.png" width="100%" alt="изображение пункта меню">
+            </div>
+            <div class="account-menu__title">
+                Личный кабинет
+            </div>
+        </a>
+    </div>
+    <div class="btn btn-account-menu fixed bottom-14 left-2.5 w-[calc(100%-20px)] md:w-52 md:left-[calc(50%-104px)]">
+        Закрыть
+        <img src="img/buttons/account-menu-close.svg" alt="закрыть">
+    </div>
+</div>
+
+
+            </div>
+
+            
+<div class="schedule-modal fixed md:absolute bg-gray w-full h-full md:pt-14 translate-y-full transition-all top-0 overflow-auto z-50 px-5">
+    <div class="container h-full">
+
+        <div class="md:bg-white w-full rounded-t-[48px] h-full">
+            <div class="relative flex items-center justify-center md:justify-between py-5 md:py-11 border-b md:border-gray px-11">
+                <div class="md:text-3xl font-semibold">
+                    График платежей
+                </div>
+                <button class="schedule-close absolute md:relative right-0 border-red md:border rounded-full p-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path class="md:stroke-red" d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#000000" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="pt-10">
+                <div class="schedule-row font-bold hidden md:flex">
+                    <div class="schedule-row__item">Рекомендованная <br> дата погашения</div>
+                    <div class="schedule-row__item">Платеж по графику</div>
+                    <div class="schedule-row__item">Просрочка</div>
+                    <div class="schedule-row__item">Сумма к оплате</div>
+                </div>
+                
+                <div class="schedule-row">
+                    <div class="schedule-row__item">
+                        <div class="text-blue_text">02.01.2024</div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Платеж по графику
+                        </div>
+                        <div class="basis-1/3 text-left text-blue_text"><span>2500</span> руб.</div>
+
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Просрочка
+                        </div>
+                        <div class="basis-1/3 text-left text-blue_text">-</div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Сумма к оплате
+                        </div>
+                        <div class="text-accent basis-1/3 text-left">Оплачен</div>
+                    </div>
+                </div>
+
+                <div class="schedule-row">
+                    <div class="schedule-row__item">
+                        <div class="text-blue_text">02.01.2024</div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Платеж по графику
+                        </div>
+                        <div class="basis-1/3 text-left text-blue_text"><span>2500</span> руб.</div>
+
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Просрочка
+                        </div>
+                        <div class="basis-1/3 text-left text-blue_text">-</div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Сумма к оплате
+                        </div>
+                        <div class="text-accent basis-1/3 text-left">Оплачен</div>
+                    </div>
+                </div>
+
+                <div class="schedule-row">
+                    <div class="schedule-row__item">
+                        <div class="text-blue_text">02.01.2024</div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Платеж по графику
+                        </div>
+                        <div class="basis-1/3 text-left text-blue_text"><span>2500</span> руб.</div>
+
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Просрочка
+                        </div>
+                        <div class="basis-1/3 text-left text-blue_text">-</div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Сумма к оплате
+                        </div>
+                        <div class="text-accent basis-1/3 text-left">Оплачен</div>
+                    </div>
+                </div>
+
+                <div class="schedule-row">
+                    <div class="schedule-row__item">
+                        <div class="text-blue_text">02.01.2024</div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Платеж по графику
+                        </div>
+                        <div class="basis-1/3 text-left text-blue_text"><span>2500</span> руб.</div>
+
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Просрочка
+                        </div>
+                        <div class="basis-1/3 text-left text-blue_text">-</div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Сумма к оплате
+                        </div>
+                        <div class="text-accent basis-1/3 text-left">Оплачен</div>
+                    </div>
+                </div>
+
+                <div class="schedule-row">
+                    <div class="schedule-row__item">
+                        <div class="text-blue_text">02.01.2024</div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Платеж по графику
+                        </div>
+                        <div class="basis-1/3 text-left text-blue_text"><span>2500</span> руб.</div>
+
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Просрочка
+                        </div>
+                        <div class="basis-1/3 text-left text-blue_text">-</div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Сумма к оплате
+                        </div>
+                        <div class="text-accent basis-1/3 text-left">Оплачен</div>
+                    </div>
+                </div>
+
+                <div class="schedule-row">
+                    <div class="schedule-row__item">
+                        <div class="text-blue_text">02.01.2024</div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Платеж по графику
+                        </div>
+                        <div class="basis-1/3 text-left text-blue_text"><span>2500</span> руб.</div>
+
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Просрочка
+                        </div>
+                        <div class="basis-1/3 text-left text-blue_text">-</div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="md:hidden text-gray_text md:text-black text-sm md:text-base">
+                            Сумма к оплате
+                        </div>
+                        <div class="text-accent basis-1/3 text-left">Оплачен</div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>
+        </div>
+
+        <div class="modal" id="set-password-modal">
+    <div class="popup popup-small">
+        <div class="w-full max-w-[400px] mx-auto">
+            <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                <div class="font-medium">
+                    Создание пароля
+                </div>
+                <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <form action="">
+                <div class="form-item mb-5 lg:mb-10">
+                    <label for="new-password">Новый пароль</label>
+                    <div class="js-password-wrapper relative">
+                        <input type="password" id="new-password" class="peer" placeholder="Введите пароль" required>
+                        <div
+                            class="show-password absolute right-5 top-5 cursor-pointer opacity-60 peer-focus:opacity-100">
+                            <img src="img/icons/password-eye.svg" alt="">
+                        </div>
+                        <div
+                            class="absolute top-full left-0 w-full bg-white border-2 border-darkgray px-2.5 py-5 lg:p-5 shadow-sm z-20 rounded-md mt-1 opacity-0 pointer-events-none peer-focus:opacity-100">
+                            <div class="text-center text-sm md:text-base mb-5">Пароль должен содержать</div>
+                            <div class="font-semibold text-xs md:text-base mb-5">
+                                - 8 символов латинского алфавита (A-z)
+                            </div>
+                            <div class="font-semibold text-xs md:text-base">
+                                - цифры (0-9)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden text-red text-xs pt-1">Обязательное поле</div>
+                    <div class="hidden text-red text-xs pt-1">Проверьте поле на корректность текста
+                    </div>
+                </div>
+
+                <div class="form-item mb-10">
+                    <label for="confirm-password">Повторите пароль</label>
+                    <div class="js-password-wrapper relative">
+                        <input type="password" id="confirm-password" class="peer" placeholder="Повторите пароль"
+                            required>
+                        <div
+                            class="show-password absolute right-5 top-5 cursor-pointer opacity-60 peer-focus:opacity-100">
+                            <img src="img/icons/password-eye.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="hidden text-red text-xs pt-1">Обязательное поле</div>
+                    <div class="hidden text-red text-xs pt-1">Проверьте поле на корректность текста
+                    </div>
+                </div>
+
+                <div class="btn btn-accent">
+                    Далее
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="modal" id="email-confirm-modal">
+    <div class="popup">
+        <div class="w-full max-w-[480px] mx-auto">
+            <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                <div class="font-medium">
+                    Подтверждение почты
+                </div>
+                <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+
+
+            <p class="text-blue_text text-center mb-10">
+                Мы отправили вам письмо с подтверждением на вашу почту. Пожалуйста, перейдите по ссылке в письме
+                для
+                завершения
+                процесса
+                подтверждения. Если вы уже подтвердили свою почту, обновите страницу.
+            </p>
+
+            <div class="text-center md:text-2xl mb-10">
+                P<span>*****</span>a@mail.ru
+            </div>
+
+            <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
+
+
+            <button class="btn btn-accent btn-disabled js-email-button w-full max-w-sm mx-auto"
+                onclick="startEmailTimer()">
+                Отправить ещё раз
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="notification bg-red_75">
+    <span>Не все поля заполнены</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="white" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+    </svg>
+</div>
+
+<div class="notification bg-green_80">
+    <span>Почта подтверждена</span>
+    <img src="img/buttons/account-menu-close.svg" alt="Почта подтверждена">
+</div>
+
+
+        <footer>
+    
+</footer>
+
+<script src="./js/scripts.js"></script>
+
+
+    </div>
+</body>
+</html>

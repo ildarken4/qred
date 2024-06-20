@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+<link rel="manifest" href="img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Получить заём</title>
+</head>
+
+<body>
+    <div id="app">
+        <header class="header relative py-7">
+    <div class="container">
+      <div class="flex items-center justify-center">
+        <a href="index.html" class="logo w-36 lg:w-52">
+          <img src="img/Logo.svg" width="100%" alt="Логотип компании">
+        </a>
+      </div>
+    </div>
+</header>
+
+
+        <div class="wrapper">
+            <div class="container">
+                <div class="max-w-[990px] mx-auto pt-10 md:pt-16 pb-36">
+                    <h1 class="text-[28px] text-blue_text  md:text-5xl text-blue_text text-center font-bold mb-5 md:mb-10">
+                        Заполните анкету
+                    </h1>
+
+                    <div class="bg-lightgray rounded-lg mb:rounded-xl border-2 border-lightgray flex justify-between items-center px-2.5 md:px-14 text-xl md:text-3xl font-bold mb-5 md:mb-10">
+                        <div class="">
+                            Добро пожаловать
+                        </div>
+                        <div class="max-w-[60px] md:max-w-[100px]">
+                            <img src="img/icons/like-3d.png" width="100%" alt="приветствие">
+                        </div>
+                    </div>
+
+                    <div class="rounded-lg mb:rounded-xl border-2 border-lightgray px-7 lg:px-20 py-7 lg:py-14 shadow-sm">
+
+
+                        <div class="js-probability text-darkblue mb-10">
+                            <div class="flex justify-between items-center md:text-2xl font-semibold mb-4">
+                                <div class="">Вероятность одобрения</div>
+                                <div class="js-probability__percent"><span>2</span>%</div>
+                            </div>
+
+
+                            <div class="w-full bg-lightgray rounded-full h-[10px]">
+                                <div class="js-probability-scale__fill bg-darkblue rounded-full h-full w-0"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row gap-1  items-center justify-between text-xl md:text-3xl mb-10">
+                            <h2 class="font-bold">Контактная информация</h2>
+                            <div class="font-bold md:font-semibold  text-gray_text">
+                                Шаг 1 из 5
+                            </div>
+                        </div>
+                        <form action="">
+
+                            <div class="flex flex-col md:flex-row flex-wrap gap-5 mb-5">
+                                <div class="form-item w-full md:w-[calc(50%-10px)]">
+
+                                    <label for="contact-name">Имя</label>
+                                    <input type="text" id="contact-name" placeholder="Введите имя" required>
+                                    <div class="hidden text-error">Обязательное поле</div>
+                                </div>
+
+                                <div class="form-item w-full md:w-[calc(50%-10px)]">
+                                    <label for="contact-surname">Фамилия</label>
+                                    <input type="text" id="contact-surname" placeholder="Введите фамилию" required>
+                                    <div class="hidden text-error">Обязательное поле</div>
+                                </div>
+
+
+                                <div class="form-item w-full md:w-[calc(50%-10px)]">
+                                    <label for="contact-pathronymic">Отчество</label>
+                                    <input type="text" id="contact-pathronymic" placeholder="Введите отчество" required>
+                                    <div class="hidden text-error">Обязательное поле</div>
+                                </div>
+
+                                <div class="form-item w-full md:w-[calc(50%-10px)]">
+                                    <label>Пол</label>
+
+
+                                    <div class="custom-select">
+                                        <div class="custom-select__head">
+                                            <div class="custom-select__result">
+                                                Выберите ваш пол
+                                            </div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"
+                                                viewBox="0 0 12 9" fill="none">
+                                                <path d="M6 9L0.803847 -2.51247e-08L11.1962 8.834e-07L6 9Z"
+                                                    fill="#A3A3A3" />
+                                            </svg>
+                                        </div>
+                                        <div class="custom-select__options">
+                                            <div class="custom-option" selected>
+                                                <div class="custom-select__value">
+                                                    Мужской
+                                                </div>
+                                            </div>
+                                            <div class="custom-option">
+                                                <div class="custom-select__value">
+                                                    Женский
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-item w-full md:w-[calc(50%-10px)]">
+                                    <label for="contact-date">Дата рождения</label>
+                                    <input type="date" id="contact-date" class="js-input-date" placeholder="ДД.ММ.ГГГГ"
+                                        required>
+                                    <div class="hidden text-error">Обязательное поле</div>
+                                </div>
+
+                                <div class="form-item w-full md:w-[calc(50%-10px)] mb-5">
+                                    <label for="contact-email">Почта</label>
+                                    <input type="text" id="contact-email" placeholder="Введите почту">
+                                    <div class="hidden text-error">Обязательное поле</div>
+                                </div>
+                            </div>
+                            <div class="border-t border-b px-2.5 md:px-5 py-5 flex flex-col md:flex-row gap-5 md:gap-2.5 items-end justify-center text-sm mb-10">
+                                <div class="text-center md:text-start">
+                                    <div class="uppercase mb-5 md:mb-1 font-bold leading-3">Подтвердите свою почту</div>
+                                    <div>Мы будем использовать ваш адрес электронной почты для обеспечения
+                                        безопасности вашего аккаунта</div>
+                                </div>
+                                <div class="btn w-full md:w-auto" onclick="openModal('email-confirm-modal');startEmailTimer()">
+                                    Подтвердить почту
+                                </div>
+                            </div>
+
+                            <a href="flow-passport.html" class="btn btn-accent w-full js-form-btn"> Перейти к
+                                следующему шагу</a>
+
+                           
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="modal" id="email-confirm-modal">
+            <div class="popup">
+                <div class="w-full max-w-[480px] mx-auto">
+                    <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                        <div class="font-medium">
+                            Подтверждение почты
+                        </div>
+                        <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+
+
+                    <p class="text-blue_text text-center mb-10">
+                        Мы отправили вам письмо с подтверждением на вашу почту. Пожалуйста, перейдите по ссылке в письме
+                        для
+                        завершения
+                        процесса
+                        подтверждения. Если вы уже подтвердили свою почту, обновите страницу.
+                    </p>
+
+                    <div class="text-center md:text-2xl mb-10">
+                        P<span>*****</span>a@mail.ru
+                    </div>
+
+                    <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
+
+
+                    <button class="btn btn-accent btn-disabled js-email-button w-full max-w-sm mx-auto"
+                        onclick="startEmailTimer()">
+                        Отправить ещё раз
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="notification bg-red_75">
+            <span>Не все поля заполнены</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="white" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+
+        <div class="notification bg-green_80">
+            <span>Почта подтверждена</span>
+            <img src="img/buttons/account-menu-close.svg" alt="Почта подтверждена">
+        </div>
+
+        <footer class="pb-16">
+    <div class="container">
+        <div class="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-5 bg-lightgray rounded-3xl p-10">
+            <a href="index.html" class="order-2 md:order-1 w-36 md:w-52">
+                <img src="img/Logo.svg" width="100%" alt="Логотип компании">
+            </a>
+            <p class="order-3 md:order-2 text-[10px] text-gray_text max-w-md text-center">
+                2024 ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ МИКРОКРЕДИТНАЯ КОМПАНИЯ «БАНКА ДЕНЕГ», ИНН 9727039021, ОГРН 1237700445696, 117638, г Москва, ул Одесская, д 2, помещ. 5/7, регистрационный номер записи в государственном реестре микрофинансовых организаций Банка России 2303045009979 от 22.08.2023.
+            </p>
+            <div class="text-[28px] md:text-xl xl:text-3xl leading-8 uppercase font-medium md:font-semibold flex flex-col order-1 md:order-3 items-center md:items-end">
+                <a href="tel:88000000000">8 800 000-00-00</a>
+                <a href="mailto:mail@mail.ru" class="lg:underline underline-offset-4">mail@mail.ru</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="./js/scripts.js"></script>
+
+    </div>
+</body>
+
+</html>
