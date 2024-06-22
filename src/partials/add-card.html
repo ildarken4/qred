@@ -1,0 +1,24 @@
+<div class="bg-lightgray rounded-md px-5 py-7 md:p-7 mb-10">
+    <p class="text-center font-medium leading-5 md:leading-6 md:text-2xl mb-5">
+        Добавьте карту, на которую хотите получить деньги
+    </p>
+    <div class="btn btn-accent max-w-xs min-w-full sm:min-w-fit mx-auto">Привязать карту</div>
+</div>
+
+
+<div class="bg-lightgray rounded-md px-2.5 py-7 md:p-7 mb-10">
+    <p class="text-center text-sm font-medium md:text-base max-w-[170px] mx-auto md:max-w-none mb-5">
+        Пожалуйста, загрузите следующие фотографии
+    </p>
+
+    <div class="flex flex-col md:flex-row justify-center gap-5 md:gap-8 mb-10">
+        @@include('upload-photo-item.html', {
+            "title": "Фото привязанной карты",
+            "image": "img/card-photo.png",
+            "modal": "upload-card"
+        })
+    </div>
+
+    <div class="btn btn-accent max-w-md mx-auto" onclick="openModal('upload-card')">Добавить
+    </div>
+</div>

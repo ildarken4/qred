@@ -13,33 +13,25 @@
         <div class="wrapper bg-lightgray py-14 relative min-h-screen">
             <div class="container">
 
-                <div
-                    class="bg-account-banner bg-banner bg-repeat-x md:bg-repeat bg-top md:bg-center bg-white rounded-lg mb-5 md:mb-10 relative overflow-hidden">
-                    <div
-                        class="account-banner w-full relative md:w-2/3 mx-auto text-center md:bg-white py-5 md:py-10 px-6 h-full">
-                        <div class="account-banner__bg md:hidden absolute bottom-0 left-0 w-full h-1/2 bg-white z-0">
-                        </div>
-                        <div class="text-blue_text relative z-10 text-xl md:text-3xl font-bold mb-5 md:mb-8">
-                            Создать обращение
-                        </div>
-                        <a href="account-appeal.html" class="btn btn-accent relative z-10 min-w-fit sm:w-80 mx-auto">
-                            Создать
-                        </a>
-                    </div>
-                </div>
+                @@include('partials/account-banner.html', {
+                    "title": "Создать обращение",
+                    "button": "Создать"
+                })
 
                 <div class="bg-white rounded-lg shadow-md py-10 px-7 md:px-10">
-                    <h1 class="text-[28px] text-blue_text  md:text-5xl text-center font-bold mb-10">Мои обращения</h1>
+                    @@include('partials/page-title.html', {
+                        "title": "Мои обращения"
+                    })
 
                     <!-- Если нет обращений (пока скрыто классом d-none) -->
 
-                    <div class="flex justify-center hidden">
+                    <div class="flex justify-center hidden pt-5 md:pt-0">
                         <p class="text-gray_text">Пусто</p>
                     </div>
 
                     <!-- Если есть обращения-->
 
-                    <div class="w-full md:px-12">
+                    <div class="w-full md:px-12 pt-5 md:pt-0">
                         <div
                             class="hidden md:flex items-center justify-between font-semibold px-12 pb-10 border-b border-gray">
                             <div class="basis-1/4">Дата обращения</div>
@@ -53,27 +45,27 @@
                                 <div class="lg:hidden text-sm">
                                     Дата обращения
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">02.01.2024</div>
+                                <div class="basis-1/2 text-sm md:text-base ">02.01.2024</div>
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Тема обращения
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">Тема 1</div>
+                                <div class="basis-1/2 text-sm md:text-base ">Тема 1</div>
 
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Статус
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right text-accent">Ожидает
+                                <div class="basis-1/2 text-sm md:text-base text-accent">Ожидает
                                     ответа</div>
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Ответ
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">Звонок кредитору
+                                <div class="basis-1/2 text-sm md:text-base ">Звонок кредитору
                                 </div>
                             </div>
                         </div>
@@ -84,27 +76,27 @@
                                 <div class="lg:hidden text-sm">
                                     Дата обращения
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">02.01.2024</div>
+                                <div class="basis-1/2 text-sm md:text-base ">02.01.2024</div>
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Тема обращения
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">Тема 1</div>
+                                <div class="basis-1/2 text-sm md:text-base ">Тема 1</div>
 
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Статус
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right text-accent">Ожидает
+                                <div class="basis-1/2 text-sm md:text-base text-accent">Ожидает
                                     ответа</div>
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Ответ
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">Звонок кредитору
+                                <div class="basis-1/2 text-sm md:text-base ">Звонок кредитору
                                 </div>
                             </div>
                         </div>
@@ -115,27 +107,27 @@
                                 <div class="lg:hidden text-sm">
                                     Дата обращения
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">02.01.2024</div>
+                                <div class="basis-1/2 text-sm md:text-base ">02.01.2024</div>
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Тема обращения
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">Тема 1</div>
+                                <div class="basis-1/2 text-sm md:text-base ">Тема 1</div>
 
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Статус
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right text-accent">Ожидает
+                                <div class="basis-1/2 text-sm md:text-base text-accent">Ожидает
                                     ответа</div>
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Ответ
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">Звонок кредитору
+                                <div class="basis-1/2 text-sm md:text-base ">Звонок кредитору
                                 </div>
                             </div>
                         </div>
@@ -146,27 +138,27 @@
                                 <div class="lg:hidden text-sm">
                                     Дата обращения
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">02.01.2024</div>
+                                <div class="basis-1/2 text-sm md:text-base ">02.01.2024</div>
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Тема обращения
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">Тема 1</div>
+                                <div class="basis-1/2 text-sm md:text-base ">Тема 1</div>
 
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Статус
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right text-accent">Ожидает
+                                <div class="basis-1/2 text-sm md:text-base text-accent">Ожидает
                                     ответа</div>
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Ответ
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">Звонок кредитору
+                                <div class="basis-1/2 text-sm md:text-base ">Звонок кредитору
                                 </div>
                             </div>
                         </div>
@@ -177,27 +169,27 @@
                                 <div class="lg:hidden text-sm">
                                     Дата обращения
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">02.01.2024</div>
+                                <div class="basis-1/2 text-sm md:text-base ">02.01.2024</div>
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Тема обращения
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">Тема 1</div>
+                                <div class="basis-1/2 text-sm md:text-base ">Тема 1</div>
 
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Статус
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right text-accent">Ожидает
+                                <div class="basis-1/2 text-sm md:text-base text-accent">Ожидает
                                     ответа</div>
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Ответ
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">Звонок кредитору
+                                <div class="basis-1/2 text-sm md:text-base ">Звонок кредитору
                                 </div>
                             </div>
                         </div>
@@ -208,27 +200,27 @@
                                 <div class="lg:hidden text-sm">
                                     Дата обращения
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">02.01.2024</div>
+                                <div class="basis-1/2 text-sm md:text-base ">02.01.2024</div>
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Тема обращения
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">Тема 1</div>
+                                <div class="basis-1/2 text-sm md:text-base ">Тема 1</div>
 
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Статус
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right text-accent">Ожидает
+                                <div class="basis-1/2 text-sm md:text-base text-accent">Ожидает
                                     ответа</div>
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Ответ
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">Звонок кредитору
+                                <div class="basis-1/2 text-sm md:text-base ">Звонок кредитору
                                 </div>
                             </div>
                         </div>
@@ -239,27 +231,27 @@
                                 <div class="lg:hidden text-sm">
                                     Дата обращения
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">02.01.2024</div>
+                                <div class="basis-1/2 text-sm md:text-base ">02.01.2024</div>
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Тема обращения
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">Тема 1</div>
+                                <div class="basis-1/2 text-sm md:text-base ">Тема 1</div>
 
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Статус
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right text-accent">Ожидает
+                                <div class="basis-1/2 text-sm md:text-base text-accent">Ожидает
                                     ответа</div>
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Ответ
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">Звонок кредитору
+                                <div class="basis-1/2 text-sm md:text-base ">Звонок кредитору
                                 </div>
                             </div>
                         </div>
@@ -270,27 +262,27 @@
                                 <div class="lg:hidden text-sm">
                                     Дата обращения
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">02.01.2024</div>
+                                <div class="basis-1/2 text-sm md:text-base ">02.01.2024</div>
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Тема обращения
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">Тема 1</div>
+                                <div class="basis-1/2 text-sm md:text-base ">Тема 1</div>
 
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Статус
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right text-accent">Ожидает
+                                <div class="basis-1/2 text-sm md:text-base text-accent">Ожидает
                                     ответа</div>
                             </div>
                             <div class="mb-2.5 md:mb-0 basis-full w-full md:basis-1/4 flex justify-between md:block">
                                 <div class="lg:hidden text-sm">
                                     Ответ
                                 </div>
-                                <div class="basis-1/2 text-sm md:text-base text-left md:text-right ">Звонок кредитору
+                                <div class="basis-1/2 text-sm md:text-base ">Звонок кредитору
                                 </div>
                             </div>
                         </div>
@@ -298,8 +290,8 @@
 
                     </div>
 
-                    <div class="js-show-appeals text-center mt-10 cursor-pointer">
-                        Показать ещё
+                    <div class="js-show-appeals font-medium text-center mt-10 cursor-pointer">
+                        Показать все обращения
 
                     </div>
 

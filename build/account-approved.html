@@ -66,65 +66,62 @@
             <div class="container">
 
                 <div class="bg-white rounded-lg shadow-md py-10 px-2.5 md:px-10">
-                    <h1 class="text-[28px] text-blue_text  md:text-5xl text-center font-bold mb-5 md:mb-10">
-                        Заем одобрен!
-                    </h1>
+                     <h1 class="text-[28px] text-blue_text leading-7 md:text-5xl md:leading-normal text-center font-bold mb-5 md:mb-10">
+    Заем одобрен!
+</h1>
 
                     <div class="max-w-[990px] mx-auto flex flex-col items-center">
                         <div class="w-[100px] md:w-40 mx-auto mb-5 md:mb-10">
-                            <img src="img/icons/approved=3d.png" width="100%" alt="одобрение">
-                        </div>
+    <img src="img/icons/approved=3d.png" width="100%" alt="одобрение">
+</div>
 
-                        <p class="text-center md:text-2xl text-blue_text font-semibold mb-5 max-w-3xl mx-auto md:mb-10">
-                            Для
-                            подтверждения займа, ознакомьтесь с документами и&nbsp;<span class="text-accent">введите код
-                                из
-                                СМС.</span></p>
+<p class="text-center md:text-2xl text-blue_text font-medium mb-5 max-w-3xl mx-auto md:mb-10">Для
+    подтверждения займа, ознакомьтесь с документами и&nbsp;<span class="text-accent">введите код из
+        СМС.</span></p>
 
 
-                        <div
-                            class="w-full max-w-xl px-5 md:px-10 py-7 md:py-5 mx-auto rounded-lg shadow-md border-2 border-darkgray text-left flex flex-col items-center gap-2.5 md:gap-5">
-                            <div class="w-full flex items-center justify-between text-blue_text">
-                                <div class="text-sm md:text-base">Заявка принята</div>
-                                <div class="font-semibold text-sm md:text-base">14.06.24 в 14:55</div>
-                            </div>
-                            <div class="w-full flex items-center justify-between text-blue_text">
-                                <div class="text-sm md:text-base">Дата выдачи займа</div>
-                                <div class="font-semibold text-sm md:text-base">01.02.23</div>
-                            </div>
-                            <div class="w-full flex items-center justify-between text-blue_text">
-                                <div class="text-sm md:text-base">Сумма займа</div>
-                                <div class="font-semibold text-sm md:text-base">21 000 ₽</div>
-                            </div>
-                            <div class="w-full flex items-center justify-between text-blue_text">
-                                <div class="text-sm md:text-base">Погасить не позже</div>
-                                <div class="font-semibold text-sm md:text-base">15.02.24</div>
-                            </div>
-                            <div class="w-full flex items-center justify-between text-blue_text mb-10">
-                                <div class="text-sm md:text-base">Статус займа</div>
-                                <div class="font-semibold text-sm md:text-base max-w-min text-right">Ожидает
-                                    подтверждения
-                                </div>
-                            </div>
+<div
+    class="w-full max-w-xl px-5 md:px-10 py-7 md:py-5 mx-auto rounded-lg shadow-md border-2 border-darkgray text-left flex flex-col items-center gap-2.5 md:gap-5">
+    <div class="w-full flex justify-between text-blue_text">
+        <div class="text-sm md:text-base">Заявка принята</div>
+        <div class="font-semibold text-sm md:text-base">14.06.24 в 14:55</div>
+    </div>
+    <div class="w-full flex justify-between text-blue_text">
+        <div class="text-sm md:text-base">Дата выдачи займа</div>
+        <div class="font-semibold text-sm md:text-base">01.02.23</div>
+    </div>
+    <div class="w-full flex justify-between text-blue_text">
+        <div class="text-sm md:text-base">Сумма займа</div>
+        <div class="font-semibold text-sm md:text-base">21 000 ₽</div>
+    </div>
+    <div class="w-full flex justify-between text-blue_text">
+        <div class="text-sm md:text-base">Погасить не позже</div>
+        <div class="font-semibold text-sm md:text-base">15.02.24</div>
+    </div>
+    <div class="w-full flex justify-between text-blue_text mb-10">
+        <div class="text-sm md:text-base">Статус займа</div>
+        <div class="font-semibold text-sm md:text-base max-w-min text-right">Ожидает подтверждения
+        </div>
+    </div>
 
-                            <div class="form-item w-full max-w-sm mx-auto retiree-hide mb-10">
-                                <label for="sms-code">Введите код</label>
-                                <input type="text" id="sms-code" placeholder="Введите код">
+    <div class="form-item w-full max-w-sm mx-auto retiree-hide mb-10">
+        <label for="sms-code">Введите код</label>
+        <input type="text" id="sms-code" placeholder="Введите код">
 
-                            </div>
+    </div>
 
-                            <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
+    <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
 
-                            <p class="text-center text-gray_text js-email-button mb-10 cursor-pointer"
-                                onclick="startEmailTimer()">Отправить код ещё раз</p>
+    <p class="text-center text-gray_text font-medium js-email-button mb-10 cursor-pointer" onclick="startEmailTimer()">Отправить код
+        ещё раз</p>
 
 
-                            <button class="btn btn-accent btn-disabled js-button w-full mb-10">
-                                Подтвердить
-                            </button>
+    <button class="btn btn-accent btn-disabled js-button w-full mb-10">
+        Подтвердить займ
+    </button>
 
-                            <div class="w-full self-start">
-                                <label for="rules" class="">
+    <div class="w-full self-start">
+        <label for="rules" class="">
     <input type="checkbox" id="rules">
     <span class="custom-checkbox"></span>
     <span class="text-xs md:text-sm leading-5">Я ознакомлен и согласен со&nbsp;<a class="js-show-rules text-dark_accent cursor-pointer">следующим</a> </span>
@@ -147,9 +144,9 @@
     </label>
     <div class="js-hide-rules mt-5 text-center font-medium underline cursor-pointer">Свернуть</div>
 </div>
-                            </div>
+    </div>
 
-                        </div>
+</div>
                     </div>
 
                 </div>

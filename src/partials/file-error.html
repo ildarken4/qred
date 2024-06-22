@@ -1,0 +1,26 @@
+<p class="text-center md:text-2xl text-blue_text font-semibold">Файл не прошел проверку.</p>
+<p class="text-center md:text-2xl text-accent mb-5 md:mb-10">Загрузите новый.</p>
+
+<div class="flex flex-col md:flex-row flex-wrap md:justify-center lg:justify-start gap-5 md:gap-7 w-fit mx-auto mb-10">
+    @@include('upload-photo-item.html', {
+        "title": "Селфи с паспортом",
+        "image": "img/selfie-example.png",
+        "modal": "upload-selfie"
+    })
+    @@include('upload-photo-item.html', {
+        "title": "Первый разворот паспорта",
+        "image": "img/selfie-example.png",
+        "modal": "upload-passport-1"
+    })
+    @@include('upload-photo-item.html', {
+        "title": "Разворот с регистрацией",
+        "image": "img/selfie-example.png",
+        "modal": "upload-passport-2"
+    })
+    @@include('upload-photo-item.html', {
+        "title": "Фото привязанной карты",
+        "image": "img/error-photo.png",
+        "modal": "upload-card"
+    })
+</div>
+<div class="btn btn-accent max-w-md mx-auto" onclick="openModal('upload-selfie')">Заменить</div>

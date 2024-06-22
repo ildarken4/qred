@@ -8,89 +8,58 @@
     textarea {
       @apply w-full bg-lightgray p-2.5 border-none rounded-md text-black focus:ring-black hover:ring-gray hover:text-black;
     }
+    .payment-input {
+      @apply w-full h-[70px] border border-solid border-darkgray bg-white rounded-md font-semibold md:font-medium text-center md:text-2xl;
+    }
 }
 
-.payment-input {
-  @apply w-full h-[70px] border-darkgray rounded-md font-medium text-center text-2xl 
-}
+
 label {
     @apply flex items-start gap-1 text-sm
 }
 input[type="checkbox"],
 input[type="radio"] {
-  display: none;
+  @apply hidden;
 }
 
 .custom-checkbox {
-  display: inline-block;
-  position: relative;
-  top: -4px;
-  cursor: pointer;
+  @apply inline-block relative -top-1 cursor-pointer
 }
 
 .custom-checkbox::before {
   content: '';
-  position: relative;
-  top: 0;
-  display: inline-block;
   background-image: url('../img/icons/checkbox_big_empty.svg');
-  width: 28px;
-  height: 28px;
-  border-radius: 3px;
-  margin-right: 6px;
-  transition: all 0.4s ease;
+  @apply relative top-0 inline-block w-7 h-7 rounded-sm mr-1.5 transition-all;
 }
 
 .custom-checkbox::after {
   content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
   background-image: url('../img/icons/checkbox_big_checked.svg');
-  width: 28px;
-  height: 28px;
-  visibility: hidden;
+  @apply absolute top-0 left-0 w-7 h-7 invisible;
 }
 
 input[type="checkbox"]:checked + .custom-checkbox::after {
-  visibility: visible;
+  @apply visible;
 }
 
 /* Кастомный input[type="radio"] */
 .custom-radio {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
+  @apply inline-block relative cursor-pointer;
 }
 
 .custom-radio::before {
   content: '';
-  position: relative;
-  top: 4px;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 3px;
-  margin-right: 4px;
-  border: 2px solid #191919;
-  border-radius: 50%;
+  @apply relative top-1 inline-block w-5 h-5 mr-1 border-2 border-black rounded-full;
 }
 
 .custom-radio::after {
   content: '';
-  position: absolute;
-  top: 11px;
-  left: 6px;
-  background-color: #F1C025;
-  border-radius: 50%;
-  width: 8px;
-  height: 8px;
-  visibility: hidden;
+  @apply absolute top-3 left-1.5 bg-accent rounded-full w-2 h-2 invisible
 }
 
 input[type="radio"]:checked {
   & + .custom-radio::after {
-    visibility: visible;
+    @apply visible;
   }
 }
 

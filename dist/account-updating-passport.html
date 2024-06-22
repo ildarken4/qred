@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
@@ -25,6 +26,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Личный кабинет</title>
 </head>
+
 <body>
     <div id="app">
         <a id="top"></a>
@@ -64,84 +66,92 @@
             <div class="container">
 
                 <div class="bg-white rounded-lg shadow-md py-7 px-5 md:py-10 md:px-2.5">
-                    <h1 class="text-[28px] text-blue_text  md:text-5xl text-center font-bold mb-10">Изменение паспортных данных</h1>
+                     <h1 class="text-[28px] text-blue_text leading-7 md:text-5xl md:leading-normal text-center font-bold mb-5 md:mb-10">
+    Изменение паспортных данных
+</h1>
 
-            <form class="max-w-4xl mx-auto" action="">
-                            
-                <div class="flex flex-wrap gap-5">
-                    <div class="form-item w-full">
+                    <form class="max-w-4xl mx-auto pt-5 md:pt-0" action="">
 
-                        <label for="passport-number">Серия и номер паспорта</label>
-                        <input type="text" id="passport-number" placeholder="Введите серию и номер паспорта" required>
-                        <div class="hidden text-error">Обязательное поле</div>
-                    </div>
+                        <div class="flex flex-wrap gap-5">
+                            <div class="form-item w-full">
 
-                    <div class="form-item w-full">
-                        <label for="passport-issued">Кем выдан</label>
-                        <input type="text" id="passport-issued" placeholder="Введите название" required>
-                        <div class="hidden text-error">Обязательное поле</div>
-                    </div>
+                                <label for="passport-number">Серия и номер паспорта</label>
+                                <input type="text" id="passport-number" placeholder="Введите серию и номер паспорта"
+                                    required>
+                                <div class="hidden text-error">Обязательное поле</div>
+                            </div>
 
-                    
-                    <div class="form-item w-full md:w-[calc(50%-10px)]">
-                        <label for="passport-date">Дата выдачи</label>
-                        <input type="date" id="passport-date" class="js-input-date" placeholder="ДД.ММ.ГГ" required>
-                        <div class="hidden text-error">Обязательное поле</div>
-                    </div>
+                            <div class="form-item w-full">
+                                <label for="passport-issued">Кем выдан</label>
+                                <input type="text" id="passport-issued" placeholder="Введите название" required>
+                                <div class="hidden text-error">Обязательное поле</div>
+                            </div>
 
-                    <div class="form-item w-full md:w-[calc(50%-10px)]">
-                        <label for="passport-code">Код подразделения</label>
-                        <input type="text" id="passport-code" placeholder="Введите код подразделения" required>
-                        <div class="hidden text-error">Обязательное поле</div>
-                    </div>
 
-                    <div class="form-item w-full">
-                        <label for="passport-birthplace">Место рождения</label>
-                        <input type="text" id="passport-birthplace" placeholder="Введите место рождения" required>
-                        <div class="hidden text-error">Обязательное поле</div>
-                    </div>
+                            <div class="form-item w-full md:w-[calc(50%-10px)]">
+                                <label for="passport-date">Дата выдачи</label>
+                                <input type="date" id="passport-date" class="js-input-date" placeholder="ДД.ММ.ГГ"
+                                    required>
+                                <div class="hidden text-error">Обязательное поле</div>
+                            </div>
 
-                    <div class="form-item w-full">
-                        <label for="passport-address">Адрес регистрации</label>
-                        <input type="text" id="passport-address" placeholder="Введите адрес регистрации" required>
-                        <div class="hidden text-error">Обязательное поле</div>
-                    </div>
+                            <div class="form-item w-full md:w-[calc(50%-10px)]">
+                                <label for="passport-code">Код подразделения</label>
+                                <input type="text" id="passport-code" placeholder="Введите код подразделения" required>
+                                <div class="hidden text-error">Обязательное поле</div>
+                            </div>
 
-                    <label class="">
-                        <input type="checkbox" id="same-address">
-                        <span class="custom-checkbox"></span>
-                        <span>Адрес регистрации совпадает с моим фактическим местом жительства</span>
-                    </label>
+                            <div class="form-item w-full">
+                                <label for="passport-birthplace">Место рождения</label>
+                                <input type="text" id="passport-birthplace" placeholder="Введите место рождения"
+                                    required>
+                                <div class="hidden text-error">Обязательное поле</div>
+                            </div>
 
-                    <div class="form-item w-full js-fact-address mb-10">
-                        <label for="passport-fact-address">Адрес фактического места жительства</label>
-                        <input type="text" id="passport-fact-address" class="" placeholder="Введите адрес фактического места жительства">
-                    </div>
+                            <div class="form-item w-full">
+                                <label for="passport-address">Адрес регистрации</label>
+                                <input type="text" id="passport-address" placeholder="Введите адрес регистрации"
+                                    required>
+                                <div class="hidden text-error">Обязательное поле</div>
+                            </div>
+
+                            <label class="">
+                                <input type="checkbox" id="same-address">
+                                <span class="custom-checkbox"></span>
+                                <span>Адрес регистрации совпадает с моим фактическим местом жительства</span>
+                            </label>
+
+                            <div class="form-item w-full js-fact-address mb-0">
+                                <label for="passport-fact-address">Адрес фактического места жительства</label>
+                                <input type="text" id="passport-fact-address" class=""
+                                    placeholder="Введите адрес фактического места жительства">
+                            </div>
+
+                        </div>
+                        <div class="flex flex-col-reverse md:flex-row gap-5 mt-10">
+                            <a href="account-updating.html" class="btn w-full btn-dashed ">
+                                Назад
+                            </a>
+                            <a href="account-updating-photos.html" class="btn w-full btn-accent">Сохранить</a>
+                            <!-- По нажатию появляется соответствующий .notification и при успехе кнопка подтвердить становится .btn-disabled -->
+                        </div>
+                    </form>
 
                 </div>
-                <div class="flex flex-col-reverse md:flex-row gap-5">
-                    <a href="account-updating.html" class="btn w-full btn-dashed ">
-                        Назад
-                    </a>
-                    <a href="account-updating-photos.html" class="btn w-full btn-accent">Сохранить</a>
-                    <!-- По нажатию появляется соответствующий .notification и при успехе кнопка подтвердить становится .btn-disabled -->
-                </div>
-            </form>
 
+            </div>
         </div>
 
-    </div>
-</div>
 
 
 
-
-<footer>
+        <footer>
     
 </footer>
 
 <script src="./js/scripts.js"></script>
 
-</div>
+    </div>
 </body>
+
 </html>

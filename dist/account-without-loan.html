@@ -71,18 +71,17 @@
 </div>
 
             <div
-                class="bg-account-banner bg-banner bg-repeat-x md:bg-repeat bg-top md:bg-center bg-white rounded-lg mb-5 md:mb-10 relative overflow-hidden">
-                <div
-                    class="account-banner w-full relative md:w-2/4 mx-auto text-center md:bg-white py-5 md:py-10 px-7 h-full">
-                    <div class="account-banner__bg md:hidden absolute bottom-0 left-0 w-full h-1/2 bg-white z-0"></div>
-                    <div class="text-blue_text relative z-10 text-xl md:text-3xl font-bold mb-5 md:mb-8">
-                        Вернуться назад
-                    </div>
-                    <div class="btn btn-accent relative z-10 min-w-fit sm:w-80 mx-auto">
-                        Назад
-                    </div>
-                </div>
-            </div>
+    class="bg-account-banner bg-banner bg-repeat-x md:bg-repeat bg-top md:bg-center bg-white rounded-lg mb-5 md:mb-10 relative overflow-hidden">
+    <div class="account-banner w-full relative md:w-fit lg:min-w-[600px] xl:min-w-[830px] mx-auto text-center md:bg-white py-5 md:py-5 px-7 h-full">
+        <div class="account-banner__bg md:hidden absolute bottom-0 left-0 w-full h-1/2 bg-white z-0"></div>
+        <div class="text-blue_text relative z-10 text-xl md:text-4xl font-semibold mb-5 md:mb-8">
+            Вернуться назад
+        </div>
+        <div class="btn btn-accent relative z-10 min-w-fit sm:w-80 mx-auto">
+            Назад
+        </div>
+    </div>
+</div>
 
 
 
@@ -90,72 +89,67 @@
                 <div class="bg-white rounded-lg shadow-md lg:w-1/2 py-7 px-5 lg:py-[70px]">
 
                     <form class="calculator w-full max-w-md mx-auto" action="">
-                        <div class="calculator__card mb-5 md:mb-10">
-                            <div class="flex justify-between items-center">
-                                <div class="text-xs md:text-base">Выберите сумму</div>
-                                <div
-                                    class="data w-28 md:w-36 h-8 md:h-10 flex items-center justify-between text-xs md:text-lg px-2.5 rounded-[4px] bg-lightgray text-gray_text">
-                                    <span class="data__number result-sum">15 000</span> <span>₽</span></div>
-                            </div>
+                        <div class="calculator__card text-blue_text mb-5 md:mb-10">
+    <div class="flex justify-between items-center">
+        <div class="text-xs md:text-base">Выберите сумму</div>
+        <div
+            class="data w-28 md:w-36 h-8 md:h-10 flex items-center justify-between text-xs md:text-lg px-2.5 rounded-[4px] bg-lightgray text-gray_text">
+            <span class="data__number result-sum">15 000</span> <span>₽</span></div>
+    </div>
 
-                            <div class="range-slider sum-slider">
+    <div class="range-slider sum-slider">
 
-                                <input type="range" class="styled-slider slider-progress" id="sum-input" min="10000"
-                                    max="300000" value="80000" step="1000" />
-                                <div class="range-slider__values w-full flex items-center justify-between">
-                                    <span class="minimum-scale text-xs">10 000</span>
-                                    <span class="maximum-scale text-xs">300 000</span>
-                                </div>
-                            </div>
-                        </div>
+        <input type="range" class="styled-slider slider-progress" id="sum-input" min="10000" max="300000" value="80000"
+            step="1000" />
+        <div class="range-slider__values w-full flex items-center justify-between">
+            <span class="minimum-scale text-xs">10 000</span>
+            <span class="maximum-scale text-xs">300 000</span>
+        </div>
+    </div>
+</div>
 
-                        <div class="calculator__card mb-5">
-                            <div class="flex justify-between items-center">
-                                <div class="text-xs md:text-base">Выберите срок</div>
-                                <div
-                                    class="data w-28 md:w-36 h-8 md:h-10 flex items-center justify-between text-xs md:text-lg px-2.5 rounded-[4px] bg-lightgray text-gray_text">
-                                    <span class="data__number calc-days">21</span> <span>день</span></div>
-                            </div>
+<div class="calculator__card text-blue_text mb-5">
+    <div class="flex justify-between items-center">
+        <div class="text-xs md:text-base">Выберите срок</div>
+        <div
+            class="data w-28 md:w-36 h-8 md:h-10 flex items-center justify-between text-xs md:text-lg px-2.5 rounded-[4px] bg-lightgray text-gray_text">
+            <span class="data__number calc-days">21</span> <span>день</span></div>
+    </div>
 
-                            <div class="range-slider term-slider">
+    <div class="range-slider term-slider">
 
-                                <input type="range" class="styled-slider slider-progress" id="term-input" min="5"
-                                    max="30" value="21" />
-                                <div class="range-slider__values w-full flex items-center justify-between">
-                                    <span class="minimum-scale text-xs">5 дней</span>
-                                    <span class="maximum-scale text-xs">31 день</span>
-                                </div>
-                            </div>
-                        </div>
+        <input type="range" class="styled-slider slider-progress" id="term-input" min="5" max="30" value="21" />
+        <div class="range-slider__values w-full flex items-center justify-between">
+            <span class="minimum-scale text-xs">5 дней</span>
+            <span class="maximum-scale text-xs">31 день</span>
+        </div>
+    </div>
+</div>
 
-                        <div
-                            class="calculator-result flex justify-between gap-2 md:gap-5 w-full pt-5 border-t border-gray">
-                            <div class="result-item text-center">
-                                <div class="result-head text-xs md:text-[11px] text-gray_text mb-1">Вы берете</div>
-                                <div class="result-number text-blue_text font-bold text-xs"> <span
-                                        class="result-monthly">15 000
-                                    </span> ₽</div>
-                            </div>
-                            <div class="result-item text-center">
-                                <div class="result-head text-xs md:text-[11px] text-gray_text mb-1">До (включительно)
-                                </div>
-                                <div class="result-number text-blue_text font-bold text-xs"> <span
-                                        class="result-date">24 апреля,
-                                        2024</div>
-                            </div>
-                            <div class="result-item text-center">
-                                <div class="result-head text-xs md:text-[11px] text-gray_text mb-1">Вы возвращаете</div>
-                                <div class="result-number font-bold text-xs text-accent"> <span
-                                        class="crossed relative text-gray_text font-normal mr-2">14 016 <span
-                                            class="w-full top-1/2 left-0 absolute border-b border-gray_text"></span></span>
-                                    <span class="result-sum">15 000 </span> ₽</div>
-                            </div>
-                        </div>
+<div class="calculator-result text-blue_text flex justify-between gap-2 md:gap-5 w-full md:mb-10 pt-5 border-t border-gray">
+    <div class="result-item text-center">
+        <div class="result-head text-xs md:text-[11px] text-gray_text mb-1">Вы берете</div>
+        <div class="result-number font-bold text-xs"> <span class="result-monthly">15 000
+            </span> ₽</div>
+    </div>
+    <div class="result-item text-center">
+        <div class="result-head text-xs md:text-[11px] text-gray_text mb-1">До (включительно)</div>
+        <div class="result-number font-bold text-xs"> <span class="result-date">24 апреля,
+                2024</div>
+    </div>
+    <div class="result-item text-center">
+        <div class="result-head text-xs md:text-[11px] text-gray_text mb-1">Вы возвращаете</div>
+        <div class="result-number font-bold text-xs text-accent"> <span
+                class="crossed relative text-gray_text font-normal mr-2">14 016 <span
+                    class="w-full top-1/2 left-0 absolute border-b border-gray_text"></span></span>
+            <span class="result-sum">15 000 </span> ₽</div>
+    </div>
+</div>
 
                         
                     </form>
                 </div>
-                <div class="bg-white rounded-lg shadow-md lg:w-1/2  py-7 px-5 md:py-10 md:px-10">
+                <div class="bg-white rounded-lg shadow-md lg:w-1/2 text-blue_text py-7 px-5 md:py-10 md:px-10">
 
                     <form action="" class="">
                         <div class="text-sm md:text-base flex flex-col md:flex-row justify-between items-center pb-7 border-b border-gray">
@@ -323,54 +317,50 @@
 
 
     <div class="modal" id="sms-confirm-modal">
-        <div class="popup popup-small">
-            <div class="w-full max-w-[400px] mx-auto">
-                <div class="flex items-center justify-center relative border-b pb-5 mb-5">
-                    <div class="font-medium">
-                        Введите код из смс
-                    </div>
-                    <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none">
-                            <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
+    <div class="popup popup-small">
+        <div class="w-full max-w-[400px] mx-auto">
+            <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                <div class="font-medium">
+                    Введите код из смс
                 </div>
-
-
-
-                <p class="text-blue_text md:text-2xl font-medium text-center mb-5 md:mb-10">
-                    SMS с кодом подтверждения отправлен на указанный номер.
-                </p>
-
-                <div class="text-center md:text-2xl mb-10">
-                    +7 (912) 345-67-89
-                </div>
-
-                <div class="form-item w-full retiree-hide mb-10">
-                    <label for="sms-code">Введите код</label>
-                    <input type="text" id="sms-code" placeholder="Введите код">
-
-                </div>
-
-                <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
-
-                <p class="text-center text-gray_text js-email-button mb-10 cursor-pointer"
-                    onclick="startEmailTimer()">Отправить код ещё раз</p>
-
-
-                <button class="btn btn-accent btn-disabled w-full max-w-sm mx-auto">
-                    Подтвердить
+                <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                 </button>
+            </div>
+
+
+
+            <p class="text-blue_text md:text-2xl font-medium text-center mb-5 md:mb-10">
+                SMS с кодом подтверждения отправлен на указанный номер.
+            </p>
+
+            <div class="text-center font-medium md:text-2xl mb-10">
+                +7 (912) 345-67-89
+            </div>
+
+            <div class="form-item w-full retiree-hide mb-10">
+                <label for="sms-code">Введите код</label>
+                <input type="text" id="sms-code" placeholder="Введите код">
 
             </div>
 
+            <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
+
+            <p class="text-center text-gray_text js-email-button mb-10 cursor-pointer" onclick="startEmailTimer()">
+                Отправить код ещё раз</p>
+
+
+            <button class="btn btn-accent btn-disabled w-full max-w-sm mx-auto mb-12 md:mb-0">
+                Подтвердить
+            </button>
+
         </div>
+
     </div>
-
-    
-
+</div>
 
     <footer>
     

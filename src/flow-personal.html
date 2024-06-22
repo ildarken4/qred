@@ -13,40 +13,27 @@
         <div class="wrapper">
             <div class="container">
                 <div class="max-w-[990px] mx-auto pt-10 md:pt-16 pb-36">
-                    <h1 class="text-[28px] text-blue_text  md:text-5xl text-blue_text text-center font-bold mb-5 md:mb-10">
-                        Заполните анкету
-                    </h1>
+                    @@include('partials/page-title.html', {
+                        "title": "Заполните анкету"
+                    })
 
-                    <div class="bg-lightgray rounded-lg mb:rounded-xl border-2 border-lightgray flex justify-between items-center px-2.5 md:px-14 text-xl md:text-3xl font-bold mb-5 md:mb-10">
-                        <div class="">
-                            Добро пожаловать
-                        </div>
-                        <div class="max-w-[60px] md:max-w-[100px]">
-                            <img src="img/icons/like-3d.png" width="100%" alt="приветствие">
-                        </div>
-                    </div>
+                    @@include('partials/flow-banner.html', {
+                        "title": "Добро пожаловать",
+                        "image": "<img src='img/icons/like-3d.png' width='100%' alt='приветствие'>"
+                    })
 
                     <div class="rounded-lg mb:rounded-xl border-2 border-lightgray px-7 lg:px-20 py-7 lg:py-14 shadow-sm">
 
 
-                        <div class="js-probability text-darkblue mb-10">
-                            <div class="flex justify-between items-center md:text-2xl font-semibold mb-4">
-                                <div class="">Вероятность одобрения</div>
-                                <div class="js-probability__percent"><span>2</span>%</div>
-                            </div>
+                        @@include('partials/flow-probability.html', {
+                            "percent": "2"
+                        })
 
+                        @@include('partials/flow-steps.html', {
+                            "title": "Контактная информация",
+                            "steps": "Шаг 1 из 5"
+                        })
 
-                            <div class="w-full bg-lightgray rounded-full h-[10px]">
-                                <div class="js-probability-scale__fill bg-darkblue rounded-full h-full w-0"></div>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col md:flex-row gap-1  items-center justify-between text-xl md:text-3xl mb-10">
-                            <h2 class="font-bold">Контактная информация</h2>
-                            <div class="font-bold md:font-semibold  text-gray_text">
-                                Шаг 1 из 5
-                            </div>
-                        </div>
                         <form action="">
 
                             <div class="flex flex-col md:flex-row flex-wrap gap-5 mb-5">
@@ -120,7 +107,7 @@
                                         безопасности вашего аккаунта</div>
                                 </div>
                                 <div class="btn w-full md:w-auto" onclick="openModal('email-confirm-modal');startEmailTimer()">
-                                    Подтвердить почту
+                                    Подтвердить
                                 </div>
                             </div>
 
@@ -140,48 +127,7 @@
         </div>
 
 
-        <div class="modal" id="email-confirm-modal">
-            <div class="popup">
-                <div class="w-full max-w-[480px] mx-auto">
-                    <div class="flex items-center justify-center relative border-b pb-5 mb-5">
-                        <div class="font-medium">
-                            Подтверждение почты
-                        </div>
-                        <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-
-
-
-                    <p class="text-blue_text text-center mb-10">
-                        Мы отправили вам письмо с подтверждением на вашу почту. Пожалуйста, перейдите по ссылке в письме
-                        для
-                        завершения
-                        процесса
-                        подтверждения. Если вы уже подтвердили свою почту, обновите страницу.
-                    </p>
-
-                    <div class="text-center md:text-2xl mb-10">
-                        P<span>*****</span>a@mail.ru
-                    </div>
-
-                    <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
-
-
-                    <button class="btn btn-accent btn-disabled js-email-button w-full max-w-sm mx-auto"
-                        onclick="startEmailTimer()">
-                        Отправить ещё раз
-                    </button>
-
-                </div>
-
-            </div>
-        </div>
+       @@include('partials/email-confirm-modal.html')
 
 
         <div class="notification bg-red_75">

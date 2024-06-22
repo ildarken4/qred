@@ -43,40 +43,40 @@
         <div class="wrapper">
             <div class="container">
                 <div class="max-w-[990px] mx-auto pt-10 md:pt-16 pb-36">
-                    <h1 class="text-[28px] text-blue_text  md:text-5xl text-blue_text text-center font-bold mb-5 md:mb-10">
-                        Заполните анкету
-                    </h1>
+                     <h1 class="text-[28px] text-blue_text leading-7 md:text-5xl md:leading-normal text-center font-bold mb-5 md:mb-10">
+    Заполните анкету
+</h1>
 
-                    <div class="bg-lightgray rounded-lg mb:rounded-xl border-2 border-lightgray flex justify-between items-center px-2.5 md:px-14 text-xl md:text-3xl font-bold mb-5 md:mb-10">
-                        <div class="">
-                            Добро пожаловать
-                        </div>
-                        <div class="max-w-[60px] md:max-w-[100px]">
-                            <img src="img/icons/like-3d.png" width="100%" alt="приветствие">
-                        </div>
-                    </div>
+                    <div class="bg-blue_01 rounded-lg mb:rounded-xl border-2 border-lightgray text-blue_text flex justify-between items-center px-2.5 md:px-14 leading-6 text-xl md:text-3xl md:leading-9 font-bold md:font-semibold mb-5 md:mb-10">
+    <div class="max-w-[70%]">
+        Добро пожаловать
+    </div>
+    <div class="max-w-[60px] md:max-w-[100px]">
+        <img src='img/icons/like-3d.png' width='100%' alt='приветствие'>
+    </div>
+</div>
 
                     <div class="rounded-lg mb:rounded-xl border-2 border-lightgray px-7 lg:px-20 py-7 lg:py-14 shadow-sm">
 
 
                         <div class="js-probability text-darkblue mb-10">
-                            <div class="flex justify-between items-center md:text-2xl font-semibold mb-4">
-                                <div class="">Вероятность одобрения</div>
-                                <div class="js-probability__percent"><span>2</span>%</div>
-                            </div>
+    <div class="flex justify-between items-center md:text-2xl font-semibold mb-4">
+        <div class="">Вероятность одобрения</div>
+        <div class="js-probability__percent"><span>2</span>%</div>
+    </div>
 
-
-                            <div class="w-full bg-lightgray rounded-full h-[10px]">
-                                <div class="js-probability-scale__fill bg-darkblue rounded-full h-full w-0"></div>
-                            </div>
-                        </div>
+    <div class="w-full bg-lightgray rounded-full h-[10px]">
+        <div class="js-probability-scale__fill bg-darkblue rounded-full h-full w-0"></div>
+    </div>
+</div>
 
                         <div class="flex flex-col md:flex-row gap-1  items-center justify-between text-xl md:text-3xl mb-10">
-                            <h2 class="font-bold">Контактная информация</h2>
-                            <div class="font-bold md:font-semibold  text-gray_text">
-                                Шаг 1 из 5
-                            </div>
-                        </div>
+    <h2 class="font-bold md:font-semibold">Контактная информация</h2>
+    <div class="font-bold md:font-semibold  text-gray_text">
+        Шаг 1 из 5
+    </div>
+</div>
+
                         <form action="">
 
                             <div class="flex flex-col md:flex-row flex-wrap gap-5 mb-5">
@@ -150,7 +150,7 @@
                                         безопасности вашего аккаунта</div>
                                 </div>
                                 <div class="btn w-full md:w-auto" onclick="openModal('email-confirm-modal');startEmailTimer()">
-                                    Подтвердить почту
+                                    Подтвердить
                                 </div>
                             </div>
 
@@ -171,47 +171,46 @@
 
 
         <div class="modal" id="email-confirm-modal">
-            <div class="popup">
-                <div class="w-full max-w-[480px] mx-auto">
-                    <div class="flex items-center justify-center relative border-b pb-5 mb-5">
-                        <div class="font-medium">
-                            Подтверждение почты
-                        </div>
-                        <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
+     <div class="popup">
+         <div class="w-full max-w-[480px] mx-auto">
+             <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                 <div class="font-medium">
+                     Подтверждение почты
+                 </div>
+                 <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                         <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round" />
+                     </svg>
+                 </button>
+             </div>
 
 
 
-                    <p class="text-blue_text text-center mb-10">
-                        Мы отправили вам письмо с подтверждением на вашу почту. Пожалуйста, перейдите по ссылке в письме
-                        для
-                        завершения
-                        процесса
-                        подтверждения. Если вы уже подтвердили свою почту, обновите страницу.
-                    </p>
+             <p class="text-blue_text font-medium text-center mb-10">
+                 Мы отправили вам письмо с подтверждением на вашу почту. Пожалуйста, перейдите по ссылке в письме
+                 для
+                 завершения
+                 процесса
+                 подтверждения. Если вы уже подтвердили свою почту, обновите страницу.
+             </p>
 
-                    <div class="text-center md:text-2xl mb-10">
-                        P<span>*****</span>a@mail.ru
-                    </div>
+             <div class="text-center font-medium md:text-2xl mb-10">
+                 P<span>*****</span>a@mail.ru
+             </div>
 
-                    <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
+             <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
 
 
-                    <button class="btn btn-accent btn-disabled js-email-button w-full max-w-sm mx-auto"
-                        onclick="startEmailTimer()">
-                        Отправить ещё раз
-                    </button>
+             <button class="btn btn-accent btn-disabled js-email-button w-full max-w-sm mx-auto mb-12 md:mb-0"
+                 onclick="startEmailTimer()">
+                 Отправить ещё раз
+             </button>
 
-                </div>
+         </div>
 
-            </div>
-        </div>
+     </div>
+ </div>
 
 
         <div class="notification bg-red_75">
@@ -233,7 +232,7 @@
             <a href="index.html" class="order-2 md:order-1 w-36 md:w-52">
                 <img src="img/Logo.svg" width="100%" alt="Логотип компании">
             </a>
-            <p class="order-3 md:order-2 text-[10px] text-gray_text max-w-md text-center">
+            <p class="order-3 md:order-2 leading-5 text-sm md:text-[10px] md:leading-4 text-gray_text max-w-md text-center">
                 2024 ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ МИКРОКРЕДИТНАЯ КОМПАНИЯ «БАНКА ДЕНЕГ», ИНН 9727039021, ОГРН 1237700445696, 117638, г Москва, ул Одесская, д 2, помещ. 5/7, регистрационный номер записи в государственном реестре микрофинансовых организаций Банка России 2303045009979 от 22.08.2023.
             </p>
             <div class="text-[28px] md:text-xl xl:text-3xl leading-8 uppercase font-medium md:font-semibold flex flex-col order-1 md:order-3 items-center md:items-end">

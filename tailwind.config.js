@@ -46,6 +46,7 @@ module.exports = {
         blue: '#0E174A',
         darkblue: '#394D69',
         blue_08: 'rgba(14,23,74,.8)',
+        blue_01: 'rgba(14,23,74,.1)',
 
         purple: '#312D4B',
       },
@@ -57,6 +58,9 @@ module.exports = {
         'cover': 'cover',
         'contain': 'contain',
         'banner': '25%'
+      },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
       },
       container: {
         center: true,

@@ -53,7 +53,7 @@
                     </div>
                 </div>
 
-                <div class="btn btn-accent">
+                <div class="btn btn-accent mb-12 md:mb-0">
                     Далее
                 </div>
 
@@ -64,48 +64,47 @@
     </div>
 </div>
 
-<div class="modal" id="email-confirm-modal">
-    <div class="popup">
-        <div class="w-full max-w-[480px] mx-auto">
-            <div class="flex items-center justify-center relative border-b pb-5 mb-5">
-                <div class="font-medium">
-                    Подтверждение почты
-                </div>
-                <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>
+ <div class="modal" id="email-confirm-modal">
+     <div class="popup">
+         <div class="w-full max-w-[480px] mx-auto">
+             <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                 <div class="font-medium">
+                     Подтверждение почты
+                 </div>
+                 <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                         <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round" />
+                     </svg>
+                 </button>
+             </div>
 
 
 
-            <p class="text-blue_text text-center mb-10">
-                Мы отправили вам письмо с подтверждением на вашу почту. Пожалуйста, перейдите по ссылке в письме
-                для
-                завершения
-                процесса
-                подтверждения. Если вы уже подтвердили свою почту, обновите страницу.
-            </p>
+             <p class="text-blue_text font-medium text-center mb-10">
+                 Мы отправили вам письмо с подтверждением на вашу почту. Пожалуйста, перейдите по ссылке в письме
+                 для
+                 завершения
+                 процесса
+                 подтверждения. Если вы уже подтвердили свою почту, обновите страницу.
+             </p>
 
-            <div class="text-center md:text-2xl mb-10">
-                P<span>*****</span>a@mail.ru
-            </div>
+             <div class="text-center font-medium md:text-2xl mb-10">
+                 P<span>*****</span>a@mail.ru
+             </div>
 
-            <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
+             <div class="js-popup-timer text-gray_text text-center mb-5">59 секунд</div>
 
 
-            <button class="btn btn-accent btn-disabled js-email-button w-full max-w-sm mx-auto"
-                onclick="startEmailTimer()">
-                Отправить ещё раз
-            </button>
+             <button class="btn btn-accent btn-disabled js-email-button w-full max-w-sm mx-auto mb-12 md:mb-0"
+                 onclick="startEmailTimer()">
+                 Отправить ещё раз
+             </button>
 
-        </div>
+         </div>
 
-    </div>
-</div>
-
+     </div>
+ </div>
 
 <div class="notification bg-red_75">
     <span>Не все поля заполнены</span>

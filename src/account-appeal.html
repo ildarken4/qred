@@ -14,9 +14,11 @@
             <div class="container">
 
                 <div class="bg-white rounded-lg shadow-md py-7 px-5 md:py-10 md:px-2.5">
-                    <h1 class="text-[28px] text-blue_text  md:text-5xl text-center font-bold mb-10">Создать обращение</h1>
+                    @@include('partials/page-title.html', {
+                        "title": "Создать обращение"
+                    })
 
-                    <div class="max-w-4xl mx-auto">
+                    <div class="max-w-4xl mx-auto pt-5 md:pt-0">
                         <form action="">
                             <div class="form-item mb-5">
                                 <div class="">Выберите тему обращения</div>
@@ -100,10 +102,10 @@
                             <div class="py-5 mb-10 border-t border-b border-darkgray">
                                 <div class="flex flex-wrap items-center text-center md:text-left justify-between gap-7">
                                     <div class="w-full md:max-w-[50%]">
-                                        <div class="text-xl uppercase font-semibold mb-2.5">
+                                        <div class="text-sm md:text-xl uppercase font-bold mb-2.5">
                                             Прикрепите файлы
                                         </div>
-                                        <div>Прикрепите файлы, которые могут помочь нам быстрее ответить на ваш запрос.
+                                        <div class="text-sm">Прикрепите файлы, которые могут помочь нам быстрее ответить на ваш запрос.
                                             До 10 файлов.</div>
                                     </div>
                                     <div class="w-full md:max-w-[45%]">

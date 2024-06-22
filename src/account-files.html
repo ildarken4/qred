@@ -14,10 +14,12 @@
             <div class="container">
 
                 <div class="bg-white rounded-lg shadow-md py-7 md:py-10 px-2.5">
-                    <h1 class="text-[28px] text-blue_text  md:text-5xl text-center font-bold mb-10">Мои файлы</h1>
+                    @@include('partials/page-title.html', {
+                        "title": "Мои файлы"
+                    })
 
                     <div
-                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center xl:grid-cols-4 gap-7">
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center xl:grid-cols-4 gap-7 pt-5 px-7 md:pt-0">
                         <div
                             class="border-2 border-darkblue border-dashed rounded-md shadow-md w-full max-w-[332px] min-h-[145px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
                             <div class="md:mb-5">
@@ -27,7 +29,7 @@
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">
+                            <div class="file-name font-semibold h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">
                                 Название файла которого не хватает</div>
                         </div>
                         <div
@@ -35,7 +37,7 @@
                             <div class="mb-2.5 md:mb-5 w-12 md:w-24">
                                 <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
                             </div>
-                            <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                            <div class="file-name font-semibold h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
                                 с паспортом</div>
                         </div>
                         <div
@@ -43,7 +45,7 @@
                             <div class="mb-2.5 md:mb-5 w-12 md:w-24">
                                 <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
                             </div>
-                            <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                            <div class="file-name font-semibold h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
                                 с паспортом</div>
                         </div>
                         <div
@@ -51,7 +53,7 @@
                             <div class="mb-2.5 md:mb-5 w-12 md:w-24">
                                 <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
                             </div>
-                            <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">
+                            <div class="file-name font-semibold h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">
                                 Пример очень и очень длинного текста, который может не влезть или все же?</div>
                         </div>
                         <div
@@ -59,7 +61,7 @@
                             <div class="mb-2.5 md:mb-5 w-12 md:w-24">
                                 <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
                             </div>
-                            <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                            <div class="file-name font-semibold h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
                                 с паспортом</div>
                         </div>
                         <div
@@ -67,7 +69,7 @@
                             <div class="mb-2.5 md:mb-5 w-12 md:w-24">
                                 <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
                             </div>
-                            <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                            <div class="file-name font-semibold h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
                                 с паспортом</div>
                         </div>
                         <div
@@ -75,7 +77,7 @@
                             <div class="mb-2.5 md:mb-5 w-12 md:w-24">
                                 <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
                             </div>
-                            <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                            <div class="file-name font-semibold h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
                                 с паспортом</div>
                         </div>
                         <div
@@ -83,7 +85,7 @@
                             <div class="mb-2.5 md:mb-5 w-12 md:w-24">
                                 <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
                             </div>
-                            <div class="file-name h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                            <div class="file-name font-semibold h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
                                 с паспортом</div>
                         </div>
 

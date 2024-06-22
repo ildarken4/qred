@@ -66,80 +66,89 @@
             <div class="container">
 
                 <div class="bg-white rounded-lg shadow-md py-7 px-5 md:py-10 md:px-2.5">
-                    <h1 class="text-[28px] text-blue_text  md:text-5xl text-center font-bold mb-10">Изменение паспортных данных</h1>
 
-                    <form class="max-w-4xl mx-auto" action="">
+                     <h1 class="text-[28px] text-blue_text leading-7 md:text-5xl md:leading-normal text-center font-bold mb-5 md:mb-10">
+    Изменение паспортных данных
+</h1>
+
+                    <form class="max-w-4xl mx-auto pt-5 md:pt-0" action="">
 
                         <p class="text-center text-sm md:text-base max-w-[170px] mx-auto md:max-w-none mb-5">
-                                Пожалуйста, загрузите следующие фотографии
-                            </p>
+    Пожалуйста, загрузите следующие фотографии
+</p>
 
-                            <div class="flex flex-col md:flex-row justify-center gap-5 md:gap-8 mb-10">
-                                <div class="flex md:block w-full md:max-w-[256px] text-center relative">
-                                    <div class="bg-lightgray rounded-md overflow-hidden w-full max-w-[150px] md:max-w-none h-[130px] md:h-[180px] mb-0 md:mb-2 border border-darkblue md:border-none">
-                                        <img src="img/passport-selfie.png" class="w-full h-full object-contain" alt="селфи с паспортом">
-                                    </div>
-                                    <div class="pl-5 md:pl-0 flex justify-between flex-col md:block">
-                                        <div class="text-sm md:text-base text-left md:text-center">
-                                            Селфи с паспортом
-                                        </div>
-                                        <div class="md:absolute md:bg-lightgray rounded-full border-2 border-accent md:border-none text-accent h-10 md:h-12 w-36 md:w-12 flex items-center justify-center cursor-pointer -top-5 -right-5 group md:hover:bg-darkblue hover:bg-white hover:border-black hover:text-black transition-all "     onclick="openModal('upload-selfie')">
-                                            <span class="md:hidden">Переснять</span>
-                                            <svg class="hidden md:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none">
-                                                <path class="stroke-black group-hover:stroke-white transition-all"
-                                                d="M12.5 20.6946H18.5M6.50736 19.6946H5C4.44772 19.6946 4 19.2469 4 18.6946V17.1873C4 16.3916 4.31607 15.6285 4.87868 15.0659L14.75 5.19462C15.7855 4.15909 17.4645 4.15909 18.5 5.19462C19.5355 6.23015 19.5355 7.90909 18.5 8.94462L8.62868 18.8159C8.06607 19.3785 7.30301 19.6946 6.50736 19.6946Z"
-                                                stroke="#151515" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex md:block w-full md:max-w-[256px] text-center relative">
-                                    <div class="bg-lightgray rounded-md overflow-hidden w-full max-w-[150px] md:max-w-none h-[130px] md:h-[180px] mb-0 md:mb-2 border border-darkblue md:border-none">
-                                        <img src="img/passport-photo.png" class="w-full h-full object-contain" alt="первый разворот паспорта">
-                                    </div>
-                                    <div class="pl-5 md:pl-0 flex justify-between flex-col md:block">
-                                        <div class="text-sm md:text-base text-left md:text-center">
-                                            Первый разворот паспорта
-                                        </div>
-                                        <div class="md:absolute md:bg-lightgray rounded-full border-2 border-accent md:border-none text-accent h-10 md:h-12 w-36 md:w-12 flex items-center justify-center cursor-pointer -top-5 -right-5 group md:hover:bg-darkblue hover:bg-white hover:border-black hover:text-black transition-all"    onclick="openModal('upload-passport-1')">
-                                            <span class="md:hidden">Переснять</span>
-                                            <svg class="hidden md:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none">
-                                                <path class="stroke-black group-hover:stroke-white transition-all"
-                                                d="M12.5 20.6946H18.5M6.50736 19.6946H5C4.44772 19.6946 4 19.2469 4 18.6946V17.1873C4 16.3916 4.31607 15.6285 4.87868 15.0659L14.75 5.19462C15.7855 4.15909 17.4645 4.15909 18.5 5.19462C19.5355 6.23015 19.5355 7.90909 18.5 8.94462L8.62868 18.8159C8.06607 19.3785 7.30301 19.6946 6.50736 19.6946Z"
-                                                stroke="#151515" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex md:block w-full md:max-w-[256px] text-center relative">
-                                    <div class="bg-lightgray rounded-md overflow-hidden w-full max-w-[150px] md:max-w-none h-[130px] md:h-[180px] mb-0 md:mb-2 border border-darkblue md:border-none">
-                                        <img src="img/passport-address.png" class="w-full h-full object-contain" alt="фото прописки">
-                                    </div>
-                                    <div class="pl-5 md:pl-0 flex justify-between flex-col md:block">
-                                        <div class="text-sm md:text-base text-left md:text-center">
-                                            Разворот с регистрацией
-                                        </div>
-                                        <div class="md:absolute md:bg-lightgray rounded-full border-2 border-accent md:border-none text-accent h-10 md:h-12 w-36 md:w-12 flex items-center justify-center cursor-pointer -top-5 -right-5 group md:hover:bg-darkblue hover:bg-white hover:border-black hover:text-black transition-all "     onclick="openModal('upload-passport-2')">
-                                            <span class="md:hidden">Переснять</span>
-                                            <svg class="hidden md:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none">
-                                                <path class="stroke-black group-hover:stroke-white transition-all"
-                                                d="M12.5 20.6946H18.5M6.50736 19.6946H5C4.44772 19.6946 4 19.2469 4 18.6946V17.1873C4 16.3916 4.31607 15.6285 4.87868 15.0659L14.75 5.19462C15.7855 4.15909 17.4645 4.15909 18.5 5.19462C19.5355 6.23015 19.5355 7.90909 18.5 8.94462L8.62868 18.8159C8.06607 19.3785 7.30301 19.6946 6.50736 19.6946Z"
-                                                stroke="#151515" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<div class="flex flex-col md:flex-row flex-wrap md:justify-center lg:justify-start gap-5 md:gap-7 w-fit mx-auto mb-10">
+    <div class="flex md:block w-full min-w-0 md:max-w-[225px] lg:max-w-[250px] xl:max-w-[256px] text-center relative">
+    <div
+        class="bg-lightgray rounded-md overflow-hidden w-full max-w-[150px] md:max-w-none h-[130px] md:h-[180px] mb-0 md:mb-2 border border-darkblue md:border-none flex items-center">
+        <img src="img/passport-selfie.png" class="w-full" alt="Селфи с паспортом">
+    </div>
+    <div class="pl-5 md:pl-0 flex justify-between flex-col md:block">
+        <div class="text-sm font-medium text-left md:text-center">
+            Селфи с паспортом
+        </div>
+        <div class="md:absolute md:bg-lightgray rounded-full border-2 border-accent md:border-none text-accent h-10 md:h-12 w-36 md:w-12 flex items-center justify-center cursor-pointer -top-5 -right-5 group md:hover:bg-darkblue hover:bg-white hover:border-black hover:text-black transition-all "
+            onclick="openModal('upload-selfie')">
+            <span class="md:hidden">Переснять</span>
+            <svg class="hidden md:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none">
+                <path class="stroke-black group-hover:stroke-white transition-all"
+                    d="M12.5 20.6946H18.5M6.50736 19.6946H5C4.44772 19.6946 4 19.2469 4 18.6946V17.1873C4 16.3916 4.31607 15.6285 4.87868 15.0659L14.75 5.19462C15.7855 4.15909 17.4645 4.15909 18.5 5.19462C19.5355 6.23015 19.5355 7.90909 18.5 8.94462L8.62868 18.8159C8.06607 19.3785 7.30301 19.6946 6.50736 19.6946Z"
+                    stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+    </div>
+</div>
+    <div class="flex md:block w-full min-w-0 md:max-w-[225px] lg:max-w-[250px] xl:max-w-[256px] text-center relative">
+    <div
+        class="bg-lightgray rounded-md overflow-hidden w-full max-w-[150px] md:max-w-none h-[130px] md:h-[180px] mb-0 md:mb-2 border border-darkblue md:border-none flex items-center">
+        <img src="img/passport-photo.png" class="w-full" alt="Первый разворот паспорта">
+    </div>
+    <div class="pl-5 md:pl-0 flex justify-between flex-col md:block">
+        <div class="text-sm font-medium text-left md:text-center">
+            Первый разворот паспорта
+        </div>
+        <div class="md:absolute md:bg-lightgray rounded-full border-2 border-accent md:border-none text-accent h-10 md:h-12 w-36 md:w-12 flex items-center justify-center cursor-pointer -top-5 -right-5 group md:hover:bg-darkblue hover:bg-white hover:border-black hover:text-black transition-all "
+            onclick="openModal('upload-passport-1')">
+            <span class="md:hidden">Переснять</span>
+            <svg class="hidden md:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none">
+                <path class="stroke-black group-hover:stroke-white transition-all"
+                    d="M12.5 20.6946H18.5M6.50736 19.6946H5C4.44772 19.6946 4 19.2469 4 18.6946V17.1873C4 16.3916 4.31607 15.6285 4.87868 15.0659L14.75 5.19462C15.7855 4.15909 17.4645 4.15909 18.5 5.19462C19.5355 6.23015 19.5355 7.90909 18.5 8.94462L8.62868 18.8159C8.06607 19.3785 7.30301 19.6946 6.50736 19.6946Z"
+                    stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+    </div>
+</div>
+    <div class="flex md:block w-full min-w-0 md:max-w-[225px] lg:max-w-[250px] xl:max-w-[256px] text-center relative">
+    <div
+        class="bg-lightgray rounded-md overflow-hidden w-full max-w-[150px] md:max-w-none h-[130px] md:h-[180px] mb-0 md:mb-2 border border-darkblue md:border-none flex items-center">
+        <img src="img/passport-address.png" class="w-full" alt="Разворот с регистрацией">
+    </div>
+    <div class="pl-5 md:pl-0 flex justify-between flex-col md:block">
+        <div class="text-sm font-medium text-left md:text-center">
+            Разворот с регистрацией
+        </div>
+        <div class="md:absolute md:bg-lightgray rounded-full border-2 border-accent md:border-none text-accent h-10 md:h-12 w-36 md:w-12 flex items-center justify-center cursor-pointer -top-5 -right-5 group md:hover:bg-darkblue hover:bg-white hover:border-black hover:text-black transition-all "
+            onclick="openModal('upload-passport-2')">
+            <span class="md:hidden">Переснять</span>
+            <svg class="hidden md:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none">
+                <path class="stroke-black group-hover:stroke-white transition-all"
+                    d="M12.5 20.6946H18.5M6.50736 19.6946H5C4.44772 19.6946 4 19.2469 4 18.6946V17.1873C4 16.3916 4.31607 15.6285 4.87868 15.0659L14.75 5.19462C15.7855 4.15909 17.4645 4.15909 18.5 5.19462C19.5355 6.23015 19.5355 7.90909 18.5 8.94462L8.62868 18.8159C8.06607 19.3785 7.30301 19.6946 6.50736 19.6946Z"
+                    stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+    </div>
+</div>
+    
+</div>
 
 
-                        <div class="btn btn-accent max-w-md mx-auto mb-10" onclick="openModal('upload-selfie')">Добавить
+                        <div class="btn btn-accent max-w-md mx-auto" onclick="openModal('upload-selfie')">Добавить
                         </div>
+
+                        <div class="w-full border-b border-darkgray my-10"></div>
 
                         <div class="flex flex-col-reverse md:flex-row gap-5">
                             <a href="account-updating.html" class="btn w-full btn-dashed ">
@@ -160,13 +169,13 @@
         <div class="modal modal-uploads" id="upload-selfie">
     <div class="flex justify-between md:justify-center relative mt-14 mb-12">
         <div class="flex items-center bg-lightgray rounded-lg p-2 gap-2">
-            <div class="rounded-md py-2 px-4 transition-all bg-accent">
+            <div class="rounded-md py-2 px-4 transition-all font-medium bg-accent">
                 Шаг 1
             </div>
-            <div class="rounded-md py-2 px-4 transition-all">
+            <div class="rounded-md py-2 px-4 transition-all font-medium">
                 Шаг 2
             </div>
-            <div class="rounded-md py-2 px-4 transition-all">
+            <div class="rounded-md py-2 px-4 transition-all font-medium">
                 Шаг 3
             </div>
         </div>
@@ -182,7 +191,7 @@
         Селфи с паспортом
     </div>
     <div class="w-full max-w-[990px] bg-white rounded-[20px] mx-auto flex flex-col items-center pt-10 pb-14">
-        <div class="bg-lightgray rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-5">
+        <div class="bg-white md:bg-lightgray shadow-md md:shadow-none shadow-gray_015 rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-5">
             <img src="img/passport-selfie.png" class="w-full h-full object-contain" alt="селфи с паспортом">
         </div>
         <p class="text-center text-sm md:text-base max-w-[280px] md:max-w-xs md:mb-10">Убедитесь, что данные паспорта и
@@ -209,12 +218,12 @@
         </label>
 
         <div class="hidden">
-            <div class="btn mb-5">Заменить</div>
-            <div class="btn">Использовать</div>
+            <div class="btn btn-accent mb-5">Заменить</div>
+            <div class="btn btn-accent">Использовать</div>
         </div>
     </div>
     <div
-        class="mobile-upload-icon lg:hidden bg-accent rounded-full h-[60px] w-[60px] flex items-center justify-center mx-auto cursor-pointer fixed bottom-10 left-[calc(50%-24px)]">
+        class="mobile-upload-icon lg:hidden bg-accent rounded-full h-[60px] w-[60px] flex items-center justify-center mx-auto mt-[72px] mb-14 cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path
                 d="M8 5.7777H5C3.34315 5.7777 2 7.12084 2 8.7777V16.9999C2 18.6568 3.34315 19.9999 5 19.9999H19C20.6569 19.9999 22 18.6568 22 16.9999V8.7777C22 7.12084 20.6569 5.7777 19 5.7777H16M8 5.7777L8.08797 4.65915C8.12212 4.22487 8.23322 3.78752 8.52463 3.46373C9.08674 2.83916 9.89408 2.4707 10.7545 2.4707H13.2455C14.1059 2.4707 14.9133 2.83916 15.4754 3.46373C15.7668 3.78752 15.8779 4.22487 15.912 4.65915L16 5.7777M8 5.7777H16M18.01 8.99992H18M15 12.9999C15 14.6568 13.6569 15.9999 12 15.9999C10.3431 15.9999 9 14.6568 9 12.9999C9 11.3431 10.3431 9.99992 12 9.99992C13.6569 9.99992 15 11.3431 15 12.9999Z"
@@ -226,13 +235,13 @@
 <div class="modal modal-uploads" id="upload-passport-1">
     <div class="flex justify-between md:justify-center relative mt-14 mb-12">
         <div class="flex items-center bg-lightgray rounded-lg p-2 gap-2">
-            <div class="rounded-md py-2 px-4 transition-all bg-accent">
+            <div class="rounded-md py-2 px-4 transition-all font-medium bg-accent">
                 Шаг 1
             </div>
-            <div class="rounded-md py-2 px-4 transition-all bg-accent">
+            <div class="rounded-md py-2 px-4 transition-all font-medium bg-accent">
                 Шаг 2
             </div>
-            <div class="rounded-md py-2 px-4 transition-all">
+            <div class="rounded-md py-2 px-4 transition-all font-medium">
                 Шаг 3
             </div>
         </div>
@@ -248,7 +257,7 @@
         Первый разворот паспорта
     </div>
     <div class="w-full max-w-[990px] bg-white rounded-[20px] mx-auto flex flex-col items-center pt-10 pb-14">
-        <div class="bg-lightgray rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-5">
+        <div class="bg-white md:bg-lightgray shadow-md md:shadow-none shadow-gray_015 rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-5">
             <img src="img/passport-photo.png" class="w-full h-full object-contain" alt="Первый разворот паспорта">
         </div>
         <p class="text-center text-sm md:text-base max-w-[280px] md:max-w-xs md:mb-10">Убедитесь, что все данные
@@ -275,12 +284,12 @@
         </label>
 
         <div class="hidden">
-            <div class="btn mb-5">Заменить</div>
-            <div class="btn">Использовать</div>
+            <div class="btn btn-accent mb-5">Заменить</div>
+            <div class="btn btn-accent">Использовать</div>
         </div>
     </div>
     <div
-        class="mobile-upload-icon lg:hidden bg-accent rounded-full h-[60px] w-[60px] flex items-center justify-center mx-auto cursor-pointer fixed bottom-10 left-[calc(50%-24px)]">
+        class="mobile-upload-icon lg:hidden bg-accent rounded-full h-[60px] w-[60px] flex items-center justify-center mx-auto mt-[72px] mb-14 cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path
                 d="M8 5.7777H5C3.34315 5.7777 2 7.12084 2 8.7777V16.9999C2 18.6568 3.34315 19.9999 5 19.9999H19C20.6569 19.9999 22 18.6568 22 16.9999V8.7777C22 7.12084 20.6569 5.7777 19 5.7777H16M8 5.7777L8.08797 4.65915C8.12212 4.22487 8.23322 3.78752 8.52463 3.46373C9.08674 2.83916 9.89408 2.4707 10.7545 2.4707H13.2455C14.1059 2.4707 14.9133 2.83916 15.4754 3.46373C15.7668 3.78752 15.8779 4.22487 15.912 4.65915L16 5.7777M8 5.7777H16M18.01 8.99992H18M15 12.9999C15 14.6568 13.6569 15.9999 12 15.9999C10.3431 15.9999 9 14.6568 9 12.9999C9 11.3431 10.3431 9.99992 12 9.99992C13.6569 9.99992 15 11.3431 15 12.9999Z"
@@ -294,13 +303,13 @@
 
     <div class="flex justify-between md:justify-center relative mt-14 mb-12">
         <div class="flex items-center bg-lightgray rounded-lg p-2 gap-2">
-            <div class="rounded-md py-2 px-4 transition-all bg-accent">
+            <div class="rounded-md py-2 px-4 transition-all font-medium bg-accent">
                 Шаг 1
             </div>
-            <div class="rounded-md py-2 px-4 transition-all bg-accent">
+            <div class="rounded-md py-2 px-4 transition-all font-medium bg-accent">
                 Шаг 2
             </div>
-            <div class="rounded-md py-2 px-4 transition-all bg-accent">
+            <div class="rounded-md py-2 px-4 transition-all font-medium bg-accent">
                 Шаг 3
             </div>
         </div>
@@ -316,7 +325,7 @@
         Разворот с регистрацией
     </div>
     <div class="w-full max-w-[990px] bg-white rounded-[20px] mx-auto flex flex-col items-center pt-10 pb-14">
-        <div class="bg-lightgray rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-5">
+        <div class="bg-white md:bg-lightgray shadow-md md:shadow-none shadow-gray_015 rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-5">
             <img src="img/passport-address.png" class="w-full h-full object-contain" alt="Разворот с регистрацией">
         </div>
         <p class="text-center text-sm md:text-base max-w-[280px] md:max-w-xs md:mb-10">Убедитесь, что все данные
@@ -343,12 +352,12 @@
         </label>
 
         <div class="hidden">
-            <div class="btn mb-5">Заменить</div>
-            <div class="btn">Использовать</div>
+            <div class="btn btn-accent mb-5">Заменить</div>
+            <div class="btn btn-accent">Использовать</div>
         </div>
     </div>
     <div
-        class="mobile-upload-icon lg:hidden bg-accent rounded-full h-[60px] w-[60px] flex items-center justify-center mx-auto cursor-pointer fixed bottom-10 left-[calc(50%-24px)]">
+        class="mobile-upload-icon lg:hidden bg-accent rounded-full h-[60px] w-[60px] flex items-center justify-center mx-auto mt-[72px] mb-14 cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path
                 d="M8 5.7777H5C3.34315 5.7777 2 7.12084 2 8.7777V16.9999C2 18.6568 3.34315 19.9999 5 19.9999H19C20.6569 19.9999 22 18.6568 22 16.9999V8.7777C22 7.12084 20.6569 5.7777 19 5.7777H16M8 5.7777L8.08797 4.65915C8.12212 4.22487 8.23322 3.78752 8.52463 3.46373C9.08674 2.83916 9.89408 2.4707 10.7545 2.4707H13.2455C14.1059 2.4707 14.9133 2.83916 15.4754 3.46373C15.7668 3.78752 15.8779 4.22487 15.912 4.65915L16 5.7777M8 5.7777H16M18.01 8.99992H18M15 12.9999C15 14.6568 13.6569 15.9999 12 15.9999C10.3431 15.9999 9 14.6568 9 12.9999C9 11.3431 10.3431 9.99992 12 9.99992C13.6569 9.99992 15 11.3431 15 12.9999Z"
@@ -363,7 +372,7 @@
 <div class="modal modal-uploads" id="upload-card">
     <div class="flex justify-between md:justify-center relative mt-14 mb-12">
         <div class="flex items-center bg-lightgray rounded-lg p-2 gap-2">
-            <div class="rounded-md py-2 px-4 transition-all bg-accent">
+            <div class="rounded-md py-2 px-4 transition-all font-medium bg-accent">
                 Шаг 1
             </div>
         </div>
@@ -379,7 +388,7 @@
         Фото привязанной карты
     </div>
     <div class="w-full max-w-[990px] bg-white rounded-[20px] mx-auto flex flex-col items-center pt-10 pb-14">
-        <div class="bg-lightgray rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-5">
+        <div class="bg-white md:bg-lightgray shadow-md md:shadow-none shadow-gray_015 rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-5">
             <img src="img/card-photo.png" class="w-full h-full object-contain" alt="сФото привязанной карты">
         </div>
         <p class="text-center text-sm md:text-base max-w-[280px] md:max-w-xs md:mb-10">Убедитесь, что данные с
@@ -406,12 +415,12 @@
         </label>
 
         <div class="hidden">
-            <div class="btn mb-5">Заменить</div>
-            <div class="btn">Использовать</div>
+            <div class="btn btn-accent mb-5">Заменить</div>
+            <div class="btn btn-accent">Использовать</div>
         </div>
     </div>
     <div
-        class="mobile-upload-icon lg:hidden bg-accent rounded-full h-[60px] w-[60px] flex items-center justify-center mx-auto cursor-pointer fixed bottom-10 left-[calc(50%-24px)]">
+        class="mobile-upload-icon lg:hidden bg-accent rounded-full h-[60px] w-[60px] flex items-center justify-center mx-auto mt-[72px] mb-14 cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path
                 d="M8 5.7777H5C3.34315 5.7777 2 7.12084 2 8.7777V16.9999C2 18.6568 3.34315 19.9999 5 19.9999H19C20.6569 19.9999 22 18.6568 22 16.9999V8.7777C22 7.12084 20.6569 5.7777 19 5.7777H16M8 5.7777L8.08797 4.65915C8.12212 4.22487 8.23322 3.78752 8.52463 3.46373C9.08674 2.83916 9.89408 2.4707 10.7545 2.4707H13.2455C14.1059 2.4707 14.9133 2.83916 15.4754 3.46373C15.7668 3.78752 15.8779 4.22487 15.912 4.65915L16 5.7777M8 5.7777H16M18.01 8.99992H18M15 12.9999C15 14.6568 13.6569 15.9999 12 15.9999C10.3431 15.9999 9 14.6568 9 12.9999C9 11.3431 10.3431 9.99992 12 9.99992C13.6569 9.99992 15 11.3431 15 12.9999Z"

@@ -14,21 +14,10 @@
             <div class="container">
 
                 @@include('partials/account-top-single-loan.html')
-
-                <div
-                    class="bg-account-banner bg-banner bg-repeat-x md:bg-repeat bg-top md:bg-center bg-white rounded-lg mb-5 md:mb-10 relative overflow-hidden">
-                    <div
-                        class="account-banner w-full relative md:w-2/3 mx-auto text-center md:bg-white py-5 md:py-10 px-6 h-full">
-                        <div class="account-banner__bg md:hidden absolute bottom-0 left-0 w-full h-1/2 bg-white z-0">
-                        </div>
-                        <div class="text-blue_text relative z-10 text-xl md:text-3xl font-bold mb-5 md:mb-8">
-                            Активировать предложение по новому заему
-                        </div>
-                        <div class="btn btn-accent relative z-10 min-w-fit sm:w-80 mx-auto">
-                            Активировать
-                        </div>
-                    </div>
-                </div>
+                @@include('partials/account-banner.html', {
+                    "title": "Активировать предложение по новому заему",
+                    "button": "Активировать"
+                })
 
 
 
@@ -54,56 +43,7 @@
                     <div
                         class="js-loan-card bg-white rounded-lg shadow-md md:w-1/2 py-10 px-10 flex flex-col items-center">
 
-                        <div class="text-center text-sm md:hidden">Номер договора</div>
-                        <div class="text-center text-sm text-accent font-bold mb-5 md:hidden">№<span>12435445</span>
-                        </div>
-
-                        <form action="" class="w-full max-w-[400px] mx-auto h-fit my-auto">
-
-                            <input type="text" class="payment-input mb-2.5" placeholder="Введите сумму"
-                                value="2100 руб.">
-
-                            <button class="btn btn-accent btn-squared w-full min-w-0 mb-5 md:mb-10">Оплатить</button>
-                            <a href="#top"
-                                class="schedule-btn text-2xl font-semibold hidden md:flex items-center gap-2 cursor-pointer hover:underlined">
-                                График платежей
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
-                                    fill="none">
-                                    <path d="M4.5 20.5L20.5 4.5M20.5 4.5V20.5M20.5 4.5H4.5" stroke="#000000"
-                                        stroke-width="2" />
-                                </svg>
-                            </a>
-                        </form>
-                        <div
-                            class="js-loan-info border-b border-dashed border-gray mb-5 h-fit max-h-0 overflow-hidden transition-all text-blue_text md:hidden">
-                            <div class="w-full py-2.5 flex items-center justify-between">
-                                <div class="text-sm  max-w-[50%]">Общая сумма долга</div>
-                                <div class=" font-bold basis-2/5">21 000 руб.</span></div>
-                            </div>
-                            <div class="w-full py-2.5 flex items-center justify-between">
-                                <div class="text-sm  max-w-[50%]">Очередной платеж</div>
-                                <div class=" font-bold basis-2/5">2 100 руб.</span></div>
-                            </div>
-                            <div class="w-full py-2.5 flex items-center justify-between mb-5">
-                                <div class="text-sm  max-w-[50%]">Рекомендованная дата платежа</div>
-                                <div class=" font-bold basis-2/5">03.03.23</span></div>
-                            </div>
-
-                            <a href="#top"
-                                class="schedule-btn text-accent font-semibold flex items-center justify-center gap-2 cursor-pointer hover:underlined mb-5 transition-all hover:text-black group">
-                                График платежей
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
-                                    fill="none">
-                                    <path class="stroke-accent transition-all group-hover:stroke-black"
-                                        d="M4.5 20.5L20.5 4.5M20.5 4.5V20.5M20.5 4.5H4.5" stroke="#000000"
-                                        stroke-width="2" />
-                                </svg>
-                            </a>
-                        </div>
-
-                        <div class="js-show-info text-center font-medium cursor-pointer md:hidden">Подробнее о заеме
-                        </div>
-
+                        @@include('partials/annuity-single-card.html')
 
                     </div>
                 </div>

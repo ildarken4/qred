@@ -1,0 +1,56 @@
+<div class="calculator__card text-blue_text mb-5 md:mb-10">
+    <div class="flex justify-between items-center">
+        <div class="text-xs md:text-base">Выберите сумму</div>
+        <div
+            class="data w-28 md:w-36 h-8 md:h-10 flex items-center justify-between text-xs md:text-lg px-2.5 rounded-[4px] bg-lightgray text-gray_text">
+            <span class="data__number result-sum">15 000</span> <span>₽</span></div>
+    </div>
+
+    <div class="range-slider sum-slider">
+
+        <input type="range" class="styled-slider slider-progress" id="sum-input" min="10000" max="300000" value="80000"
+            step="1000" />
+        <div class="range-slider__values w-full flex items-center justify-between">
+            <span class="minimum-scale text-xs">10 000</span>
+            <span class="maximum-scale text-xs">300 000</span>
+        </div>
+    </div>
+</div>
+
+<div class="calculator__card text-blue_text mb-5">
+    <div class="flex justify-between items-center">
+        <div class="text-xs md:text-base">Выберите срок</div>
+        <div
+            class="data w-28 md:w-36 h-8 md:h-10 flex items-center justify-between text-xs md:text-lg px-2.5 rounded-[4px] bg-lightgray text-gray_text">
+            <span class="data__number calc-days">21</span> <span>день</span></div>
+    </div>
+
+    <div class="range-slider term-slider">
+
+        <input type="range" class="styled-slider slider-progress" id="term-input" min="5" max="30" value="21" />
+        <div class="range-slider__values w-full flex items-center justify-between">
+            <span class="minimum-scale text-xs">5 дней</span>
+            <span class="maximum-scale text-xs">31 день</span>
+        </div>
+    </div>
+</div>
+
+<div class="calculator-result text-blue_text flex justify-between gap-2 md:gap-5 w-full md:mb-10 pt-5 border-t border-gray">
+    <div class="result-item text-center">
+        <div class="result-head text-xs md:text-[11px] text-gray_text mb-1">Вы берете</div>
+        <div class="result-number font-bold text-xs"> <span class="result-monthly">15 000
+            </span> ₽</div>
+    </div>
+    <div class="result-item text-center">
+        <div class="result-head text-xs md:text-[11px] text-gray_text mb-1">До (включительно)</div>
+        <div class="result-number font-bold text-xs"> <span class="result-date">24 апреля,
+                2024</div>
+    </div>
+    <div class="result-item text-center">
+        <div class="result-head text-xs md:text-[11px] text-gray_text mb-1">Вы возвращаете</div>
+        <div class="result-number font-bold text-xs text-accent"> <span
+                class="crossed relative text-gray_text font-normal mr-2">14 016 <span
+                    class="w-full top-1/2 left-0 absolute border-b border-gray_text"></span></span>
+            <span class="result-sum">15 000 </span> ₽</div>
+    </div>
+</div>
