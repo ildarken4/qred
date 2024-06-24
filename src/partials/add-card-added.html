@@ -1,0 +1,14 @@
+<div class="bg-lightgray rounded-md px-2.5 py-7 md:p-7 mb-10">
+    <p class="text-center text-sm font-medium md:text-base max-w-[170px] mx-auto md:max-w-none mb-5">
+        Пожалуйста, загрузите следующие фотографии
+    </p>
+
+    <div class="flex flex-col md:flex-row justify-center gap-5 md:gap-8">
+        @@include('uploaded-card.html', {
+            "title": "Фото привязанной карты",
+            "image": "img/error-photo.png",
+            "modal": "upload-card"
+        })
+    </div>
+
+</div>

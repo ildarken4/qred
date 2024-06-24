@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+    <div id="app">
+        @@include('partials/header-account.html')
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
+            <div class="container">
+
+                <div class="bg-white rounded-lg shadow-md py-10 px-2.5 md:px-10">
+                    @@include('partials/page-title.html', {
+                        "title": "Ваша заявка рассматривается"
+                    })
+
+                    <div class="max-w-[990px] mx-auto text-center px-2.5 md:px-10 xl:px-20">
+                        <div class="w-[100px] md:w-40 mx-auto mb5 md:mb-10">
+                            <img src="img/icons/clock-3d.png" width="100%" alt="">
+                        </div>
+
+
+                         @@include('partials/file-error-added.html')
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        @@include('partials/uploaded-modals.html')
+        @@include('partials/footer.html')
+    </div>
+</body>
+
+</html>

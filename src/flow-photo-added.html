@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Получить заём</title>
+</head>
+
+<body>
+    <div id="app">
+        @@include('partials/header-flow.html')
+        <div class="wrapper">
+            <div class="container">
+                    <div class="max-w-[990px] mx-auto pt-10 md:pt-16 pb-36">
+                        @@include('partials/page-title.html', {
+                            "title": "Заполните анкету"
+                        })
+
+                        @@include('partials/flow-banner.html', {
+                            "title": "Ваши данные под надежной защитой!",
+                            "image": "<img src='img/icons/lock-3d.png' width='100%' alt='защита'>"
+                        })
+
+                        <div class="rounded-lg mb:rounded-xl border-2 border-lightgray px-2.5 md:px-20 py-7 lg:py-14 shadow-sm">
+
+
+                            @@include('partials/flow-probability.html', {
+                                "percent": "65"
+                            })
+                            @@include('partials/flow-hint.html', {
+                                "hint": "Пожалуйста, загрузите фото по&nbsp;образцу"
+                            })
+                            @@include('partials/flow-steps.html', {
+                                "title": "Подтверждение личности",
+                                "steps": "Шаг 3 из 5"
+                            })
+                        
+                            @@include('partials/uploaded-photos.html')
+
+                            <a href="flow-job.html" class="btn btn-accent"> Перейти к следующему шагу</a>
+
+
+                        </div>
+
+                    </div>
+                
+            </div>
+            
+
+        </div>
+
+
+        @@include('partials/uploaded-modals.html')
+        @@include('partials/main-footer.html')
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+    <div id="app">
+        @@include('partials/header-account.html')
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
+            <div class="container">
+
+                <div class="bg-white rounded-lg shadow-md py-7 px-5 md:py-10 md:px-2.5">
+
+                    @@include('partials/page-title.html', {
+                        "title": "Изменение паспортных данных"
+                    })
+
+                    <form class="max-w-4xl mx-auto pt-5 md:pt-0" action="">
+
+                        @@include('partials/uploaded-photos.html')
+
+                        <div class="w-full border-b border-darkgray my-10"></div>
+
+                        <div class="flex flex-col-reverse md:flex-row gap-5">
+                            <a href="account-updating.html" class="btn w-full btn-dashed ">
+                                Назад
+                            </a>
+                            <a href="account-updating.html" class="btn w-full btn-accent">Сохранить</a>
+                            <!-- По нажатию появляется соответствующий .notification и при успехе кнопка подтвердить становится .btn-disabled -->
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+        @@include('partials/uploaded-modals.html')
+        @@include('partials/footer.html')
+    </div>
+</body>
+
+</html>

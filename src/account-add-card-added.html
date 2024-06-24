@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+    <div id="app">
+        @@include('partials/header-account.html')
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
+            <div class="container">
+
+                <div class="bg-white rounded-lg shadow-md py-7 md:py-10 px-2.5">
+                    @@include('partials/page-title.html', {
+                        "title": "Мои карты"
+                    })
+
+                    <div class="max-w-[830px] mx-auto">
+
+                        @@include('partials/add-card-added.html')
+                    </div>
+
+                    <button class="btn btn-accent w-full max-w-[280px] md:max-w-4xl mx-auto">Готово</button>
+                </div>
+
+                @@include('partials/account-menu.html')
+            </div>
+        </div>
+
+        @@include('partials/uploaded-modals.html')
+        @@include('partials/footer.html')
+    </div>
+</body>
+
+</html>
