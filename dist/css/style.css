@@ -3082,6 +3082,9 @@ input[type=range].styled-slider::-ms-thumb:hover {
   .md\:mt-0{
     margin-top: 0px;
   }
+  .md\:mt-10{
+    margin-top: 2.5rem;
+  }
   .md\:block{
     display: block;
   }
