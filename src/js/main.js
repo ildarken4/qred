@@ -548,6 +548,88 @@ if (fileInputs) {
             }
         });
     });
+}
 
-    
+// Input маски
+let phoneInputs = document.querySelectorAll('input[type="tel"]');
+if (phoneInputs) {
+    Inputmask({"mask": "+7 (999) 999-99-99"}).mask(phoneInputs);
+}
+
+let numberInput = document.getElementById('passport-number');
+if (numberInput) {
+    Inputmask({"mask": "99 99 999999"}).mask(numberInput);
+
+}
+
+let dateInputs = document.getElementsByClassName('input-date');
+if (dateInputs) {
+    Inputmask(
+    {
+        alias: 'datetime',
+        rightAlign: false,
+        allowPlus: false,
+        allowMinus: false,
+        digits: 0,
+        placeholder: "__.__.____",
+        inputFormat: "dd.mm.yyyy",
+        min: "01.01.1900",
+        max: "31.12.2100"
+    }).mask(dateInputs);
+}
+
+
+let emailInputs = document.getElementsByClassName('email-input');
+
+if (emailInputs) {
+
+        Inputmask(
+        {
+            mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}].*{1,20}[.*{2,6}][.*{1,2}]",
+            greedy: false,
+            onBeforePaste: function (pastedValue, opts) {
+            pastedValue = pastedValue.toLowerCase();
+            return pastedValue.replace("mailto:", "");
+            },
+            definitions: {
+                '*': {
+                    validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+                    casing: "lower"
+                }
+            }
+        }).mask(emailInputs);
+}
+
+let codeInput = document.getElementById('passport-code');
+if (codeInput) {
+    Inputmask({"mask": "999-999"}).mask(codeInput);
+}
+
+let incomeInput = document.getElementsByClassName('input-sum');
+if (incomeInput) {
+    Inputmask({
+        alias: 'numeric',
+        groupSeparator: ' ',
+        autoGroup: true,
+        rightAlign: false,
+        allowPlus: false,
+        allowMinus: false,
+        suffix: ' ₽',
+        digits: 0
+    }).mask(incomeInput);
+}
+
+let accountPays = document.querySelectorAll('.account-pay');
+
+if (accountPays) {
+    Inputmask({
+        alias: 'numeric',
+        groupSeparator: ' ',
+        autoGroup: true,
+        rightAlign: false,
+        allowPlus: false,
+        allowMinus: false,
+        suffix: ' ₽',
+        digits: 0
+    }).mask(accountPays);
 }

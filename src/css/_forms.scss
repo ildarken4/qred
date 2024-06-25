@@ -65,34 +65,17 @@ input[type="radio"]:checked {
 
 // кастомный селект
 .custom-select {
-  position: relative;
-  width: 100%;
+  @apply relative w-full;
 
   &__head {
-    height: 60px;
-    padding: 20px;
-    font-size: 17px;
-    font-weight: 500;
-    line-height: 20px;
-    background-color: #F4F5F7;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid #F4F5F7;
-    cursor: pointer;
+    @apply h-[60px] p-5 font-medium leading-5 bg-lightgray text-gray_text rounded-md flex items-center justify-between border border-lightgray cursor-pointer text-lg lg:text-base;
 
     &.selected {
-      color: #191919 !important;
-    }
-
-    @media (max-width:991px) {
-      font-size: 18px;
-      // padding: 10px 20px;
+      @apply text-black;
     }
 
     svg {
-      transition: all 0.4s ease;
+      @apply transition-all;
     }
   }
 

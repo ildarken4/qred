@@ -51,7 +51,7 @@ module.exports = {
         purple: '#312D4B',
       },
       backgroundImage: {
-        'account-banner': "url('/img/backgrounds/banner-background.png')",
+        'account-banner': "url('../img/backgrounds/banner-background.png')",
       },
       backgroundSize: {
         'auto': 'auto',
