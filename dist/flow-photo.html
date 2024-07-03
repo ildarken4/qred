@@ -28,6 +28,20 @@
 </head>
 
 <body>
+
+    <!-- 
+    
+    1) При нажатии на «Добавить» открывается модалка, куда добавляется фото
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=262-14807
+    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=299-777
+    
+    2) При загрузке очередного фото открывается следующая модалка.
+    3) Если в процессе нажали «Закрыть» - кнопка «Добавить» открывает ту модалку, начиная с которой не загружены фото
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=262-15136
+    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=299-1871
+    
+    -->
+
     <div id="app">
         <header class="header relative py-7">
     <div class="container">
@@ -124,7 +138,7 @@
 </div>
 
 
-                            <div class="btn btn-accent max-w-md mx-auto mb-10" onclick="openModal('upload-selfie')">Добавить</div>
+                            <div class="btn btn-accent max-w-[300px] mx-auto mb-10" onclick="openModal('upload-selfie')">Добавить</div>
 
                             <a href="flow-job.html" class="btn btn-accent btn-disabled"> Перейти к следующему шагу</a>
 

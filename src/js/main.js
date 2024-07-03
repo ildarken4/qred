@@ -564,6 +564,9 @@ if (numberInput) {
 
 let dateInputs = document.getElementsByClassName('input-date');
 if (dateInputs) {
+    let currentDate = new Date();
+    let currentYear = currentDate.getFullYear();
+    let year18YearsAgo = currentYear - 18;
     Inputmask(
     {
         alias: 'datetime',
@@ -574,7 +577,7 @@ if (dateInputs) {
         placeholder: "__.__.____",
         inputFormat: "dd.mm.yyyy",
         min: "01.01.1900",
-        max: "31.12.2100"
+        max: "31.12."+year18YearsAgo // ограничил ввод даты с 1900 до того года который был 18 лет назад
     }).mask(dateInputs);
 }
 
