@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+
+    <!-- 
+    
+    1) Скачивание документа по нажатию на стрелку
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=63-10242
+
+    2) В мобилке скачивание по клику на название
+    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=367-28303
+    
+    -->
+
+    <div id="app">
+        @@include('partials/header-flow.html')
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
+            <div class="container">
+
+                @@include('partials/unregistered-banner.html')
+
+                <div class="bg-white rounded-lg shadow-md px-7 py-7 md:py-10">
+                    @@include('partials/page-title.html', {
+                        "title": "Документы"
+                    })
+
+                    <div class="w-full max-w-[990px] mx-auto border-b border-darkgray pt-5 md:pt-0">
+                        <div class="flex py-5 justify-between items-center border-t border-darkgray">
+                            <div class="flex items-center">
+                                <div class="mr-5">
+                                    <img src="img/icons/file.svg" alt="файл">
+                                </div>
+                                <div class="font-semibold md:text-2xl">Текст документа 1.pdf</div>
+                            </div>
+
+                            <a href="" class="cursor-pointer group hidden md:block">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path class="group-hover:stroke-accent transition-all"
+                                        d="M11.9999 2.57178V21.428M11.9999 21.428L2.57178 11.9999M11.9999 21.428L21.428 11.9999"
+                                        stroke="#191919" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="flex py-5 justify-between items-center border-t border-darkgray">
+                            <div class="flex items-center">
+                                <div class="mr-5">
+                                    <img src="img/icons/file.svg" alt="файл">
+                                </div>
+                                <div class="font-semibold md:text-2xl">Текст документа 1.pdf</div>
+                            </div>
+
+                            <a href="" class="cursor-pointer group hidden md:block">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path class="group-hover:stroke-accent transition-all"
+                                        d="M11.9999 2.57178V21.428M11.9999 21.428L2.57178 11.9999M11.9999 21.428L21.428 11.9999"
+                                        stroke="#191919" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="flex py-5 justify-between items-center border-t border-darkgray">
+                            <div class="flex items-center">
+                                <div class="mr-5">
+                                    <img src="img/icons/file.svg" alt="файл">
+                                </div>
+                                <div class="font-semibold md:text-2xl">Текст документа 1.pdf</div>
+                            </div>
+
+                            <a href="" class="cursor-pointer group hidden md:block">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path class="group-hover:stroke-accent transition-all"
+                                        d="M11.9999 2.57178V21.428M11.9999 21.428L2.57178 11.9999M11.9999 21.428L21.428 11.9999"
+                                        stroke="#191919" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="flex py-5 justify-between items-center border-t border-darkgray">
+                            <div class="flex items-center">
+                                <div class="mr-5">
+                                    <img src="img/icons/file.svg" alt="файл">
+                                </div>
+                                <div class="font-semibold md:text-2xl">Текст документа 1.pdf</div>
+                            </div>
+
+                            <a href="" class="cursor-pointer group hidden md:block">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path class="group-hover:stroke-accent transition-all"
+                                        d="M11.9999 2.57178V21.428M11.9999 21.428L2.57178 11.9999M11.9999 21.428L21.428 11.9999"
+                                        stroke="#191919" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="flex py-5 justify-between items-center border-t border-darkgray">
+                            <div class="flex items-center">
+                                <div class="mr-5">
+                                    <img src="img/icons/file.svg" alt="файл">
+                                </div>
+                                <div class="font-semibold md:text-2xl">Текст документа 1.pdf</div>
+                            </div>
+
+                            <a href="" class="cursor-pointer group hidden md:block">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path class="group-hover:stroke-accent transition-all"
+                                        d="M11.9999 2.57178V21.428M11.9999 21.428L2.57178 11.9999M11.9999 21.428L21.428 11.9999"
+                                        stroke="#191919" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="flex py-5 justify-between items-center border-t border-darkgray">
+                            <div class="flex items-center">
+                                <div class="mr-5">
+                                    <img src="img/icons/file.svg" alt="файл">
+                                </div>
+                                <div class="font-semibold md:text-2xl">Текст документа 1.pdf</div>
+                            </div>
+
+                            <a href="" class="cursor-pointer group hidden md:block">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path class="group-hover:stroke-accent transition-all"
+                                        d="M11.9999 2.57178V21.428M11.9999 21.428L2.57178 11.9999M11.9999 21.428L21.428 11.9999"
+                                        stroke="#191919" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="flex py-5 justify-between items-center border-t border-darkgray">
+                            <div class="flex items-center">
+                                <div class="mr-5">
+                                    <img src="img/icons/file.svg" alt="файл">
+                                </div>
+                                <div class="font-semibold md:text-2xl">Текст документа 1.pdf</div>
+                            </div>
+
+                            <a href="" class="cursor-pointer group hidden md:block">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path class="group-hover:stroke-accent transition-all"
+                                        d="M11.9999 2.57178V21.428M11.9999 21.428L2.57178 11.9999M11.9999 21.428L21.428 11.9999"
+                                        stroke="#191919" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        @@include('partials/session-end.html')
+        @@include('partials/footer.html')
+    </div>
+</body>
+
+</html>

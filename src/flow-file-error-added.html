@@ -4,37 +4,33 @@
 <head>
     @@include('partials/head.html')
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Получить заём</title>
+    <title>Личный кабинет</title>
 </head>
 
 <body>
     <div id="app">
-        @@include('partials/header-flow.html')
-        <div class="wrapper">
+        @@include('partials/header-account.html')
+        <div class="wrapper bg-lightgray py-10 md:py-14 relative min-h-screen">
             <div class="container">
-                <div class="max-w-[990px] mx-auto pt-10 md:pt-16 pb-36 text-center px-2.5 md:px-20">
-                    @@include('partials/page-title.html', {
-                        "title": "Ваша заявка рассматривается"
-                    })
-                    <div class="w-[100px] md:w-40 mx-auto mb-5 md:mb-10">
-                        <img src="img/icons/clock-3d.png" width="100%" alt="">
+                @@include('partials/considering-banner.html')
+                <div class="bg-white rounded-lg shadow-md py-[30px] md:py-10 px-2.5 md:px-10">
+
+                    <div class="max-w-[990px] mx-auto text-center px-2.5 md:px-10 xl:px-20">
+                        <div class="w-[100px] md:w-40 mx-auto mb5 md:mb-10">
+                            <img src="img/icons/clock-3d.png" width="100%" alt="">
+                        </div>
+
+
+                         @@include('partials/file-error-added.html')
                     </div>
 
-
-                    @@include('partials/file-error-added.html')
-
-
-
                 </div>
-
+                @@include('partials/account-menu.html')
             </div>
-
-
         </div>
-
+        @@include('partials/session-end.html')
         @@include('partials/uploaded-modals.html')
-
-        @@include('partials/main-footer.html')
+        @@include('partials/footer.html')
     </div>
 </body>
 

@@ -1,61 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   @@include('partials/head.html')
   <title>Верстка</title>
 </head>
+
 <body>
 
-@@include('partials/header-flow.html')
-<div class="wrapper">
-  
-  <div class="container m-auto pt-10">
-    
-    <h4 class="mb-4">1. Войти</h4>
+  @@include('partials/header-flow.html')
+  <div class="wrapper">
+
+    <div class="container m-auto pt-10">
+
+      <h4 class="mb-4">1. Войти</h4>
       <ul class="ml-4 mb-8">
         <li class="mb-4"><a href="login.html" class="text-dark_accent underline">Номер телефона</a></li>
         <li class="mb-4"><a href="login-sms.html" class="text-dark_accent underline">Смс-код</a></li>
         <li class="mb-4"><a href="login-password.html" class="text-dark_accent underline">Пароль</a></li>
-        <li class="mb-4"><a href="login-password-email.html" class="text-dark_accent underline">Восстановить пароль через Email</a></li>
-        <li class="mb-4"><a href="login-new-password.html" class="text-dark_accent underline">Восстановление пароля</a></li>
-        <li class="mb-4"><a href="login-not-registered.html" class="text-dark_accent underline">Пользоватеь не зарегистрирован</a></li>
+        <li class="mb-4"><a href="login-password-email.html" class="text-dark_accent underline">Восстановить пароль
+            через Email</a></li>
+        <li class="mb-4"><a href="login-new-password.html" class="text-dark_accent underline">Восстановление пароля</a>
+        </li>
+        <li class="mb-4"><a href="login-not-registered.html" class="text-dark_accent underline">Пользоватеь не
+            зарегистрирован</a></li>
       </ul>
 
       <h4 class="mb-4">2. Форма займа</h4>
       <ul class="ml-4 mb-8">
-        <li class="mb-4"><a href="flow-login.html" class="text-dark_accent underline">Регистрация в личном кабинете</a></li>
+        <li class="mb-4"><a href="flow-login.html" class="text-dark_accent underline">Регистрация в личном кабинете</a>
+        </li>
+        <li class="mb-4"><a href="flow-registered.html" class="text-green underline">Пользователь зарегистрирован</a>
+        </li>
         <li class="mb-4"><a href="flow-personal.html" class="text-dark_accent underline">Контактная информация</a></li>
         <li class="mb-4"><a href="flow-passport.html" class="text-dark_accent underline">Паспортные данные</a></li>
-        <li class="mb-4"><a href="flow-photo.html" class="text-green underline">Подтверждение личности - добавление фото</a></li>
-        <li class="mb-4"><a href="flow-photo-added.html" class="text-green underline">Подтверждение личности - фото добавлены</a></li>
+        <li class="mb-4"><a href="flow-photo.html" class="text-dark_accent underline">Подтверждение личности -
+            добавление фото</a></li>
+        <li class="mb-4"><a href="flow-photo-added.html" class="text-dark_accent underline">Подтверждение личности -
+            фото добавлены</a></li>
         <li class="mb-4"><a href="flow-job.html" class="text-dark_accent underline">Место работы</a></li>
-        <li class="mb-4"><a href="flow-add-card.html" class="text-green underline">Добавить карту</a></li>
-        <li class="mb-4"><a href="flow-add-card-added.html" class="text-green underline">Карта добавлена</a></li>
-        <li class="mb-4"><a href="flow-calculator.html" class="text-dark_accent underline">Завершить оформление (калькулятор)</a></li>
-        <li class="mb-4"><a href="flow-considering.html" class="text-dark_accent underline">Заявка рассматривается</a></li>
+        <br>
+        <li class="mb-4"><a href="flow-payment-1.html" class="text-green underline">Выбор способа выплаты (до добавления
+            фото карты)</a></li>
+        <li class="mb-4"><a href="flow-payment-2.html" class="text-green underline">Выбор способа выплаты (после
+            добавления фото карты)</a></li>
+
+
+
+
+        <br>
+        <!-- <li class="mb-4"><a href="flow-add-card.html" class="text-dark_accent underline">Добавить карту</a></li>
+        <li class="mb-4"><a href="flow-add-card-added.html" class="text-dark_accent underline">Карта добавлена</a></li> -->
+        <li class="mb-4"><a href="flow-calculator.html" class="text-dark_accent underline">Завершить оформление
+            (калькулятор)</a></li>
+        <li class="mb-4"><a href="flow-considering.html" class="text-green underline">Заявка рассматривается</a></li>
         <li class="mb-4"><a href="flow-file-error.html" class="text-green underline">Файл не прошел проверку</a></li>
-        <li class="mb-4"><a href="flow-file-error-added.html" class="text-green underline">Файл не прошел проверку - добавлены новые фото</a></li>
-        <li class="mb-4"><a href="flow-denied.html" class="text-dark_accent underline">Отказано в займе</a></li>
-        <li class="mb-4"><a href="flow-approved.html" class="text-dark_accent underline">Подтверждение займа</a></li>
-        <li class="mb-4"><a href="flow-transfer.html" class="text-dark_accent underline">Перевод денег</a></li>
+        <li class="mb-4"><a href="flow-file-error-added.html" class="text-green underline">Файл не прошел проверку -
+            добавлены новые фото</a></li>
+        <li class="mb-4"><a href="flow-denied.html" class="text-green underline">Отказано в займе</a></li>
+        <li class="mb-4"><a href="flow-approved.html" class="text-green underline">Подтверждение займа</a></li>
+        <li class="mb-4"><a href="flow-assignment.html" class="text-green underline">Заём уступлен</a></li>
+        <li class="mb-4"><a href="flow-oops.html" class="text-green underline">Что-то пошло не так</a></li>
       </ul>
-      
+
       <h4 class="mb-4">3. Первые окна ЛК</h4>
       <ul class="ml-4 mb-8">
-        <li class="mb-4"><a href="account-without-loan.html" class="text-dark_accent underline">Взятие нового займа</a></li>
-        <li class="mb-4"><a href="account-annuity-single.html" class="text-dark_accent underline">Один активный займ - аннуитетный</a></li>
-        <li class="mb-4"><a href="account-pdl-single.html" class="text-dark_accent underline">Один активный займ - PDL</a></li>
-        <li class="mb-4"><a href="account-annuity-multiple.html" class="text-dark_accent underline">Несколько аннуитетных займов</a></li>
-        <li class="mb-4"><a href="account-pdl-multiple.html" class="text-dark_accent  underline">Несколько PDL займов</a></li>
+        <li class="mb-4"><a href="account-without-loan.html" class="text-green underline">Взятие нового займа</a></li>
+        <li class="mb-4"><a href="account-annuity-single.html" class="text-dark_accent underline">Один активный займ -
+            аннуитетный</a></li>
+        <li class="mb-4"><a href="account-pdl-single.html" class="text-dark_accent underline">Один активный займ -
+            PDL</a></li>
+        <li class="mb-4"><a href="account-annuity-multiple.html" class="text-dark_accent underline">Несколько
+            аннуитетных займов</a></li>
+        <li class="mb-4"><a href="account-pdl-multiple.html" class="text-dark_accent  underline">Несколько PDL
+            займов</a></li>
 
       </ul>
 
       <h4 class="mb-4">4. Дргуие страницы ЛК</h4>
       <ul class="ml-4 mb-8">
         <div class=" mb-5">4.1 Мои карты</div>
-        <li class="mb-4 ml-4"><a href="account-my-cards.html" class="text-dark_accent underline">Мои карты (1 карта)</a></li>
-        <li class="mb-4 ml-4"><a href="account-add-card.html" class="text-green underline">Мои карты - добавить карту</a></li>
-        <li class="mb-4 ml-4"><a href="account-add-card-added.html" class="text-green underline">Мои карты - карта добавлена</a></li>
+        <li class="mb-4 ml-4"><a href="account-my-cards.html" class="text-dark_accent underline">Мои карты (1 карта)</a>
+        </li>
+        <li class="mb-4 ml-4"><a href="account-add-card.html" class="text-dark_accent underline">Мои карты - добавить
+            карту</a></li>
+        <li class="mb-4 ml-4"><a href="account-add-card-added.html" class="text-dark_accent underline">Мои карты - карта
+            добавлена</a></li>
 
         <div class="mt-5 mb-5">4.2 История займов</div>
         <li class="mb-4 ml-4"><a href="account-history.html" class="text-dark_accent underline">История займов</a></li>
@@ -70,33 +100,64 @@
         <li class="mb-4 ml-4"><a href="account-settings.html" class="text-dark_accent underline">Настройки ЛК</a></li>
 
         <div class="mt-5 mb-5">4.6 Мои обращения</div>
-        <li class="mb-4 ml-4"><a href="account-my-appeals.html" class="text-dark_accent underline">Мои обращения</a></li>
-        <li class="mb-4 ml-4"><a href="account-appeal.html" class="text-dark_accent underline">Создать обращение</a></li>
+        <li class="mb-4 ml-4"><a href="account-my-appeals.html" class="text-dark_accent underline">Мои обращения</a>
+        </li>
+        <li class="mb-4 ml-4"><a href="account-appeal.html" class="text-dark_accent underline">Создать обращение</a>
+        </li>
       </ul>
 
       <h4 class="mb-4">5. Актуализация данных</h4>
       <ul class="ml-4 mb-8">
         <li class="mb-4"><a href="account-updating.html" class="text-dark_accent underline">Актуализация данных</a></li>
-        <li class="mb-4"><a href="account-updating-email.html" class="text-dark_accent underline">Изменение почты</a></li>
-        <li class="mb-4"><a href="account-updating-job.html" class="text-dark_accent underline">Изменение занятости</a></li>
-        <li class="mb-4"><a href="account-updating-passport.html" class="text-dark_accent underline">Изменение паспортных данных</a></li>
-        <li class="mb-4"><a href="account-updating-photos.html" class="text-green underline">Изменение фото паспорта</a></li>
-        <li class="mb-4"><a href="account-updated-photos.html" class="text-green underline">Изменение фото паспорта - фото добавлены</a></li>
+        <li class="mb-4"><a href="account-updating-email.html" class="text-dark_accent underline">Изменение почты</a>
+        </li>
+        <li class="mb-4"><a href="account-updating-job.html" class="text-green underline">Изменение занятости</a></li>
+        <li class="mb-4"><a href="account-updating-passport.html" class="text-green underline">Изменение паспортных
+            данных</a></li>
+        <li class="mb-4"><a href="account-updating-photos.html" class="text-dark_accent underline">Изменение фото
+            паспорта</a></li>
+        <li class="mb-4"><a href="account-updated-photos.html" class="text-dark_accent underline">Изменение фото
+            паспорта - фото добавлены</a></li>
+
+        <br>
+        <li class="mb-4"><a href="account-personal.html" class="text-green underline">Персональные данные</a></li>
+        <li class="mb-4"><a href="account-update-personal.html" class="text-green underline">Изменение контактной
+            информации</a></li>
+
 
       </ul>
+
+
 
       <h4 class="mb-4">6. Взятие нового займа</h4>
       <ul class="ml-4 mb-8">
-        <li class="mb-4"><a href="account-considering.html" class="text-dark_accent underline">Заявка рассматривается</a></li>
-        <li class="mb-4"><a href="account-file-error.html" class="text-green underline">Заявка - Файл не прошел проверку</a></li>
-        <li class="mb-4"><a href="account-file-error-added.html" class="text-green underline">Заявка - Файл не прошел проверку - Файлы загружены</a></li>
-        <li class="mb-4"><a href="account-denied.html" class="text-dark_accent underline">Заявка - отказ</a></li>
-        <li class="mb-4"><a href="account-approved.html" class="text-dark_accent underline">Заявка - одобрение</a></li>
-        <li class="mb-4"><a href="account-transfer.html" class="text-dark_accent underline">Заявка - Перевод денег</a></li>
+        <li class="mb-4"><a href="flow-considering.html" class="text-green underline">Заявка рассматривается</a></li>
+        <li class="mb-4"><a href="flow-file-error.html" class="text-green underline">Заявка - Файл не прошел
+            проверку</a></li>
+        <li class="mb-4"><a href="flow-file-error-added.html" class="text-green underline">Заявка - Файл не прошел
+            проверку - Файлы загружены</a></li>
+        <li class="mb-4"><a href="flow-denied.html" class="text-green underline">Заявка - отказ</a></li>
+        <li class="mb-4"><a href="flow-approved.html" class="text-green underline">Заявка - одобрение</a></li>
+        <li class="mb-4"><a href="flow-transfer.html" class="text-green underline">Заявка - Перевод денег</a></li>
+        <li class="mb-4"><a href="flow-assignment.html" class="text-green underline">Заём уступлен</a></li>
+        <li class="mb-4"><a href="flow-oops.html" class="text-green underline">Что-то пошло не так</a></li>
       </ul>
 
-  </div>
 
-@@include('partials/footer.html')
+
+      <h4 class="mb-4">Страницы для тех, не заполнил форму займа</h4>
+      <ul class="ml-4 mb-8">
+        <li class="mb-4"><a href="unregistered-my-cards.html" class="text-green underline">Мои карты</a></li>
+        <li class="mb-4"><a href="unregistered-history.html" class="text-green underline">История займов</a></li>
+        <li class="mb-4"><a href="unregistered-docs.html" class="text-green underline">Документы</a></li>
+        <li class="mb-4"><a href="unregistered-files.html" class="text-green underline">Мои файлы</a></li>
+        <li class="mb-4"><a href="unregistered-appeals.html" class="text-green underline">Обращения</a></li>
+        <li class="mb-4"><a href="unregistered-personal.html" class="text-green underline">Контактная информация</a></li>
+      </ul>
+
+    </div>
+
+    @@include('partials/footer.html')
 </body>
+
 </html>

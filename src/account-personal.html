@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+
+    <!-- 
+    
+    1) Зеленая подсказка «Изменения успешно внесены»
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=63-21274
+    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=369-41457
+    
+    -->
+
+    <div id="app">
+        @@include('partials/header-account.html')
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
+            <div class="container">
+
+                <div class="bg-white rounded-lg shadow-md py-7 px-5 md:py-10 md:px-2.5">
+                    @@include('partials/page-title.html', {
+                        "title": "Персональные данные"
+                    })
+
+                    <div class="w-full max-w-[830px] m-10 p-[5px] flex-col md:flex-row bg-lightgray rounded-lg justify-center items-center gap-2.5 md:gap-[30px] flex mx-auto">
+                        <div class="grow shrink basis-full w-full md:basis-0 px-[15px] py-[5px] bg-white rounded justify-between items-center flex">
+                            <div class="flex-col justify-start w-full items-center md:items-start text-center md:text-left gap-[7px] flex">
+                                <div class="self-stretch opacity-50 text-black text-sm font-medium  leading-[14px]">Номер телефона</div>
+                                <div class="self-stretch text-black text-base md:text-sm lg:text-base font-bold ">8 XXX XXX XX 99</div>
+                            </div>
+                            <div class="h-full px-4 py-2 bg-black rounded justify-center items-center gap-2.5 cursor-pointer hidden md:flex">
+                                <div class="relative">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M8.27922 15.7275C11.3726 18.8209 15.4918 19.9606 18.5265 18.8451C19.8759 18.3491 19.9477 16.6499 19.0264 15.5463L18.2565 14.6241C17.6239 13.8663 16.4773 13.8148 15.7793 14.5128C15.2848 15.0073 14.5352 15.1447 13.918 14.8159C13.0551 14.3562 11.8526 13.6441 11.1076 12.8991C10.3627 12.1542 9.65054 10.9516 9.19087 10.0887C8.86208 9.47152 8.99944 8.72194 9.49393 8.22744C10.1919 7.52943 10.1404 6.38289 9.38269 5.75026L8.4605 4.98037C7.35691 4.05902 5.6577 4.13091 5.16168 5.48027C4.04616 8.51495 5.18583 12.6342 8.27922 15.7275Z" stroke="white" stroke-width="2"/>
+                                    </svg>    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-[15px] py-[5px] w-full md:w-auto bg-white rounded justify-center flex-col md:flex-row text-center md:text-left items-center gap-5 flex">
+                            <div class="flex-col justify-start items-start gap-[7px] inline-flex">
+                                <div class="self-stretch text-black text-base font-bold ">Пароль</div>
+                                <div class="opacity-50 text-black text-sm font-medium  leading-[14px]">Вы можете задать или изменить пароль</div>
+                            </div>
+                            <div class="px-4 py-2 bg-black rounded justify-center items-center gap-2.5 flex cursor-pointer">
+                                <div class="text-white text-base font-normal " onclick="openModal('set-password-modal')">Изменить</div>
+                                <div class="relative">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12.5 20.6951H18.5M6.50736 19.6951H5C4.44772 19.6951 4 19.2474 4 18.6951V17.1877C4 16.3921 4.31607 15.629 4.87868 15.0664L14.75 5.19511C15.7855 4.15957 17.4645 4.15957 18.5 5.19511C19.5355 6.23064 19.5355 7.90957 18.5 8.94511L8.62868 18.8164C8.06607 19.379 7.30301 19.6951 6.50736 19.6951Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full max-w-[830px] text-blue_text mx-auto md:pt-0">
+                        <div class="mb-5">
+                            <div class="bg-lightgray flex items-center justify-between px-5 py-4">
+                                <div class="md:text-2xl font-semibold">Контактная информация</div>
+                                <a href="account-update-personal.html" class="flex items-center gap-1 cursor-pointer">
+                                    <div class="hidden md:block text-black">Изменить</div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M12.5 20.6951H18.5M6.50736 19.6951H5C4.44772 19.6951 4 19.2474 4 18.6951V17.1877C4 16.3921 4.31607 15.629 4.87868 15.0664L14.75 5.19511C15.7855 4.15957 17.4645 4.15957 18.5 5.19511C19.5355 6.23064 19.5355 7.90957 18.5 8.94511L8.62868 18.8164C8.06607 19.379 7.30301 19.6951 6.50736 19.6951Z"
+                                            stroke="#151515" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="border-l border-darkgray border-dashed px-5 py-2.5 text-sm md:text-base">
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Фамилия:</span>
+                                    <span class="text-blue_text">Иванов</span>
+                                </div>
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Имя:</span>
+                                    <span class="text-blue_text">Иван</span>
+                                </div>
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Отчество:</span>
+                                    <span class="text-blue_text">Иванович</span>
+                                </div>
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Пол:</span>
+                                    <span class="text-blue_text">Мужской</span>
+                                </div>
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Дата рождения:</span>
+                                    <span class="text-blue_text">01.01.1991</span>
+                                </div>
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Почта:</span>
+                                    <span class="text-blue_text">Pochta@gmail.com</span>
+                                </div>
+
+                                <!-- Если нет данных: -->
+
+                                <div class="mb-2.5 hidden">
+                                    <span class="text-gray_text">Пусто</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <div class="bg-lightgray flex items-center justify-between px-5 py-4">
+                                <div class="md:text-2xl font-semibold">Паспортные данные</div>
+                                <a href="account-updating-passport.html" class="flex items-center gap-1 cursor-pointer">
+                                    <div class="hidden md:block text-black">Изменить</div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M12.5 20.6951H18.5M6.50736 19.6951H5C4.44772 19.6951 4 19.2474 4 18.6951V17.1877C4 16.3921 4.31607 15.629 4.87868 15.0664L14.75 5.19511C15.7855 4.15957 17.4645 4.15957 18.5 5.19511C19.5355 6.23064 19.5355 7.90957 18.5 8.94511L8.62868 18.8164C8.06607 19.379 7.30301 19.6951 6.50736 19.6951Z"
+                                            stroke="#151515" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="border-l border-darkgray border-dashed px-5 py-2.5 text-sm md:text-base">
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Серия и номер:</span>
+                                    <span class="text-blue_text">1234 456789</span>
+                                </div>
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Кем выдан:</span>
+                                    <span class="text-blue_text">Текст о том кто выдал паспорт</span>
+                                </div>
+                                 <div class="mb-2.5">
+                                    <span class="text-gray_text">Дата выдачи:</span>
+                                    <span class="text-blue_text">01.01.1991</span>
+                                </div>
+                                 <div class="mb-2.5">
+                                    <span class="text-gray_text">Код подразделения:</span>
+                                    <span class="text-blue_text">1234567890</span>
+                                </div>
+                                 <div class="mb-2.5">
+                                    <span class="text-gray_text">Место рождения:</span>
+                                    <span class="text-blue_text">Текст о месте рождения</span>
+                                </div>
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Адрес регистрации:</span>
+                                    <span class="text-blue_text">Москва, ул. Пушкина, д. 10к1, кв. 6</span>
+                                </div>
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Адрес фактического места жительства:</span>
+                                    <span class="text-blue_text">Санкт-Петербург, ул. Уточкина, д58, кв. 194</span>
+                                </div>
+                                
+                                 <!-- Если нет данных: -->
+
+                                <div class="mb-2.5 hidden">
+                                    <span class="text-gray_text">Пусто</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <div class="bg-lightgray flex items-center justify-between px-5 py-4">
+                                <div class="md:text-2xl font-semibold">Место работы</div>
+                                <a href="account-updating-email.html" class="flex items-center gap-1 cursor-pointer">
+                                    <div class="hidden md:block text-black">Изменить</div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M12.5 20.6951H18.5M6.50736 19.6951H5C4.44772 19.6951 4 19.2474 4 18.6951V17.1877C4 16.3921 4.31607 15.629 4.87868 15.0664L14.75 5.19511C15.7855 4.15957 17.4645 4.15957 18.5 5.19511C19.5355 6.23064 19.5355 7.90957 18.5 8.94511L8.62868 18.8164C8.06607 19.379 7.30301 19.6951 6.50736 19.6951Z"
+                                            stroke="#151515" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="border-l border-darkgray border-dashed px-5 py-2.5 text-sm md:text-base">
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Вид занятости:</span>
+                                    <span class="text-blue_text">Пенсионер</span>
+                                </div>
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Ежемесячный доход:</span>
+                                    <span class="text-blue_text">60 000р</span>
+                                </div>
+                                <div class="mb-2.5">
+                                    <span class="text-gray_text">Ежемесячный расход:</span>
+                                    <span class="text-blue_text">20 000р</span>
+                                </div>
+
+                                 <!-- Если нет данных: -->
+
+                                <div class="mb-2.5 hidden">
+                                    <span class="text-gray_text">Пусто</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="notification bg-green_80">
+            <span>Данные обновлены</span>
+            <img src="img/buttons/account-menu-close.svg" alt="Закрыть">
+        </div>
+        @@include('partials/session-end.html')
+        @@include('partials/account-modals.html')
+        @@include('partials/footer.html')
+</body>
+
+</html>

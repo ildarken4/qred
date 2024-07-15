@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+
+    <!-- 
+    
+    1) Если нет обращений - показываем блок с текстом «Пусто» который по умолчанию в верстке скрыт классом hidden
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=63-19177
+    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=369-36083
+    
+    2) Если есть обращения - видим таблицу
+    3) Если обращений больше 5-ти - скрываем остальные и показываем по нажатию на «Показать ещё»
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=63-20117
+    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=369-37392
+
+    4) Зеленая подсказка «»Обращение создано»
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=63-19973
+    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=369-37114
+    
+    -->
+
+    <div id="app">
+        @@include('partials/header-flow.html')
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
+            <div class="container">
+
+                @@include('partials/unregistered-banner.html')
+
+                @@include('partials/account-banner.html', {
+                    "title": "Создать обращение",
+                    "button": "Создать"
+                })
+
+                <div class="bg-white rounded-lg shadow-md py-10 px-7 md:px-10">
+                    @@include('partials/page-title.html', {
+                        "title": "Мои обращения"
+                    })
+
+                    <div class="flex justify-center pt-5 md:pt-0">
+                        <p class="text-gray_text">Пусто</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        @@include('partials/session-end.html')
+        @@include('partials/footer.html')
+    </div>
+</body>
+
+</html>

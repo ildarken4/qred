@@ -44,12 +44,86 @@
     -->
 
     <div id="app">
-        <header class="header relative py-7">
+        <header class="header relative md:pt-[25px]">
     <div class="container">
-      <div class="flex items-center justify-center">
+      <div class="flex items-center justify-between">
         <a href="index.html" class="logo w-36 lg:w-52">
           <img src="img/Logo.svg" width="100%" alt="Логотип компании">
         </a>
+        <div class="flex items-center gap-2.5">
+
+          <div class="flow-menu js-flow-menu">
+            <div class="flow-menu__head pr-5">
+              <div class="flow-menu__title uppercase">МЕНЮ</div>
+              <button class="flow-menu__toggler js-flow-menu-toggler btn btn-squared btn-gray min-w-fit h-14 flex px-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path class="js-flow-menu-icon" d="M3 17H21M3 12H21M3 7H21" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="flow-menu__body js-flow-menu-body">
+              <div class="flex bg-white justify-between items-center py-2.5 pl-5 font-semibold text-2xl border border-transparent pr-5 md:hidden">
+                <div class="uppercase">МЕНЮ</div>
+                <button class="flow-menu__toggler js-flow-menu-toggler btn btn-squared btn-gray min-w-fit h-14 flex px-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path class="js-flow-menu-icon" d="M3 17H21M3 12H21M3 7H21" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="flow-menu__list">
+                <a href="unregistered-my-cards.html" class="flow-menu__item">
+                  <span>Мои карты</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 5L16 12L9 19" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="unregistered-history.html" class="flow-menu__item">
+                  <span>История займов</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 5L16 12L9 19" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="unregistered-docs.html" class="flow-menu__item">
+                  <span>Документы</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 5L16 12L9 19" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="unregistered-files.html" class="flow-menu__item">
+                  <span>Мои файлы</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 5L16 12L9 19" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="unregistered-appeals.html" class="flow-menu__item">
+                  <span>Мои обращения</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 5L16 12L9 19" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="unregistered-personal.html" class="flow-menu__item">
+                  <span>Мои данные</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 5L16 12L9 19" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+          </div>
+         
+
+
+
+
+          <a href="login.html" class="btn btn-squared btn-gray min-w-fit h-14 flex px-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 15L15 12M15 12L12 9M15 12H4M4 7.24802V7.2002C4 6.08009 4 5.51962 4.21799 5.0918C4.40973 4.71547 4.71547 4.40973 5.0918 4.21799C5.51962 4 6.08009 4 7.2002 4H16.8002C17.9203 4 18.4796 4 18.9074 4.21799C19.2837 4.40973 19.5905 4.71547 19.7822 5.0918C20 5.5192 20 6.07899 20 7.19691V16.8036C20 17.9215 20 18.4805 19.7822 18.9079C19.5905 19.2842 19.2837 19.5905 18.9074 19.7822C18.48 20 17.921 20 16.8031 20H7.19691C6.07899 20 5.5192 20 5.0918 19.7822C4.71547 19.5905 4.40973 19.2839 4.21799 18.9076C4 18.4798 4 17.9201 4 16.8V16.75" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+
+        </div>
       </div>
     </div>
 </header>
@@ -209,7 +283,41 @@
 
     </div>
 </div>
+        <div class="modal" id="session-modal">
+    <div class="popup popup-small">
+        <div class="w-full max-w-md mx-auto">
+            <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                <div class="font-semibold">
+                    Время сессии истекло
+                </div>
+                <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none">
+                        <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
 
+            <p class="text-blue_text font-medium text-center mb-10">
+                Вы слишком долго отсутствовали на странице. В целях обеспечения безопасности ваших данных, мы вышли из вашего аккаунта. Пожалуйста, войдите заново.
+            </p>
+
+            <div class="w-[100px] mb-10 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M49.6667 16.6673C31.2572 16.6673 16.3333 31.5912 16.3333 50.0007C16.3333 68.4101 31.2572 83.334 49.6667 83.334C68.0762 83.334 83 68.4101 83 50.0007C83 31.5912 68.0762 16.6673 49.6667 16.6673ZM8 50.0007C8 26.9888 26.6548 8.33398 49.6667 8.33398C72.6785 8.33398 91.3333 26.9888 91.3333 50.0007C91.3333 73.0125 72.6785 91.6673 49.6667 91.6673C26.6548 91.6673 8 73.0125 8 50.0007ZM49.6667 31.0431C51.9679 31.0431 53.8333 32.9086 53.8333 35.2098V51.8765C53.8333 54.1777 51.9679 56.0431 49.6667 56.0431C47.3655 56.0431 45.5 54.1777 45.5 51.8765V35.2098C45.5 32.9086 47.3655 31.0431 49.6667 31.0431ZM45.2925 64.3765C45.2925 62.0753 47.158 60.2098 49.4591 60.2098H49.8742C52.1754 60.2098 54.0409 62.0753 54.0409 64.3765V64.7931C54.0409 65.901 53.5996 66.9633 52.8147 67.7452C52.0297 68.5271 50.9657 68.9641 49.8578 68.9598L49.4428 68.9581C47.148 68.9491 45.2925 67.0863 45.2925 64.7915V64.3765Z" fill="#D9D9D9"/>
+                </svg>
+            </div>
+
+            <button class="btn btn-accent w-full max-w-[280px] mx-auto min-w-0">
+                Понятно
+            </button>
+
+
+        </div>
+
+    </div>
+</div>
         <footer class="pb-16">
     <div class="container">
         <div class="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-5 bg-lightgray rounded-3xl p-10">

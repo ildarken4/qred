@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+    <div id="app">
+        @@include('partials/header-account.html')
+        <div class="wrapper bg-lightgray py-10 md:py-14 relative min-h-screen">
+            <div class="container">
+                 @@include('partials/flow-result-banner.html', {
+                    "title": "Заем уступлен"
+                })
+                <div class="bg-white rounded-lg shadow-md py-[30px] md:py-10 px-2.5 md:px-10">
+                   
+
+                    <div class="max-w-[930px] mx-auto flex flex-col items-center text-center">
+                        <p class="text-sm md:text-2xl mb-5 md:mb-10">Уведомляем вас о том, что права требования по договору займа №0101-10101 были уступлены 16.04.2024 в ООО “LoremIpsum”.ИНН:1010101010, тел. 8(999) 999 99 99, LoremIpsum58@gmail.com.</p>
+                        <a href="" class="underline mt-5 mb-5 md:mb-10">Ссылка на оплату через <span class="block md:inline">“LoremIpsum”</span></a>
+                        <p class="text-sm md:text-2xl mb-5 md:mb-10 mt-5">Таким образом, теперь вашим кредитором является ООО “LoremIpsum”</p>
+                        <a href="" class="underline mt-5">Уведомление о состоявшейся уступке права</a>
+                    </div>
+
+                </div>
+                @@include('partials/account-menu.html')
+            </div>
+        </div>
+        @@include('partials/session-end.html')
+        @@include('partials/footer.html')
+    </div>
+</body>
+
+</html>

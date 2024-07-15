@@ -37,41 +37,41 @@
                             <div class="form-item w-full">
 
                                 <label for="passport-number">Серия и номер паспорта</label>
-                                <input type="text" id="passport-number" placeholder="Введите серию и номер паспорта"
+                                <input type="text" id="passport-number" placeholder="Введите серию и номер паспорта" value="4444444444"
                                     required>
                                 <div class="hidden text-error">Обязательное поле</div>
                             </div>
 
                             <div class="form-item w-full">
                                 <label for="passport-issued">Кем выдан</label>
-                                <input type="text" id="passport-issued" placeholder="Введите название" required>
+                                <input type="text" id="passport-issued" placeholder="Введите название" value="Ранее заполненные данные" required>
                                 <div class="hidden text-error">Обязательное поле</div>
                             </div>
 
 
                             <div class="form-item w-full md:w-[calc(50%-10px)]">
                                 <label for="passport-date">Дата выдачи</label>
-                                <input type="date" id="passport-date" class="input-date" placeholder="ДД.ММ.ГГ"
+                                <input type="text" id="passport-date" class="input-date" placeholder="ДД.ММ.ГГ" value="27.06.1989"
                                     required>
                                 <div class="hidden text-error">Обязательное поле</div>
                             </div>
 
                             <div class="form-item w-full md:w-[calc(50%-10px)]">
                                 <label for="passport-code">Код подразделения</label>
-                                <input type="text" id="passport-code" placeholder="Введите код подразделения" required>
+                                <input type="text" id="passport-code" placeholder="Введите код подразделения" value="500050" required>
                                 <div class="hidden text-error">Обязательное поле</div>
                             </div>
 
                             <div class="form-item w-full">
                                 <label for="passport-birthplace">Место рождения</label>
-                                <input type="text" id="passport-birthplace" placeholder="Введите место рождения"
+                                <input type="text" id="passport-birthplace" placeholder="Введите место рождения" value="Ранее заполненные данные"
                                     required>
                                 <div class="hidden text-error">Обязательное поле</div>
                             </div>
 
                             <div class="form-item w-full">
                                 <label for="passport-address">Адрес регистрации</label>
-                                <input type="text" id="passport-address" placeholder="Введите адрес регистрации"
+                                <input type="text" id="passport-address" placeholder="Введите адрес регистрации" value="Ранее заполненные данные"
                                     required>
                                 <div class="hidden text-error">Обязательное поле</div>
                             </div>
@@ -85,7 +85,7 @@
                             <div class="form-item w-full js-fact-address mb-0">
                                 <label for="passport-fact-address">Адрес фактического места жительства</label>
                                 <input type="text" id="passport-fact-address" class=""
-                                    placeholder="Введите адрес фактического места жительства">
+                                    placeholder="Введите адрес фактического места жительства" value="Ранее заполненные данные">
                             </div>
 
                         </div>
@@ -93,7 +93,7 @@
                             <a href="account-updating.html" class="btn w-full btn-dashed ">
                                 Назад
                             </a>
-                            <a href="account-updating-photos.html" class="btn w-full btn-accent">Сохранить</a>
+                            <a href="account-updating-photos.html" class="btn w-full btn-accent btn-disabled">Сохранить</a>
                             <!-- По нажатию появляется соответствующий .notification и при успехе кнопка подтвердить становится .btn-disabled -->
                         </div>
                     </form>
@@ -105,7 +105,7 @@
 
 
 
-
+        @@include('partials/session-end.html')
         @@include('partials/footer.html')
     </div>
 </body>

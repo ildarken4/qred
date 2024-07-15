@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+
+    <!-- 
+    
+    1) блок «Добавить карту» в десктопе меняет форму и расположение когда он является «нечётным и не первым»
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=56-8521
+    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=367-16686
+
+    2) Если карта используется в заёме - крестика для удаления карты быть не должно
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=56-8554
+    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=367-16749
+    
+    -->
+
+    <div id="app">
+        @@include('partials/header-flow.html')
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
+            <div class="container">
+
+                @@include('partials/unregistered-banner.html')
+
+                <div class="bg-white rounded-lg shadow-md py-7 md:py-10">
+
+                    <div class="js-cards-table">
+                        @@include('partials/page-title.html', {
+                        "title": "Мои карты"
+                        })
+
+                        <div
+                            class="grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-8 max-w-3xl mx-auto pt-2.5 md:pt-0 px-7">
+                            <!-- Карточка -->
+
+                            <div
+                                class="border-2 border-darkgray rounded-md px-5 py-5 shadow-md w-full max-w-[353px] min-h-[144px] md:min-h-[188px] text-black flex flex-col justify-between">
+                                <div class="w-full flex items-center justify-between">
+                                    <div
+                                        class="bg-black text-white flex items-center justify-center gap-2 w-full p-2.5 text-xs rounded-[4px]">
+                                        <span>Используется</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M8 12.4849L12.2426 16.7275L20.727 8.24219M3 12.4849L7.24264 16.7275M15.7279 8.24219L12.5 11.4996"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div
+                                    class="my-5 max-w-[240px] w-full md:max-w-none mx-auto md:text-2xl font-bold flex items-center justify-between">
+                                    <span>2200 </span>
+                                    <span>**** </span>
+                                    <span>**** </span>
+                                    <span>2525</span>
+                                </div>
+
+                                <div class="bank-card__autopay flex justify-between">
+                                    <label class="checkbox-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="checkbox-switch-mask"></span>
+                                        <span class="ml-2 text-sm md:text-base">Автоплатёж</span>
+                                    </label>
+                                    <div class="cursor-pointer hidden" onclick="openModal('delete-card-modal')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M7.99996 6L8.54411 4.36754C8.81634 3.55086 9.58061 3 10.4415 3H13.5584C14.4193 3 15.1836 3.55086 15.4558 4.36754L16 6M7.99996 6H5.61799C4.87461 6 4.39111 6.78231 4.72356 7.44721L5.21259 8.42527C5.40202 8.80413 5.50907 9.2188 5.52671 9.64201L5.88016 18.1249C5.94711 19.7318 7.26928 21 8.87756 21H15.1224C16.7306 21 18.0528 19.7318 18.1198 18.1249L18.4732 9.64202C18.4908 9.21881 18.5979 8.80413 18.7873 8.42527L19.2763 7.44721C19.6088 6.78231 19.1253 6 18.3819 6H16M7.99996 6H16M14.4399 16.5L14.6899 10.5M9.56001 16.5L9.31001 10.5"
+                                                stroke="#191919" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="border-2 border-darkgray rounded-md px-5 py-5 shadow-md w-full max-w-[353px] min-h-[144px] md:min-h-[188px] text-black flex flex-col justify-between">
+                                <div
+                                    class="bg-lightgray text-black flex items-center justify-center gap-2 w-full p-2.5 text-xs rounded-[4px] cursor-pointer">
+                                    <span>Использовать для получения займа</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path d="M6 12.0005L10.2426 16.2431L18.727 7.75781" stroke="#191919"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div
+                                    class="my-5 max-w-[240px] w-full md:max-w-none mx-auto md:text-2xl font-bold flex items-center justify-between">
+                                    <span>2200 </span>
+                                    <span>**** </span>
+                                    <span>**** </span>
+                                    <span>2525</span>
+                                </div>
+
+                                <div class="bank-card__autopay flex justify-between">
+                                    <label class="checkbox-switch">
+                                        <input type="checkbox">
+                                        <span class="checkbox-switch-mask"></span>
+                                        <span class="ml-2 text-sm md:text-base">Автоплатёж</span>
+                                    </label>
+                                    <!-- Если карту можно удалить: -->
+                                    <div class="cursor-pointer" onclick="openModal('delete-card-modal')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M7.99996 6L8.54411 4.36754C8.81634 3.55086 9.58061 3 10.4415 3H13.5584C14.4193 3 15.1836 3.55086 15.4558 4.36754L16 6M7.99996 6H5.61799C4.87461 6 4.39111 6.78231 4.72356 7.44721L5.21259 8.42527C5.40202 8.80413 5.50907 9.2188 5.52671 9.64201L5.88016 18.1249C5.94711 19.7318 7.26928 21 8.87756 21H15.1224C16.7306 21 18.0528 19.7318 18.1198 18.1249L18.4732 9.64202C18.4908 9.21881 18.5979 8.80413 18.7873 8.42527L19.2763 7.44721C19.6088 6.78231 19.1253 6 18.3819 6H16M7.99996 6H16M14.4399 16.5L14.6899 10.5M9.56001 16.5L9.31001 10.5"
+                                                stroke="#191919" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <a href="account-add-card.html"
+                                class="add-card border-2 border-darkblue border-dotted rounded-md px-10 py-2.5 w-full max-w-[353px] min-h-[144px] md:min-h-[188px] flex items-center justify-center md:text-2xl text-blue_text font-semibold cursor-pointer">
+                                Добавить карту
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="js-sbp-table hidden">
+                        @@include('partials/page-title.html', {
+                        "title": "Система быстрых платежей"
+                        })
+
+                        <div
+                            class="grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-8 max-w-3xl mx-auto pt-2.5 md:pt-0 px-7">
+                            <!-- Карточка -->
+
+                            <div
+                                class="border-2 border-darkgray rounded-md px-5 py-5 shadow-md w-full max-w-[353px] min-h-[144px] md:min-h-[188px] text-black flex flex-col justify-between">
+                                <div class="w-full flex items-center justify-between">
+                                    <div
+                                        class="bg-black text-white flex items-center justify-center gap-2 w-full p-2.5 text-xs rounded-[4px]">
+                                        <span>Используется</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M8 12.4849L12.2426 16.7275L20.727 8.24219M3 12.4849L7.24264 16.7275M15.7279 8.24219L12.5 11.4996"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="text-gray_text font-bold mt-5 mb-2.5 text-base ">Сбербанк</div>
+                                <div
+                                    class="mb-5 max-w-[240px] w-full md:max-w-none mx-auto md:text-2xl font-bold flex items-center justify-between">
+                                    <span>+7</span>
+                                    <span>915</span>
+                                    <span>***</span>
+                                    <span>**</span>
+                                    <span>19</span>
+                                </div>
+
+                                <div class="bank-card__autopay flex justify-between">
+                                    <label class="checkbox-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="checkbox-switch-mask"></span>
+                                        <span class="ml-2 text-sm md:text-base">Автоплатёж</span>
+                                    </label>
+                                    <div class="cursor-pointer hidden" onclick="openModal('delete-sbp-modal')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M7.99996 6L8.54411 4.36754C8.81634 3.55086 9.58061 3 10.4415 3H13.5584C14.4193 3 15.1836 3.55086 15.4558 4.36754L16 6M7.99996 6H5.61799C4.87461 6 4.39111 6.78231 4.72356 7.44721L5.21259 8.42527C5.40202 8.80413 5.50907 9.2188 5.52671 9.64201L5.88016 18.1249C5.94711 19.7318 7.26928 21 8.87756 21H15.1224C16.7306 21 18.0528 19.7318 18.1198 18.1249L18.4732 9.64202C18.4908 9.21881 18.5979 8.80413 18.7873 8.42527L19.2763 7.44721C19.6088 6.78231 19.1253 6 18.3819 6H16M7.99996 6H16M14.4399 16.5L14.6899 10.5M9.56001 16.5L9.31001 10.5"
+                                                stroke="#191919" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="border-2 border-darkgray rounded-md px-5 py-5 shadow-md w-full max-w-[353px] min-h-[144px] md:min-h-[188px] text-black flex flex-col justify-between">
+                                <div
+                                    class="bg-lightgray text-black flex items-center justify-center gap-2 w-full p-2.5 text-xs rounded-[4px] cursor-pointer">
+                                    <span>Использовать для получения займа</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path d="M6 12.0005L10.2426 16.2431L18.727 7.75781" stroke="#191919"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="text-gray_text font-bold mt-5 mb-2.5 text-base ">Т-Банк</div>
+                                <div
+                                    class="mb-5 max-w-[240px] w-full md:max-w-none mx-auto md:text-2xl font-bold flex items-center justify-between">
+                                    <span>+7</span>
+                                    <span>915</span>
+                                    <span>***</span>
+                                    <span>**</span>
+                                    <span>80</span>
+                                </div>
+
+                                <div class="bank-card__autopay flex justify-between">
+                                    <label class="checkbox-switch">
+                                        <input type="checkbox">
+                                        <span class="checkbox-switch-mask"></span>
+                                        <span class="ml-2 text-sm md:text-base">Автоплатёж</span>
+                                    </label>
+                                    <!-- Если карту можно удалить: -->
+                                    <div class="cursor-pointer" onclick="openModal('delete-sbp-modal')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M7.99996 6L8.54411 4.36754C8.81634 3.55086 9.58061 3 10.4415 3H13.5584C14.4193 3 15.1836 3.55086 15.4558 4.36754L16 6M7.99996 6H5.61799C4.87461 6 4.39111 6.78231 4.72356 7.44721L5.21259 8.42527C5.40202 8.80413 5.50907 9.2188 5.52671 9.64201L5.88016 18.1249C5.94711 19.7318 7.26928 21 8.87756 21H15.1224C16.7306 21 18.0528 19.7318 18.1198 18.1249L18.4732 9.64202C18.4908 9.21881 18.5979 8.80413 18.7873 8.42527L19.2763 7.44721C19.6088 6.78231 19.1253 6 18.3819 6H16M7.99996 6H16M14.4399 16.5L14.6899 10.5M9.56001 16.5L9.31001 10.5"
+                                                stroke="#191919" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <a href="account-add-card.html"
+                                class="add-card border-2 border-darkblue border-dotted rounded-md px-10 py-2.5 w-full max-w-[353px] min-h-[144px] md:min-h-[188px] flex items-center justify-center md:text-2xl text-blue_text font-semibold cursor-pointer">
+                                Добавить способ
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal" id="delete-card-modal">
+            <div class="popup popup-small">
+                <div class="w-full max-w-md mx-auto">
+                    <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                        <div class="font-semibold">
+                            Удалить карту?
+                        </div>
+                        <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <p class="text-blue_text font-medium text-center mb-10">
+                        Вы действительно хотите удалить свою карту? Если вы захотите добавить ее заново, то нужно будет
+                        пройти фото подтверждение еще раз.
+                    </p>
+
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-5 mb-12 md:mb-0">
+                        <button class="btn btn-accent btn-dashed w-full max-w-xs min-w-0">
+                            Не удалять
+                        </button>
+                        <button class="btn btn-accent w-full max-w-xs min-w-0">
+                            Удалить
+                        </button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal" id="delete-sbp-modal">
+            <div class="popup popup-small">
+                <div class="w-full max-w-md mx-auto">
+                    <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                        <div class="font-semibold">
+                            Удалить этот способ?
+                        </div>
+                        <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <p class="text-blue_text font-medium text-center mb-10">
+                        Вы действительно хотите удалить этот способ СБП? Данные будут безвозвратно удалены
+                    </p>
+
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-5 mb-12 md:mb-0">
+                        <button class="btn btn-accent btn-dashed w-full max-w-xs min-w-0">
+                            Не удалять
+                        </button>
+                        <button class="btn btn-accent w-full max-w-xs min-w-0">
+                            Удалить
+                        </button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        @@include('partials/session-end.html')
+        @@include('partials/footer.html')
+    </div>
+</body>
+
+</html>

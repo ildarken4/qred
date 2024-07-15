@@ -44,17 +44,17 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
 
 /* Кастомный input[type="radio"] */
 .custom-radio {
-  @apply inline-block relative cursor-pointer;
+  @apply inline-block relative w-5 h-5 cursor-pointer;
 }
 
 .custom-radio::before {
   content: '';
-  @apply relative top-1 inline-block w-5 h-5 mr-1 border-2 border-black rounded-full;
+  @apply relative inline-block w-5 h-5 mr-1 border border-black rounded-full;
 }
 
 .custom-radio::after {
   content: '';
-  @apply absolute top-3 left-1.5 bg-accent rounded-full w-2 h-2 invisible
+  @apply absolute top-[6px] left-1.5 bg-accent rounded-full w-2 h-2 invisible
 }
 
 input[type="radio"]:checked {
@@ -90,13 +90,16 @@ input[type="radio"]:checked {
       }
 
       label {
-        @apply flex justify-between items-center w-full;
+        @apply flex justify-between items-center w-full mb-0;
       }
     }
 
     .custom-option {
-      @apply flex items-center justify-start py-2.5 px-10 transition-all break-inside-avoid cursor-pointer;
+      @apply flex items-center py-2.5 px-10 transition-all break-inside-avoid cursor-pointer;
 
+      &-payment {
+        @apply px-5;
+      }
       img {
         margin-right: 15px;
       }
@@ -133,7 +136,7 @@ input[type="radio"]:checked {
     }
 
     .custom-select__options {
-      @apply max-h-[500px]
+      @apply max-h-[500px] py-5 overflow-visible; 
     }
   }
 }
@@ -186,4 +189,41 @@ input[type="radio"]:checked {
 }
 .delete-file {
   @apply cursor-pointer;
+}
+
+// Поле поиска (выбор банка в flow-payment.html)
+input[type="search"] {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #000; /* добавьте свои стили */
+  width: 100%;
+  padding-left: 36px;
+
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+  &::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: black;
+    border-width: 2px;
+  }
+
+  &.disabled {
+    opacity: .4;
+    pointer-events: none;
+  }
+}
+
+
+.js-payment-info {
+  @apply  h-0 max-h-0 overflow-hidden transition-all;
+
+  &.active {
+    @apply h-auto max-h-[1000px];
+  }
 }

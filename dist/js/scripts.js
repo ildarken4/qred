@@ -4392,3 +4392,87 @@ if (accountPays) {
         digits: 0
     }).mask(accountPays);
 }
+
+
+// radio переключение способа платежа
+
+const paymentBlocks = document.querySelectorAll('.payment-block');
+
+if (paymentBlocks) {
+    paymentBlocks.forEach(block => {
+        const paymentButton = block.querySelector('.js-payment-button');
+        paymentButton.addEventListener('click', function() {
+            // Uncheck all radios and remove 'active' class from all .js-payment-info
+            paymentBlocks.forEach(otherBlock => {
+                const radio = otherBlock.querySelector('input[type="radio"]');
+                const paymentInfo = otherBlock.querySelector('.js-payment-info');
+                radio.checked = false;
+                paymentInfo.classList.remove('active');
+            });
+
+            // Check the clicked radio and add 'active' class to its .js-payment-info
+            const radio = block.querySelector('input[type="radio"]');
+            const paymentInfo = block.querySelector('.js-payment-info');
+            radio.checked = true;
+            paymentInfo.classList.add('active');
+        });
+    });
+}
+
+
+// переключение вкладок на странице account-my-cards
+const cardTableToggler = document.querySelector('.js-card-toggler');
+
+if (cardTableToggler) {
+    const cardTab = document.querySelector('.js-cards-table');
+    const sbpTab = document.querySelector('.js-sbp-table');
+    const sbpTableToggler = document.querySelector('.js-sbp-toggler');
+
+    cardTableToggler.addEventListener('click', function() {
+        cardTab.classList.remove('hidden');
+        cardTableToggler.classList.add('bg-accent');
+        sbpTab.classList.add('hidden');
+        sbpTableToggler.classList.remove('bg-accent');
+    })
+
+    sbpTableToggler.addEventListener('click', function() {
+        sbpTab.classList.remove('hidden');
+        sbpTableToggler.classList.add('bg-accent');
+        cardTab.classList.add('hidden');
+        cardTableToggler.classList.remove('bg-accent');
+    })
+}
+
+// flow-menu в header-flow
+
+const flowMenuTogglers = document.querySelectorAll('.js-flow-menu-toggler');
+
+if (flowMenuTogglers) {
+    const flowMenu = document.querySelector('.js-flow-menu');
+    const flowMenuBody = document.querySelector('.js-flow-menu-body');
+    const flowMenuIcons = document.querySelectorAll('.js-flow-menu-icon');
+
+    flowMenuTogglers.forEach(function (flowMenuToggler) {
+        flowMenuToggler.addEventListener('click', function() {
+
+            if(!flowMenu.classList.contains('active')) {
+                flowMenu.classList.add('active');
+                flowMenuBody.classList.add('active');
+                flowMenuIcons.forEach(function (flowMenuIcon) {
+                    flowMenuIcon.setAttribute('d', 'M21 21.5L12 12.5M12 12.5L3 3.5M12 12.5L21.0001 3.5M12 12.5L3 21.5001')
+                })
+            } else {
+            
+                flowMenuBody.classList.remove('active');
+                flowMenuIcons.forEach(function (flowMenuIcon) {
+                    flowMenuIcon.setAttribute('d', 'M3 17H21M3 12H21M3 7H21')
+                })
+
+                setTimeout(() => {
+                    flowMenu.classList.remove('active');
+                }, 200);
+            }
+        })
+    })
+    
+}

@@ -25,3 +25,64 @@
         }
     }
 }
+
+.flow-menu {
+    @apply relative;
+
+    &.active {
+        .flow-menu__head {
+            @apply md:border-black md:min-w-[250px]; 
+		}
+        .flow-menu__title{
+            @apply md:opacity-100; 
+		}
+
+        .flow-menu__toggler {
+            &:hover {
+                @apply border-transparent;
+            }
+        }
+    }
+     &__title {
+        @apply opacity-0;
+    }
+
+    &__head {
+        @apply min-w-0 flex justify-between items-center py-[5px] pl-5 rounded-lg font-semibold text-2xl border border-transparent; 
+    }
+
+    &__body {
+        @apply transition-all max-h-0 fixed md:absolute top-0 left-0 md:top-full w-screen md:w-auto overflow-hidden z-50 bg-black_02 md:bg-transparent  md:backdrop-blur-none;
+
+        &.active {
+            @apply md:mt-2.5 h-screen md:h-auto max-h-screen backdrop-blur-sm;
+        }
+    }
+
+    &__list {
+        @apply  min-w-[250px] px-5 py-2.5 bg-white md:border md:rounded-lg;
+    }
+
+    &__item {
+        @apply flex justify-between items-center py-3 font-bold cursor-pointer;
+
+        &:not(:last-child) {
+            @apply border-b border-darkgray;
+        }
+
+        svg {
+            @apply transition-all;
+            path {
+                @apply transition-all stroke-darkgray;
+            }
+        }
+        &:hover {
+            svg {
+                @apply -translate-x-1;
+                path {
+                    @apply stroke-black;
+                }
+            }
+        }
+    }
+}

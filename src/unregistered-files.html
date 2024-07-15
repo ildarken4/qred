@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+
+    <!-- 
+    
+    1) Если не хватает каких-то файлов - вместо них карточка с плюсом и названием
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=63-10717
+    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=367-29494
+
+    -->
+
+    <div id="app">
+        @@include('partials/header-flow.html')
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
+            <div class="container">
+
+                @@include('partials/unregistered-banner.html')
+
+                <div class="bg-white rounded-lg shadow-md py-7 md:py-10 px-2.5">
+                    @@include('partials/page-title.html', {
+                        "title": "Мои файлы"
+                    })
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center xl:grid-cols-4 gap-7 pt-5 px-7 md:pt-0">
+                        <div
+                            class="border-2 border-darkblue border-dashed rounded-md shadow-md w-full max-w-[332px] min-h-[145px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
+                            <div class="md:mb-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96"
+                                    fill="none">
+                                    <path d="M24 48H48M48 48H72M48 48V72M48 48V24" stroke="#394D69" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="file-name font-semibold h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">
+                                Название файла которого не хватает</div>
+                        </div>
+                        <div
+                            class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[116px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
+                            <div class="mb-2.5 md:mb-5 w-12 md:w-24">
+                                <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
+                            </div>
+                            <div class="file-name font-semibold h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                                с паспортом</div>
+                        </div>
+                        <div
+                            class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[116px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
+                            <div class="mb-2.5 md:mb-5 w-12 md:w-24">
+                                <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
+                            </div>
+                            <div class="file-name font-semibold h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                                с паспортом</div>
+                        </div>
+                        <div
+                            class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[116px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
+                            <div class="mb-2.5 md:mb-5 w-12 md:w-24">
+                                <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
+                            </div>
+                            <div class="file-name font-semibold h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">
+                                Пример очень и очень длинного текста, который может не влезть или все же?</div>
+                        </div>
+                        <div
+                            class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[116px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
+                            <div class="mb-2.5 md:mb-5 w-12 md:w-24">
+                                <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
+                            </div>
+                            <div class="file-name font-semibold h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                                с паспортом</div>
+                        </div>
+                        <div
+                            class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[116px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
+                            <div class="mb-2.5 md:mb-5 w-12 md:w-24">
+                                <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
+                            </div>
+                            <div class="file-name font-semibold h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                                с паспортом</div>
+                        </div>
+                        <div
+                            class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[116px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
+                            <div class="mb-2.5 md:mb-5 w-12 md:w-24">
+                                <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
+                            </div>
+                            <div class="file-name font-semibold h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                                с паспортом</div>
+                        </div>
+                        <div
+                            class="border-2 border-darkgray rounded-md shadow-md w-full max-w-[332px] min-h-[116px] md:min-h-[263px] flex flex-col items-center justify-between px-5 md:px-[30px] py-5 md:py-10">
+                            <div class="mb-2.5 md:mb-5 w-12 md:w-24">
+                                <img src="img/icons/file-big-blue.svg" width="100%" alt="файл">
+                            </div>
+                            <div class="file-name font-semibold h-[47px] overflow-hidden text-ellipsis line-clamp-2 text-center">Селфи
+                                с паспортом</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        @@include('partials/session-end.html')
+        @@include('partials/footer.html')
+    </div>
+</body>
+
+</html>

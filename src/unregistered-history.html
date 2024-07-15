@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+
+    <!-- 
+    
+    1) Если карточек больше 6-ти - они собираются в слайды swiper по 6 шт.
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=63-9976
+    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=367-20229
+
+    -->
+
+    <div id="app">
+        @@include('partials/header-flow.html')
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
+            <div class="container">
+
+                @@include('partials/unregistered-banner.html')
+
+                <div class="bg-white rounded-lg shadow-md py-7 md:py-10 px-2.5">
+                    @@include('partials/page-title.html', {
+                        "title": "История займов"
+                    })
+                    <div class="account-slider overflow-hidden swiper-container pt-5 md:pt-0">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="text-center">Пусто</div> 
+
+                            </div>
+                        </div>
+                    </div>
+
+                    @@include('partials/slider-controls.html')
+                </div>
+
+            </div>
+        </div>
+        @@include('partials/session-end.html')
+        @@include('partials/footer.html')
+    </div>
+</body>
+
+</html>

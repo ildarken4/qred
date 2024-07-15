@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+
+    <!-- 
+    
+    1) Зеленая подсказка «Изменения успешно внесены»
+    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=63-21274
+    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=369-41457
+    
+    -->
+
+    <div id="app">
+        @@include('partials/header-account.html')
+        <div class="wrapper bg-lightgray py-14 relative min-h-screen">
+            <div class="container">
+
+                <div class="bg-white rounded-lg shadow-md py-7 px-5 md:py-10 md:px-2.5">
+                    @@include('partials/page-title.html', {
+                    "title": "Контактная информация"
+                    })
+
+                    <div class="w-full max-w-[830px] ml-auto mr-auto">
+                        <form action="">
+
+                            <div class="flex flex-col md:flex-row flex-wrap gap-5 mb-5">
+
+
+                                <div class="form-item w-full md:w-[calc(50%-10px)]">
+                                    <label for="contact-surname">Фамилия</label>
+                                    <input type="text" id="contact-surname" placeholder="Введите фамилию" value="Иванов" required>
+                                    <div class="hidden text-error">Обязательное поле</div>
+                                </div>
+                                <div class="form-item w-full md:w-[calc(50%-10px)]">
+                                    <label for="contact-name">Имя</label>
+                                    <input type="text" id="contact-name" placeholder="Введите имя" value="Иван" required>
+                                    <div class="hidden text-error">Обязательное поле</div>
+                                </div>
+
+                                <div class="form-item w-full md:w-[calc(50%-10px)]">
+                                    <label for="contact-pathronymic">Отчество</label>
+                                    <input type="text" id="contact-pathronymic" placeholder="Введите отчество" value="Иванович" required>
+                                    <div class="hidden text-error">Обязательное поле</div>
+                                </div>
+
+                                <div class="form-item w-full md:w-[calc(50%-10px)]">
+                                    <label>Пол</label>
+
+
+                                    <div class="custom-select">
+                                        <div class="custom-select__head selected">
+                                            <div class="custom-select__result">
+                                                Мужской
+                                            </div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"
+                                                viewBox="0 0 12 9" fill="none">
+                                                <path d="M6 9L0.803847 -2.51247e-08L11.1962 8.834e-07L6 9Z"
+                                                    fill="#A3A3A3" />
+                                            </svg>
+                                        </div>
+                                        <div class="custom-select__options">
+                                            <div class="custom-option" selected>
+                                                <div class="custom-select__value">
+                                                    Мужской
+                                                </div>
+                                            </div>
+                                            <div class="custom-option">
+                                                <div class="custom-select__value">
+                                                    Женский
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-item w-full md:w-[calc(50%-10px)]">
+                                    <label for="contact-date">Дата рождения</label>
+                                    <input type="text" id="contact-date" class="input-date" placeholder="ДД.ММ.ГГГГ"  value="27.06.1989"
+                                        required>
+                                    <div class="hidden text-error">Обязательное поле</div>
+                                </div>
+
+                                <div class="form-item w-full md:w-[calc(50%-10px)] mb-5">
+                                    <label for="contact-email">Почта</label>
+                                    <input type="text" id="email-input" class="email-input" placeholder="Введите почту" value="ivanov@ivan.iv">
+                                    <div class="hidden text-error">Обязательное поле</div>
+                                </div>
+                            </div>
+                            <div
+                                class="border-t border-b px-2.5 md:px-0 py-5 flex flex-col md:flex-row gap-5 md:gap-2.5 items-end justify-center text-sm mb-10">
+                                <div class="text-center md:text-start">
+                                    <div class="uppercase mb-5 md:mb-3 font-bold leading-3">Подтвердите свою почту</div>
+                                    <div class="leading-[18px]">Мы будем использовать ваш адрес электронной почты для
+                                        обеспечения
+                                        безопасности вашего аккаунта</div>
+                                </div>
+                                <div class="btn w-full md:w-full md:max-w-[50%]"
+                                    onclick="openModal('email-confirm-modal');startEmailTimer()">
+                                    Подтвердить
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col-reverse md:flex-row gap-5">
+                                <a href="account-updating.html" class="btn w-full btn-dashed ">
+                                    Назад
+                                </a>
+                                <a href="" class="btn w-full btn-accent btn-disabled">Сохранить</a>
+                                <!-- По нажатию появляется соответствующий .notification и при успехе кнопка подтвердить становится .btn-disabled -->
+                            </div>
+
+
+
+                        </form>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="notification bg-green_80">
+            <span>Почта подтверждена</span>
+            <img src="img/buttons/account-menu-close.svg" alt="Закрыть">
+        </div>
+        @@include('partials/session-end.html')
+        @@include('partials/account-modals.html')
+        @@include('partials/footer.html')
+</body>
+
+</html>

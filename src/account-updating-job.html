@@ -39,7 +39,7 @@
 
 
                                 <div class="custom-select">
-                                    <div class="custom-select__head">
+                                    <div class="custom-select__head selected">
                                         <div class="custom-select__result">
                                             Выберите занятость
                                         </div>
@@ -113,38 +113,38 @@
 
                             <div class="form-item w-full retiree-hide">
                                 <label for="job-position">Ваша должность</label>
-                                <input type="text" id="job-position" placeholder="Введите должность">
+                                <input type="text" id="job-position" placeholder="Введите должность" value="Ранее введенные данные" value="Ранее введенные данные">
 
                             </div>
 
 
                             <div class="form-item w-full retiree-hide">
                                 <label for="job-name">Наименование работодателя</label>
-                                <input type="text" id="job-name" placeholder="Введите наименование">
+                                <input type="text" id="job-name" placeholder="Введите наименование" value="Ранее введенные данные">
 
                             </div>
 
                             <div class="form-item w-full retiree-hide">
                                 <label for="job-address">Адрес работодателя</label>
-                                <input type="text" id="job-address" placeholder="Введите адрес работодателя">
+                                <input type="text" id="job-address" placeholder="Введите адрес работодателя" value="Ранее введенные данные">
 
                             </div>
 
                             <div class="form-item w-full retiree-hide">
                                 <label for="job-phone">Рабочий телефон</label>
-                                <input type="tel" id="job-phone" placeholder="Введите рабочий телефон">
+                                <input type="tel" id="job-phone" placeholder="Введите рабочий телефон" value="9154444444">
 
                             </div>
 
                             <div class="form-item w-full md:w-[calc(50%-10px)]">
                                 <label for="job-income">Ежемесячный доход</label>
-                                <input type="text" id="job-income" class="input-sum" placeholder="Введите ваш ежемесячный доход">
+                                <input type="text" id="job-income" class="input-sum" placeholder="Введите ваш ежемесячный доход" value="60000">
 
                             </div>
 
                             <div class="form-item w-full md:w-[calc(50%-10px)] mb-10">
                                 <label for="job-expenses">Ежемесячный расход</label>
-                                <input type="text" id="job-expenses" class="input-sum" placeholder="Введите ваш ежемесячный расход">
+                                <input type="text" id="job-expenses" class="input-sum" placeholder="Введите ваш ежемесячный расход" value="20000">
 
                             </div>
 
@@ -156,7 +156,7 @@
                             <a href="account-updating.html" class="btn w-full btn-dashed ">
                                 Назад
                             </a>
-                            <a href="" class="btn w-full btn-accent">Сохранить</a>
+                            <a href="" class="btn w-full btn-accent btn-disabled">Сохранить</a>
                             <!-- По нажатию появляется соответствующий .notification и при успехе кнопка подтвердить становится .btn-disabled -->
                         </div>
 
@@ -167,7 +167,7 @@
             </div>
         </div>
 
-
+        @@include('partials/session-end.html')
         @@include('partials/footer.html')
     </div>
 </body>

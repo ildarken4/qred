@@ -126,7 +126,7 @@
                                     <div class="leading-[18px]">Мы будем использовать ваш адрес электронной почты для обеспечения
                                         безопасности вашего аккаунта</div>
                                 </div>
-                                <div class="btn w-full md:w-full max-w-[50%]" onclick="openModal('email-confirm-modal');startEmailTimer()">
+                                <div class="btn w-full md:max-w-[50%]" onclick="openModal('email-confirm-modal');startEmailTimer()">
                                     Подтвердить
                                 </div>
                             </div>
@@ -146,8 +146,8 @@
 
         </div>
 
-
-       @@include('partials/email-confirm-modal.html')
+        @@include('partials/actualise-modal.html')
+        @@include('partials/email-confirm-modal.html')
 
 
         <div class="notification bg-red_75">
@@ -162,7 +162,7 @@
             <span>Почта подтверждена</span>
             <img src="img/buttons/account-menu-close.svg" alt="Почта подтверждена">
         </div>
-
+        @@include('partials/session-end.html')
         @@include('partials/main-footer.html')
     </div>
 </body>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+<link rel="manifest" href="img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+    <div id="app">
+        <a id="top"></a>
+<header class="header relative py-2.5 md:py-7">
+    <div class="container flex items-center justify-between">
+      
+      <a href="index.html" class="w-36 md:w-52">
+          <img src="img/Logo.svg" width="100%" alt="Логотип компании">
+      </a>
+      <div class="flex gap-2.5 lg:gap-7">
+
+        <button class="btn btn-squared btn-gray min-w-fit h-14 flex px-4 lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M20.7772 10.5C20.9231 11.1432 21.0002 11.8126 21.0002 12.5C21.0002 17.4706 16.9708 21.5 12.0002 21.5C11.3072 21.5 10.6324 21.4217 9.98437 21.2734C9.35838 21.1301 8.70618 21.1103 8.08126 21.2581C6.68573 21.5884 4.75953 21.8545 3.4417 21.4801C2.88639 21.3224 2.83203 20.6354 3.09965 20.1239C3.41097 19.5289 3.68178 18.7964 3.88646 18.1456C4.11568 17.4167 3.97026 16.6402 3.67854 15.934C3.24139 14.8758 3.0002 13.7161 3.0002 12.5C3.0002 7.52944 7.02964 3.5 12.0002 3.5C12.8677 3.5 13.7065 3.62273 14.5002 3.85177M8.0002 11H16.0002M8.0002 15H12.0002M20.0002 2.5V4.5M20.0002 4.5V6.5M20.0002 4.5H18.0002M20.0002 4.5H22.0002" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="btn btn-squared btn-gray min-w-fit h-14 flex px-4 lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M12 15.5L15 12.5M15 12.5L12 9.5M15 12.5H4M4 7.74802V7.7002C4 6.58009 4 6.01962 4.21799 5.5918C4.40973 5.21547 4.71547 4.90973 5.0918 4.71799C5.51962 4.5 6.08009 4.5 7.2002 4.5H16.8002C17.9203 4.5 18.4796 4.5 18.9074 4.71799C19.2837 4.90973 19.5905 5.21547 19.7822 5.5918C20 6.0192 20 6.57899 20 7.69691V17.3036C20 18.4215 20 18.9805 19.7822 19.4079C19.5905 19.7842 19.2837 20.0905 18.9074 20.2822C18.48 20.5 17.921 20.5 16.8031 20.5H7.19691C6.07899 20.5 5.5192 20.5 5.0918 20.2822C4.71547 20.0905 4.40973 19.7839 4.21799 19.4076C4 18.9798 4 18.4201 4 17.3V17.25" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <a class="btn btn-accent hidden lg:flex">Подать обращение</a>
+        <a class="btn hidden lg:flex">
+          Выйти
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+            <path d="M12.5 15L15.5 12M15.5 12L12.5 9M15.5 12H4.5M4.5 7.24802V7.2002C4.5 6.08009 4.5 5.51962 4.71799 5.0918C4.90973 4.71547 5.21547 4.40973 5.5918 4.21799C6.01962 4 6.58009 4 7.7002 4H17.3002C18.4203 4 18.9796 4 19.4074 4.21799C19.7837 4.40973 20.0905 4.71547 20.2822 5.0918C20.5 5.5192 20.5 6.07899 20.5 7.19691V16.8036C20.5 17.9215 20.5 18.4805 20.2822 18.9079C20.0905 19.2842 19.7837 19.5905 19.4074 19.7822C18.98 20 18.421 20 17.3031 20H7.69691C6.57899 20 6.0192 20 5.5918 19.7822C5.21547 19.5905 4.90973 19.2839 4.71799 18.9076C4.5 18.4798 4.5 17.9201 4.5 16.8V16.75" stroke="#F1C025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      
+    </div>
+</header>
+
+        <div class="wrapper bg-lightgray py-10 md:py-14 relative min-h-screen">
+            <div class="container">
+                
+                <div class="bg-darkblue text-center p-5 rounded-lg mb-5 md:mb-10">
+    <div class="text-accent font-bold max-w-[280px] mx-auto leading-8 md:max-w-full text-[28px] md:text-5xl">Упс, что-то пошло не так!</div>
+</div>
+                <div class="bg-white rounded-lg shadow-md py-[30px] md:py-10 px-2.5 md:px-10">
+
+                    <div class="max-w-[990px] mx-auto flex flex-col items-center">
+                        <div class="w-[100px] md:w-40 mx-auto mb-5 md:mb-10">
+                        <img src="img/icons/mail-3d.png" width="100%" alt="отказ">
+                    </div>
+
+                    <p class="text-center leading-5 md:text-2xl text-blue_text font-semibold mb-5 md:mb-10 px-4">По какой-то причине нам не удалось выполнить выплату этим способом. Вы можете изменить способ выплаты и попробовать еще раз.</p>
+
+                    <a href="index.html" class="btn btn-accent max-w-[280px] mx-auto">Изменить способ выплаты</a>
+                    </div>
+
+                </div>
+                <div class="btn btn-account-menu">
+    Меню
+    <img src="img/buttons/menu.svg" alt="меню">
+</div>
+
+<div class="js-account-menu fixed top-0 left-0 h-screen w-screen bg-blue_08 backdrop-blur-sm translate-y-full transition-all z-50">
+    <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-2.5 md:gap-5 px-2.5 md:px-[50px] pt-10 md:pt-36 overflow-auto max-h-screen pb-52">
+        
+        <a href="account-loan.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
+                <img src="img/icons/account-main.png" width="100%" alt="изображение пункта меню">
+            </div>
+            <div class="account-menu__title">
+                Главная
+            </div>
+        </a>
+    
+        <a href="account-my-cards.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
+                <img src="img/icons/account-menu_card.png" width="100%" alt="изображение пункта меню">
+            </div>
+            <div class="account-menu__title">
+                Мои Карты
+            </div>
+        </a>
+    
+        <a href="account-history.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
+                <img src="img/icons/account-menu_history.png" width="100%" alt="изображение пункта меню">
+            </div>
+            <div class="account-menu__title">
+                История займов
+            </div>
+        </a>
+    
+        <a href="account-docs.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
+                <img src="img/icons/account-menu_docs.png" width="100%" alt="изображение пункта меню">
+            </div>
+            <div class="account-menu__title">
+                Документы
+            </div>
+        </a>
+    
+        <a href="account-files.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
+                <img src="img/icons/account-menu_files.png" width="100%" alt="изображение пункта меню">
+            </div>
+            <div class="account-menu__title">
+                Мои файлы
+            </div>
+        </a>
+    
+        <a href="account-my-appeals.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
+                <img src="img/icons/my-appeals.png" width="100%" alt="изображение пункта меню">
+            </div>
+            <div class="account-menu__title">
+                Мои обращения
+            </div>
+        </a>
+    
+        <a href="account-files.html" class="flex items-center gap-5 bg-white rounded-lg p-2.5 lg:text-2xl font-semibold w-full">
+            <div class="bg-lightgray rounded-md w-12 min-w-12 md:min-w-[80px] xl:min-w-[100px]">
+                <img src="img/icons/my-account.png" width="100%" alt="изображение пункта меню">
+            </div>
+            <div class="account-menu__title">
+                Личный кабинет
+            </div>
+        </a>
+    </div>
+    <div class="btn btn-account-menu fixed bottom-14 left-2.5 w-[calc(100%-20px)] md:w-52 md:left-[calc(50%-104px)]">
+        Закрыть
+        <img src="img/buttons/account-menu-close.svg" alt="закрыть">
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="modal" id="session-modal">
+    <div class="popup popup-small">
+        <div class="w-full max-w-md mx-auto">
+            <div class="flex items-center justify-center relative border-b pb-5 mb-5">
+                <div class="font-semibold">
+                    Время сессии истекло
+                </div>
+                <button class="absolute right-0 cursor-pointer" onclick="closeModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none">
+                        <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <p class="text-blue_text font-medium text-center mb-10">
+                Вы слишком долго отсутствовали на странице. В целях обеспечения безопасности ваших данных, мы вышли из вашего аккаунта. Пожалуйста, войдите заново.
+            </p>
+
+            <div class="w-[100px] mb-10 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M49.6667 16.6673C31.2572 16.6673 16.3333 31.5912 16.3333 50.0007C16.3333 68.4101 31.2572 83.334 49.6667 83.334C68.0762 83.334 83 68.4101 83 50.0007C83 31.5912 68.0762 16.6673 49.6667 16.6673ZM8 50.0007C8 26.9888 26.6548 8.33398 49.6667 8.33398C72.6785 8.33398 91.3333 26.9888 91.3333 50.0007C91.3333 73.0125 72.6785 91.6673 49.6667 91.6673C26.6548 91.6673 8 73.0125 8 50.0007ZM49.6667 31.0431C51.9679 31.0431 53.8333 32.9086 53.8333 35.2098V51.8765C53.8333 54.1777 51.9679 56.0431 49.6667 56.0431C47.3655 56.0431 45.5 54.1777 45.5 51.8765V35.2098C45.5 32.9086 47.3655 31.0431 49.6667 31.0431ZM45.2925 64.3765C45.2925 62.0753 47.158 60.2098 49.4591 60.2098H49.8742C52.1754 60.2098 54.0409 62.0753 54.0409 64.3765V64.7931C54.0409 65.901 53.5996 66.9633 52.8147 67.7452C52.0297 68.5271 50.9657 68.9641 49.8578 68.9598L49.4428 68.9581C47.148 68.9491 45.2925 67.0863 45.2925 64.7915V64.3765Z" fill="#D9D9D9"/>
+                </svg>
+            </div>
+
+            <button class="btn btn-accent w-full max-w-[280px] mx-auto min-w-0">
+                Понятно
+            </button>
+
+
+        </div>
+
+    </div>
+</div>
+        <footer>
+    
+</footer>
+
+<script src="./js/scripts.js"></script>
+
+    </div>
+</body>
+
+</html>

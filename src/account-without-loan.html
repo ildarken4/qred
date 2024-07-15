@@ -58,24 +58,63 @@
 
 
             <div class="flex flex-col lg:flex-row gap-5">
-                <div class="bg-white rounded-lg shadow-md lg:w-1/2 py-7 px-5 lg:py-[70px]">
+                <div class="bg-white flex items-center justify-center rounded-lg shadow-md lg:w-1/2  py-7 px-5 md:py-10 md:px-10">
 
-                    <form class="calculator w-full max-w-md mx-auto" action="">
-                        @@include('partials/calculator-body.html')
+                    <form action="" class="max-w-[400px] ml-auto mr-auto">
 
-                        
-                    </form>
-                </div>
-                <div class="bg-white rounded-lg shadow-md lg:w-1/2 text-blue_text py-7 px-5 md:py-10 md:px-10">
-
-                    <form action="" class="">
-                        <div class="text-sm md:text-base flex flex-col md:flex-row justify-between items-center pb-7 border-b border-gray">
-                            <div class="form-text mb-5 md:mb-0 text-center md:text-left">
-                                Выберите карту, <br> на&nbsp;которую <span class="text-accent">придут</span> деньги
+                        <div class="text-sm md:text-base pb-7">
+                            <div class="form-text mb-2.5 md:text-left">
+                                Выберите способ выплаты
                             </div>
-                            <div class="custom-select max-w-xs">
+                            <div class="custom-select">
                                 <div class="custom-select__head selected">
-                                    <div class="custom-select__result">
+                                    <div class="custom-select__result text-[13px] md:text-[17px]">
+                                        Банковская карта
+                                    </div>
+                                    <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <path d="M19 9L12 16L5 9" stroke="#A3A3A3" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="custom-select__options">
+                                    <div class="custom-option custom-option-payment justify-between" selected>
+                                        <label for="pay-card" class="radio-wrapper justify-content-between">
+                                            <input type="radio" name="pay" id="pay-card" checked>
+                                            <span class="custom-radio"></span>
+                                            <span class="custom-select__value ml-[15px]">Банковская карта</span>
+                                        </label>
+                                        <div class="">
+                                            <img src="img/icons/credit-card.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="custom-option custom-option-payment justify-between">
+                                        <label for="pay-sbp" class="radio-wrapper justify-content-between">
+                                            <input type="radio" name="pay" id="pay-sbp">
+                                            <span class="custom-radio"></span>
+                                            <span class="custom-select__value ml-[15px]">По СБП</span>
+                                        </label>
+                                        <div class="">
+                                            <img src="img/icons/sbp.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- При выборе в селекте "Добавить новую карту" селект сменяется на кнопку ниже (скрыта классом hidden) -->
+                            <a href="account-updating.html" class="btn hidden">Добавить карту</a>
+                        </div>
+
+                        <div class="text-sm md:text-base pb-7 border-b border-gray">
+                            
+                            <!-- Если выбран способ оплаты картой -->
+
+                            <div class="form-text mb-2.5 md:text-left">
+                                Выберите номер карты
+                            </div>
+                            <div class="custom-select">
+                                <div class="custom-select__head selected">
+                                    <div class="custom-select__result text-[13px] md:text-[17px]">
                                         4276********3958
                                     </div>
                                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -85,31 +124,79 @@
                                     </svg>
                                 </div>
                                 <div class="custom-select__options">
-                                    <div class="custom-option" selected>
-                                        <div class="custom-select__value">
-                                            4276********3958
-                                        </div>
+                                    <div class="custom-option custom-option-payment" selected>
+                                        <label for="card-1" class="radio-wrapper justify-content-between">
+                                            <input type="radio" name="card" id="card-1" checked>
+                                            <span class="custom-radio"></span>
+                                            <span class="custom-select__value ml-[15px]">4276********3958</span>
+                                        </label>
                                     </div>
-                                    <div class="custom-option">
-                                        <div class="custom-select__value">
-                                            4276********3958
-                                        </div>
-                                    </div>
-                                    <div class="custom-option">
-                                        <a href="account-add-card.html" class="custom-select__value">
-                                            Добавить новую карту
-                                        </a>
+                                    <div class="custom-option custom-option-payment">
+                                        <label for="card-2" class="radio-wrapper justify-content-between">
+                                            <input type="radio" name="card" id="card-2" checked>
+                                            <span class="custom-radio"></span>
+                                            <span class="custom-select__value ml-[15px]">4276********3958</span>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- При выборе в селекте "Добавить новую карту" селект сменяется на кнопку ниже (скрыта классом hidden) -->
-                            <a href="account-updating.html" class="btn hidden">Добавить карту</a>
+                            <!-- Если карта не добавлена - селект сменяется на блок ниже (скрыто классом hidden) -->
+
+                             <div class="hidden">
+                                <div class="text-center text-blue_text mb-5">У вас нет привязанной карты</div>
+                                <a href="account-updating.html" class="btn">Добавить карту</a>
+                             </div>
+
+                            <!-- Если выбран способ оплаты по СБП (скрыто  class="hidden") --> 
+                             
+                             <div class="hidden">
+                                <div class="form-text mb-2.5 md:text-left">
+                                    Выберите банк
+                                </div>
+                                <div class="custom-select">
+                                    <div class="custom-select__head selected">
+                                        <div class="custom-select__result text-[13px] md:text-[17px]">
+                                            8 999 *** ** 52 (Сбербанк)
+                                        </div>
+                                        <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path d="M19 9L12 16L5 9" stroke="#A3A3A3" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="custom-select__options">
+                                        <div class="custom-option" selected>
+                                            <label for="card-1" class="radio-wrapper justify-content-between">
+                                                <input type="radio" name="card" id="card-1" checked>
+                                                <span class="custom-radio"></span>
+                                                <span class="custom-select__value text-base ml-[15px]">8 999 *** ** 52 (Сбербанк)</span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-option">
+                                            <label for="card-2" class="radio-wrapper justify-content-between">
+                                                <input type="radio" name="card" id="card-2" checked>
+                                                <span class="custom-radio"></span>
+                                                <span class="custom-select__value text-base ml-[15px]">8 999 *** ** 52 (Тинькофф)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                            
+                            
+                            
+                            <!-- Если не привязан СПБ - селект сменяется на блок ниже (скрыто классом hidden) -->
+                             <div class="hidden">
+                                <div class="text-center text-blue_text mb-5">У вас нет привязанного способа СБП</div>
+                                <a href="account-updating.html" class="btn">Добавить способ</a>
+                             </div>
+                            
                         </div>
 
-                        <div class="text-sm md:text-base flex flex-col xl:flex-row items-center justify-between py-7 border-b border-gray">
-                            <div class="form-text mb-5 xl:mb-0 text-sm xl:text-base text-center xl:text-left">
-                                Перед оформлением нового займа <span class="text-accent">актуализируйте </span>или <span
+                        <div class="text-sm md:text-base py-7">
+                            <div class="form-text mb-5 text-sm text-blue_text xl:text-base text-center ">
+                                Перед оформлением нового займа <br><span class="text-accent">актуализируйте </span>или <span
                                     class="text-accent">подтвердите&nbsp;</span> личные данные
                             </div>
                             <a href="account-updating.html" class="btn">Проверить</a>
@@ -117,7 +204,15 @@
                             <!-- Кода данные актуализированы - кнопка выше получает класс .btn-disabled -->
                         </div>
 
-                        <div class="max-w-sm mx-auto">
+                       
+                    </form>
+                </div>
+                <div class="bg-white rounded-lg shadow-md lg:w-1/2 py-10 px-5">
+
+                    <form class="calculator w-full max-w-[500px] mx-auto" action="">
+                        @@include('partials/calculator-body.html')
+
+                        <div class="max-w-[400px] mx-auto">
                             <a href="" class="btn btn-accent btn-disabled mb-10 md:mb-5 js-button w-full mx-auto mt-7"
                                 onclick="event.preventDefault(); openModal('sms-confirm-modal'); startEmailTimer()">
                                 Получить заем
@@ -136,7 +231,7 @@
 
 
     @@include('partials/sms-confirm-modal.html')
-
+    @@include('partials/session-end.html')
     @@include('partials/footer.html')
 </div>
 </body>

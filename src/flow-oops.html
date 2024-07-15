@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('partials/head.html')
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+    <div id="app">
+        @@include('partials/header-account.html')
+        <div class="wrapper bg-lightgray py-10 md:py-14 relative min-h-screen">
+            <div class="container">
+                
+                @@include('partials/flow-result-banner.html', {
+                    "title": "Упс, что-то пошло не так!"
+                })
+                <div class="bg-white rounded-lg shadow-md py-[30px] md:py-10 px-2.5 md:px-10">
+
+                    <div class="max-w-[990px] mx-auto flex flex-col items-center">
+                        <div class="w-[100px] md:w-40 mx-auto mb-5 md:mb-10">
+                        <img src="img/icons/mail-3d.png" width="100%" alt="отказ">
+                    </div>
+
+                    <p class="text-center leading-5 md:text-2xl text-blue_text font-semibold mb-5 md:mb-10 px-4">По какой-то причине нам не удалось выполнить выплату этим способом. Вы можете изменить способ выплаты и попробовать еще раз.</p>
+
+                    <a href="index.html" class="btn btn-accent max-w-[280px] mx-auto">Изменить способ выплаты</a>
+                    </div>
+
+                </div>
+                @@include('partials/account-menu.html')
+            </div>
+        </div>
+        @@include('partials/session-end.html')
+        @@include('partials/footer.html')
+    </div>
+</body>
+
+</html>
