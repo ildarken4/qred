@@ -2,9 +2,9 @@
     <div class="flex flex-col gap-5">
         <div class="payment-block px-[5px] md:py-5 py-2.5 md:px-[60px] rounded-lg border border-darkgray cursor-pointer">
             <div class="js-payment-button flex items-center justify-between">
-                <label for="payment-sbp" class="radio-wrapper justify-between items-center">
+                 <label for="payment-sbp" class="pointer-events-none radio-wrapper justify-between items-center">
                     
-                    <input type="radio" name="payment-check" id="payment-sbp">
+                    <input type="radio" name="payment-sbp" class="payment-check" id="payment-sbp">
                     
                     <span class="custom-radio"></span>
                     <span class="custom-select__value text-base md:text-2xl leading-6 ml-2 md:ml-4">По СБП</span>
@@ -188,9 +188,9 @@
         <div class="payment-block px-[5px] md:py-5 py-2.5 md:px-[60px] rounded-lg border border-darkgray mb-10 cursor-pointer">
             <div class="js-payment-button px- flex items-center justify-between">
 
-                <label for="payment-card" class="radio-wrapper justify-between items-center">
+                <label for="payment-card" class="pointer-events-none radio-wrapper justify-between items-center">
                 
-                    <input type="radio" name="payment-check" id="payment-card">
+                    <input type="radio" name="payment-card" class="payment-check" id="payment-card">
                     
                     <span class="custom-radio"></span>
                     <span class="custom-select__value text-base md:text-2xl leading-6 ml-2 md:ml-4">Привязать карту</span>
