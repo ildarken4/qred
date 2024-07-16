@@ -3,11 +3,22 @@
 
 <head>
     @@include('partials/head.html')
-    <link rel="stylesheet" href="./css/styles.css" />
+    
     <title>Получить заём</title>
 </head>
 
 <body>
+    <!-- 
+    
+    Состояние страницы после загрузки фото карты
+
+    1) Пользователь выбирает из списка что-то одно. При полном заполнении, выбранного способа, кнопка “далее” становится активной
+    2) В варианте “По СБП”, пользователю показывается номер телефона, который он ввел при регистрации. Он может добавить другой номер. Добавленный номер будет показываться в выпадающим списке (По логике, он должен встать вместо прошлого)
+    3) При добавлении карты, когда юзер добавляет фото, то кнопка “добавить фото” пропадает, а вместо него появляется фото с возможностью редактирования.
+    
+    https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1170-8490&m=dev
+
+    -->
     <div id="app">
         @@include('partials/header-flow.html')
         <div class="wrapper">
@@ -51,6 +62,14 @@
 
         </div>
 
+        
+        <!-- 
+        
+        !!! Добавлен попап "Время сессии истекло"
+        https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1754-21815&m=dev
+
+        
+        -->
         @@include('partials/session-end.html')
         @@include('partials/uploaded-modals.html')
         @@include('partials/main-footer.html')

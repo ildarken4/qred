@@ -3,7 +3,7 @@
 
 <head>
     @@include('partials/head.html')
-    <link rel="stylesheet" href="./css/styles.css" />
+    
     <title>Личный кабинет</title>
 </head>
 
@@ -40,6 +40,8 @@
 
     9) При успешном нажатии на «Получить заём» открывается модалка с sms и таймером
     десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=115-10118
+    
+    10) Обратить внимание на то что при выборе способа оплаты меняется селект, и при отсутствии привязанных карт и банков - появляется соответствующая кнопка (см. коммеенты по коду ниже)
     
     -->
 
@@ -231,7 +233,15 @@
 
 
     @@include('partials/sms-confirm-modal.html')
-    @@include('partials/session-end.html')
+    
+        <!-- 
+        
+        !!! Добавлен попап "Время сессии истекло"
+        https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1754-21815&m=dev
+
+        
+        -->
+        @@include('partials/session-end.html')
     @@include('partials/footer.html')
 </div>
 </body>

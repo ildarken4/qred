@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-    @@include('partials/head.html')
-    <link rel="stylesheet" href="./css/styles.css" />
+    @@include('../partials/head.html')
+    
     <title>Личный кабинет</title>
 </head>
 
 <body>
     <div id="app">
-        @@include('partials/header-account.html')
+        @@include('../partials/header-account.html')
         <div class="wrapper bg-lightgray py-14 relative min-h-screen">
             <div class="container">
 
                 <div class="bg-white rounded-lg shadow-md py-10 px-2.5 md:px-10">
-                    @@include('partials/page-title.html', {
+                    @@include('../partials/page-title.html', {
                         "title": "Ваша заявка рассматривается"
                     })
 
@@ -24,16 +24,24 @@
                         </div>
 
 
-                         @@include('partials/file-error-added.html')
+                         @@include('../partials/file-error.html')
                     </div>
 
                 </div>
 
             </div>
         </div>
-        @@include('partials/session-end.html')
-        @@include('partials/uploaded-modals.html')
-        @@include('partials/footer.html')
+        
+        <!-- 
+        
+        !!! Добавлен попап "Время сессии истекло"
+        https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1754-21815&m=dev
+
+        
+        -->
+        @@include('../partials/session-end.html')
+        @@include('../partials/upload-modals.html')
+        @@include('../partials/footer.html')
     </div>
 </body>
 

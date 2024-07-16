@@ -23,7 +23,7 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    
     <title>Вход в личный кабинет</title>
 </head>
 
@@ -35,7 +35,6 @@
     2) маска поля «телефон»
     десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=14-2174
     мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=282-5234
-
 -->
 
 <div id="app">
@@ -46,6 +45,15 @@
           <img src="img/Logo.svg" width="100%" alt="Логотип компании">
         </a>
         <div class="flex items-center gap-2.5">
+
+
+          <!-- 
+          
+          Добавлено меню которое пополняется пунктами по мере заполнения данных
+          https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1549-56481&m=dev
+          
+          -->
+
 
           <div class="flow-menu js-flow-menu">
             <div class="flow-menu__head pr-5">
@@ -169,7 +177,15 @@
 
         </div>
     </div>
-    <div class="modal" id="session-modal">
+    
+        <!-- 
+        
+        !!! Добавлен попап "Время сессии истекло"
+        https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1754-21815&m=dev
+
+        
+        -->
+        <div class="modal" id="session-modal">
     <div class="popup popup-small">
         <div class="w-full max-w-md mx-auto">
             <div class="flex items-center justify-center relative border-b pb-5 mb-5">

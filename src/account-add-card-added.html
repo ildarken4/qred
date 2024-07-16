@@ -3,7 +3,7 @@
 
 <head>
     @@include('partials/head.html')
-    <link rel="stylesheet" href="./css/styles.css" />
+    
     <title>Личный кабинет</title>
 </head>
 
@@ -29,6 +29,14 @@
                 @@include('partials/account-menu.html')
             </div>
         </div>
+        
+        <!-- 
+        
+        !!! Добавлен попап "Время сессии истекло"
+        https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1754-21815&m=dev
+
+        
+        -->
         @@include('partials/session-end.html')
         @@include('partials/uploaded-modals.html')
         @@include('partials/footer.html')

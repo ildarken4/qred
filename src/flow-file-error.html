@@ -3,11 +3,24 @@
 
 <head>
     @@include('partials/head.html')
-    <link rel="stylesheet" href="./css/styles.css" />
+    
     <title>Личный кабинет</title>
 </head>
 
 <body>
+     <!--
+
+    Состояние страницы до изменения фото.
+
+    1) Под изображениями кнопка "Заменить" которая исчезает после добавления фото
+    2) Кнопка заменить открывает модалку для добавления фото с графическими примерами
+    3) Модалки сменяют друг друга по мере добавления фото
+    4) После добавления фото кнопка Заменить исчезает и возле фото появляется кнопка редактирования (см файл flow-file-error-added.html)
+     
+    Добавлен баннер о рассмотрении заявки
+    https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1170-12190&m=dev
+    
+    -->
     <div id="app">
         @@include('partials/header-account.html')
         <div class="wrapper bg-lightgray py-10 md:py-14 relative min-h-screen">
@@ -29,6 +42,14 @@
                 @@include('partials/account-menu.html')
             </div>
         </div>
+        
+        <!-- 
+        
+        !!! Добавлен попап "Время сессии истекло"
+        https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1754-21815&m=dev
+
+        
+        -->
         @@include('partials/session-end.html')
         @@include('partials/upload-modals.html')
         @@include('partials/footer.html')

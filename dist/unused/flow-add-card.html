@@ -23,7 +23,7 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    
     <title>Получить заём</title>
 </head>
 
@@ -36,6 +36,15 @@
           <img src="img/Logo.svg" width="100%" alt="Логотип компании">
         </a>
         <div class="flex items-center gap-2.5">
+
+
+          <!-- 
+          
+          Добавлено меню которое пополняется пунктами по мере заполнения данных
+          https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1549-56481&m=dev
+          
+          -->
+
 
           <div class="flow-menu js-flow-menu">
             <div class="flow-menu__head pr-5">
@@ -153,39 +162,39 @@
                         </div>
 
 
-                        <div class="bg-lightgray rounded-md px-2.5 py-7 md:p-7 mb-10">
+                        <div class="bg-lightgray rounded-md px-5 py-7 md:p-7 mb-10">
+    <p class="text-center font-medium leading-5 md:leading-6 md:text-2xl mb-5">
+        Добавьте карту, на которую хотите получить деньги
+    </p>
+    <div class="btn btn-accent max-w-xs min-w-full sm:min-w-fit mx-auto">Привязать карту</div>
+</div>
+
+
+<div class="bg-lightgray rounded-md px-2.5 py-7 md:p-7 mb-10">
     <p class="text-center text-sm font-medium md:text-base max-w-[170px] mx-auto md:max-w-none mb-5">
         Пожалуйста, загрузите следующие фотографии
     </p>
 
-    <div class="flex flex-col md:flex-row justify-center gap-5 md:gap-8">
-        <div class="flex justify-center md:block w-full min-w-0 md:max-w-[225px] lg:max-w-[280px] xl:max-w-[280px] h-[130px] md:h-[276px] text-center relative">
+    <div class="flex flex-col md:flex-row justify-center gap-5 md:gap-8 mb-10">
+        <div class="flex md:block w-full min-w-0 md:max-w-[225px] lg:max-w-[250px] xl:max-w-[256px] text-center relative">
     <div
-        class="bg-white rounded-md overflow-hidden w-full max-w-[150px] md:max-w-none h-[130px] md:h-full mb-0 md:mb-2 border border-darkblue md:border-none flex items-center">
-        <img src="img/error-photo.png" class="w-full" alt="Фото привязанной карты">
+        class="bg-white rounded-md overflow-hidden w-full max-w-[150px] md:max-w-none h-[130px] md:h-[180px] mb-0 md:mb-2 border border-darkblue md:border-none flex items-center">
+        <img src="img/card-photo.png" class="w-full" alt="Фото привязанной карты">
     </div>
     <div class="pl-5 md:pl-0 flex justify-between flex-col md:block">
-        <div class="text-sm font-medium text-left md:hidden md:text-center">
+        <div class="text-sm font-medium text-left md:text-center">
             Фото привязанной карты
         </div>
-        <div class="md:absolute md:bg-white rounded-full border-2 border-accent md:border-none text-accent h-10 md:h-12 w-36 md:w-12 flex items-center justify-center cursor-pointer -top-5 -right-5 group md:hover:bg-darkblue hover:bg-white hover:border-black hover:text-black transition-all "
-            onclick="openModal('upload-card')">
-            <span class="md:hidden">Переснять</span>
-            <svg class="hidden md:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                viewBox="0 0 24 24" fill="none">
-                <path class="stroke-black group-hover:stroke-white transition-all"
-                    d="M12.5 20.6946H18.5M6.50736 19.6946H5C4.44772 19.6946 4 19.2469 4 18.6946V17.1873C4 16.3916 4.31607 15.6285 4.87868 15.0659L14.75 5.19462C15.7855 4.15909 17.4645 4.15909 18.5 5.19462C19.5355 6.23015 19.5355 7.90909 18.5 8.94462L8.62868 18.8159C8.06607 19.3785 7.30301 19.6946 6.50736 19.6946Z"
-                    stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </div>
     </div>
 </div>
     </div>
 
+    <div class="btn btn-accent max-w-md mx-auto" onclick="openModal('upload-card')">Добавить
+    </div>
 </div>
 
 
-                        <a href="flow-job.html" class="btn btn-accent">Далее</a>
+                        <a href="flow-job.html" class="btn btn-accent btn-disabled">Далее</a>
 
 
                     </div>
@@ -197,6 +206,14 @@
 
         </div>
 
+        
+        <!-- 
+        
+        !!! Добавлен попап "Время сессии истекло"
+        https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1754-21815&m=dev
+
+        
+        -->
         <div class="modal" id="session-modal">
     <div class="popup popup-small">
         <div class="w-full max-w-md mx-auto">
@@ -257,14 +274,31 @@
         Селфи с паспортом
     </div>
     <div class="w-full max-w-[990px] bg-white rounded-[20px] mx-auto flex flex-col items-center pt-10 pb-14">
-        <div class="bg-white md:bg-lightgray shadow-md md:shadow-none shadow-gray_015 rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-10">
-            <img src="img/selfie-example.png" class="w-full h-full object-cover" alt="селфи с паспортом">
+        <div class="bg-white md:bg-lightgray shadow-md md:shadow-none shadow-gray_015 rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-5">
+            <img src="img/passport-selfie.png" class="w-full h-full object-contain" alt="селфи с паспортом">
         </div>
+        <p class="text-center text-sm md:text-base max-w-[280px] md:max-w-xs md:mb-10">Убедитесь, что данные паспорта и
+            Ваше лицо будет хорошо видно </p>
 
-        <div class="hidden md:block ">
-            <div class="btn btn-accent mb-5">Заменить</div>
-            <div class="btn btn-accent">Использовать</div>
-        </div>
+        <label
+            class="w-full max-w-2xl h-60 border border-darkblue border-dashed rounded-lg hidden md:flex flex-col items-center justify-center">
+            <input type="file" class="hidden" name="flow-photo">
+
+            <div class="hidden lg:block mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <path
+                        d="M26 6.00174C25.809 6 25.5946 6 25.3494 6H16.4004C14.1602 6 13.0392 6 12.1836 6.43597C11.4309 6.81947 10.8195 7.43095 10.436 8.18359C10 9.03924 10 10.1602 10 12.4004V35.6004C10 37.8406 10 38.9601 10.436 39.8158C10.8195 40.5684 11.4309 41.181 12.1836 41.5645C13.0384 42 14.158 42 16.3939 42L31.6062 42C33.842 42 34.96 42 35.8148 41.5645C36.5674 41.181 37.181 40.5684 37.5645 39.8158C38 38.961 38 37.843 38 35.6072V18.6514C38 18.4059 37.9999 18.1912 37.9981 18M26 6.00174C26.5713 6.00694 26.9327 6.02769 27.2777 6.11052C27.6858 6.20851 28.0757 6.37053 28.4336 6.58984C28.8371 6.83713 29.1836 7.18364 29.875 7.875L36.126 14.126C36.8178 14.8178 37.1617 15.1627 37.4091 15.5664C37.6284 15.9243 37.7907 16.3145 37.8887 16.7227C37.9715 17.0675 37.9927 17.429 37.9981 18M26 6.00174V11.6C26 13.8402 26 14.9595 26.436 15.8152C26.8195 16.5678 27.4309 17.181 28.1836 17.5645C29.0384 18 30.158 18 32.3938 18H37.9981M37.9981 18H38.0004"
+                        stroke="#F1C025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+
+            <p class="upload-description text-blue_text mb-1">
+                Нажмите или перетащите фото, чтобы загрузить.
+            </p>
+            <p class="text-gray_text">
+                PNG, JPG (Размером до 25MB)
+            </p>
+        </label>
     </div>
     <div
         class="mobile-upload-icon lg:hidden bg-accent rounded-full h-[60px] w-[60px] flex items-center justify-center mx-auto mt-[72px] mb-14 cursor-pointer">
@@ -301,14 +335,31 @@
         Первый разворот паспорта
     </div>
     <div class="w-full max-w-[990px] bg-white rounded-[20px] mx-auto flex flex-col items-center pt-10 pb-14">
-        <div class="bg-white md:bg-lightgray shadow-md md:shadow-none shadow-gray_015 rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-10">
-            <img src="img/selfie-example.png" class="w-full h-full object-cover" alt="Первый разворот паспорта">
+        <div class="bg-white md:bg-lightgray shadow-md md:shadow-none shadow-gray_015 rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-5">
+            <img src="img/passport-photo.png" class="w-full h-full object-contain" alt="Первый разворот паспорта">
         </div>
+        <p class="text-center text-sm md:text-base max-w-[280px] md:max-w-xs md:mb-10">Убедитесь, что все данные
+            паспорта будут хорошо видны</p>
 
-        <div class="hidden md:block ">
-            <div class="btn btn-accent mb-5">Заменить</div>
-            <div class="btn btn-accent">Использовать</div>
-        </div>
+        <label
+            class="w-full max-w-2xl h-60 border border-darkblue border-dashed rounded-lg hidden md:flex flex-col items-center justify-center">
+            <input type="file" class="hidden" name="flow-photo">
+
+            <div class="hidden lg:block mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <path
+                        d="M26 6.00174C25.809 6 25.5946 6 25.3494 6H16.4004C14.1602 6 13.0392 6 12.1836 6.43597C11.4309 6.81947 10.8195 7.43095 10.436 8.18359C10 9.03924 10 10.1602 10 12.4004V35.6004C10 37.8406 10 38.9601 10.436 39.8158C10.8195 40.5684 11.4309 41.181 12.1836 41.5645C13.0384 42 14.158 42 16.3939 42L31.6062 42C33.842 42 34.96 42 35.8148 41.5645C36.5674 41.181 37.181 40.5684 37.5645 39.8158C38 38.961 38 37.843 38 35.6072V18.6514C38 18.4059 37.9999 18.1912 37.9981 18M26 6.00174C26.5713 6.00694 26.9327 6.02769 27.2777 6.11052C27.6858 6.20851 28.0757 6.37053 28.4336 6.58984C28.8371 6.83713 29.1836 7.18364 29.875 7.875L36.126 14.126C36.8178 14.8178 37.1617 15.1627 37.4091 15.5664C37.6284 15.9243 37.7907 16.3145 37.8887 16.7227C37.9715 17.0675 37.9927 17.429 37.9981 18M26 6.00174V11.6C26 13.8402 26 14.9595 26.436 15.8152C26.8195 16.5678 27.4309 17.181 28.1836 17.5645C29.0384 18 30.158 18 32.3938 18H37.9981M37.9981 18H38.0004"
+                        stroke="#F1C025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+
+            <p class="upload-description text-blue_text mb-1">
+                Нажмите или перетащите фото, чтобы загрузить.
+            </p>
+            <p class="text-gray_text">
+                PNG, JPG (Размером до 25MB)
+            </p>
+        </label>
     </div>
     <div
         class="mobile-upload-icon lg:hidden bg-accent rounded-full h-[60px] w-[60px] flex items-center justify-center mx-auto mt-[72px] mb-14 cursor-pointer">
@@ -347,14 +398,31 @@
         Разворот с регистрацией
     </div>
     <div class="w-full max-w-[990px] bg-white rounded-[20px] mx-auto flex flex-col items-center pt-10 pb-14">
-        <div class="bg-white md:bg-lightgray shadow-md md:shadow-none shadow-gray_015 rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-10">
-            <img src="img/selfie-example.png" class="w-full h-full object-cover" alt="Разворот с регистрацией">
+        <div class="bg-white md:bg-lightgray shadow-md md:shadow-none shadow-gray_015 rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-5">
+            <img src="img/passport-address.png" class="w-full h-full object-contain" alt="Разворот с регистрацией">
         </div>
+        <p class="text-center text-sm md:text-base max-w-[280px] md:max-w-xs md:mb-10">Убедитесь, что все данные
+            паспорта будут хорошо видны</p>
 
-        <div class="hidden md:block ">
-            <div class="btn btn-accent mb-5">Заменить</div>
-            <div class="btn btn-accent">Использовать</div>
-        </div>
+        <label
+            class="w-full max-w-2xl h-60 border border-darkblue border-dashed rounded-lg hidden md:flex flex-col items-center justify-center">
+            <input type="file" class="hidden" name="flow-photo">
+
+            <div class="hidden lg:block mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <path
+                        d="M26 6.00174C25.809 6 25.5946 6 25.3494 6H16.4004C14.1602 6 13.0392 6 12.1836 6.43597C11.4309 6.81947 10.8195 7.43095 10.436 8.18359C10 9.03924 10 10.1602 10 12.4004V35.6004C10 37.8406 10 38.9601 10.436 39.8158C10.8195 40.5684 11.4309 41.181 12.1836 41.5645C13.0384 42 14.158 42 16.3939 42L31.6062 42C33.842 42 34.96 42 35.8148 41.5645C36.5674 41.181 37.181 40.5684 37.5645 39.8158C38 38.961 38 37.843 38 35.6072V18.6514C38 18.4059 37.9999 18.1912 37.9981 18M26 6.00174C26.5713 6.00694 26.9327 6.02769 27.2777 6.11052C27.6858 6.20851 28.0757 6.37053 28.4336 6.58984C28.8371 6.83713 29.1836 7.18364 29.875 7.875L36.126 14.126C36.8178 14.8178 37.1617 15.1627 37.4091 15.5664C37.6284 15.9243 37.7907 16.3145 37.8887 16.7227C37.9715 17.0675 37.9927 17.429 37.9981 18M26 6.00174V11.6C26 13.8402 26 14.9595 26.436 15.8152C26.8195 16.5678 27.4309 17.181 28.1836 17.5645C29.0384 18 30.158 18 32.3938 18H37.9981M37.9981 18H38.0004"
+                        stroke="#F1C025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+
+            <p class="upload-description text-blue_text mb-1">
+                Нажмите или перетащите фото, чтобы загрузить.
+            </p>
+            <p class="text-gray_text">
+                PNG, JPG (Размером до 25MB)
+            </p>
+        </label>
     </div>
     <div
         class="mobile-upload-icon lg:hidden bg-accent rounded-full h-[60px] w-[60px] flex items-center justify-center mx-auto mt-[72px] mb-14 cursor-pointer">
@@ -388,14 +456,31 @@
         Фото привязанной карты
     </div>
     <div class="w-full max-w-[990px] bg-white rounded-[20px] mx-auto flex flex-col items-center pt-10 pb-14">
-        <div class="bg-white md:bg-lightgray shadow-md md:shadow-none shadow-gray_015 rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-10">
-            <img src="img/error-photo.png" class="w-full h-full object-cover" alt="Фото привязанной карты">
+        <div class="bg-white md:bg-lightgray shadow-md md:shadow-none shadow-gray_015 rounded-md overflow-hidden w-72 md:w-[256px] h-60 md:h-[180px] mb-5">
+            <img src="img/card-photo.png" class="w-full h-full object-contain" alt="сФото привязанной карты">
         </div>
+        <p class="text-center text-sm md:text-base max-w-[280px] md:max-w-xs md:mb-10">Убедитесь, что данные с
+            карты будет хорошо видно </p>
 
-        <div class="hidden md:block ">
-            <div class="btn btn-accent mb-5">Заменить</div>
-            <div class="btn btn-accent">Использовать</div>
-        </div>
+        <label
+            class="w-full max-w-2xl h-60 border border-darkblue border-dashed rounded-lg hidden md:flex flex-col items-center justify-center">
+            <input type="file" class="hidden" name="flow-photo">
+
+            <div class="hidden lg:block mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <path
+                        d="M26 6.00174C25.809 6 25.5946 6 25.3494 6H16.4004C14.1602 6 13.0392 6 12.1836 6.43597C11.4309 6.81947 10.8195 7.43095 10.436 8.18359C10 9.03924 10 10.1602 10 12.4004V35.6004C10 37.8406 10 38.9601 10.436 39.8158C10.8195 40.5684 11.4309 41.181 12.1836 41.5645C13.0384 42 14.158 42 16.3939 42L31.6062 42C33.842 42 34.96 42 35.8148 41.5645C36.5674 41.181 37.181 40.5684 37.5645 39.8158C38 38.961 38 37.843 38 35.6072V18.6514C38 18.4059 37.9999 18.1912 37.9981 18M26 6.00174C26.5713 6.00694 26.9327 6.02769 27.2777 6.11052C27.6858 6.20851 28.0757 6.37053 28.4336 6.58984C28.8371 6.83713 29.1836 7.18364 29.875 7.875L36.126 14.126C36.8178 14.8178 37.1617 15.1627 37.4091 15.5664C37.6284 15.9243 37.7907 16.3145 37.8887 16.7227C37.9715 17.0675 37.9927 17.429 37.9981 18M26 6.00174V11.6C26 13.8402 26 14.9595 26.436 15.8152C26.8195 16.5678 27.4309 17.181 28.1836 17.5645C29.0384 18 30.158 18 32.3938 18H37.9981M37.9981 18H38.0004"
+                        stroke="#F1C025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+
+            <p class="upload-description text-blue_text mb-1">
+                Нажмите или перетащите фото, чтобы загрузить.
+            </p>
+            <p class="text-gray_text">
+                PNG, JPG (Размером до 25MB)
+            </p>
+        </label>
     </div>
     <div
         class="mobile-upload-icon lg:hidden bg-accent rounded-full h-[60px] w-[60px] flex items-center justify-center mx-auto mt-[72px] mb-14 cursor-pointer">

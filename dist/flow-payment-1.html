@@ -23,11 +23,22 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    
     <title>Получить заём</title>
 </head>
 
 <body>
+
+    <!-- 
+    
+    Состояние страницы до загрузки фото карты
+
+    1) Пользователь выбирает из списка что-то одно. При полном заполнении, выбранного способа, кнопка “далее” становится активной
+    2) В варианте “По СБП”, пользователю показывается номер телефона, который он ввел при регистрации. Он может добавить другой номер. Добавленный номер будет показываться в выпадающим списке (По логике, он должен встать вместо прошлого)
+    3) При добавлении карты, когда юзер добавляет фото, то кнопка “добавить фото” пропадает, а вместо него появляется фото с возможностью редактирования.
+    
+    https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1170-8490&m=dev
+    -->
     <div id="app">
         <header class="header relative md:pt-7">
     <div class="container">
@@ -36,6 +47,15 @@
           <img src="img/Logo.svg" width="100%" alt="Логотип компании">
         </a>
         <div class="flex items-center gap-2.5">
+
+
+          <!-- 
+          
+          Добавлено меню которое пополняется пунктами по мере заполнения данных
+          https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1549-56481&m=dev
+          
+          -->
+
 
           <div class="flow-menu js-flow-menu">
             <div class="flow-menu__head pr-5">
@@ -400,6 +420,14 @@
 
         </div>
 
+        
+        <!-- 
+        
+        !!! Добавлен попап "Время сессии истекло"
+        https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1754-21815&m=dev
+
+        
+        -->
         <div class="modal" id="session-modal">
     <div class="popup popup-small">
         <div class="w-full max-w-md mx-auto">

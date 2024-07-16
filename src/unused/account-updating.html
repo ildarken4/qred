@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    @@include('partials/head.html')
-    <link rel="stylesheet" href="./css/styles.css" />
+    @@include('../partials/head.html')
+    
     <title>Личный кабинет</title>
 </head>
 
@@ -18,12 +18,12 @@
     -->
 
     <div id="app">
-        @@include('partials/header-account.html')
+        @@include('../partials/header-account.html')
         <div class="wrapper bg-lightgray py-14 relative min-h-screen">
             <div class="container">
 
                 <div class="bg-white rounded-lg shadow-md py-7 px-5 md:py-10 md:px-2.5">
-                    @@include('partials/page-title.html', {
+                    @@include('../partials/page-title.html', {
                         "title": "Убедитесь, что все данные актуальны"
                     })
 
@@ -118,8 +118,16 @@
             <span>Изменения успешно внесены</span>
             <img src="img/buttons/account-menu-close.svg" alt="Закрыть">
         </div>
-        @@include('partials/session-end.html')
-        @@include('partials/footer.html')
+        
+        <!-- 
+        
+        !!! Добавлен попап "Время сессии истекло"
+        https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1754-21815&m=dev
+
+        
+        -->
+        @@include('../partials/session-end.html')
+        @@include('../partials/footer.html')
 </body>
 
 </html>

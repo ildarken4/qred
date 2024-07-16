@@ -3,7 +3,7 @@
 
 <head>
     @@include('partials/head.html')
-    <link rel="stylesheet" href="./css/styles.css" />
+    
     <title>Вход в личный кабинет</title>
 </head>
 
@@ -11,10 +11,11 @@
 
     <!-- 
     
-    1) чекбокс активирует кнопку «Получить заём» 
-    2) ссылка в тексте чекбокса открывает скрытые чекбоксы с документами
-    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=14-2085
-    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=282-4160
+    https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1549-55552&m=dev
+
+
+    !!! Добавлен попап "Время сессии истекло"
+    https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1754-21815&m=dev
     
     -->
 
@@ -43,6 +44,14 @@
 
             </div>
         </div>
+
+        <!-- 
+        
+        !!! Добавлен попап "Время сессии истекло"
+        https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1754-21815&m=dev
+
+        
+        -->
         @@include('partials/session-end.html')
         @@include('partials/main-footer.html')
     </div>

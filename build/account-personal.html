@@ -23,7 +23,7 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    
     <title>Личный кабинет</title>
 </head>
 
@@ -31,10 +31,13 @@
 
     <!-- 
     
-    1) Зеленая подсказка «Изменения успешно внесены»
-    десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=63-21274
-    мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=369-41457
+    1) Страница “Личный кабинет” стала страницей “Персональные данные”; в меню называется как “Мои данные”
+    2) Кнопки “изменить” доступны только при определенных условиях
+    3) Когда юзер переходит на изменение какого-то блока информации, то поля (где есть нужная информация) находятся в заполненном состоянии.
+    4) Кнопка “сохранить” становится активной только после каких-либо изменений в формах
+    5) Страницы, на которых мы меняем данные - это те же страницы, что и у сценария “актуализация данных” 
     
+    https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1348-34168&m=dev
     -->
 
     <div id="app">
@@ -257,6 +260,14 @@
             <span>Данные обновлены</span>
             <img src="img/buttons/account-menu-close.svg" alt="Закрыть">
         </div>
+        
+        <!-- 
+        
+        !!! Добавлен попап "Время сессии истекло"
+        https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1754-21815&m=dev
+
+        
+        -->
         <div class="modal" id="session-modal">
     <div class="popup popup-small">
         <div class="w-full max-w-md mx-auto">

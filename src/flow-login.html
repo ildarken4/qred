@@ -3,7 +3,7 @@
 
 <head>
     @@include('partials/head.html')
-    <link rel="stylesheet" href="./css/styles.css" />
+    
     <title>Вход в личный кабинет</title>
 </head>
 
@@ -15,7 +15,6 @@
     2) маска поля «телефон»
     десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=14-2174
     мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=282-5234
-
 -->
 
 <div id="app">
@@ -65,7 +64,15 @@
 
         </div>
     </div>
-    @@include('partials/session-end.html')
+    
+        <!-- 
+        
+        !!! Добавлен попап "Время сессии истекло"
+        https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1754-21815&m=dev
+
+        
+        -->
+        @@include('partials/session-end.html')
     @@include('partials/main-footer.html')
 
 </div>

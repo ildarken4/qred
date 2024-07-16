@@ -3,11 +3,22 @@
 
 <head>
     @@include('partials/head.html')
-    <link rel="stylesheet" href="./css/styles.css" />
+    
     <title>Личный кабинет</title>
 </head>
 
 <body>
+     <!--
+
+    Состояние страницыg после изменения фото.
+
+    1) Под изображениями отсутствует кнопка "Заменить" которая была до добавления фото
+    2) Кнопки редактирования возле фоток открывают соответствующуб модалку для замены фото
+     
+    Добавлен баннер о рассмотрении заявки
+    https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1170-12190&m=dev
+    
+    -->
     <div id="app">
         @@include('partials/header-account.html')
         <div class="wrapper bg-lightgray py-10 md:py-14 relative min-h-screen">
@@ -28,6 +39,14 @@
                 @@include('partials/account-menu.html')
             </div>
         </div>
+        
+        <!-- 
+        
+        !!! Добавлен попап "Время сессии истекло"
+        https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1754-21815&m=dev
+
+        
+        -->
         @@include('partials/session-end.html')
         @@include('partials/uploaded-modals.html')
         @@include('partials/footer.html')

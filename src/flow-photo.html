@@ -3,7 +3,7 @@
 
 <head>
     @@include('partials/head.html')
-    <link rel="stylesheet" href="./css/styles.css" />
+    
     <title>Получить заём</title>
 </head>
 
@@ -20,6 +20,12 @@
     десктоп: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=262-15136
     мобилка: https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=299-1871
     
+
+    4) Добавлен попап “актуальность данных” - Пользователь, который начинал заполнять форму займа, но ушел и пришел через долгое время, он видит попап с просьбой проверить свои данные на актуальность.
+        Соглашается -> оказывается на странице “мои данные” -> Смотрит/Редактирует (то что у него добавлено) -> -> Переходит по баннеру обратно к форме -> Возвращается на тот шаг формы, на котором остановился в прошлый раз.
+        Не соглашается -> Возвращается на тот шаг формы, на котором остановился в прошлый раз.
+    https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1527-55550&m=dev
+
     -->
 
     <div id="app">
@@ -67,6 +73,14 @@
 
         </div>
 
+        
+        <!-- 
+        
+        !!! Добавлен попап "Время сессии истекло"
+        https://www.figma.com/design/xXQgW9f1KspJd4W3jXIrCH/Qreditka?node-id=1754-21815&m=dev
+
+        
+        -->
         @@include('partials/session-end.html')
         @@include('partials/upload-modals.html')
         @@include('partials/main-footer.html')
