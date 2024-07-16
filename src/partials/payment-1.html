@@ -2,9 +2,9 @@
     <div class="flex flex-col gap-5">
         <div class="payment-block px-[5px] md:py-5 py-2.5 md:px-[60px] rounded-lg border border-darkgray cursor-pointer">
             <div class="js-payment-button flex items-center justify-between">
-                <label for="payment-sbp" class="radio-wrapper justify-between items-center">
+                <label for="payment-sbp" class="pointer-events-none radio-wrapper justify-between items-center">
                     
-                    <input type="radio" name="payment-check" id="payment-sbp">
+                    <input type="radio" name="payment-sbp" class="payment-check" id="payment-sbp">
                     
                     <span class="custom-radio"></span>
                     <span class="custom-select__value text-base md:text-2xl leading-6 ml-2 md:ml-4">По СБП</span>
@@ -28,7 +28,7 @@
                             <div class="custom-select">
                                 <div class="custom-select__head selected">
                                     <div class="custom-select__result text-sm md:text-lg">
-                                        8 999 *** ** 52
+                                        8 999 *** 25 52
                                     </div>
                                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                         viewBox="0 0 24 24" fill="none">
@@ -39,12 +39,12 @@
                                 <div class="custom-select__options">
                                     <div class="custom-option" selected>
                                         <div class="custom-select__value text-sm md:text-lg">
-                                            8 999 *** ** 52
+                                            8 999 *** 25 52
                                         </div>
                                     </div>
                                     <div class="custom-option">
                                         <div class="custom-select__value text-sm md:text-lg">
-                                            8 999 *** ** 52
+                                            8 999 *** 25 52
                                         </div>
                                     </div>
                                 </div>
@@ -52,7 +52,7 @@
                         </div>
                     
 
-                        <a href="account-updating.html" class="btn btn-accent w-full">Добавить номер</a>
+                        <div class="btn btn-accent w-full" onclick="openModal('change-phone-modal')">Добавить номер</div>
 
                     </div>
                     
@@ -81,7 +81,7 @@
                                 
                                 <span class="custom-radio"></span>
                                 <span class="custom-select__value text-base md:text-2xl leading-6 font-medium ml-4 flex items-center gap-5">
-                                    <img src="../img/icons/banks/sber.svg" alt="">
+                                    <img src="img/icons/banks/sber.svg" alt="">
                                     Сбербанк
                                 </span>
                             </label>
@@ -91,7 +91,7 @@
                                 
                                 <span class="custom-radio"></span>
                                 <span class="custom-select__value text-base md:text-2xl leading-6 font-medium ml-4 flex items-center gap-5">
-                                    <img src="../img/icons/banks/tbank.svg" alt="">
+                                    <img src="img/icons/banks/tbank.svg" alt="">
                                     Т-Банк
                                 </span>
                             </label>
@@ -101,7 +101,7 @@
                                 
                                 <span class="custom-radio"></span>
                                 <span class="custom-select__value text-base md:text-2xl leading-6 font-medium ml-4 flex items-center gap-5">
-                                    <img src="../img/icons/banks/alfa.svg" alt="">
+                                    <img src="img/icons/banks/alfa.svg" alt="">
                                     Альфа Банк
                                 </span>
                             </label>
@@ -111,7 +111,7 @@
                                 
                                 <span class="custom-radio"></span>
                                 <span class="custom-select__value text-base md:text-2xl leading-6 font-medium ml-4 flex items-center gap-5">
-                                    <img src="../img/icons/banks/raiff.svg" alt="">
+                                    <img src="img/icons/banks/raiff.svg" alt="">
                                     Райффайзен Банк
                                 </span>
                             </label>
@@ -122,7 +122,7 @@
                                 
                                 <span class="custom-radio"></span>
                                 <span class="custom-select__value text-base md:text-2xl leading-6 font-medium ml-4 flex items-center gap-5">
-                                    <img src="../img/icons/banks/psb.svg" alt="">
+                                    <img src="img/icons/banks/psb.svg" alt="">
                                     Промсвязьбанк
                                 </span>
                             </label>
@@ -132,7 +132,7 @@
                                 
                                 <span class="custom-radio"></span>
                                 <span class="custom-select__value text-base md:text-2xl leading-6 font-medium ml-4 flex items-center gap-5">
-                                    <img src="../img/icons/banks/sber.svg" alt="">
+                                    <img src="img/icons/banks/sber.svg" alt="">
                                     Сбербанк
                                 </span>
                             </label>
@@ -142,7 +142,7 @@
                                 
                                 <span class="custom-radio"></span>
                                 <span class="custom-select__value text-base md:text-2xl leading-6 font-medium ml-4 flex items-center gap-5">
-                                    <img src="../img/icons/banks/tbank.svg" alt="">
+                                    <img src="img/icons/banks/tbank.svg" alt="">
                                     Т-Банк
                                 </span>
                             </label>
@@ -152,7 +152,7 @@
                                 
                                 <span class="custom-radio"></span>
                                 <span class="custom-select__value text-base md:text-2xl leading-6 font-medium ml-4 flex items-center gap-5">
-                                    <img src="../img/icons/banks/alfa.svg" alt="">
+                                    <img src="img/icons/banks/alfa.svg" alt="">
                                     Альфа Банк
                                 </span>
                             </label>
@@ -162,7 +162,7 @@
                                 
                                 <span class="custom-radio"></span>
                                 <span class="custom-select__value text-base md:text-2xl leading-6 font-medium ml-4 flex items-center gap-5">
-                                    <img src="../img/icons/banks/raiff.svg" alt="">
+                                    <img src="img/icons/banks/raiff.svg" alt="">
                                     Райффайзен Банк
                                 </span>
                             </label>
@@ -173,7 +173,7 @@
                                 
                                 <span class="custom-radio"></span>
                                 <span class="custom-select__value text-base md:text-2xl leading-6 font-medium ml-4 flex items-center gap-5">
-                                    <img src="../img/icons/banks/psb.svg" alt="">
+                                    <img src="img/icons/banks/psb.svg" alt="">
                                     Промсвязьбанк
                                 </span>
                             </label>
@@ -186,11 +186,11 @@
         </div>
 
         <div class="payment-block px-[5px] md:py-5 py-2.5 md:px-[60px] rounded-lg border border-darkgray mb-10 cursor-pointer">
-            <div class="js-payment-button px- flex items-center justify-between">
+            <div class="js-payment-button flex items-center justify-between">
 
-                <label for="payment-card" class="radio-wrapper justify-between items-center">
+                <label for="payment-card" class="pointer-events-none radio-wrapper justify-between items-center">
                 
-                    <input type="radio" name="payment-check" id="payment-card">
+                    <input type="radio" name="payment-card" class="payment-check" id="payment-card">
                     
                     <span class="custom-radio"></span>
                     <span class="custom-select__value text-base md:text-2xl leading-6 ml-2 md:ml-4">Привязать карту</span>

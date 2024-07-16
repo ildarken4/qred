@@ -31,7 +31,7 @@
 
     &.active {
         .flow-menu__head {
-            @apply md:border-black md:min-w-[250px]; 
+            @apply md:border-black md:min-w-[250px] pl-5; 
 		}
         .flow-menu__title{
             @apply md:opacity-100; 
@@ -48,7 +48,7 @@
     }
 
     &__head {
-        @apply min-w-0 flex justify-between items-center py-[5px] pl-5 rounded-lg font-semibold text-2xl border border-transparent; 
+        @apply min-w-0 flex justify-between items-center py-[5px] rounded-lg font-semibold text-2xl border border-transparent; 
     }
 
     &__body {

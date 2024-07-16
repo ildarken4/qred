@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    @@include('partials/head.html')
+    @@include('../partials/head.html')
     
     <title>Личный кабинет</title>
 </head>
@@ -34,12 +34,12 @@
     -->
 
     <div id="app">
-        @@include('partials/header-account.html')
+        @@include('../partials/header-account.html')
         <div class="wrapper bg-lightgray py-14 relative min-h-screen">
             <div class="container">
 
                 <div class="bg-white rounded-lg shadow-md py-7 md:py-10 px-7 font-medium">
-                    @@include('partials/page-title.html', {
+                    @@include('../partials/page-title.html', {
                         "title": "Личный кабинет"
                     })
 
@@ -138,13 +138,13 @@
                     </div>
 
                 </div>
-                @@include('partials/account-menu.html')
+                @@include('../partials/account-menu.html')
             </div>
         </div>
 
-        @@include('partials/set-password-modal.html')
+        @@include('../partials/set-password-modal.html')
 
-        @@include('partials/email-confirm-modal.html')
+        @@include('../partials/email-confirm-modal.html')
 
         <div class="modal" id="change-phone-modal">
             <div class="popup">
@@ -227,8 +227,8 @@
 
         
         -->
-        @@include('partials/session-end.html')
-        @@include('partials/footer.html')
+        @@include('../partials/session-end.html')
+        @@include('../partials/footer.html')
     </div>
 </body>
 

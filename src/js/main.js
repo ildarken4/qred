@@ -643,26 +643,48 @@ if (accountPays) {
 const paymentBlocks = document.querySelectorAll('.payment-block');
 
 if (paymentBlocks) {
-    paymentBlocks.forEach(block => {
-        const paymentButton = block.querySelector('.js-payment-button');
-        paymentButton.addEventListener('click', function() {
-            // Uncheck all radios and remove 'active' class from all .js-payment-info
-            paymentBlocks.forEach(otherBlock => {
-                const radio = otherBlock.querySelector('input[type="radio"]');
-                const paymentInfo = otherBlock.querySelector('.js-payment-info');
-                radio.checked = false;
-                paymentInfo.classList.remove('active');
-            });
+    // Функция для обработки клика
+    function handleClick(button) {
+        // Получить родительский элемент .payment-block
+        const parentBlock = button.closest('.payment-block');
+        // Найти .payment-check внутри текущего .js-payment-button или связанного label
+        const paymentCheck = parentBlock.querySelector('.payment-check');
+        // Найти .js-payment-info внутри родительского .payment-block
+        const paymentInfo = parentBlock.querySelector('.js-payment-info');
 
-            // Check the clicked radio and add 'active' class to its .js-payment-info
-            const radio = block.querySelector('input[type="radio"]');
-            const paymentInfo = block.querySelector('.js-payment-info');
-            radio.checked = true;
-            paymentInfo.classList.add('active');
+        // Переключить checked для текущего .payment-check
+        paymentCheck.checked = !paymentCheck.checked;
+
+        // Переключить класс active для текущего .js-payment-info
+        paymentInfo.classList.toggle('active', paymentCheck.checked);
+
+        // Убрать checked и active для всех остальных блоков
+        document.querySelectorAll('.payment-block').forEach(block => {
+            if (block !== parentBlock) {
+                // Установить checked = false для других .payment-check
+                const otherCheck = block.querySelector('.payment-check');
+                if (otherCheck) {
+                    otherCheck.checked = false;
+                }
+                // Удалить класс active для других .js-payment-info
+                const otherInfo = block.querySelector('.js-payment-info');
+                if (otherInfo) {
+                    otherInfo.classList.remove('active');
+                }
+            }
+        });
+    }
+
+    // Найти все элементы с классом js-payment-button
+    const paymentButtons = document.querySelectorAll('.js-payment-button');
+
+    paymentButtons.forEach(button => {
+        button.addEventListener('click', function (event) {
+            handleClick(button);
         });
     });
-}
 
+}
 
 // переключение вкладок на странице account-my-cards
 const cardTableToggler = document.querySelector('.js-card-toggler');
